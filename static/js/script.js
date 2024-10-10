@@ -10,18 +10,19 @@ document.addEventListener('DOMContentLoaded', function() {
     const cancelAddBtn = document.getElementById('cancelAddBtn');
     const itemNameInput = document.getElementById('itemName');
     const itemTagsInput = document.getElementById('itemTags');
+    const mapSelector = document.getElementById('mapSelector');
 
     let items = [];
     let mapImage = new Image();
     let selectedLocation = null;
     let scale = 1;
+    let currentMapId = null;
 
     mapImage.onload = function() {
         resizeCanvas();
         window.addEventListener('resize', resizeCanvas);
         drawMap();
     };
-    mapImage.src = '/static/img/makerspace_map.svg';
 
     function resizeCanvas() {
         const container = mapCanvas.parentElement;
@@ -49,8 +50,23 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    function loadMaps() {
+        fetch('/api/maps')
+            .then(response => response.json())
+            .then(data => {
+                mapSelector.innerHTML = '<option value="">Select a map</option>';
+                data.forEach(map => {
+                    const option = document.createElement('option');
+                    option.value = map.id;
+                    option.textContent = map.name;
+                    mapSelector.appendChild(option);
+                });
+            });
+    }
+
     function loadItems() {
-        fetch('/api/items')
+        if (!currentMapId) return;
+        fetch(`/api/items?map_id=${currentMapId}`)
             .then(response => response.json())
             .then(data => {
                 items = data;
@@ -88,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     searchInput.addEventListener('input', function() {
         const query = this.value.toLowerCase();
-        fetch(`/api/search?q=${encodeURIComponent(query)}`)
+        fetch(`/api/search?q=${encodeURIComponent(query)}&map_id=${currentMapId}`)
             .then(response => response.json())
             .then(data => {
                 items = data;
@@ -125,8 +141,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     saveItemBtn.addEventListener('click', function() {
-        if (!selectedLocation) {
-            alert('Please select a location on the map.');
+        if (!selectedLocation || !currentMapId) {
+            alert('Please select a location on the map and ensure a map is selected.');
             return;
         }
 
@@ -134,7 +150,8 @@ document.addEventListener('DOMContentLoaded', function() {
             name: itemNameInput.value,
             tags: itemTagsInput.value,
             x_coord: selectedLocation.x / scale,
-            y_coord: selectedLocation.y / scale
+            y_coord: selectedLocation.y / scale,
+            map_id: currentMapId
         };
 
         fetch('/api/items', {
@@ -161,5 +178,21 @@ document.addEventListener('DOMContentLoaded', function() {
         addItemForm.style.display = 'none';
     });
 
-    loadItems();
+    mapSelector.addEventListener('change', function() {
+        currentMapId = this.value;
+        if (currentMapId) {
+            fetch(`/api/maps/${currentMapId}`)
+                .then(response => response.json())
+                .then(data => {
+                    mapImage.src = data.svg_path;
+                    loadItems();
+                });
+        } else {
+            ctx.clearRect(0, 0, mapCanvas.width, mapCanvas.height);
+            items = [];
+            updateItemList();
+        }
+    });
+
+    loadMaps();
 });

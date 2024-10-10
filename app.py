@@ -25,6 +25,16 @@ with app.app_context():
 def index():
     return render_template('index.html')
 
+@app.route('/api/maps', methods=['GET'])
+def get_maps():
+    maps = models.Map.query.all()
+    return jsonify([{"id": map.id, "name": map.name} for map in maps])
+
+@app.route('/api/maps/<int:map_id>', methods=['GET'])
+def get_map(map_id):
+    map = models.Map.query.get_or_404(map_id)
+    return jsonify({"id": map.id, "name": map.name, "svg_path": map.svg_path})
+
 @app.route('/api/items', methods=['GET', 'POST'])
 def items():
     if request.method == 'POST':
@@ -33,34 +43,39 @@ def items():
             name=data['name'],
             tags=data['tags'],
             x_coord=data['x_coord'],
-            y_coord=data['y_coord']
+            y_coord=data['y_coord'],
+            map_id=data['map_id']
         )
         db.session.add(new_item)
         db.session.commit()
         return jsonify({"success": True, "id": new_item.id}), 201
     else:
-        items = models.Item.query.all()
+        map_id = request.args.get('map_id')
+        items = models.Item.query.filter_by(map_id=map_id).all()
         return jsonify([{
             "id": item.id,
             "name": item.name,
             "tags": item.tags,
             "x_coord": item.x_coord,
-            "y_coord": item.y_coord
+            "y_coord": item.y_coord,
+            "map_id": item.map_id
         } for item in items])
 
 @app.route('/api/search')
 def search():
     query = request.args.get('q', '')
+    map_id = request.args.get('map_id')
     items = models.Item.query.filter(
-        (models.Item.name.ilike(f'%{query}%')) |
-        (models.Item.tags.ilike(f'%{query}%'))
+        (models.Item.name.ilike(f'%{query}%') | models.Item.tags.ilike(f'%{query}%')) &
+        (models.Item.map_id == map_id)
     ).all()
     return jsonify([{
         "id": item.id,
         "name": item.name,
         "tags": item.tags,
         "x_coord": item.x_coord,
-        "y_coord": item.y_coord
+        "y_coord": item.y_coord,
+        "map_id": item.map_id
     } for item in items])
 
 if __name__ == '__main__':
