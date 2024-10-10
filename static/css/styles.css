@@ -8,10 +8,12 @@
     background-color: var(--bs-secondary);
 }
 
-.modal-open .modal {
-    pointer-events: none;
+#addItemForm {
+    max-width: 300px;
+    z-index: 1000;
+    display: none;
 }
 
-.modal-open .modal-dialog {
-    pointer-events: all;
+#addItemForm.show {
+    display: block;
 }

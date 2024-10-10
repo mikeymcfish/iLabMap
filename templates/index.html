@@ -18,22 +18,11 @@
                 <button id="addItemBtn" class="btn btn-primary mb-3">ADD</button>
                 <div id="itemList" class="list-group"></div>
             </div>
-            <div class="col-md-8">
+            <div class="col-md-8 position-relative">
                 <canvas id="mapCanvas" class="img-fluid"></canvas>
-            </div>
-        </div>
-    </div>
-
-    <!-- Add Item Modal -->
-    <div class="modal fade" id="addItemModal" tabindex="-1" aria-labelledby="addItemModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="addItemModalLabel">Add New Item</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form id="addItemForm">
+                <div id="addItemForm" class="position-absolute top-0 end-0 p-3 bg-dark rounded shadow" style="display: none;">
+                    <h5>Add New Item</h5>
+                    <form>
                         <div class="mb-3">
                             <label for="itemName" class="form-label">Item Name</label>
                             <input type="text" class="form-control" id="itemName" required>
@@ -42,12 +31,9 @@
                             <label for="itemTags" class="form-label">Tags (comma-separated)</label>
                             <input type="text" class="form-control" id="itemTags">
                         </div>
-                        <p>Click on the map to set the item's location.</p>
+                        <button type="button" class="btn btn-primary" id="saveItemBtn">Save Item</button>
+                        <button type="button" class="btn btn-secondary" id="cancelAddBtn">Cancel</button>
                     </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary" id="saveItemBtn">Save Item</button>
                 </div>
             </div>
         </div>

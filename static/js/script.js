@@ -4,8 +4,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const itemList = document.getElementById('itemList');
     const searchInput = document.getElementById('searchInput');
     const addItemBtn = document.getElementById('addItemBtn');
-    const addItemModal = new bootstrap.Modal(document.getElementById('addItemModal'));
+    const addItemForm = document.getElementById('addItemForm');
     const saveItemBtn = document.getElementById('saveItemBtn');
+    const cancelAddBtn = document.getElementById('cancelAddBtn');
     const itemNameInput = document.getElementById('itemName');
     const itemTagsInput = document.getElementById('itemTags');
 
@@ -13,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let mapImage = new Image();
     let selectedLocation = null;
     let scale = 1;
+    let isAddingItem = false;
 
     mapImage.onload = function() {
         resizeCanvas();
@@ -39,6 +41,12 @@ document.addEventListener('DOMContentLoaded', function() {
             ctx.arc(item.x_coord * scale, item.y_coord * scale, 5, 0, 2 * Math.PI);
             ctx.fill();
         });
+        if (selectedLocation) {
+            ctx.fillStyle = 'blue';
+            ctx.beginPath();
+            ctx.arc(selectedLocation.x * scale, selectedLocation.y * scale, 5, 0, 2 * Math.PI);
+            ctx.fill();
+        }
     }
 
     function loadItems() {
@@ -83,21 +91,25 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     addItemBtn.addEventListener('click', function() {
+        isAddingItem = true;
         selectedLocation = null;
-        addItemModal.show();
+        addItemBtn.disabled = true;
+        mapCanvas.style.cursor = 'crosshair';
+        alert('Click on the map to select a location for the new item.');
     });
 
     mapCanvas.addEventListener('click', function(event) {
-        const rect = mapCanvas.getBoundingClientRect();
-        selectedLocation = {
-            x: (event.clientX - rect.left) / scale,
-            y: (event.clientY - rect.top) / scale
-        };
-        drawMap();
-        ctx.fillStyle = 'blue';
-        ctx.beginPath();
-        ctx.arc(selectedLocation.x * scale, selectedLocation.y * scale, 5, 0, 2 * Math.PI);
-        ctx.fill();
+        if (isAddingItem) {
+            const rect = mapCanvas.getBoundingClientRect();
+            selectedLocation = {
+                x: (event.clientX - rect.left) / scale,
+                y: (event.clientY - rect.top) / scale
+            };
+            drawMap();
+            addItemForm.classList.add('show');
+            isAddingItem = false;
+            mapCanvas.style.cursor = 'default';
+        }
     });
 
     saveItemBtn.addEventListener('click', function() {
@@ -123,12 +135,21 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(response => response.json())
         .then(data => {
             if (data.success) {
-                addItemModal.hide();
+                addItemForm.classList.remove('show');
                 loadItems();
                 itemNameInput.value = '';
                 itemTagsInput.value = '';
+                selectedLocation = null;
+                addItemBtn.disabled = false;
             }
         });
+    });
+
+    cancelAddBtn.addEventListener('click', function() {
+        addItemForm.classList.remove('show');
+        selectedLocation = null;
+        addItemBtn.disabled = false;
+        drawMap();
     });
 
     loadItems();
