@@ -130,20 +130,51 @@ document.addEventListener('DOMContentLoaded', function() {
         items.sort((a, b) => a.name.localeCompare(b.name));
         itemList.innerHTML = '';
         items.forEach(item => {
-            const li = document.createElement('a');
-            li.classList.add('list-group-item', 'list-group-item-action');
+            const li = document.createElement('div');
+            li.classList.add('list-group-item', 'd-flex', 'justify-content-between', 'align-items-center');
             li.innerHTML = `
-                <div class="d-flex w-100 justify-content-between align-items-center">
-                    <h5 class="mb-0">${item.name}</h5>
+                <div>
+                    <h5 class="mb-1">${item.name}</h5>
                     <div class="tag-container">
                         ${item.tags.split(',').map(tag => `<span class="item-tag">${tag.trim()}</span>`).join('')}
                     </div>
                 </div>
+                <button class="btn btn-danger btn-sm delete-item" data-item-id="${item.id}">Delete</button>
             `;
             li.addEventListener('mouseover', () => highlightItem(item));
             li.addEventListener('mouseout', drawMap);
             itemList.appendChild(li);
         });
+
+        // Add event listeners for delete buttons
+        document.querySelectorAll('.delete-item').forEach(button => {
+            button.addEventListener('click', function(event) {
+                event.stopPropagation();
+                const itemId = this.getAttribute('data-item-id');
+                deleteItem(itemId);
+            });
+        });
+    }
+
+    function deleteItem(itemId) {
+        if (confirm('Are you sure you want to delete this item?')) {
+            fetch(`/api/items/${itemId}`, {
+                method: 'DELETE',
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(() => {
+                loadItems(); // Reload the items after deletion
+            })
+            .catch(error => {
+                console.error('Error deleting item:', error);
+                displayErrorMessage('Error deleting item. Please try again later.');
+            });
+        }
     }
 
     function highlightItem(item) {
