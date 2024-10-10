@@ -12,12 +12,62 @@ document.addEventListener('DOMContentLoaded', function() {
     const itemNameInput = document.getElementById('itemName');
     const itemTagsInput = document.getElementById('itemTags');
     const mapSelector = document.getElementById('mapSelector');
+    const threeDContainer = document.getElementById('threeDContainer');
 
     let items = [];
     let mapImage = new Image();
     let selectedLocation = null;
     let scale = 1;
     let currentMapId = null;
+    let scene, camera, renderer, threeJsItems = [];
+
+    function init3DScene() {
+        scene = new THREE.Scene();
+        camera = new THREE.PerspectiveCamera(75, threeDContainer.clientWidth / threeDContainer.clientHeight, 0.1, 1000);
+        renderer = new THREE.WebGLRenderer({ alpha: true });
+        renderer.setSize(threeDContainer.clientWidth, threeDContainer.clientHeight);
+        threeDContainer.appendChild(renderer.domElement);
+
+        const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+        scene.add(ambientLight);
+
+        const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
+        directionalLight.position.set(5, 5, 5);
+        scene.add(directionalLight);
+
+        camera.position.set(0, -10, 15);
+        camera.lookAt(0, 0, 0);
+    }
+
+    function addItemTo3DScene(item) {
+        const geometry = new THREE.SphereGeometry(0.5, 32, 32);
+        const material = new THREE.MeshStandardMaterial({ color: 0xff0000, metalness: 0.7, roughness: 0.2 });
+        const sphere = new THREE.Mesh(geometry, material);
+        
+        const x = (item.x_coord / mapCanvas.width) * 10 - 5;
+        const y = -(item.y_coord / mapCanvas.height) * 10 + 5;
+        
+        sphere.position.set(x, y, 1);
+        scene.add(sphere);
+        threeJsItems.push(sphere);
+    }
+
+    function updateThreeDItems() {
+        threeJsItems.forEach(item => scene.remove(item));
+        threeJsItems = [];
+        items.forEach(item => addItemTo3DScene(item));
+    }
+
+    function animate() {
+        requestAnimationFrame(animate);
+        const time = Date.now() * 0.001;
+        threeJsItems.forEach((item, index) => {
+            item.rotation.x += 0.01;
+            item.rotation.y += 0.01;
+            item.position.z = 1 + Math.sin(time + index * 0.5) * 0.5;
+        });
+        renderer.render(scene, camera);
+    }
 
     mapImage.onload = function() {
         resizeCanvas();
@@ -52,6 +102,12 @@ document.addEventListener('DOMContentLoaded', function() {
             mapCanvas.height = (mapImage.height / mapImage.width) * containerWidth;
             scale = containerWidth / mapImage.width;
             drawMap();
+
+            if (renderer) {
+                renderer.setSize(containerWidth, mapCanvas.height);
+                camera.aspect = containerWidth / mapCanvas.height;
+                camera.updateProjectionMatrix();
+            }
         }
     }
 
@@ -93,7 +149,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     mapSelector.appendChild(option);
                 });
                 
-                // Set iLab map as default
                 const iLabOption = Array.from(mapSelector.options).find(option => option.text === 'iLab');
                 if (iLabOption) {
                     mapSelector.value = iLabOption.value;
@@ -119,6 +174,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 items = data;
                 updateItemList();
                 drawMap();
+                updateThreeDItems();
             })
             .catch(error => {
                 console.error('Error loading items:', error);
@@ -170,6 +226,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 items = data;
                 updateItemList();
                 drawMap();
+                updateThreeDItems();
             })
             .catch(error => {
                 console.error('Error searching items:', error);
@@ -315,9 +372,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
                 items = [];
                 updateItemList();
+                updateThreeDItems();
             }
         });
     }
 
+    init3DScene();
+    animate();
     loadMaps();
 });

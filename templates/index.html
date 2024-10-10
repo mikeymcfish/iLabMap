@@ -6,6 +6,7 @@
     <title>Makerspace Map</title>
     <link rel="stylesheet" href="https://cdn.replit.com/agent/bootstrap-agent-dark-theme.min.css">
     <link rel="stylesheet" href="/static/css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
 <body>
     <div class="container-fluid">
@@ -34,7 +35,10 @@
                 <div id="itemList" class="list-group"></div>
             </div>
             <div class="col-md-8 position-relative">
-                <canvas id="mapCanvas" class="img-fluid"></canvas>
+                <div id="mapContainer">
+                    <canvas id="mapCanvas" class="img-fluid"></canvas>
+                    <div id="threeDContainer"></div>
+                </div>
                 <div id="addItemForm" class="position-absolute p-3 bg-dark rounded shadow" style="display: none;">
                     <h5>Add New Item</h5>
                     <form>
