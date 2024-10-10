@@ -12,20 +12,31 @@ document.addEventListener('DOMContentLoaded', function() {
     let items = [];
     let mapImage = new Image();
     let selectedLocation = null;
+    let scale = 1;
 
     mapImage.onload = function() {
-        mapCanvas.width = mapImage.width;
-        mapCanvas.height = mapImage.height;
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
         drawMap();
     };
     mapImage.src = '/static/img/makerspace_map.svg';
 
+    function resizeCanvas() {
+        const container = mapCanvas.parentElement;
+        const containerWidth = container.clientWidth;
+        scale = containerWidth / mapImage.width;
+        mapCanvas.width = containerWidth;
+        mapCanvas.height = mapImage.height * scale;
+        drawMap();
+    }
+
     function drawMap() {
-        ctx.drawImage(mapImage, 0, 0);
+        ctx.clearRect(0, 0, mapCanvas.width, mapCanvas.height);
+        ctx.drawImage(mapImage, 0, 0, mapCanvas.width, mapCanvas.height);
         items.forEach(item => {
             ctx.fillStyle = 'red';
             ctx.beginPath();
-            ctx.arc(item.x_coord, item.y_coord, 5, 0, 2 * Math.PI);
+            ctx.arc(item.x_coord * scale, item.y_coord * scale, 5, 0, 2 * Math.PI);
             ctx.fill();
         });
     }
@@ -56,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function() {
         drawMap();
         ctx.fillStyle = 'yellow';
         ctx.beginPath();
-        ctx.arc(item.x_coord, item.y_coord, 8, 0, 2 * Math.PI);
+        ctx.arc(item.x_coord * scale, item.y_coord * scale, 8, 0, 2 * Math.PI);
         ctx.fill();
     }
 
@@ -77,18 +88,16 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     mapCanvas.addEventListener('click', function(event) {
-        if (addItemModal._isShown) {
-            const rect = mapCanvas.getBoundingClientRect();
-            selectedLocation = {
-                x: event.clientX - rect.left,
-                y: event.clientY - rect.top
-            };
-            drawMap();
-            ctx.fillStyle = 'blue';
-            ctx.beginPath();
-            ctx.arc(selectedLocation.x, selectedLocation.y, 5, 0, 2 * Math.PI);
-            ctx.fill();
-        }
+        const rect = mapCanvas.getBoundingClientRect();
+        selectedLocation = {
+            x: (event.clientX - rect.left) / scale,
+            y: (event.clientY - rect.top) / scale
+        };
+        drawMap();
+        ctx.fillStyle = 'blue';
+        ctx.beginPath();
+        ctx.arc(selectedLocation.x * scale, selectedLocation.y * scale, 5, 0, 2 * Math.PI);
+        ctx.fill();
     });
 
     saveItemBtn.addEventListener('click', function() {

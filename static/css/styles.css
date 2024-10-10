@@ -1,9 +1,17 @@
 #mapCanvas {
     border: 1px solid #ccc;
-    max-width: 100%;
+    width: 100%;
     height: auto;
 }
 
 .list-group-item:hover {
     background-color: var(--bs-secondary);
+}
+
+.modal-open .modal {
+    pointer-events: none;
+}
+
+.modal-open .modal-dialog {
+    pointer-events: all;
 }
