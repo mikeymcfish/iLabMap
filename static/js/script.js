@@ -64,7 +64,14 @@ document.addEventListener('DOMContentLoaded', function() {
         items.forEach(item => {
             const li = document.createElement('a');
             li.classList.add('list-group-item', 'list-group-item-action');
-            li.textContent = item.name;
+            li.innerHTML = `
+                <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">${item.name}</h5>
+                </div>
+                <div class="tag-container">
+                    ${item.tags.split(',').map(tag => `<span class="item-tag">${tag.trim()}</span>`).join('')}
+                </div>
+            `;
             li.addEventListener('mouseover', () => highlightItem(item));
             li.addEventListener('mouseout', drawMap);
             itemList.appendChild(li);

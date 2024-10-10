@@ -17,3 +17,18 @@
 #addItemForm.show {
     display: block;
 }
+
+.item-tag {
+    display: inline-block;
+    padding: 0.25em 0.5em;
+    margin: 0.25em;
+    font-size: 0.75em;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.25rem;
+    background-color: var(--bs-info);
+    color: var(--bs-dark);
+}
