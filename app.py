@@ -4,6 +4,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from sqlalchemy.orm import DeclarativeBase
 from sqlalchemy.exc import SQLAlchemyError
+from sqlalchemy import or_
 
 class Base(DeclarativeBase):
     pass
@@ -95,10 +96,24 @@ def search():
     try:
         query = request.args.get('q', '')
         map_id = request.args.get('map_id')
-        items = models.Item.query.filter(
-            (models.Item.name.ilike(f'%{query}%') | models.Item.tags.ilike(f'%{query}%')) &
-            (models.Item.map_id == map_id)
-        ).all()
+        tags = request.args.get('tags', '').split(',')
+        
+        items_query = models.Item.query.filter(models.Item.map_id == map_id)
+        
+        if query:
+            items_query = items_query.filter(
+                or_(
+                    models.Item.name.ilike(f'%{query}%'),
+                    models.Item.tags.ilike(f'%{query}%')
+                )
+            )
+        
+        if tags and tags[0]:  # Check if tags is not an empty list
+            tag_filters = [models.Item.tags.ilike(f'%{tag.strip()}%') for tag in tags]
+            items_query = items_query.filter(or_(*tag_filters))
+        
+        items = items_query.all()
+        
         return jsonify([{
             "id": item.id,
             "name": item.name,

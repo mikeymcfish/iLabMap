@@ -32,3 +32,13 @@
     background-color: var(--bs-info);
     color: var(--bs-dark);
 }
+
+#tagFilterContainer .btn-outline-secondary {
+    margin-right: 0.25rem;
+    margin-bottom: 0.25rem;
+}
+
+#tagFilterContainer .btn-outline-secondary.active {
+    background-color: var(--bs-secondary);
+    color: var(--bs-light);
+}
