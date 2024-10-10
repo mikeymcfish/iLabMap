@@ -11,14 +11,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const itemNameInput = document.getElementById('itemName');
     const itemTagsInput = document.getElementById('itemTags');
     const mapSelector = document.getElementById('mapSelector');
-    const tagFilterContainer = document.getElementById('tagFilterContainer');
 
     let items = [];
     let mapImage = new Image();
     let selectedLocation = null;
     let scale = 1;
     let currentMapId = null;
-    let allTags = new Set();
 
     mapImage.onload = function() {
         resizeCanvas();
@@ -112,7 +110,6 @@ document.addEventListener('DOMContentLoaded', function() {
             .then(data => {
                 items = data;
                 updateItemList();
-                updateTagFilters();
                 drawMap();
             })
             .catch(error => {
@@ -150,56 +147,26 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    function updateTagFilters() {
-        allTags.clear();
-        items.forEach(item => {
-            item.tags.split(',').forEach(tag => allTags.add(tag.trim()));
-        });
-
-        tagFilterContainer.innerHTML = '';
-        allTags.forEach(tag => {
-            const tagBtn = document.createElement('button');
-            tagBtn.classList.add('btn', 'btn-outline-secondary', 'btn-sm', 'm-1');
-            tagBtn.textContent = tag;
-            tagBtn.addEventListener('click', () => toggleTagFilter(tagBtn, tag));
-            tagFilterContainer.appendChild(tagBtn);
-        });
-    }
-
-    function toggleTagFilter(tagBtn, tag) {
-        tagBtn.classList.toggle('active');
-        performSearch();
-    }
-
-    function getActiveTagFilters() {
-        return Array.from(tagFilterContainer.querySelectorAll('.btn.active')).map(btn => btn.textContent);
-    }
-
-    function performSearch() {
-        const query = searchInput.value.toLowerCase();
-        const activeTags = getActiveTagFilters();
-        const tagsParam = activeTags.length > 0 ? `&tags=${encodeURIComponent(activeTags.join(','))}` : '';
-        
-        fetch(`/api/search?q=${encodeURIComponent(query)}&map_id=${currentMapId}${tagsParam}`)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                return response.json();
-            })
-            .then(data => {
-                items = data;
-                updateItemList();
-                drawMap();
-            })
-            .catch(error => {
-                console.error('Error searching items:', error);
-                displayErrorMessage('Error searching items. Please try again later.');
-            });
-    }
-
     if (searchInput) {
-        searchInput.addEventListener('input', performSearch);
+        searchInput.addEventListener('input', function() {
+            const query = this.value.toLowerCase();
+            fetch(`/api/search?q=${encodeURIComponent(query)}&map_id=${currentMapId}`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    items = data;
+                    updateItemList();
+                    drawMap();
+                })
+                .catch(error => {
+                    console.error('Error searching items:', error);
+                    displayErrorMessage('Error searching items. Please try again later.');
+                });
+        });
     }
 
     if (mapCanvas) {
@@ -328,7 +295,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
                 items = [];
                 updateItemList();
-                updateTagFilters();
             }
         });
     }
