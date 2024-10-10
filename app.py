@@ -126,9 +126,9 @@ def search():
         app.logger.error(f"Error searching items: {str(e)}")
         return jsonify({"error": "An error occurred while searching for items"}), 500
 
-@app.route('/static/img/<path:filename>')
+@app.route('/static/maps/<path:filename>')
 def serve_static(filename):
-    return send_from_directory(app.static_folder + '/img', filename)
+    return send_from_directory(app.static_folder + '/maps', filename)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
