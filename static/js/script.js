@@ -207,8 +207,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (addItemForm.style.display === 'block') {
                     addItemForm.style.display = 'none';
                 } else {
-                    addItemForm.style.display = 'block';
                     positionAddItemForm();
+                    addItemForm.style.display = 'block';
                 }
             }
         });
@@ -220,7 +220,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const viewportWidth = window.innerWidth;
         const viewportHeight = window.innerHeight;
         const formWidth = 300; // Approximate width of the form
-        const formHeight = 200; // Approximate height of the form
+        const formHeight = 250; // Increased height to account for form contents
 
         let left = selectedLocation.x / scale;
         let top = selectedLocation.y / scale;
@@ -235,15 +235,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Adjust vertical position if it goes off-screen
         if (top + formHeight > viewportHeight) {
-            top = viewportHeight - formHeight - 20; // 20px padding from the bottom edge
+            top = Math.max(20, viewportHeight - formHeight - 20); // Ensure it doesn't go above the top edge
         }
         if (top < 0) {
             top = 20; // 20px padding from the top edge
         }
 
-        addItemForm.style.position = 'fixed';
-        addItemForm.style.left = `${left}px`;
-        addItemForm.style.top = `${top}px`;
+        // Convert viewport coordinates to document coordinates
+        const scrollX = window.pageXOffset || document.documentElement.scrollLeft;
+        const scrollY = window.pageYOffset || document.documentElement.scrollTop;
+
+        addItemForm.style.position = 'absolute';
+        addItemForm.style.left = `${left + scrollX}px`;
+        addItemForm.style.top = `${top + scrollY}px`;
     }
 
     if (clearBtn) {
