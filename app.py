@@ -94,7 +94,10 @@ def items():
 @app.route('/api/items/<int:item_id>', methods=['DELETE'])
 def delete_item(item_id):
     try:
-        item = models.Item.query.get_or_404(item_id)
+        item = models.Item.query.get(item_id)
+        if item is None:
+            app.logger.warning(f"Attempt to delete non-existent item with id: {item_id}")
+            return jsonify({"error": "Item not found"}), 404
         db.session.delete(item)
         db.session.commit()
         return jsonify({"message": "Item deleted successfully"}), 200

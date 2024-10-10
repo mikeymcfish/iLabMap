@@ -154,9 +154,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
                 return response.json();
             })
-            .then(() => {
+            .then(data => {
                 loadItems();
-                displaySuccessMessage('Item deleted successfully');
+                displaySuccessMessage(data.message || 'Item deleted successfully');
             })
             .catch(error => {
                 console.error('Error deleting item:', error);
