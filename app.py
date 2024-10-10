@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, send_from_directory
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.orm import DeclarativeBase
 
@@ -77,6 +77,10 @@ def search():
         "y_coord": item.y_coord,
         "map_id": item.map_id
     } for item in items])
+
+@app.route('/static/img/<path:filename>')
+def serve_static(filename):
+    return send_from_directory(app.static_folder + '/img', filename)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)

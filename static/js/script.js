@@ -21,8 +21,27 @@ document.addEventListener('DOMContentLoaded', function() {
     mapImage.onload = function() {
         resizeCanvas();
         window.addEventListener('resize', resizeCanvas);
-        drawMap();
+        try {
+            drawMap();
+        } catch (error) {
+            console.error('Error drawing map:', error);
+            displayErrorMessage('Error loading map. Please try again later.');
+        }
     };
+
+    mapImage.onerror = function() {
+        console.error('Failed to load map image');
+        displayErrorMessage('Failed to load map image. Please try again later.');
+    };
+
+    function displayErrorMessage(message) {
+        ctx.fillStyle = 'white';
+        ctx.fillRect(0, 0, mapCanvas.width, mapCanvas.height);
+        ctx.fillStyle = 'black';
+        ctx.font = '20px Arial';
+        ctx.textAlign = 'center';
+        ctx.fillText(message, mapCanvas.width / 2, mapCanvas.height / 2);
+    }
 
     function resizeCanvas() {
         const container = mapCanvas.parentElement;
