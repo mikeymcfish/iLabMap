@@ -51,12 +51,10 @@ def get_map(map_id):
 def items():
     if request.method == 'POST':
         data = request.json
-        app.logger.info(f"Received item data: {data}")
         required_fields = ['name', 'tags', 'x_coord', 'y_coord', 'map_id']
         missing_fields = [field for field in required_fields if field not in data]
         
         if missing_fields:
-            app.logger.error(f"Missing required fields: {missing_fields}")
             return jsonify({"error": f"Missing required fields: {', '.join(missing_fields)}"}), 400
         
         try:
@@ -69,7 +67,6 @@ def items():
             )
             db.session.add(new_item)
             db.session.commit()
-            app.logger.info(f"Item added successfully: {new_item.id}")
             return jsonify({"id": new_item.id}), 201
         except SQLAlchemyError as e:
             db.session.rollback()
@@ -93,18 +90,6 @@ def items():
         except SQLAlchemyError as e:
             app.logger.error(f"Error fetching items: {str(e)}")
             return jsonify({"error": "An error occurred while fetching items"}), 500
-
-@app.route('/api/items/<int:item_id>', methods=['DELETE'])
-def delete_item(item_id):
-    try:
-        item = models.Item.query.get_or_404(item_id)
-        db.session.delete(item)
-        db.session.commit()
-        return jsonify({"message": "Item deleted successfully"}), 200
-    except SQLAlchemyError as e:
-        db.session.rollback()
-        app.logger.error(f"Error deleting item: {str(e)}")
-        return jsonify({"error": "An error occurred while deleting the item"}), 500
 
 @app.route('/api/search')
 def search():
