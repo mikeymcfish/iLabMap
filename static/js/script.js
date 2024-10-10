@@ -217,17 +217,17 @@ document.addEventListener('DOMContentLoaded', function() {
     function positionAddItemForm() {
         if (!addItemForm || !selectedLocation) return;
 
+        const addButton = document.getElementById('addItemBtn');
+        const addButtonRect = addButton.getBoundingClientRect();
+
         const viewportWidth = window.innerWidth;
         const viewportHeight = window.innerHeight;
         const formWidth = 300;
         const formHeight = 250;
 
-        // Get the canvas position and dimensions
-        const canvasRect = mapCanvas.getBoundingClientRect();
-
-        // Calculate the position relative to the canvas
-        let left = (selectedLocation.x / scale) + canvasRect.left;
-        let top = (selectedLocation.y / scale) + canvasRect.top;
+        // Position the form beneath the ADD button
+        let left = addButtonRect.left;
+        let top = addButtonRect.bottom + 10; // 10px gap between button and form
 
         // Adjust horizontal position if it goes off-screen
         if (left + formWidth > viewportWidth) {
@@ -239,10 +239,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Adjust vertical position if it goes off-screen
         if (top + formHeight > viewportHeight) {
-            top = viewportHeight - formHeight - 20;
-        }
-        if (top < 0) {
-            top = 20;
+            top = Math.max(20, viewportHeight - formHeight - 20);
         }
 
         // Apply the new position
@@ -254,8 +251,7 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('Form positioning:', {
             viewportWidth,
             viewportHeight,
-            canvasRect,
-            selectedLocation,
+            addButtonRect,
             formPosition: { left, top }
         });
     }
