@@ -12,12 +12,18 @@ document.addEventListener('DOMContentLoaded', function() {
     const itemNameInput = document.getElementById('itemName');
     const itemTagsInput = document.getElementById('itemTags');
     const mapSelector = document.getElementById('mapSelector');
+    const zoomInBtn = document.getElementById('zoomInBtn');
+    const zoomOutBtn = document.getElementById('zoomOutBtn');
 
     let items = [];
     let mapImage = new Image();
     let selectedLocation = null;
     let scale = 1;
     let currentMapId = null;
+    let zoomLevel = 1;
+    let panOffset = { x: 0, y: 0 };
+    let isDragging = false;
+    let dragStart = { x: 0, y: 0 };
 
     mapImage.onload = function() {
         resizeCanvas();
@@ -44,19 +50,28 @@ document.addEventListener('DOMContentLoaded', function() {
     function drawMap() {
         if (ctx && mapImage.complete && mapImage.naturalHeight !== 0) {
             ctx.clearRect(0, 0, mapCanvas.width, mapCanvas.height);
-            ctx.drawImage(mapImage, 0, 0, mapCanvas.width, mapCanvas.height);
+            
+            ctx.save();
+            ctx.translate(panOffset.x, panOffset.y);
+            ctx.scale(zoomLevel, zoomLevel);
+            
+            ctx.drawImage(mapImage, 0, 0, mapCanvas.width / zoomLevel, mapCanvas.height / zoomLevel);
+            
             items.forEach(item => {
                 ctx.fillStyle = 'red';
                 ctx.beginPath();
-                ctx.arc(item.x_coord * scale, item.y_coord * scale, 5, 0, 2 * Math.PI);
+                ctx.arc(item.x_coord * scale, item.y_coord * scale, 5 / zoomLevel, 0, 2 * Math.PI);
                 ctx.fill();
             });
+            
             if (selectedLocation) {
                 ctx.fillStyle = 'blue';
                 ctx.beginPath();
-                ctx.arc(selectedLocation.x, selectedLocation.y, 5, 0, 2 * Math.PI);
+                ctx.arc(selectedLocation.x / zoomLevel, selectedLocation.y / zoomLevel, 5 / zoomLevel, 0, 2 * Math.PI);
                 ctx.fill();
             }
+            
+            ctx.restore();
         } else {
             console.error('Unable to draw map: Canvas context or image not ready');
         }
@@ -168,10 +183,14 @@ document.addEventListener('DOMContentLoaded', function() {
     function highlightItem(item) {
         drawMap();
         if (ctx) {
+            ctx.save();
+            ctx.translate(panOffset.x, panOffset.y);
+            ctx.scale(zoomLevel, zoomLevel);
             ctx.fillStyle = 'yellow';
             ctx.beginPath();
-            ctx.arc(item.x_coord * scale, item.y_coord * scale, 8, 0, 2 * Math.PI);
+            ctx.arc(item.x_coord * scale, item.y_coord * scale, 8 / zoomLevel, 0, 2 * Math.PI);
             ctx.fill();
+            ctx.restore();
         }
     }
 
@@ -268,13 +287,55 @@ document.addEventListener('DOMContentLoaded', function() {
             const scaleX = mapCanvas.width / rect.width;
             const scaleY = mapCanvas.height / rect.height;
             selectedLocation = {
-                x: (event.clientX - rect.left) * scaleX,
-                y: (event.clientY - rect.top) * scaleY
+                x: ((event.clientX - rect.left) * scaleX - panOffset.x) / zoomLevel,
+                y: ((event.clientY - rect.top) * scaleY - panOffset.y) / zoomLevel
             };
             drawMap();
             if (addItemBtn) {
                 addItemBtn.disabled = false;
             }
+        });
+
+        mapCanvas.addEventListener('mousedown', function(event) {
+            isDragging = true;
+            dragStart = { x: event.clientX - panOffset.x, y: event.clientY - panOffset.y };
+        });
+
+        mapCanvas.addEventListener('mousemove', function(event) {
+            if (isDragging) {
+                panOffset.x = event.clientX - dragStart.x;
+                panOffset.y = event.clientY - dragStart.y;
+                drawMap();
+            }
+        });
+
+        mapCanvas.addEventListener('mouseup', function() {
+            isDragging = false;
+        });
+
+        mapCanvas.addEventListener('mouseleave', function() {
+            isDragging = false;
+        });
+
+        mapCanvas.addEventListener('wheel', function(event) {
+            event.preventDefault();
+            const zoomIntensity = 0.1;
+            const wheel = event.deltaY < 0 ? 1 : -1;
+            const zoom = Math.exp(wheel * zoomIntensity);
+            
+            const bounds = mapCanvas.getBoundingClientRect();
+            const mouseX = event.clientX - bounds.left;
+            const mouseY = event.clientY - bounds.top;
+            
+            const widthDiff = mapCanvas.width * (1 - zoom);
+            const heightDiff = mapCanvas.height * (1 - zoom);
+            
+            panOffset.x += widthDiff * (mouseX / bounds.width);
+            panOffset.y += heightDiff * (mouseY / bounds.height);
+            
+            zoomLevel *= zoom;
+            
+            drawMap();
         });
     }
 
@@ -396,6 +457,20 @@ document.addEventListener('DOMContentLoaded', function() {
                 items = [];
                 updateItemList();
             }
+        });
+    }
+
+    if (zoomInBtn) {
+        zoomInBtn.addEventListener('click', function() {
+            zoomLevel *= 1.1;
+            drawMap();
+        });
+    }
+
+    if (zoomOutBtn) {
+        zoomOutBtn.addEventListener('click', function() {
+            zoomLevel /= 1.1;
+            drawMap();
         });
     }
 
