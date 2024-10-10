@@ -30,20 +30,6 @@ document.addEventListener('DOMContentLoaded', function() {
         displayErrorMessage('Failed to load map image. Please try again later.');
     };
 
-    function displayErrorMessage(message) {
-        if (ctx) {
-            ctx.fillStyle = 'white';
-            ctx.fillRect(0, 0, mapCanvas.width, mapCanvas.height);
-            ctx.fillStyle = 'black';
-            ctx.font = '20px Arial';
-            ctx.textAlign = 'center';
-            ctx.fillText(message, mapCanvas.width / 2, mapCanvas.height / 2);
-        } else {
-            console.error('Canvas context not available');
-        }
-        alert(message);
-    }
-
     function resizeCanvas() {
         if (mapCanvas) {
             const container = mapCanvas.parentElement;
@@ -93,7 +79,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     mapSelector.appendChild(option);
                 });
                 
-                // Set iLab map as default
                 const iLabOption = Array.from(mapSelector.options).find(option => option.text === 'iLab');
                 if (iLabOption) {
                     mapSelector.value = iLabOption.value;
@@ -146,7 +131,6 @@ document.addEventListener('DOMContentLoaded', function() {
             itemList.appendChild(li);
         });
 
-        // Add event listeners for delete buttons
         document.querySelectorAll('.delete-item').forEach(button => {
             button.addEventListener('click', function(event) {
                 event.stopPropagation();
@@ -163,16 +147,20 @@ document.addEventListener('DOMContentLoaded', function() {
             })
             .then(response => {
                 if (!response.ok) {
+                    if (response.status === 404) {
+                        throw new Error('Item not found. It may have been already deleted.');
+                    }
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
                 return response.json();
             })
             .then(() => {
-                loadItems(); // Reload the items after deletion
+                loadItems();
+                displaySuccessMessage('Item deleted successfully');
             })
             .catch(error => {
                 console.error('Error deleting item:', error);
-                displayErrorMessage('Error deleting item. Please try again later.');
+                displayErrorMessage(`Error deleting item: ${error.message}`);
             });
         }
     }
@@ -206,6 +194,71 @@ document.addEventListener('DOMContentLoaded', function() {
                 console.error('Error searching items:', error);
                 displayErrorMessage('Error searching items. Please try again later.');
             });
+    }
+
+    function displayErrorMessage(message) {
+        const errorDiv = document.createElement('div');
+        errorDiv.className = 'alert alert-danger alert-dismissible fade show';
+        errorDiv.role = 'alert';
+        errorDiv.innerHTML = `
+            ${message}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        `;
+        document.body.insertBefore(errorDiv, document.body.firstChild);
+        setTimeout(() => {
+            errorDiv.remove();
+        }, 5000);
+    }
+
+    function displaySuccessMessage(message) {
+        const successDiv = document.createElement('div');
+        successDiv.className = 'alert alert-success alert-dismissible fade show';
+        successDiv.role = 'alert';
+        successDiv.innerHTML = `
+            ${message}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        `;
+        document.body.insertBefore(successDiv, document.body.firstChild);
+        setTimeout(() => {
+            successDiv.remove();
+        }, 5000);
+    }
+
+    function positionAddItemForm() {
+        if (!addItemForm || !selectedLocation) return;
+
+        const addButton = document.getElementById('addItemBtn');
+        const addButtonRect = addButton.getBoundingClientRect();
+
+        const viewportWidth = window.innerWidth;
+        const viewportHeight = window.innerHeight;
+        const formWidth = 300;
+        const formHeight = 250;
+
+        let left = addButtonRect.left;
+        let top = addButtonRect.bottom + 10;
+
+        if (left + formWidth > viewportWidth) {
+            left = viewportWidth - formWidth - 20;
+        }
+        if (left < 0) {
+            left = 20;
+        }
+
+        if (top + formHeight > viewportHeight) {
+            top = Math.max(20, viewportHeight - formHeight - 20);
+        }
+
+        addItemForm.style.position = 'fixed';
+        addItemForm.style.left = `${left}px`;
+        addItemForm.style.top = `${top}px`;
+
+        console.log('Form positioning:', {
+            viewportWidth,
+            viewportHeight,
+            addButtonRect,
+            formPosition: { left, top }
+        });
     }
 
     if (searchInput) {
@@ -242,48 +295,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     addItemForm.style.display = 'none';
                 }
             }
-        });
-    }
-
-    function positionAddItemForm() {
-        if (!addItemForm || !selectedLocation) return;
-
-        const addButton = document.getElementById('addItemBtn');
-        const addButtonRect = addButton.getBoundingClientRect();
-
-        const viewportWidth = window.innerWidth;
-        const viewportHeight = window.innerHeight;
-        const formWidth = 300;
-        const formHeight = 250;
-
-        // Position the form beneath the ADD button
-        let left = addButtonRect.left;
-        let top = addButtonRect.bottom + 10; // 10px gap between button and form
-
-        // Adjust horizontal position if it goes off-screen
-        if (left + formWidth > viewportWidth) {
-            left = viewportWidth - formWidth - 20;
-        }
-        if (left < 0) {
-            left = 20;
-        }
-
-        // Adjust vertical position if it goes off-screen
-        if (top + formHeight > viewportHeight) {
-            top = Math.max(20, viewportHeight - formHeight - 20);
-        }
-
-        // Apply the new position
-        addItemForm.style.position = 'fixed';
-        addItemForm.style.left = `${left}px`;
-        addItemForm.style.top = `${top}px`;
-
-        // Log positioning information for debugging
-        console.log('Form positioning:', {
-            viewportWidth,
-            viewportHeight,
-            addButtonRect,
-            formPosition: { left, top }
         });
     }
 
@@ -391,14 +402,12 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Add event listener for window resize
     window.addEventListener('resize', function() {
         if (addItemForm && addItemForm.style.display === 'block') {
             positionAddItemForm();
         }
     });
 
-    // Add event listener for window scroll
     window.addEventListener('scroll', function() {
         if (addItemForm && addItemForm.style.display === 'block') {
             positionAddItemForm();
