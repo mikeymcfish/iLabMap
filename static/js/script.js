@@ -185,7 +185,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 .then(response => response.json())
                 .then(data => {
                     mapImage.src = data.svg_path;
-                    loadItems();
+                    mapImage.onload = function() {
+                        resizeCanvas();
+                        loadItems();
+                    };
                 });
         } else {
             ctx.clearRect(0, 0, mapCanvas.width, mapCanvas.height);
