@@ -18,10 +18,22 @@
     display: block;
 }
 
+.list-group-item {
+    display: flex;
+    align-items: center;
+}
+
+.tag-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin-left: 10px;
+}
+
 .item-tag {
     display: inline-block;
     padding: 0.25em 0.5em;
-    margin: 0.25em;
+    margin: 2px;
     font-size: 0.75em;
     font-weight: 700;
     line-height: 1;

@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const ctx = mapCanvas.getContext('2d');
     const itemList = document.getElementById('itemList');
     const searchInput = document.getElementById('searchInput');
+    const searchType = document.getElementById('searchType');
     const addItemBtn = document.getElementById('addItemBtn');
     const clearBtn = document.getElementById('clearBtn');
     const addItemForm = document.getElementById('addItemForm');
@@ -119,16 +120,17 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function updateItemList() {
+        items.sort((a, b) => a.name.localeCompare(b.name));
         itemList.innerHTML = '';
         items.forEach(item => {
             const li = document.createElement('a');
             li.classList.add('list-group-item', 'list-group-item-action');
             li.innerHTML = `
-                <div class="d-flex w-100 justify-content-between">
-                    <h5 class="mb-1">${item.name}</h5>
-                </div>
-                <div class="tag-container">
-                    ${item.tags.split(',').map(tag => `<span class="item-tag">${tag.trim()}</span>`).join('')}
+                <div class="d-flex w-100 justify-content-between align-items-center">
+                    <h5 class="mb-0">${item.name}</h5>
+                    <div class="tag-container">
+                        ${item.tags.split(',').map(tag => `<span class="item-tag">${tag.trim()}</span>`).join('')}
+                    </div>
                 </div>
             `;
             li.addEventListener('mouseover', () => highlightItem(item));
@@ -147,26 +149,33 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    function performSearch() {
+        const query = searchInput.value.toLowerCase();
+        const type = searchType.value;
+        fetch(`/api/search?q=${encodeURIComponent(query)}&type=${type}&map_id=${currentMapId}`)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                items = data;
+                updateItemList();
+                drawMap();
+            })
+            .catch(error => {
+                console.error('Error searching items:', error);
+                displayErrorMessage('Error searching items. Please try again later.');
+            });
+    }
+
     if (searchInput) {
-        searchInput.addEventListener('input', function() {
-            const query = this.value.toLowerCase();
-            fetch(`/api/search?q=${encodeURIComponent(query)}&map_id=${currentMapId}`)
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error(`HTTP error! status: ${response.status}`);
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                    items = data;
-                    updateItemList();
-                    drawMap();
-                })
-                .catch(error => {
-                    console.error('Error searching items:', error);
-                    displayErrorMessage('Error searching items. Please try again later.');
-                });
-        });
+        searchInput.addEventListener('input', performSearch);
+    }
+
+    if (searchType) {
+        searchType.addEventListener('change', performSearch);
     }
 
     if (mapCanvas) {
