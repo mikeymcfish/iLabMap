@@ -1,0 +1,9 @@
+#mapCanvas {
+    border: 1px solid #ccc;
+    max-width: 100%;
+    height: auto;
+}
+
+.list-group-item:hover {
+    background-color: var(--bs-secondary);
+}
