@@ -204,11 +204,11 @@ document.addEventListener('DOMContentLoaded', function() {
     if (addItemBtn) {
         addItemBtn.addEventListener('click', function() {
             if (selectedLocation && addItemForm) {
-                if (addItemForm.style.display === 'block') {
-                    addItemForm.style.display = 'none';
-                } else {
+                if (addItemForm.style.display === 'none' || addItemForm.style.display === '') {
                     positionAddItemForm();
                     addItemForm.style.display = 'block';
+                } else {
+                    addItemForm.style.display = 'none';
                 }
             }
         });
@@ -219,35 +219,45 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const viewportWidth = window.innerWidth;
         const viewportHeight = window.innerHeight;
-        const formWidth = 300; // Approximate width of the form
-        const formHeight = 250; // Increased height to account for form contents
+        const formWidth = 300;
+        const formHeight = 250;
 
-        let left = selectedLocation.x / scale;
-        let top = selectedLocation.y / scale;
+        // Get the canvas position and dimensions
+        const canvasRect = mapCanvas.getBoundingClientRect();
+
+        // Calculate the position relative to the canvas
+        let left = (selectedLocation.x / scale) + canvasRect.left;
+        let top = (selectedLocation.y / scale) + canvasRect.top;
 
         // Adjust horizontal position if it goes off-screen
         if (left + formWidth > viewportWidth) {
-            left = viewportWidth - formWidth - 20; // 20px padding from the right edge
+            left = viewportWidth - formWidth - 20;
         }
         if (left < 0) {
-            left = 20; // 20px padding from the left edge
+            left = 20;
         }
 
         // Adjust vertical position if it goes off-screen
         if (top + formHeight > viewportHeight) {
-            top = Math.max(20, viewportHeight - formHeight - 20); // Ensure it doesn't go above the top edge
+            top = viewportHeight - formHeight - 20;
         }
         if (top < 0) {
-            top = 20; // 20px padding from the top edge
+            top = 20;
         }
 
-        // Convert viewport coordinates to document coordinates
-        const scrollX = window.pageXOffset || document.documentElement.scrollLeft;
-        const scrollY = window.pageYOffset || document.documentElement.scrollTop;
+        // Apply the new position
+        addItemForm.style.position = 'fixed';
+        addItemForm.style.left = `${left}px`;
+        addItemForm.style.top = `${top}px`;
 
-        addItemForm.style.position = 'absolute';
-        addItemForm.style.left = `${left + scrollX}px`;
-        addItemForm.style.top = `${top + scrollY}px`;
+        // Log positioning information for debugging
+        console.log('Form positioning:', {
+            viewportWidth,
+            viewportHeight,
+            canvasRect,
+            selectedLocation,
+            formPosition: { left, top }
+        });
     }
 
     if (clearBtn) {
@@ -356,6 +366,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Add event listener for window resize
     window.addEventListener('resize', function() {
+        if (addItemForm && addItemForm.style.display === 'block') {
+            positionAddItemForm();
+        }
+    });
+
+    // Add event listener for window scroll
+    window.addEventListener('scroll', function() {
         if (addItemForm && addItemForm.style.display === 'block') {
             positionAddItemForm();
         }
