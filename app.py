@@ -41,6 +41,12 @@ def get_map(map_id):
 def items():
     if request.method == 'POST':
         data = request.json
+        required_fields = ['name', 'tags', 'x_coord', 'y_coord', 'map_id']
+        missing_fields = [field for field in required_fields if field not in data]
+        
+        if missing_fields:
+            return jsonify({"success": False, "error": f"Missing required fields: {', '.join(missing_fields)}"}), 400
+        
         try:
             new_item = models.Item(
                 name=data['name'],
@@ -54,18 +60,26 @@ def items():
             return jsonify({"success": True, "id": new_item.id}), 201
         except Exception as e:
             db.session.rollback()
-            return jsonify({"success": False, "error": str(e)}), 400
+            app.logger.error(f"Error adding item: {str(e)}")
+            return jsonify({"success": False, "error": "An error occurred while adding the item. Please try again."}), 500
     else:
-        map_id = request.args.get('map_id')
-        items = models.Item.query.filter_by(map_id=map_id).all()
-        return jsonify([{
-            "id": item.id,
-            "name": item.name,
-            "tags": item.tags,
-            "x_coord": item.x_coord,
-            "y_coord": item.y_coord,
-            "map_id": item.map_id
-        } for item in items])
+        try:
+            map_id = request.args.get('map_id')
+            if not map_id:
+                return jsonify({"success": False, "error": "map_id is required"}), 400
+            
+            items = models.Item.query.filter_by(map_id=map_id).all()
+            return jsonify([{
+                "id": item.id,
+                "name": item.name,
+                "tags": item.tags,
+                "x_coord": item.x_coord,
+                "y_coord": item.y_coord,
+                "map_id": item.map_id
+            } for item in items])
+        except Exception as e:
+            app.logger.error(f"Error fetching items: {str(e)}")
+            return jsonify({"success": False, "error": "An error occurred while fetching items. Please try again."}), 500
 
 @app.route('/api/search')
 def search():

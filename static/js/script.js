@@ -40,6 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             console.error('Canvas context not available');
         }
+        alert(message);
     }
 
     function resizeCanvas() {
@@ -95,15 +96,23 @@ document.addEventListener('DOMContentLoaded', function() {
     function loadItems() {
         if (!currentMapId) return;
         fetch(`/api/items?map_id=${currentMapId}`)
-            .then(response => response.json())
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
             .then(data => {
+                if (data.success === false) {
+                    throw new Error(data.error || 'Unknown error occurred');
+                }
                 items = data;
                 updateItemList();
                 drawMap();
             })
             .catch(error => {
                 console.error('Error loading items:', error);
-                displayErrorMessage('Error loading items. Please try again later.');
+                displayErrorMessage(`Error loading items: ${error.message}`);
             });
     }
 
@@ -214,7 +223,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 },
                 body: JSON.stringify(newItem),
             })
-            .then(response => response.json())
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
             .then(data => {
                 if (data.success) {
                     if (addItemForm) {
@@ -237,7 +251,7 @@ document.addEventListener('DOMContentLoaded', function() {
             })
             .catch(error => {
                 console.error('Error adding item:', error);
-                alert('Error adding item. Please try again.');
+                displayErrorMessage(`Error adding item: ${error.message}`);
             });
         });
     }
