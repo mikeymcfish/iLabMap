@@ -77,7 +77,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function loadMaps() {
         fetch('/api/maps')
-            .then(response => response.json())
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
             .then(data => {
                 mapSelector.innerHTML = '<option value="">Select a map</option>';
                 data.forEach(map => {
@@ -103,16 +108,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 return response.json();
             })
             .then(data => {
-                if (data.success === false) {
-                    throw new Error(data.error || 'Unknown error occurred');
-                }
                 items = data;
                 updateItemList();
                 drawMap();
             })
             .catch(error => {
                 console.error('Error loading items:', error);
-                displayErrorMessage(`Error loading items: ${error.message}`);
+                displayErrorMessage('Error loading items. Please try again later.');
             });
     }
 
@@ -149,7 +151,12 @@ document.addEventListener('DOMContentLoaded', function() {
         searchInput.addEventListener('input', function() {
             const query = this.value.toLowerCase();
             fetch(`/api/search?q=${encodeURIComponent(query)}&map_id=${currentMapId}`)
-                .then(response => response.json())
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    return response.json();
+                })
                 .then(data => {
                     items = data;
                     updateItemList();
@@ -157,7 +164,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 })
                 .catch(error => {
                     console.error('Error searching items:', error);
-                    displayErrorMessage('Error searching items. Please try again.');
+                    displayErrorMessage('Error searching items. Please try again later.');
                 });
         });
     }
@@ -204,7 +211,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (saveItemBtn) {
         saveItemBtn.addEventListener('click', function() {
             if (!selectedLocation || !currentMapId) {
-                alert('Please select a location on the map and ensure a map is selected.');
+                displayErrorMessage('Please select a location on the map and ensure a map is selected.');
                 return;
             }
 
@@ -230,28 +237,24 @@ document.addEventListener('DOMContentLoaded', function() {
                 return response.json();
             })
             .then(data => {
-                if (data.success) {
-                    if (addItemForm) {
-                        addItemForm.style.display = 'none';
-                    }
-                    loadItems();
-                    if (itemNameInput) {
-                        itemNameInput.value = '';
-                    }
-                    if (itemTagsInput) {
-                        itemTagsInput.value = '';
-                    }
-                    selectedLocation = null;
-                    if (addItemBtn) {
-                        addItemBtn.disabled = true;
-                    }
-                } else {
-                    throw new Error(data.error || 'Failed to add item');
+                if (addItemForm) {
+                    addItemForm.style.display = 'none';
+                }
+                loadItems();
+                if (itemNameInput) {
+                    itemNameInput.value = '';
+                }
+                if (itemTagsInput) {
+                    itemTagsInput.value = '';
+                }
+                selectedLocation = null;
+                if (addItemBtn) {
+                    addItemBtn.disabled = true;
                 }
             })
             .catch(error => {
                 console.error('Error adding item:', error);
-                displayErrorMessage(`Error adding item: ${error.message}`);
+                displayErrorMessage('Error adding item. Please try again later.');
             });
         });
     }
@@ -269,7 +272,12 @@ document.addEventListener('DOMContentLoaded', function() {
             currentMapId = this.value;
             if (currentMapId) {
                 fetch(`/api/maps/${currentMapId}`)
-                    .then(response => response.json())
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error(`HTTP error! status: ${response.status}`);
+                        }
+                        return response.json();
+                    })
                     .then(data => {
                         mapImage.src = data.svg_path;
                         mapImage.onload = function() {
