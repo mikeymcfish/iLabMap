@@ -26,9 +26,9 @@ document.addEventListener('DOMContentLoaded', function() {
     function resizeCanvas() {
         const container = mapCanvas.parentElement;
         const containerWidth = container.clientWidth;
-        scale = containerWidth / mapImage.width;
         mapCanvas.width = containerWidth;
-        mapCanvas.height = mapImage.height * scale;
+        mapCanvas.height = (mapImage.height / mapImage.width) * containerWidth;
+        scale = containerWidth / mapImage.width;
         drawMap();
     }
 
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (selectedLocation) {
             ctx.fillStyle = 'blue';
             ctx.beginPath();
-            ctx.arc(selectedLocation.x * scale, selectedLocation.y * scale, 5, 0, 2 * Math.PI);
+            ctx.arc(selectedLocation.x, selectedLocation.y, 5, 0, 2 * Math.PI);
             ctx.fill();
         }
     }
@@ -99,9 +99,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     mapCanvas.addEventListener('click', function(event) {
         const rect = mapCanvas.getBoundingClientRect();
+        const scaleX = mapCanvas.width / rect.width;
+        const scaleY = mapCanvas.height / rect.height;
         selectedLocation = {
-            x: (event.clientX - rect.left) / scale,
-            y: (event.clientY - rect.top) / scale
+            x: (event.clientX - rect.left) * scaleX,
+            y: (event.clientY - rect.top) * scaleY
         };
         drawMap();
         addItemBtn.disabled = false;
@@ -110,8 +112,8 @@ document.addEventListener('DOMContentLoaded', function() {
     addItemBtn.addEventListener('click', function() {
         if (selectedLocation) {
             addItemForm.style.display = 'block';
-            addItemForm.style.left = `${selectedLocation.x * scale}px`;
-            addItemForm.style.top = `${selectedLocation.y * scale}px`;
+            addItemForm.style.left = `${selectedLocation.x / scale}px`;
+            addItemForm.style.top = `${selectedLocation.y / scale}px`;
         }
     });
 
@@ -131,8 +133,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const newItem = {
             name: itemNameInput.value,
             tags: itemTagsInput.value,
-            x_coord: selectedLocation.x,
-            y_coord: selectedLocation.y
+            x_coord: selectedLocation.x / scale,
+            y_coord: selectedLocation.y / scale
         };
 
         fetch('/api/items', {
