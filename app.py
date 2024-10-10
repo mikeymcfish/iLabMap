@@ -1,12 +1,14 @@
 import os
 from flask import Flask, render_template, request, jsonify, send_from_directory
 from flask_sqlalchemy import SQLAlchemy
+from flask_migrate import Migrate
 from sqlalchemy.orm import DeclarativeBase
 
 class Base(DeclarativeBase):
     pass
 
 db = SQLAlchemy(model_class=Base)
+migrate = Migrate()
 app = Flask(__name__)
 
 app.secret_key = os.environ.get("FLASK_SECRET_KEY") or "a secret key"
@@ -16,10 +18,10 @@ app.config["SQLALCHEMY_ENGINE_OPTIONS"] = {
     "pool_pre_ping": True,
 }
 db.init_app(app)
+migrate.init_app(app, db)
 
 with app.app_context():
     import models
-    db.create_all()
 
 @app.route('/')
 def index():
@@ -39,16 +41,20 @@ def get_map(map_id):
 def items():
     if request.method == 'POST':
         data = request.json
-        new_item = models.Item(
-            name=data['name'],
-            tags=data['tags'],
-            x_coord=data['x_coord'],
-            y_coord=data['y_coord'],
-            map_id=data['map_id']
-        )
-        db.session.add(new_item)
-        db.session.commit()
-        return jsonify({"success": True, "id": new_item.id}), 201
+        try:
+            new_item = models.Item(
+                name=data['name'],
+                tags=data['tags'],
+                x_coord=data['x_coord'],
+                y_coord=data['y_coord'],
+                map_id=data['map_id']
+            )
+            db.session.add(new_item)
+            db.session.commit()
+            return jsonify({"success": True, "id": new_item.id}), 201
+        except Exception as e:
+            db.session.rollback()
+            return jsonify({"success": False, "error": str(e)}), 400
     else:
         map_id = request.args.get('map_id')
         items = models.Item.query.filter_by(map_id=map_id).all()

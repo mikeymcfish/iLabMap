@@ -4,6 +4,7 @@ class Map(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(100), nullable=False)
     svg_path = db.Column(db.String(200), nullable=False)
+    items = db.relationship('Item', backref='map', lazy=True)
 
 class Item(db.Model):
     id = db.Column(db.Integer, primary_key=True)
