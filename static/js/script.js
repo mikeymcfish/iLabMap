@@ -252,13 +252,6 @@ document.addEventListener('DOMContentLoaded', function() {
         addItemForm.style.position = 'fixed';
         addItemForm.style.left = `${left}px`;
         addItemForm.style.top = `${top}px`;
-
-        console.log('Form positioning:', {
-            viewportWidth,
-            viewportHeight,
-            addButtonRect,
-            formPosition: { left, top }
-        });
     }
 
     if (searchInput) {
@@ -354,6 +347,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (addItemBtn) {
                     addItemBtn.disabled = true;
                 }
+                displaySuccessMessage('Item added successfully');
             })
             .catch(error => {
                 console.error('Error adding item:', error);
@@ -387,6 +381,9 @@ document.addEventListener('DOMContentLoaded', function() {
                             resizeCanvas();
                             loadItems();
                         };
+                        if (mapCanvas) {
+                            mapCanvas.style.backgroundColor = data.background_color;
+                        }
                     })
                     .catch(error => {
                         console.error('Error loading map:', error);

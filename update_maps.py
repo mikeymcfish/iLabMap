@@ -1,20 +1,19 @@
 from app import app, db
 from models import Map
 
-def update_map_names():
+def update_maps():
     with app.app_context():
-        ilab_map = Map.query.filter_by(name="Main Floor").first()
+        ilab_map = Map.query.filter_by(name="iLab").first()
         if ilab_map:
-            ilab_map.name = "iLab"
-            ilab_map.svg_path = "/static/maps/main.JPG"
+            ilab_map.svg_path = "/static/maps/main.svg"
+            ilab_map.background_color = "white"
 
-        closet_map = Map.query.filter_by(name="Second Floor").first()
+        closet_map = Map.query.filter_by(name="Closet").first()
         if closet_map:
-            closet_map.name = "Closet"
-            closet_map.svg_path = "/static/maps/closet.svg"
+            closet_map.background_color = "white"
 
         db.session.commit()
-        print("Map names and paths updated successfully.")
+        print("Maps updated successfully.")
 
 if __name__ == "__main__":
-    update_map_names()
+    update_maps()

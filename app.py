@@ -33,7 +33,7 @@ def index():
 def get_maps():
     try:
         maps = models.Map.query.all()
-        return jsonify([{"id": map.id, "name": map.name} for map in maps])
+        return jsonify([{"id": map.id, "name": map.name, "background_color": map.background_color} for map in maps])
     except SQLAlchemyError as e:
         app.logger.error(f"Error fetching maps: {str(e)}")
         return jsonify({"error": "An error occurred while fetching maps"}), 500
@@ -42,7 +42,12 @@ def get_maps():
 def get_map(map_id):
     try:
         map = models.Map.query.get_or_404(map_id)
-        return jsonify({"id": map.id, "name": map.name, "svg_path": map.svg_path})
+        return jsonify({
+            "id": map.id,
+            "name": map.name,
+            "svg_path": map.svg_path,
+            "background_color": map.background_color
+        })
     except SQLAlchemyError as e:
         app.logger.error(f"Error fetching map: {str(e)}")
         return jsonify({"error": "An error occurred while fetching the map"}), 500
@@ -100,6 +105,7 @@ def delete_item(item_id):
             return jsonify({"error": "Item not found"}), 404
         db.session.delete(item)
         db.session.commit()
+        app.logger.info(f"Item with id {item_id} deleted successfully")
         return jsonify({"message": "Item deleted successfully"}), 200
     except SQLAlchemyError as e:
         db.session.rollback()
