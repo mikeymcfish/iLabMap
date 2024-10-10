@@ -92,6 +92,13 @@ document.addEventListener('DOMContentLoaded', function() {
                     option.textContent = map.name;
                     mapSelector.appendChild(option);
                 });
+                
+                // Set iLab map as default
+                const iLabOption = Array.from(mapSelector.options).find(option => option.text === 'iLab');
+                if (iLabOption) {
+                    mapSelector.value = iLabOption.value;
+                    mapSelector.dispatchEvent(new Event('change'));
+                }
             })
             .catch(error => {
                 console.error('Error loading maps:', error);
@@ -197,9 +204,13 @@ document.addEventListener('DOMContentLoaded', function() {
     if (addItemBtn) {
         addItemBtn.addEventListener('click', function() {
             if (selectedLocation && addItemForm) {
-                addItemForm.style.display = 'block';
-                addItemForm.style.left = `${selectedLocation.x / scale}px`;
-                addItemForm.style.top = `${selectedLocation.y / scale}px`;
+                if (addItemForm.style.display === 'block') {
+                    addItemForm.style.display = 'none';
+                } else {
+                    addItemForm.style.display = 'block';
+                    addItemForm.style.left = `${selectedLocation.x / scale}px`;
+                    addItemForm.style.top = `${selectedLocation.y / scale}px`;
+                }
             }
         });
     }
