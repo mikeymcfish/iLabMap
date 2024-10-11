@@ -1,0 +1,23 @@
+2024-10-11 12:02:25,478 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-11 12:02:25,479 - INFO - Added job "create_backup" to job store "default"
+2024-10-11 12:02:25,479 - INFO - Scheduler started
+2024-10-11 12:02:25,480 - INFO - Scheduler started
+2024-10-11 12:02:25,482 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.196.9:5000
+2024-10-11 12:02:25,483 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-11 12:02:26,170 - INFO - 172.31.196.9 - - [11/Oct/2024 12:02:26] "GET / HTTP/1.1" 200 -
+2024-10-11 12:02:26,775 - INFO - 172.31.196.9 - - [11/Oct/2024 12:02:26] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-10-11 12:02:26,884 - INFO - 172.31.196.9 - - [11/Oct/2024 12:02:26] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2024-10-11 12:02:27,321 - INFO - 172.31.196.9 - - [11/Oct/2024 12:02:27] "GET /api/maps HTTP/1.1" 200 -
+2024-10-11 12:02:27,706 - INFO - 172.31.196.9 - - [11/Oct/2024 12:02:27] "GET /api/maps/1 HTTP/1.1" 200 -
+2024-10-11 12:02:27,792 - INFO - 172.31.196.9 - - [11/Oct/2024 12:02:27] "[36mGET /static/maps/main.svg HTTP/1.1[0m" 304 -
+2024-10-11 12:02:28,127 - INFO - 172.31.196.9 - - [11/Oct/2024 12:02:28] "GET /api/items?map_id=1 HTTP/1.1" 200 -
+2024-10-11 12:02:37,827 - INFO - 172.31.196.9 - - [11/Oct/2024 12:02:37] "GET / HTTP/1.1" 200 -
+2024-10-11 12:02:37,836 - INFO - 172.31.196.9 - - [11/Oct/2024 12:02:37] "GET /static/css/styles.css HTTP/1.1" 200 -
+2024-10-11 12:02:37,853 - INFO - 172.31.196.9 - - [11/Oct/2024 12:02:37] "GET /static/js/script.js HTTP/1.1" 200 -
+2024-10-11 12:02:38,178 - INFO - 172.31.196.9 - - [11/Oct/2024 12:02:38] "GET /api/maps HTTP/1.1" 200 -
+2024-10-11 12:02:38,411 - INFO - 172.31.196.9 - - [11/Oct/2024 12:02:38] "GET /api/maps/1 HTTP/1.1" 200 -
+2024-10-11 12:02:38,417 - INFO - 172.31.196.9 - - [11/Oct/2024 12:02:38] "GET /static/maps/main.svg HTTP/1.1" 200 -
+2024-10-11 12:02:38,676 - INFO - 172.31.196.9 - - [11/Oct/2024 12:02:38] "GET /api/items?map_id=1 HTTP/1.1" 200 -
