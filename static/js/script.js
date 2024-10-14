@@ -149,17 +149,30 @@ document.addEventListener('DOMContentLoaded', function() {
             imageElement.style.marginRight = '10px';  // Margin between image and name
 
             // Item name
-            const nameElement = document.createElement('h4');
-            nameElement.classList.add('mb-1', 'flex-grow-1');
+            const infoElement = document.createElement('div');
+            infoElement.classList.add('d-flex', 'flex-column', 'info-box', 'flex-grow-1');
+
+            // Create tag container beneath the main row
+            const tagContainer = document.createElement('div');
+            tagContainer.classList.add('tag-container', 'mt-2');
+            tagContainer.innerHTML = item.tags.split(',')
+                .map(tag => `<span class="item-tag">${tag.trim()}</span>`)
+                .join('');
+            
+            const nameElement = document.createElement('div');
+            nameElement.classList.add('mb-1', 'flex-grow-1', 'item-name');
             if (item.quantity !== null && item.quantity !== 1) {
                 nameElement.textContent = item.name + " (" + item.quantity + ")";
             } else {
                 nameElement.textContent = item.name;
             }
+            
 
             // Append image and name to imageNameContainer
             imageNameContainer.appendChild(imageElement);
-            imageNameContainer.appendChild(nameElement);
+            infoElement.appendChild(nameElement);
+            infoElement.appendChild(tagContainer);
+            imageNameContainer.appendChild(infoElement);
 
             
             // Check for item warnings and create badges
@@ -175,7 +188,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             }
 
-            
+            const buttons = document.createElement('div');
             // Edit button
             const editButton = document.createElement('button');
             editButton.classList.add('btn', 'btn-secondary', 'btn-sm', 'edit-item');
@@ -190,19 +203,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Append imageNameContainer and delete button to mainContent
             mainContent.appendChild(imageNameContainer);
-            mainContent.appendChild(editButton);
-            mainContent.appendChild(deleteButton);
+            buttons.appendChild(editButton);
+            buttons.appendChild(deleteButton);
+            mainContent.appendChild(buttons);
 
-            // Create tag container beneath the main row
-            const tagContainer = document.createElement('div');
-            tagContainer.classList.add('tag-container', 'mt-2');
-            tagContainer.innerHTML = item.tags.split(',')
-                .map(tag => `<span class="item-tag">${tag.trim()}</span>`)
-                .join('');
+            // // Create tag container beneath the main row
+            // const tagContainer = document.createElement('div');
+            // tagContainer.classList.add('tag-container', 'mt-2');
+            // tagContainer.innerHTML = item.tags.split(',')
+            //     .map(tag => `<span class="item-tag">${tag.trim()}</span>`)
+            //     .join('');
 
             // Append mainContent and tagContainer to the list item
             li.appendChild(mainContent);
-            li.appendChild(tagContainer);
+            // li.appendChild(tagContainer);
 
             // Add event listeners for highlight and remove
             li.addEventListener('mouseover', () => highlightItem(item));
@@ -447,7 +461,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 itemColorInput.value = 'red';
                 itemZoneInput.value = '';
                 itemQuantityInput.value = 1;
-                document.querySelectorAll('input[name="itemwarninginput"]:checked').forEach(input => input.checked = false); // Uncheck checkboxes
+                document.querySelectorAll('input[type="checkbox"]:checked').forEach(input => input.checked = false); // Uncheck checkboxes
 
 
                 selectedLocation = null;

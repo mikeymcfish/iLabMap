@@ -7,12 +7,15 @@
 .list-group-item:hover {
     background-color: var(--bs-secondary);
 }
+.list-group-item {
+    border: none !important;
+}
 
 #addItemForm {
     max-width: 300px;
     z-index: 1000;
     display: none;
-    background-color: var(--bs-dark);
+    background-color: var(--bs-light);
     border: 1px solid var(--bs-secondary);
     border-radius: 5px;
     padding: 15px;
@@ -45,23 +48,31 @@
 .tag-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-end;
-    margin-left: 10px;
+    justify-content: flex-start;
     width: 100%;
+    margin-top: 0px !important;
 }
 
 .item-tag {
     display: inline-block;
     padding: 0.25em 0.5em; /* Adjust padding for size */
-    margin: 2px; /* Space between tags */
-    font-size: 0.75em; /* Relative size of text */
-    font-weight: 700; /* Make text bold */
+    margin-right: 2px; /* Space between tags */
+    font-size: 1em; /* Relative size of text */
+    font-weight: 600; /* Make text bold */
     line-height: 1;
     text-align: center;
     white-space: nowrap;
-    vertical-align: baseline;
+    vertical-align: center;
     border-radius: 0.25rem; /* Rounded corners */
     background-color: var(--bs-info); /* Background color */
     color: var(--bs-dark); /* Text color */
     border: 1px solid var(--bs-dark); /* Optional border */
+}
+
+.selector-box {
+    margin-top: 20px;
+}
+
+.item-name {
+    font-size: 1.2em;
 }
