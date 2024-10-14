@@ -1,3 +1,4 @@
+# models.py
 from app import db
 
 class Map(db.Model):
@@ -14,3 +15,4 @@ class Item(db.Model):
     x_coord = db.Column(db.Float, nullable=False)
     y_coord = db.Column(db.Float, nullable=False)
     map_id = db.Column(db.Integer, db.ForeignKey('map.id'), nullable=False)
+    image_path = db.Column(db.String(200), nullable=True)

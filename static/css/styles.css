@@ -33,6 +33,7 @@
     flex-wrap: wrap;
     justify-content: flex-end;
     margin-left: 10px;
+    width: 100%;
 }
 
 .item-tag {

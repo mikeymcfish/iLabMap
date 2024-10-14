@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const cancelAddBtn = document.getElementById('cancelAddBtn');
     const itemNameInput = document.getElementById('itemName');
     const itemTagsInput = document.getElementById('itemTags');
+    const itemImageInput = document.getElementById('itemImage');
     const mapSelector = document.getElementById('mapSelector');
 
     let items = [];
@@ -29,6 +30,19 @@ document.addEventListener('DOMContentLoaded', function() {
         console.error('Failed to load map image');
         displayErrorMessage('Failed to load map image. Please try again later.');
     };
+
+    function submitOnEnter(event) {
+        if (event.key === 'Enter') {
+            event.preventDefault();
+            saveItemBtn.click();
+        }
+    }
+    if (itemNameInput) {
+        itemNameInput.addEventListener('keydown', submitOnEnter);
+    }
+    if (itemTagsInput) {
+        itemTagsInput.addEventListener('keydown', submitOnEnter);
+    }
 
     function resizeCanvas() {
         if (mapCanvas) {
@@ -114,23 +128,66 @@ document.addEventListener('DOMContentLoaded', function() {
     function updateItemList() {
         items.sort((a, b) => a.name.localeCompare(b.name));
         itemList.innerHTML = '';
+
         items.forEach(item => {
             const li = document.createElement('div');
-            li.classList.add('list-group-item', 'd-flex', 'justify-content-between', 'align-items-center');
-            li.innerHTML = `
-                <div>
-                    <h5 class="mb-1">${item.name}</h5>
-                    <div class="tag-container">
-                        ${item.tags.split(',').map(tag => `<span class="item-tag">${tag.trim()}</span>`).join('')}
-                    </div>
-                </div>
-                <button class="btn btn-danger btn-sm delete-item" data-item-id="${item.id}">Delete</button>
-            `;
+            li.classList.add('list-group-item', 'd-flex', 'flex-column');
+
+            // Create the main content row for image, name, and delete button
+            const mainContent = document.createElement('div');
+            mainContent.classList.add('d-flex', 'align-items-center', 'justify-content-between');
+
+            // Image and name container
+            const imageNameContainer = document.createElement('div');
+            imageNameContainer.classList.add('d-flex', 'align-items-center', 'flex-grow-1');
+            mainContent.style.width = '100%';
+            
+            // Image element
+            const imageElement = document.createElement('img');
+            imageElement.src = item.image_path;
+            imageElement.width = 75;
+            imageElement.height = 75;
+            imageElement.alt = item.name;
+            imageElement.style.marginRight = '10px';  // Margin between image and name
+
+            // Item name
+            const nameElement = document.createElement('h4');
+            nameElement.classList.add('mb-1', 'flex-grow-1');
+            nameElement.textContent = item.name;
+
+            // Append image and name to imageNameContainer
+            imageNameContainer.appendChild(imageElement);
+            imageNameContainer.appendChild(nameElement);
+
+            // Delete button
+            const deleteButton = document.createElement('button');
+            deleteButton.classList.add('btn', 'btn-danger', 'btn-sm', 'delete-item');
+            deleteButton.innerHTML = '<i class="fas fa-trash-alt"></i>'; // Use Font Awesome trash icon
+            deleteButton.setAttribute('data-item-id', item.id);
+
+            // Append imageNameContainer and delete button to mainContent
+            mainContent.appendChild(imageNameContainer);
+            mainContent.appendChild(deleteButton);
+
+            // Create tag container beneath the main row
+            const tagContainer = document.createElement('div');
+            tagContainer.classList.add('tag-container', 'mt-2');
+            tagContainer.innerHTML = item.tags.split(',')
+                .map(tag => `<span class="item-tag">${tag.trim()}</span>`)
+                .join('');
+
+            // Append mainContent and tagContainer to the list item
+            li.appendChild(mainContent);
+            li.appendChild(tagContainer);
+
+            // Add event listeners for highlight and remove
             li.addEventListener('mouseover', () => highlightItem(item));
             li.addEventListener('mouseout', drawMap);
+
             itemList.appendChild(li);
         });
 
+        // Add delete button functionality
         document.querySelectorAll('.delete-item').forEach(button => {
             button.addEventListener('click', function(event) {
                 event.stopPropagation();
@@ -139,6 +196,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
+
 
     function deleteItem(itemId) {
         if (confirm('Are you sure you want to delete this item?')) {
@@ -311,20 +369,24 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
 
-            const newItem = {
-                name: itemNameInput.value,
-                tags: itemTagsInput.value,
-                x_coord: selectedLocation.x / scale,
-                y_coord: selectedLocation.y / scale,
-                map_id: currentMapId
-            };
+            // Create a FormData object to hold the form fields and image
+            const formData = new FormData();
+            formData.append('name', itemNameInput.value);
+            formData.append('tags', itemTagsInput.value);
+            formData.append('x_coord', selectedLocation.x / scale);
+            formData.append('y_coord', selectedLocation.y / scale);
+            formData.append('map_id', currentMapId);
 
+            // Add image to FormData if it's selected
+            const itemImageFile = document.getElementById('itemImage').files[0];
+            if (itemImageFile) {
+                formData.append('image', itemImageFile);
+            }
+
+            // Send the request to the backend
             fetch('/api/items', {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(newItem),
+                body: formData
             })
             .then(response => {
                 if (!response.ok) {
@@ -343,6 +405,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (itemTagsInput) {
                     itemTagsInput.value = '';
                 }
+                if (itemImageInput) {
+                    itemImageInput.value = '';
+                }
                 selectedLocation = null;
                 if (addItemBtn) {
                     addItemBtn.disabled = true;
@@ -355,6 +420,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
+
 
     if (cancelAddBtn) {
         cancelAddBtn.addEventListener('click', function() {
