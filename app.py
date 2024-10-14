@@ -29,6 +29,22 @@ with app.app_context():
 def index():
     return render_template('index.html')
 
+@app.route('/api/items/<int:item_id>', methods=['PUT'])
+def update_item(item_id):
+    try:
+        item = models.Item.query.get_or_404(item_id)
+        data = request.json
+        item.name = data.get('name', item.name)
+        item.tags = data.get('tags', item.tags)
+        item.x_coord = data.get('x_coord', item.x_coord)
+        item.y_coord = data.get('y_coord', item.y_coord)
+        db.session.commit()
+        return jsonify({"message": "Item updated successfully"}), 200
+    except SQLAlchemyError as e:
+        db.session.rollback()
+        app.logger.error(f"Error updating item: {str(e)}")
+        return jsonify({"error": "An error occurred while updating the item"}), 500
+        
 @app.route('/api/maps', methods=['GET'])
 def get_maps():
     try:

@@ -28,8 +28,8 @@ args = "python main.py"
 waitForPort = 5000
 
 [deployment]
-deploymentTarget = "static"
-publicDir = "./templates"
+deploymentTarget = "cloudrun"
+run = ["sh", "-c", "python main.py"]
 
 [[ports]]
 localPort = 5000
