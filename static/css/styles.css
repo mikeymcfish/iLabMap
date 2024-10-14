@@ -19,6 +19,20 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.warning-badges {
+    background-color: red;
+    color: white;
+    border-radius: 25px;
+    width: 30px;
+    height: 30px;
+    margin-right:3px;
+    align-content: center;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    justify-items:center;
+    align-items: center;
+}
+
 #addItemForm.show {
     display: block;
 }

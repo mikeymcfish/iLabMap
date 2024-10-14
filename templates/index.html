@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>iLab Map</title>
-    <link rel="stylesheet" href="https://cdn.replit.com/agent/bootstrap-agent-dark-theme.min.css">
+   
+    <link rel="stylesheet" href="/static/css/styles.css"> <link rel="stylesheet" href="https://cdn.replit.com/agent/bootstrap-agent-dark-theme.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-    <link rel="stylesheet" href="/static/css/styles.css">
 </head>
 <body>
     <div class="container-fluid">
@@ -33,33 +33,74 @@
                 </div>
                 <button id="addItemBtn" class="btn btn-primary mb-3" disabled>ADD</button>
                 <button id="clearBtn" class="btn btn-secondary mb-3 ms-2">CLEAR</button>
+                <div class="card position-absolute" style="display: none;" id="addItemForm">
+                    <div class="card-body">
+                        <h5 class="card-title">Add New Item</h5>
+                        <form id="itemForm">
+                            <div class="mb-3">
+                                <label for="itemName" class="form-label">Item Name</label>
+                                <input type="text" class="form-control" id="itemName" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="itemImage" class="form-label">Upload Image</label>
+                                <input type="file" class="form-control" id="itemImage" accept="image/*">
+                            </div>
+                            <div class="mb-3">
+                                <label for="itemTags" class="form-label">Tags (comma-separated)</label>
+                                <input type="text" class="form-control" id="itemTags">
+                            </div>
+                            <!-- New fields -->
+                            <div class="mb-3">
+                                <label for="itemColor" class="form-label">Color</label>
+                                <input type="text" class="form-control" id="itemColor" value="red">
+                            </div>
+                            <div class="mb-3">
+                                <label for="itemZone" class="form-label">Zone</label>
+                                <input type="text" class="form-control" id="itemZone" value="">
+                            </div>
+                            <div class="mb-3">
+                                <label for="itemQuantity" class="form-label">Quantity</label>
+                                <input type="number" class="form-control" id="itemQuantity" value="1" min="1">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Warning</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="glasses" id="glasses">
+                                    <label class="form-check-label" for="glasses">
+                                        Use safety glasses
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="hand" id="hand">
+                                    <label class="form-check-label" for="hand">
+                                        Use gloves
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="fire" id="fire">
+                                    <label class="form-check-label" for="fire">
+                                        Flammable
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="bolt-lightning" id="bolt-lightning">
+                                    <label class="form-check-label" for="bolt-lightning">
+                                        High voltage
+                                    </label>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-primary" id="saveItemBtn">Save Item</button>
+                            <button type="button" class="btn btn-secondary" id="cancelAddBtn">Cancel</button>
+                        </form>
+                    </div>
+                </div>
                 <div id="itemList" class="list-group d-flex flex-column">
                     
                 </div>
             </div>
         <div class="col-md-8 position-relative">
             <canvas id="mapCanvas" class="img-fluid"></canvas>
-            <div class="card position-absolute" style="display: none;" id="addItemForm">
-                <div class="card-body">
-                    <h5 class="card-title">Add New Item</h5>
-                    <form>
-                        <div class="mb-3">
-                            <label for="itemName" class="form-label">Item Name</label>
-                            <input type="text" class="form-control" id="itemName" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="itemImage" class="form-label">Upload Image</label>
-                            <input type="file" class="form-control" id="itemImage" accept="image/*">
-                        </div>
-                        <div class="mb-3">
-                            <label for="itemTags" class="form-label">Tags (comma-separated)</label>
-                            <input type="text" class="form-control" id="itemTags">
-                        </div>
-                        <button type="button" class="btn btn-primary" id="saveItemBtn">Save Item</button>
-                        <button type="button" class="btn btn-secondary" id="cancelAddBtn">Cancel</button>
-                    </form>
-                </div>
-            </div>
+            
         </div>
         </div>
     </div>

@@ -37,9 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
             saveItemBtn.click();
         }
     }
-    if (itemNameInput) {
-        itemNameInput.addEventListener('keydown', submitOnEnter);
-    }
+    
     if (itemTagsInput) {
         itemTagsInput.addEventListener('keydown', submitOnEnter);
     }
@@ -153,20 +151,46 @@ document.addEventListener('DOMContentLoaded', function() {
             // Item name
             const nameElement = document.createElement('h4');
             nameElement.classList.add('mb-1', 'flex-grow-1');
-            nameElement.textContent = item.name;
+            if (item.quantity !== null && item.quantity !== 1) {
+                nameElement.textContent = item.name + " (" + item.quantity + ")";
+            } else {
+                nameElement.textContent = item.name;
+            }
 
             // Append image and name to imageNameContainer
             imageNameContainer.appendChild(imageElement);
             imageNameContainer.appendChild(nameElement);
 
+            
+            // Check for item warnings and create badges
+            if (item.warning) {
+                const warnings = item.warning.split(',').filter(warning => warning.trim() !== "");
+                warnings.forEach(warning => {
+                    const warningBadge = document.createElement('div');
+                    warningBadge.classList.add('warning-badges');
+                    const warningIcon = document.createElement('i');
+                    warningIcon.classList.add('fas', 'fa-md', `fa-${warning.trim()}`);
+                    warningBadge.appendChild(warningIcon);
+                    imageNameContainer.appendChild(warningBadge);
+                });
+            }
+
+            
+            // Edit button
+            const editButton = document.createElement('button');
+            editButton.classList.add('btn', 'btn-secondary', 'btn-sm', 'edit-item');
+            editButton.innerHTML = '<i class="fas fa-edit"></i>'; // Use Font Awesome edit icon
+            
             // Delete button
             const deleteButton = document.createElement('button');
             deleteButton.classList.add('btn', 'btn-danger', 'btn-sm', 'delete-item');
             deleteButton.innerHTML = '<i class="fas fa-trash-alt"></i>'; // Use Font Awesome trash icon
             deleteButton.setAttribute('data-item-id', item.id);
+            editButton.setAttribute('data-item-id', item.id);
 
             // Append imageNameContainer and delete button to mainContent
             mainContent.appendChild(imageNameContainer);
+            mainContent.appendChild(editButton);
             mainContent.appendChild(deleteButton);
 
             // Create tag container beneath the main row
@@ -377,11 +401,28 @@ document.addEventListener('DOMContentLoaded', function() {
             formData.append('y_coord', selectedLocation.y / scale);
             formData.append('map_id', currentMapId);
 
+            // Get additional fields
+            const itemColorInput = document.getElementById('itemColor');
+            const itemZoneInput = document.getElementById('itemZone');
+            const itemQuantityInput = document.getElementById('itemQuantity');
+            const itemWarningInput = document.querySelectorAll('input[type="checkbox"]:checked'); // Assuming checkboxes have the name "itemwarninginput"
+
+            // Add inputs to FormData
+            formData.append('color', itemColorInput.value || 'red');
+            formData.append('zone', itemZoneInput.value || '');
+            formData.append('quantity', parseInt(itemQuantityInput.value, 10) || 1);
+            
             // Add image to FormData if it's selected
             const itemImageFile = document.getElementById('itemImage').files[0];
             if (itemImageFile) {
                 formData.append('image', itemImageFile);
             }
+
+            // Collect checked checkboxes (itemWarningInput) and add as CSV to FormData
+            const warnings = Array.from(itemWarningInput) // Convert NodeList to array
+                .map(input => input.value)                // Get the value of each checked checkbox
+                .join(',');                               // Convert to a CSV string
+            formData.append('warning', warnings);        // Append to FormData
 
             // Send the request to the backend
             fetch('/api/items', {
@@ -399,19 +440,19 @@ document.addEventListener('DOMContentLoaded', function() {
                     addItemForm.style.display = 'none';
                 }
                 loadItems();
-                if (itemNameInput) {
-                    itemNameInput.value = '';
-                }
-                if (itemTagsInput) {
-                    itemTagsInput.value = '';
-                }
-                if (itemImageInput) {
-                    itemImageInput.value = '';
-                }
+                // Clear inputs
+                itemNameInput.value = '';
+                itemTagsInput.value = '';
+                itemImageInput.value = '';
+                itemColorInput.value = 'red';
+                itemZoneInput.value = '';
+                itemQuantityInput.value = 1;
+                document.querySelectorAll('input[name="itemwarninginput"]:checked').forEach(input => input.checked = false); // Uncheck checkboxes
+
+
                 selectedLocation = null;
-                if (addItemBtn) {
-                    addItemBtn.disabled = true;
-                }
+                addItemBtn.disabled = true;
+
                 displaySuccessMessage('Item added successfully');
             })
             .catch(error => {
