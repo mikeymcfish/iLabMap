@@ -490,8 +490,10 @@ document.addEventListener('DOMContentLoaded', function() {
         formData.append('zone', itemZoneInput.value || '');
         formData.append('quantity', parseInt(itemQuantityInput.value, 10) || 1);
         
-        const itemImageFile = document.getElementById('itemImage').files[0];
+        console.log('Checking for image file');
+        const itemImageFile = itemImageInput.files[0];
         if (itemImageFile) {
+            console.log('Image file found:', itemImageFile.name);
             formData.append('image', itemImageFile);
         }
 
@@ -500,6 +502,7 @@ document.addEventListener('DOMContentLoaded', function() {
             .join(',');
         formData.append('warning', warnings);
 
+        console.log('Sending form data to server');
         fetch('/api/items', {
             method: 'POST',
             body: formData
@@ -511,27 +514,31 @@ document.addEventListener('DOMContentLoaded', function() {
             return response.json();
         })
         .then(data => {
+            console.log('Item saved successfully');
             if (addItemForm) {
                 addItemForm.style.display = 'none';
             }
             loadItems();
-            itemNameInput.value = '';
-            itemTagsInput.value = '';
-            itemImageInput.value = '';
-            itemColorInput.value = 'red';
-            itemZoneInput.value = '';
-            itemQuantityInput.value = 1;
-            document.querySelectorAll('input[type="checkbox"]:checked').forEach(input => input.checked = false);
-
-            selectedLocation = null;
-            addItemBtn.disabled = true;
-
+            resetForm();
             displaySuccessMessage('Item added successfully');
         })
         .catch(error => {
             console.error('Error adding item:', error);
             displayErrorMessage('Error adding item. Please try again later.');
         });
+    }
+
+    function resetForm() {
+        itemNameInput.value = '';
+        itemTagsInput.value = '';
+        itemImageInput.value = '';
+        document.getElementById('itemColor').value = 'red';
+        document.getElementById('itemZone').value = '';
+        document.getElementById('itemQuantity').value = 1;
+        document.querySelectorAll('input[type="checkbox"]:checked').forEach(input => input.checked = false);
+        dropArea.innerHTML = 'Drag and drop image here';
+        selectedLocation = null;
+        addItemBtn.disabled = true;
     }
 
     if (cancelAddBtn) {
@@ -589,10 +596,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Prevent default drag behaviors
+    // Prevent default drag behaviors for the entire window
     ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
-        dropArea.addEventListener(eventName, preventDefaults, false);
-        document.body.addEventListener(eventName, preventDefaults, false);
+        window.addEventListener(eventName, preventDefaults, false);
     });
 
     // Highlight drop area when item is dragged over it
@@ -605,7 +611,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Handle dropped files
-    dropArea.addEventListener('drop', handleDrop, false);
+    window.addEventListener('drop', handleDrop, false);
 
     function preventDefaults(e) {
         e.preventDefault();
@@ -613,35 +619,41 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function highlight(e) {
+        console.log('Highlight');
         dropArea.classList.add('bg-info');
     }
 
     function unhighlight(e) {
+        console.log('Unhighlight');
         dropArea.classList.remove('bg-info');
     }
 
     function handleDrop(e) {
+        console.log('File dropped');
         const dt = e.dataTransfer;
         const files = dt.files;
-        itemImageInput.files = files;
         
-        if (files[0]) {
-            const reader = new FileReader();
-            reader.onload = function(e) {
-                dropArea.innerHTML = `<img src="${e.target.result}" style="max-width: 100%; max-height: 200px;">`;
-            }
-            reader.readAsDataURL(files[0]);
+        if (files.length > 0) {
+            console.log('File detected:', files[0].name);
+            itemImageInput.files = files;
+            updateDropAreaUI(files[0]);
         }
+    }
+
+    function updateDropAreaUI(file) {
+        console.log('Updating UI with dropped file');
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            dropArea.innerHTML = `<img src="${e.target.result}" style="max-width: 100%; max-height: 200px;">`;
+        }
+        reader.readAsDataURL(file);
     }
 
     // Handle file input change
     itemImageInput.addEventListener('change', function(e) {
+        console.log('File input changed');
         if (this.files[0]) {
-            const reader = new FileReader();
-            reader.onload = function(e) {
-                dropArea.innerHTML = `<img src="${e.target.result}" style="max-width: 100%; max-height: 200px;">`;
-            }
-            reader.readAsDataURL(this.files[0]);
+            updateDropAreaUI(this.files[0]);
         }
     });
 
