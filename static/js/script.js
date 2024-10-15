@@ -351,11 +351,15 @@ document.addEventListener('DOMContentLoaded', function() {
             checkbox.checked = warnings.includes(checkbox.value);
         });
 
+        // Update drop area with current item image
+        dropArea.innerHTML = `<img src="${item.image_path}" style="max-width: 100%; max-height: 200px;">`;
+
         addItemForm.style.display = 'block';
         positionAddItemForm();
 
         const saveItemBtn = document.getElementById('saveItemBtn');
         saveItemBtn.textContent = 'Update Item';
+        saveItemBtn.setAttribute('data-item-id', itemId);
         saveItemBtn.onclick = function() {
             updateItem(item);
         };
@@ -596,12 +600,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Prevent default drag behaviors for the entire window
     ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
         window.addEventListener(eventName, preventDefaults, false);
     });
 
-    // Highlight drop area when item is dragged over it
     ['dragenter', 'dragover'].forEach(eventName => {
         dropArea.addEventListener(eventName, highlight, false);
     });
@@ -610,7 +612,6 @@ document.addEventListener('DOMContentLoaded', function() {
         dropArea.addEventListener(eventName, unhighlight, false);
     });
 
-    // Handle dropped files
     window.addEventListener('drop', handleDrop, false);
 
     function preventDefaults(e) {
@@ -637,6 +638,12 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log('File detected:', files[0].name);
             itemImageInput.files = files;
             updateDropAreaUI(files[0]);
+            
+            const saveItemBtn = document.getElementById('saveItemBtn');
+            if (saveItemBtn.textContent === 'Update Item') {
+                const itemId = saveItemBtn.getAttribute('data-item-id');
+                updateItemImage(itemId, files[0]);
+            }
         }
     }
 
@@ -649,11 +656,41 @@ document.addEventListener('DOMContentLoaded', function() {
         reader.readAsDataURL(file);
     }
 
-    // Handle file input change
+    function updateItemImage(itemId, file) {
+        const formData = new FormData();
+        formData.append('image', file);
+
+        fetch(`/api/items/${itemId}`, {
+            method: 'PUT',
+            body: formData
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log('Image updated successfully');
+            loadItems();
+            displaySuccessMessage('Item image updated successfully');
+        })
+        .catch(error => {
+            console.error('Error updating item image:', error);
+            displayErrorMessage('Error updating item image. Please try again later.');
+        });
+    }
+
     itemImageInput.addEventListener('change', function(e) {
         console.log('File input changed');
         if (this.files[0]) {
             updateDropAreaUI(this.files[0]);
+            
+            const saveItemBtn = document.getElementById('saveItemBtn');
+            if (saveItemBtn.textContent === 'Update Item') {
+                const itemId = saveItemBtn.getAttribute('data-item-id');
+                updateItemImage(itemId, this.files[0]);
+            }
         }
     });
 
