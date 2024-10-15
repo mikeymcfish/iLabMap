@@ -356,11 +356,11 @@ document.addEventListener('DOMContentLoaded', function() {
         const saveItemBtn = document.getElementById('saveItemBtn');
         saveItemBtn.textContent = 'Update Item';
         saveItemBtn.onclick = function() {
-            updateItem(item.id);
+            updateItem(item);
         };
     }
 
-    function updateItem(itemId) {
+    function updateItem(item) {
         if (!currentMapId) {
             displayErrorMessage('Please ensure a map is selected.');
             return;
@@ -373,6 +373,8 @@ document.addEventListener('DOMContentLoaded', function() {
         formData.append('zone', document.getElementById('itemZone').value || '');
         formData.append('quantity', parseInt(document.getElementById('itemQuantity').value, 10) || 1);
         formData.append('map_id', currentMapId);
+        formData.append('x_coord', item.x_coord);
+        formData.append('y_coord', item.y_coord);
 
         const itemImageFile = document.getElementById('itemImage').files[0];
         if (itemImageFile) {
@@ -384,7 +386,7 @@ document.addEventListener('DOMContentLoaded', function() {
             .join(',');
         formData.append('warning', warnings);
 
-        fetch(`/api/items/${itemId}`, {
+        fetch(`/api/items/${item.id}`, {
             method: 'PUT',
             body: formData
         })

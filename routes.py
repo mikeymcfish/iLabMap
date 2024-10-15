@@ -29,6 +29,8 @@ def update_item(item_id):
     quantity = request.form.get('quantity')
     warning = request.form.get('warning')
     map_id = request.form.get('map_id')
+    x_coord = request.form.get('x_coord')
+    y_coord = request.form.get('y_coord')
 
     if name:
         item.name = name
@@ -44,6 +46,10 @@ def update_item(item_id):
         item.warning = warning
     if map_id:
         item.map_id = int(map_id)
+    if x_coord:
+        item.x_coord = float(x_coord)
+    if y_coord:
+        item.y_coord = float(y_coord)
 
     # Handle image upload
     if 'image' in request.files:
@@ -54,8 +60,13 @@ def update_item(item_id):
             file.save(file_path)
             item.image_path = f'/static/thumbnails/{filename}'
 
-    db.session.commit()
-    return jsonify({'message': 'Item updated successfully'}), 200
+    try:
+        db.session.commit()
+        return jsonify({'message': 'Item updated successfully'}), 200
+    except SQLAlchemyError as e:
+        db.session.rollback()
+        current_app.logger.error(f"Error updating item (ID: {item_id}): {str(e)}")
+        return jsonify({"error": "An error occurred while updating the item"}), 500
 
 @main_blueprint.route('/api/items/<int:item_id>', methods=['GET'])
 def get_item(item_id):
@@ -270,5 +281,5 @@ def serve_static(filename):
                                filename)
 
 def allowed_file(filename):
-    return '.' in filename and \
-           filename.rsplit('.', 1)[1].lower() in current_app.config['ALLOWED_EXTENSIONS']
+    ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
+    return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
