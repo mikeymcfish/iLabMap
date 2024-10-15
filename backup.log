@@ -4219,3 +4219,65 @@ FROM item]
 2024-10-14 21:44:19,648 - INFO - Fetching items for map ID: 1
 2024-10-14 21:44:19,887 - INFO - 172.31.196.132 - - [14/Oct/2024 21:44:19] "GET /api/items?map_id=1 HTTP/1.1" 200 -
 2024-10-14 21:44:19,970 - INFO - 172.31.196.132 - - [14/Oct/2024 21:44:19] "[36mGET /static/thumbnails/placeholder.png HTTP/1.1[0m" 304 -
+2024-10-14 21:55:08,777 - INFO - 172.31.196.132 - - [14/Oct/2024 21:55:08] "GET / HTTP/1.1" 200 -
+2024-10-14 21:55:08,978 - INFO - 172.31.196.132 - - [14/Oct/2024 21:55:08] "GET /static/css/styles.css HTTP/1.1" 200 -
+2024-10-14 21:55:09,065 - INFO - 172.31.196.132 - - [14/Oct/2024 21:55:09] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2024-10-14 21:55:09,155 - INFO - Fetching all maps
+2024-10-14 21:55:09,382 - INFO - 172.31.196.132 - - [14/Oct/2024 21:55:09] "GET /api/maps HTTP/1.1" 200 -
+2024-10-14 21:55:09,465 - INFO - Fetching map with ID: 1
+2024-10-14 21:55:09,691 - INFO - 172.31.196.132 - - [14/Oct/2024 21:55:09] "GET /api/maps/1 HTTP/1.1" 200 -
+2024-10-14 21:55:09,775 - INFO - Attempting to serve static file: /home/runner/workspace/static/maps/main.svg
+2024-10-14 21:55:09,776 - INFO - 172.31.196.132 - - [14/Oct/2024 21:55:09] "[36mGET /static/maps/main.svg HTTP/1.1[0m" 304 -
+2024-10-14 21:55:09,865 - INFO - Fetching items for map ID: 1
+2024-10-14 21:55:10,092 - INFO - 172.31.196.132 - - [14/Oct/2024 21:55:10] "GET /api/items?map_id=1 HTTP/1.1" 200 -
+2024-10-14 21:55:10,178 - INFO - 172.31.196.132 - - [14/Oct/2024 21:55:10] "[36mGET /static/thumbnails/placeholder.png HTTP/1.1[0m" 304 -
+2024-10-14 21:55:22,707 - INFO - 172.31.196.132 - - [14/Oct/2024 21:55:22] "GET / HTTP/1.1" 200 -
+2024-10-14 21:55:22,827 - INFO - 172.31.196.132 - - [14/Oct/2024 21:55:22] "GET /static/css/styles.css HTTP/1.1" 200 -
+2024-10-14 21:55:22,888 - INFO - 172.31.196.132 - - [14/Oct/2024 21:55:22] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2024-10-14 21:55:22,982 - INFO - Fetching all maps
+2024-10-14 21:55:23,207 - INFO - 172.31.196.132 - - [14/Oct/2024 21:55:23] "GET /api/maps HTTP/1.1" 200 -
+2024-10-14 21:55:23,291 - INFO - Fetching map with ID: 1
+2024-10-14 21:55:23,517 - INFO - 172.31.196.132 - - [14/Oct/2024 21:55:23] "GET /api/maps/1 HTTP/1.1" 200 -
+2024-10-14 21:55:23,600 - INFO - Attempting to serve static file: /home/runner/workspace/static/maps/main.svg
+2024-10-14 21:55:23,601 - INFO - 172.31.196.132 - - [14/Oct/2024 21:55:23] "[36mGET /static/maps/main.svg HTTP/1.1[0m" 304 -
+2024-10-14 21:55:23,684 - INFO - Fetching items for map ID: 1
+2024-10-14 21:55:23,910 - INFO - 172.31.196.132 - - [14/Oct/2024 21:55:23] "GET /api/items?map_id=1 HTTP/1.1" 200 -
+2024-10-14 21:55:23,992 - INFO - 172.31.196.132 - - [14/Oct/2024 21:55:23] "[36mGET /static/thumbnails/placeholder.png HTTP/1.1[0m" 304 -
+2024-10-15 18:05:00,320 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-15 18:05:00,324 - INFO - Added job "create_backup" to job store "default"
+2024-10-15 18:05:00,324 - INFO - Scheduler started
+2024-10-15 18:05:00,324 - INFO - Scheduler started
+2024-10-15 18:05:00,550 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.196.77:5000
+2024-10-15 18:05:00,551 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-15 18:05:00,552 - INFO -  * Restarting with stat
+2024-10-15 18:05:02,277 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-15 18:05:02,277 - INFO - Added job "create_backup" to job store "default"
+2024-10-15 18:05:02,278 - INFO - Scheduler started
+2024-10-15 18:05:02,278 - INFO - Scheduler started
+2024-10-15 18:05:02,293 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.196.77:5000
+2024-10-15 18:05:02,293 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-15 18:05:02,294 - INFO -  * Restarting with stat
+2024-10-15 18:05:03,774 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-15 18:05:03,775 - INFO - Added job "create_backup" to job store "default"
+2024-10-15 18:05:03,775 - INFO - Scheduler started
+2024-10-15 18:05:03,776 - INFO - Scheduler started
+2024-10-15 18:05:03,789 - WARNING -  * Debugger is active!
+2024-10-15 18:05:03,791 - INFO -  * Debugger PIN: 130-434-343
+2024-10-15 18:05:04,868 - INFO - 172.31.196.77 - - [15/Oct/2024 18:05:04] "GET / HTTP/1.1" 200 -
+2024-10-15 18:05:04,882 - INFO - 172.31.196.77 - - [15/Oct/2024 18:05:04] "GET /static/css/styles.css HTTP/1.1" 200 -
+2024-10-15 18:05:04,947 - INFO - 172.31.196.77 - - [15/Oct/2024 18:05:04] "GET /static/js/script.js HTTP/1.1" 200 -
+2024-10-15 18:05:04,955 - INFO - Fetching all maps
+2024-10-15 18:05:05,182 - INFO - 172.31.196.77 - - [15/Oct/2024 18:05:05] "GET /api/maps HTTP/1.1" 200 -
+2024-10-15 18:05:05,190 - INFO - Fetching map with ID: 1
+2024-10-15 18:05:05,420 - INFO - 172.31.196.77 - - [15/Oct/2024 18:05:05] "GET /api/maps/1 HTTP/1.1" 200 -
+2024-10-15 18:05:05,427 - INFO - Attempting to serve static file: /home/runner/workspace/static/maps/main.svg
+2024-10-15 18:05:05,428 - INFO - 172.31.196.77 - - [15/Oct/2024 18:05:05] "GET /static/maps/main.svg HTTP/1.1" 200 -
+2024-10-15 18:05:05,455 - INFO - Fetching items for map ID: 1
+2024-10-15 18:05:05,684 - INFO - 172.31.196.77 - - [15/Oct/2024 18:05:05] "GET /api/items?map_id=1 HTTP/1.1" 200 -
+2024-10-15 18:05:05,709 - INFO - 172.31.196.77 - - [15/Oct/2024 18:05:05] "GET /static/thumbnails/placeholder.png HTTP/1.1" 200 -

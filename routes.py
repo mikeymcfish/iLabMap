@@ -8,7 +8,6 @@ import os
 
 main_blueprint = Blueprint('main', __name__)
 
-
 @main_blueprint.route('/')
 def index():
     try:
@@ -19,37 +18,50 @@ def index():
             f"Error fetching items for index page: {str(e)}")
         return f"An error occurred while fetching items. : {str(e)}", 500
 
-
 @main_blueprint.route('/api/items/<int:item_id>', methods=['PUT'])
 def update_item(item_id):
-    try:
-        item = Item.query.get_or_404(item_id)
-        data = request.json
-        current_app.logger.info(f"Received data for updating item: {data}")
-        item.name = data.get('name', item.name)
-        item.tags = data.get('tags', item.tags)
-        item.x_coord = data.get('x_coord', item.x_coord)
-        item.y_coord = data.get('y_coord', item.y_coord)
-        # Handle image URL if available in data
-        if 'image_path' in data:
-            item.image_path = data.get(
-                'image_path') or None  # Set to None if empty
-        db.session.commit()
-        return jsonify({"message": "Item updated successfully"}), 200
-    except SQLAlchemyError as e:
-        db.session.rollback()
-        current_app.logger.error(
-            f"Error updating item (ID: {item_id}): {str(e)}")
-        return jsonify({"error":
-                        "An error occurred while updating the item"}), 500
+    item = Item.query.get_or_404(item_id)
+    
+    name = request.form.get('name')
+    tags = request.form.get('tags')
+    color = request.form.get('color')
+    zone = request.form.get('zone')
+    quantity = request.form.get('quantity')
+    warning = request.form.get('warning')
+    map_id = request.form.get('map_id')
 
+    if name:
+        item.name = name
+    if tags:
+        item.tags = tags
+    if color:
+        item.color = color
+    if zone:
+        item.zone = zone
+    if quantity:
+        item.quantity = int(quantity)
+    if warning is not None:
+        item.warning = warning
+    if map_id:
+        item.map_id = int(map_id)
+
+    # Handle image upload
+    if 'image' in request.files:
+        file = request.files['image']
+        if file and allowed_file(file.filename):
+            filename = secure_filename(file.filename)
+            file_path = os.path.join(current_app.config['UPLOAD_FOLDER'], filename)
+            file.save(file_path)
+            item.image_path = f'/static/thumbnails/{filename}'
+
+    db.session.commit()
+    return jsonify({'message': 'Item updated successfully'}), 200
 
 @main_blueprint.route('/api/items/<int:item_id>', methods=['GET'])
 def get_item(item_id):
     try:
         current_app.logger.info(f"Fetching item with ID: {item_id}")
         item = Item.query.get_or_404(item_id)
-        # If image is missing, provide a placeholder or omit it
         image_path = item.image_path if item.image_path else "static/thumbnails/placeholder.png"
         return jsonify({
             "id": item.id,
@@ -69,7 +81,6 @@ def get_item(item_id):
         return jsonify(
             {"error": "An error occurred while retrieving the item"}), 500
 
-
 @main_blueprint.route('/api/maps', methods=['GET'])
 def get_maps():
     try:
@@ -83,7 +94,6 @@ def get_maps():
     except SQLAlchemyError as e:
         current_app.logger.error(f"Error fetching maps: {str(e)}")
         return jsonify({"error": "An error occurred while fetching maps"}), 500
-
 
 @main_blueprint.route('/api/maps/<int:map_id>', methods=['GET'])
 def get_map(map_id):
@@ -102,7 +112,6 @@ def get_map(map_id):
         return jsonify({"error":
                         "An error occurred while fetching the map"}), 500
 
-
 @main_blueprint.route('/api/items', methods=['GET', 'POST'])
 def items():
     if request.method == 'POST':
@@ -110,7 +119,6 @@ def items():
         image_file = request.files.get('image')
         current_app.logger.info(f"Received POST data: {data}")
 
-        # Ensure all required fields are included
         required_fields = ['name', 'tags', 'x_coord', 'y_coord', 'map_id']
         missing_fields = [
             field for field in required_fields if field not in data
@@ -123,7 +131,6 @@ def items():
                 f"Missing required fields: {', '.join(missing_fields)}"
             }), 400
 
-        # Securely save the image file
         image_path = None
         if image_file:
             filename = secure_filename(image_file.filename)
@@ -165,29 +172,18 @@ def items():
             items = Item.query.filter_by(map_id=map_id).all()
             return jsonify([
                 {
-                    "id":
-                    item.id,
-                    "name":
-                    item.name,
-                    "tags":
-                    item.tags,
-                    "zone":
-                    item.zone,
-                    "color":
-                    item.color,
-                    "quantity":
-                    item.quantity,
-                    "warning":
-                    item.warning,
-                    "x_coord":
-                    item.x_coord,
-                    "y_coord":
-                    item.y_coord,
-                    "map_id":
-                    item.map_id,
-                    "image_path":
-                    item.image_path if item.image_path else
-                    "static/thumbnails/placeholder.png"  # Provide placeholder if missing
+                    "id": item.id,
+                    "name": item.name,
+                    "tags": item.tags,
+                    "zone": item.zone,
+                    "color": item.color,
+                    "quantity": item.quantity,
+                    "warning": item.warning,
+                    "x_coord": item.x_coord,
+                    "y_coord": item.y_coord,
+                    "map_id": item.map_id,
+                    "image_path": item.image_path if item.image_path else
+                    "static/thumbnails/placeholder.png"
                 } for item in items
             ])
         except SQLAlchemyError as e:
@@ -195,7 +191,6 @@ def items():
                 f"Error fetching items for map ID {map_id}: {str(e)}")
             return jsonify({"error":
                             "An error occurred while fetching items"}), 500
-
 
 @main_blueprint.route('/api/items/<int:item_id>', methods=['DELETE'])
 def delete_item(item_id):
@@ -217,7 +212,6 @@ def delete_item(item_id):
             f"Error deleting item (ID: {item_id}): {str(e)}")
         return jsonify({"error":
                         "An error occurred while deleting the item"}), 500
-
 
 @main_blueprint.route('/api/search')
 def search():
@@ -249,28 +243,20 @@ def search():
             f"Found {len(items)} items matching search criteria")
         return jsonify([
             {
-                "id":
-                item.id,
-                "name":
-                item.name,
-                "tags":
-                item.tags,
-                "x_coord":
-                item.x_coord,
-                "y_coord":
-                item.y_coord,
-                "map_id":
-                item.map_id,
-                "image_path":
-                item.image_path if item.image_path else
-                "static/thumbnails/placeholder.png"  # Provide placeholder if missing
+                "id": item.id,
+                "name": item.name,
+                "tags": item.tags,
+                "x_coord": item.x_coord,
+                "y_coord": item.y_coord,
+                "map_id": item.map_id,
+                "image_path": item.image_path if item.image_path else
+                "static/thumbnails/placeholder.png"
             } for item in items
         ])
     except SQLAlchemyError as e:
         current_app.logger.error(f"Error searching items: {str(e)}")
         return jsonify(
             {"error": "An error occurred while searching for items"}), 500
-
 
 @main_blueprint.route('/static/maps/<path:filename>')
 def serve_static(filename):
@@ -282,3 +268,7 @@ def serve_static(filename):
         return jsonify({"error": "File not found"}), 404
     return send_from_directory(os.path.join(current_app.static_folder, 'maps'),
                                filename)
+
+def allowed_file(filename):
+    return '.' in filename and \
+           filename.rsplit('.', 1)[1].lower() in current_app.config['ALLOWED_EXTENSIONS']

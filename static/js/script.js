@@ -131,28 +131,23 @@ document.addEventListener('DOMContentLoaded', function() {
             const li = document.createElement('div');
             li.classList.add('list-group-item', 'd-flex', 'flex-column');
 
-            // Create the main content row for image, name, and delete button
             const mainContent = document.createElement('div');
             mainContent.classList.add('d-flex', 'align-items-center', 'justify-content-between');
 
-            // Image and name container
             const imageNameContainer = document.createElement('div');
             imageNameContainer.classList.add('d-flex', 'align-items-center', 'flex-grow-1');
             mainContent.style.width = '100%';
             
-            // Image element
             const imageElement = document.createElement('img');
             imageElement.src = item.image_path;
             imageElement.width = 75;
             imageElement.height = 75;
             imageElement.alt = item.name;
-            imageElement.style.marginRight = '10px';  // Margin between image and name
+            imageElement.style.marginRight = '10px';
 
-            // Item name
             const infoElement = document.createElement('div');
             infoElement.classList.add('d-flex', 'flex-column', 'info-box', 'flex-grow-1');
 
-            // Create tag container beneath the main row
             const tagContainer = document.createElement('div');
             tagContainer.classList.add('tag-container', 'mt-2');
             tagContainer.innerHTML = item.tags.split(',')
@@ -167,15 +162,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 nameElement.textContent = item.name;
             }
             
-
-            // Append image and name to imageNameContainer
             imageNameContainer.appendChild(imageElement);
             infoElement.appendChild(nameElement);
             infoElement.appendChild(tagContainer);
             imageNameContainer.appendChild(infoElement);
 
-            
-            // Check for item warnings and create badges
             if (item.warning) {
                 const warnings = item.warning.split(',').filter(warning => warning.trim() !== "");
                 warnings.forEach(warning => {
@@ -189,43 +180,30 @@ document.addEventListener('DOMContentLoaded', function() {
             }
 
             const buttons = document.createElement('div');
-            // Edit button
+
             const editButton = document.createElement('button');
-            editButton.classList.add('btn', 'btn-secondary', 'btn-sm', 'edit-item');
-            editButton.innerHTML = '<i class="fas fa-edit"></i>'; // Use Font Awesome edit icon
+            editButton.classList.add('btn', 'btn-secondary', 'btn-sm', 'edit-item', 'me-2');
+            editButton.innerHTML = '<i class="fas fa-edit"></i>';
+            editButton.setAttribute('data-item-id', item.id);
             
-            // Delete button
             const deleteButton = document.createElement('button');
             deleteButton.classList.add('btn', 'btn-danger', 'btn-sm', 'delete-item');
-            deleteButton.innerHTML = '<i class="fas fa-trash-alt"></i>'; // Use Font Awesome trash icon
+            deleteButton.innerHTML = '<i class="fas fa-trash-alt"></i>';
             deleteButton.setAttribute('data-item-id', item.id);
-            editButton.setAttribute('data-item-id', item.id);
 
-            // Append imageNameContainer and delete button to mainContent
             mainContent.appendChild(imageNameContainer);
             buttons.appendChild(editButton);
             buttons.appendChild(deleteButton);
             mainContent.appendChild(buttons);
 
-            // // Create tag container beneath the main row
-            // const tagContainer = document.createElement('div');
-            // tagContainer.classList.add('tag-container', 'mt-2');
-            // tagContainer.innerHTML = item.tags.split(',')
-            //     .map(tag => `<span class="item-tag">${tag.trim()}</span>`)
-            //     .join('');
-
-            // Append mainContent and tagContainer to the list item
             li.appendChild(mainContent);
-            // li.appendChild(tagContainer);
 
-            // Add event listeners for highlight and remove
             li.addEventListener('mouseover', () => highlightItem(item));
             li.addEventListener('mouseout', drawMap);
 
             itemList.appendChild(li);
         });
 
-        // Add delete button functionality
         document.querySelectorAll('.delete-item').forEach(button => {
             button.addEventListener('click', function(event) {
                 event.stopPropagation();
@@ -233,8 +211,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 deleteItem(itemId);
             });
         });
-    }
 
+        document.querySelectorAll('.edit-item').forEach(button => {
+            button.addEventListener('click', function(event) {
+                event.stopPropagation();
+                const itemId = this.getAttribute('data-item-id');
+                editItem(itemId);
+            });
+        });
+    }
 
     function deleteItem(itemId) {
         if (confirm('Are you sure you want to delete this item?')) {
@@ -350,6 +335,82 @@ document.addEventListener('DOMContentLoaded', function() {
         addItemForm.style.top = `${top}px`;
     }
 
+    function editItem(itemId) {
+        const item = items.find(item => item.id === parseInt(itemId));
+        if (!item) return;
+
+        document.getElementById('itemName').value = item.name;
+        document.getElementById('itemTags').value = item.tags;
+        document.getElementById('itemColor').value = item.color || 'red';
+        document.getElementById('itemZone').value = item.zone || '';
+        document.getElementById('itemQuantity').value = item.quantity || 1;
+
+        const warnings = item.warning ? item.warning.split(',') : [];
+        document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+            checkbox.checked = warnings.includes(checkbox.value);
+        });
+
+        addItemForm.style.display = 'block';
+        positionAddItemForm();
+
+        const saveItemBtn = document.getElementById('saveItemBtn');
+        saveItemBtn.textContent = 'Update Item';
+        saveItemBtn.onclick = function() {
+            updateItem(item.id);
+        };
+    }
+
+    function updateItem(itemId) {
+        if (!currentMapId) {
+            displayErrorMessage('Please ensure a map is selected.');
+            return;
+        }
+
+        const formData = new FormData();
+        formData.append('name', document.getElementById('itemName').value);
+        formData.append('tags', document.getElementById('itemTags').value);
+        formData.append('color', document.getElementById('itemColor').value || 'red');
+        formData.append('zone', document.getElementById('itemZone').value || '');
+        formData.append('quantity', parseInt(document.getElementById('itemQuantity').value, 10) || 1);
+        formData.append('map_id', currentMapId);
+
+        const itemImageFile = document.getElementById('itemImage').files[0];
+        if (itemImageFile) {
+            formData.append('image', itemImageFile);
+        }
+
+        const warnings = Array.from(document.querySelectorAll('input[type="checkbox"]:checked'))
+            .map(input => input.value)
+            .join(',');
+        formData.append('warning', warnings);
+
+        fetch(`/api/items/${itemId}`, {
+            method: 'PUT',
+            body: formData
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            addItemForm.style.display = 'none';
+            loadItems();
+            displaySuccessMessage('Item updated successfully');
+
+            const saveItemBtn = document.getElementById('saveItemBtn');
+            saveItemBtn.textContent = 'Save Item';
+            saveItemBtn.onclick = function() {
+                saveItem();
+            };
+        })
+        .catch(error => {
+            console.error('Error updating item:', error);
+            displayErrorMessage('Error updating item. Please try again later.');
+        });
+    }
+
     if (searchInput) {
         searchInput.addEventListener('input', performSearch);
     }
@@ -401,81 +462,74 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     if (saveItemBtn) {
-        saveItemBtn.addEventListener('click', function() {
-            if (!selectedLocation || !currentMapId) {
-                displayErrorMessage('Please select a location on the map and ensure a map is selected.');
-                return;
-            }
-
-            // Create a FormData object to hold the form fields and image
-            const formData = new FormData();
-            formData.append('name', itemNameInput.value);
-            formData.append('tags', itemTagsInput.value);
-            formData.append('x_coord', selectedLocation.x / scale);
-            formData.append('y_coord', selectedLocation.y / scale);
-            formData.append('map_id', currentMapId);
-
-            // Get additional fields
-            const itemColorInput = document.getElementById('itemColor');
-            const itemZoneInput = document.getElementById('itemZone');
-            const itemQuantityInput = document.getElementById('itemQuantity');
-            const itemWarningInput = document.querySelectorAll('input[type="checkbox"]:checked'); // Assuming checkboxes have the name "itemwarninginput"
-
-            // Add inputs to FormData
-            formData.append('color', itemColorInput.value || 'red');
-            formData.append('zone', itemZoneInput.value || '');
-            formData.append('quantity', parseInt(itemQuantityInput.value, 10) || 1);
-            
-            // Add image to FormData if it's selected
-            const itemImageFile = document.getElementById('itemImage').files[0];
-            if (itemImageFile) {
-                formData.append('image', itemImageFile);
-            }
-
-            // Collect checked checkboxes (itemWarningInput) and add as CSV to FormData
-            const warnings = Array.from(itemWarningInput) // Convert NodeList to array
-                .map(input => input.value)                // Get the value of each checked checkbox
-                .join(',');                               // Convert to a CSV string
-            formData.append('warning', warnings);        // Append to FormData
-
-            // Send the request to the backend
-            fetch('/api/items', {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                return response.json();
-            })
-            .then(data => {
-                if (addItemForm) {
-                    addItemForm.style.display = 'none';
-                }
-                loadItems();
-                // Clear inputs
-                itemNameInput.value = '';
-                itemTagsInput.value = '';
-                itemImageInput.value = '';
-                itemColorInput.value = 'red';
-                itemZoneInput.value = '';
-                itemQuantityInput.value = 1;
-                document.querySelectorAll('input[type="checkbox"]:checked').forEach(input => input.checked = false); // Uncheck checkboxes
-
-
-                selectedLocation = null;
-                addItemBtn.disabled = true;
-
-                displaySuccessMessage('Item added successfully');
-            })
-            .catch(error => {
-                console.error('Error adding item:', error);
-                displayErrorMessage('Error adding item. Please try again later.');
-            });
-        });
+        saveItemBtn.addEventListener('click', saveItem);
     }
 
+    function saveItem() {
+        if (!selectedLocation || !currentMapId) {
+            displayErrorMessage('Please select a location on the map and ensure a map is selected.');
+            return;
+        }
+
+        const formData = new FormData();
+        formData.append('name', itemNameInput.value);
+        formData.append('tags', itemTagsInput.value);
+        formData.append('x_coord', selectedLocation.x / scale);
+        formData.append('y_coord', selectedLocation.y / scale);
+        formData.append('map_id', currentMapId);
+
+        const itemColorInput = document.getElementById('itemColor');
+        const itemZoneInput = document.getElementById('itemZone');
+        const itemQuantityInput = document.getElementById('itemQuantity');
+        const itemWarningInput = document.querySelectorAll('input[type="checkbox"]:checked');
+
+        formData.append('color', itemColorInput.value || 'red');
+        formData.append('zone', itemZoneInput.value || '');
+        formData.append('quantity', parseInt(itemQuantityInput.value, 10) || 1);
+        
+        const itemImageFile = document.getElementById('itemImage').files[0];
+        if (itemImageFile) {
+            formData.append('image', itemImageFile);
+        }
+
+        const warnings = Array.from(itemWarningInput)
+            .map(input => input.value)
+            .join(',');
+        formData.append('warning', warnings);
+
+        fetch('/api/items', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            if (addItemForm) {
+                addItemForm.style.display = 'none';
+            }
+            loadItems();
+            itemNameInput.value = '';
+            itemTagsInput.value = '';
+            itemImageInput.value = '';
+            itemColorInput.value = 'red';
+            itemZoneInput.value = '';
+            itemQuantityInput.value = 1;
+            document.querySelectorAll('input[type="checkbox"]:checked').forEach(input => input.checked = false);
+
+            selectedLocation = null;
+            addItemBtn.disabled = true;
+
+            displaySuccessMessage('Item added successfully');
+        })
+        .catch(error => {
+            console.error('Error adding item:', error);
+            displayErrorMessage('Error adding item. Please try again later.');
+        });
+    }
 
     if (cancelAddBtn) {
         cancelAddBtn.addEventListener('click', function() {
