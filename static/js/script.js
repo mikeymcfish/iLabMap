@@ -351,7 +351,6 @@ document.addEventListener('DOMContentLoaded', function() {
             checkbox.checked = warnings.includes(checkbox.value);
         });
 
-        // Update drop area with current item image
         dropArea.innerHTML = `<img src="${item.image_path}" style="max-width: 100%; max-height: 200px;">`;
 
         addItemForm.style.display = 'block';
@@ -405,12 +404,7 @@ document.addEventListener('DOMContentLoaded', function() {
             addItemForm.style.display = 'none';
             loadItems();
             displaySuccessMessage('Item updated successfully');
-
-            const saveItemBtn = document.getElementById('saveItemBtn');
-            saveItemBtn.textContent = 'Save Item';
-            saveItemBtn.onclick = function() {
-                saveItem();
-            };
+            resetForm();
         })
         .catch(error => {
             console.error('Error updating item:', error);
@@ -446,6 +440,7 @@ document.addEventListener('DOMContentLoaded', function() {
         addItemBtn.addEventListener('click', function() {
             if (selectedLocation && addItemForm) {
                 if (addItemForm.style.display === 'none' || addItemForm.style.display === '') {
+                    resetForm();
                     positionAddItemForm();
                     addItemForm.style.display = 'block';
                 } else {
@@ -539,10 +534,15 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('itemColor').value = 'red';
         document.getElementById('itemZone').value = '';
         document.getElementById('itemQuantity').value = 1;
-        document.querySelectorAll('input[type="checkbox"]:checked').forEach(input => input.checked = false);
+        document.querySelectorAll('input[type="checkbox"]').forEach(input => input.checked = false);
         dropArea.innerHTML = 'Drag and drop image here';
         selectedLocation = null;
         addItemBtn.disabled = true;
+        
+        const saveItemBtn = document.getElementById('saveItemBtn');
+        saveItemBtn.textContent = 'Save Item';
+        saveItemBtn.onclick = saveItem;
+        saveItemBtn.removeAttribute('data-item-id');
     }
 
     if (cancelAddBtn) {
