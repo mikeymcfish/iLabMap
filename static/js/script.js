@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const itemTagsInput = document.getElementById('itemTags');
     const itemImageInput = document.getElementById('itemImage');
     const mapSelector = document.getElementById('mapSelector');
+    const dropArea = document.getElementById('dropArea');
 
     let items = [];
     let mapImage = new Image();
@@ -585,6 +586,62 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', function() {
         if (addItemForm && addItemForm.style.display === 'block') {
             positionAddItemForm();
+        }
+    });
+
+    // Prevent default drag behaviors
+    ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+        dropArea.addEventListener(eventName, preventDefaults, false);
+        document.body.addEventListener(eventName, preventDefaults, false);
+    });
+
+    // Highlight drop area when item is dragged over it
+    ['dragenter', 'dragover'].forEach(eventName => {
+        dropArea.addEventListener(eventName, highlight, false);
+    });
+
+    ['dragleave', 'drop'].forEach(eventName => {
+        dropArea.addEventListener(eventName, unhighlight, false);
+    });
+
+    // Handle dropped files
+    dropArea.addEventListener('drop', handleDrop, false);
+
+    function preventDefaults(e) {
+        e.preventDefault();
+        e.stopPropagation();
+    }
+
+    function highlight(e) {
+        dropArea.classList.add('bg-info');
+    }
+
+    function unhighlight(e) {
+        dropArea.classList.remove('bg-info');
+    }
+
+    function handleDrop(e) {
+        const dt = e.dataTransfer;
+        const files = dt.files;
+        itemImageInput.files = files;
+        
+        if (files[0]) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                dropArea.innerHTML = `<img src="${e.target.result}" style="max-width: 100%; max-height: 200px;">`;
+            }
+            reader.readAsDataURL(files[0]);
+        }
+    }
+
+    // Handle file input change
+    itemImageInput.addEventListener('change', function(e) {
+        if (this.files[0]) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                dropArea.innerHTML = `<img src="${e.target.result}" style="max-width: 100%; max-height: 200px;">`;
+            }
+            reader.readAsDataURL(this.files[0]);
         }
     });
 
