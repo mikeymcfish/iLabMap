@@ -208,8 +208,7 @@ def items():
                     "x_coord": item.x_coord,
                     "y_coord": item.y_coord,
                     "map_id": item.map_id,
-                    "image_path": item.image_path if item.image_path else
-                    "static/thumbnails/placeholder.png"
+                    "image_path": item.image_path if item.image_path and os.path.exists(os.path.join(current_app.static_folder, item.image_path.lstrip('/'))) else "/static/thumbnails/placeholder.png"
                 } for item in items
             ])
         except SQLAlchemyError as e:

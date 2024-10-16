@@ -141,11 +141,14 @@ document.addEventListener('DOMContentLoaded', function() {
             mainContent.style.width = '100%';
             
             const imageElement = document.createElement('img');
-            imageElement.src = item.image_path;
+            imageElement.src = item.image_path || '/static/thumbnails/placeholder.png';
             imageElement.width = 75;
             imageElement.height = 75;
             imageElement.alt = item.name;
             imageElement.style.marginRight = '10px';
+            imageElement.onerror = function() {
+                this.src = '/static/thumbnails/placeholder.png';
+            };
 
             const infoElement = document.createElement('div');
             infoElement.classList.add('d-flex', 'flex-column', 'info-box', 'flex-grow-1');
@@ -380,6 +383,10 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
+        const updateButton = document.getElementById('updateItemBtn');
+        updateButton.disabled = true;
+        updateButton.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Updating...';
+
         const formData = new FormData();
         formData.append('name', document.getElementById('itemName').value);
         formData.append('tags', document.getElementById('itemTags').value);
@@ -425,6 +432,10 @@ document.addEventListener('DOMContentLoaded', function() {
         .catch(error => {
             console.error('Error updating item:', error);
             displayErrorMessage('Error updating item. Please try again later.');
+        })
+        .finally(() => {
+            updateButton.disabled = false;
+            updateButton.textContent = 'Update Item';
         });
     }
 
@@ -433,6 +444,10 @@ document.addEventListener('DOMContentLoaded', function() {
             displayErrorMessage('Please select a location on the map and ensure a map is selected.');
             return;
         }
+
+        const saveButton = document.getElementById('updateItemBtn');
+        saveButton.disabled = true;
+        saveButton.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Saving...';
 
         const formData = new FormData();
         formData.append('name', itemNameInput.value);
@@ -485,6 +500,10 @@ document.addEventListener('DOMContentLoaded', function() {
         .catch(error => {
             console.error('Error adding item:', error);
             displayErrorMessage('Error adding item. Please try again later.');
+        })
+        .finally(() => {
+            saveButton.disabled = false;
+            saveButton.textContent = 'Save Item';
         });
     }
 
