@@ -5665,3 +5665,44 @@ FROM item]
 2024-10-16 13:31:29,699 - INFO - 172.31.196.108 - - [16/Oct/2024 13:31:29] "GET / HTTP/1.1" 200 -
 2024-10-16 13:31:29,759 - INFO - 172.31.196.108 - - [16/Oct/2024 13:31:29] "GET /static/css/styles.css HTTP/1.1" 200 -
 2024-10-16 13:31:29,772 - INFO - 172.31.196.108 - - [16/Oct/2024 13:31:29] "GET /static/js/script.js HTTP/1.1" 200 -
+2024-10-16 13:31:50,778 - INFO - 172.31.196.108 - - [16/Oct/2024 13:31:50] "GET / HTTP/1.1" 200 -
+2024-10-16 13:31:51,012 - INFO - 172.31.196.108 - - [16/Oct/2024 13:31:51] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-10-16 13:31:51,116 - INFO - 172.31.196.108 - - [16/Oct/2024 13:31:51] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2024-10-16 14:16:19,885 - INFO - 172.31.196.108 - - [16/Oct/2024 14:16:19] "GET / HTTP/1.1" 200 -
+2024-10-16 14:16:20,038 - INFO - 172.31.196.108 - - [16/Oct/2024 14:16:20] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-10-16 14:16:20,190 - INFO - 172.31.196.108 - - [16/Oct/2024 14:16:20] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2024-10-16 14:16:32,461 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-16 14:16:32,469 - INFO - Added job "create_backup" to job store "default"
+2024-10-16 14:16:32,472 - INFO - Scheduler started
+2024-10-16 14:16:32,475 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-16 14:16:32,477 - INFO - Added job "create_backup" to job store "default"
+2024-10-16 14:16:32,477 - INFO - Scheduler started
+2024-10-16 14:16:32,478 - INFO - Scheduler started
+2024-10-16 14:16:32,479 - INFO - Scheduler started
+2024-10-16 14:16:32,570 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.196.108:5000
+2024-10-16 14:16:32,570 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-16 14:16:32,573 - INFO -  * Restarting with stat
+2024-10-16 14:16:34,508 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-16 14:16:34,509 - INFO - Added job "create_backup" to job store "default"
+2024-10-16 14:16:34,509 - INFO - Scheduler started
+2024-10-16 14:16:34,509 - INFO - Scheduler started
+2024-10-16 14:16:34,533 - WARNING -  * Debugger is active!
+2024-10-16 14:16:34,562 - INFO -  * Debugger PIN: 990-079-294
+2024-10-16 14:16:35,779 - INFO - 172.31.196.108 - - [16/Oct/2024 14:16:35] "GET / HTTP/1.1" 200 -
+2024-10-16 14:16:35,781 - INFO - 172.31.196.108 - - [16/Oct/2024 14:16:35] "GET / HTTP/1.1" 200 -
+2024-10-16 14:16:36,342 - INFO - 172.31.196.108 - - [16/Oct/2024 14:16:36] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-10-16 14:16:36,447 - INFO - 172.31.196.108 - - [16/Oct/2024 14:16:36] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2024-10-16 14:16:36,458 - INFO - 172.31.196.108 - - [16/Oct/2024 14:16:36] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-10-16 14:16:36,517 - INFO - 172.31.196.108 - - [16/Oct/2024 14:16:36] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2024-10-16 14:17:32,257 - INFO - Fetching items for map ID: 1
+2024-10-16 14:17:32,532 - INFO - 127.0.0.1 - - [16/Oct/2024 14:17:32] "GET /api/items?map_id=1 HTTP/1.1" 200 -
+2024-10-16 14:17:32,549 - INFO - Received POST data: ImmutableMultiDict([('name', 'Test Item'), ('tags', 'test, sample'), ('x_coord', '10.5'), ('y_coord', '20.5'), ('map_id', '1')])
+2024-10-16 14:17:32,549 - INFO - Saving image to: static/thumbnails/20241016_141732_ef27672e.png
+2024-10-16 14:17:32,566 - INFO - 127.0.0.1 - - [16/Oct/2024 14:17:32] "[35m[1mPOST /api/items HTTP/1.1[0m" 500 -
+2024-10-16 14:17:32,834 - INFO - 127.0.0.1 - - [16/Oct/2024 14:17:32] "[33mPUT /api/items/1 HTTP/1.1[0m" 404 -
+2024-10-16 14:17:32,842 - INFO - Attempting to delete item with ID: 1
+2024-10-16 14:17:33,034 - WARNING - Attempt to delete non-existent item with id: 1
+2024-10-16 14:17:33,098 - INFO - 127.0.0.1 - - [16/Oct/2024 14:17:33] "[33mDELETE /api/items/1 HTTP/1.1[0m" 404 -
