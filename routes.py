@@ -75,6 +75,8 @@ def update_item(item_id):
             item.image_path = f'/static/thumbnails/{filename}'
             print(f"New image saved: {item.image_path}")
 
+    print(f"Updated item data before commit: {item.__dict__}")
+
     try:
         db.session.commit()
         print(f"Item updated successfully. New data: {item.__dict__}")
