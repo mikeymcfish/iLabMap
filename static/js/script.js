@@ -362,6 +362,12 @@ document.addEventListener('DOMContentLoaded', function() {
         saveItemBtn.onclick = function() {
             updateItem(item);
         };
+
+        selectedLocation = {
+            x: item.x_coord * scale,
+            y: item.y_coord * scale
+        };
+        drawMap();
     }
 
     function updateItem(item) {
@@ -377,8 +383,9 @@ document.addEventListener('DOMContentLoaded', function() {
         formData.append('zone', document.getElementById('itemZone').value || '');
         formData.append('quantity', parseInt(document.getElementById('itemQuantity').value, 10) || 1);
         formData.append('map_id', currentMapId);
-        formData.append('x_coord', item.x_coord);
-        formData.append('y_coord', item.y_coord);
+
+        formData.append('x_coord', (selectedLocation ? selectedLocation.x / scale : item.x_coord).toString());
+        formData.append('y_coord', (selectedLocation ? selectedLocation.y / scale : item.y_coord).toString());
 
         const itemImageFile = document.getElementById('itemImage').files[0];
         if (itemImageFile) {
@@ -405,6 +412,7 @@ document.addEventListener('DOMContentLoaded', function() {
             loadItems();
             displaySuccessMessage('Item updated successfully');
             resetForm();
+            selectedLocation = null;
         })
         .catch(error => {
             console.error('Error updating item:', error);
@@ -432,6 +440,21 @@ document.addEventListener('DOMContentLoaded', function() {
             drawMap();
             if (addItemBtn) {
                 addItemBtn.disabled = false;
+            }
+            
+            // If we're in edit mode (addItemForm is visible), update the form
+            if (addItemForm.style.display === 'block') {
+                const saveItemBtn = document.getElementById('saveItemBtn');
+                if (saveItemBtn.textContent === 'Update Item') {
+                    // We're in edit mode, so update the location
+                    const itemId = saveItemBtn.getAttribute('data-item-id');
+                    const item = items.find(item => item.id === parseInt(itemId));
+                    if (item) {
+                        item.x_coord = selectedLocation.x / scale;
+                        item.y_coord = selectedLocation.y / scale;
+                        displaySuccessMessage('Item location updated. Click "Update Item" to save changes.');
+                    }
+                }
             }
         });
     }
