@@ -47,6 +47,7 @@ function updateItem(item) {
     formData.append('quantity', parseInt(document.getElementById('itemQuantity').value, 10) || 1);
     formData.append('map_id', currentMapId);
 
+    // Use selectedLocation if available, otherwise use the original coordinates
     const newX = selectedLocation ? selectedLocation.x / scale : item.x_coord;
     const newY = selectedLocation ? selectedLocation.y / scale : item.y_coord;
     formData.append('x_coord', newX.toString());
