@@ -15,7 +15,10 @@ def generate_unique_filename(filename):
     _, file_extension = os.path.splitext(filename)
     timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
     random_string = str(uuid.uuid4())[:8]
-    return f"{timestamp}_{random_string}{file_extension}"
+    return f"{timestamp}_{random_string}{file_extensio
+@main_blueprint.before_request
+def log_request_info():
+    current_app.logger.debug('Request Method: %s, URL: %s', request.method, request.url)n}"
 
 @main_blueprint.route('/')
 def index():

@@ -5483,3 +5483,141 @@ FROM item]
 2024-10-16 14:22:26,868 - INFO - 172.31.196.108 - - [16/Oct/2024 14:22:26] "GET /api/items?map_id=1 HTTP/1.1" 200 -
 2024-10-16 14:22:26,961 - INFO - 172.31.196.108 - - [16/Oct/2024 14:22:26] "GET /static/thumbnails/placeholder.png HTTP/1.1" 200 -
 2024-10-16 14:22:27,036 - INFO - 172.31.196.108 - - [16/Oct/2024 14:22:27] "GET /static/thumbnails/150219_14_08_53__MG_0131.jpg HTTP/1.1" 200 -
+2024-10-16 16:51:11,232 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-16 16:51:11,233 - INFO - Added job "create_backup" to job store "default"
+2024-10-16 16:51:11,233 - INFO - Scheduler started
+2024-10-16 16:51:11,235 - INFO - Scheduler started
+2024-10-16 16:51:11,285 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.196.108:5000
+2024-10-16 16:51:11,285 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-16 16:51:11,288 - INFO -  * Restarting with stat
+2024-10-16 16:51:12,971 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-16 16:51:12,974 - INFO - Added job "create_backup" to job store "default"
+2024-10-16 16:51:12,975 - INFO - Scheduler started
+2024-10-16 16:51:12,976 - INFO - Scheduler started
+2024-10-16 16:51:13,002 - WARNING -  * Debugger is active!
+2024-10-16 16:51:13,018 - INFO -  * Debugger PIN: 135-494-480
+2024-10-16 16:51:14,106 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:14] "GET / HTTP/1.1" 200 -
+2024-10-16 16:51:14,117 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:14] "GET / HTTP/1.1" 200 -
+2024-10-16 16:51:14,542 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:14] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-10-16 16:51:14,555 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:14] "GET /static/js/script.js HTTP/1.1" 200 -
+2024-10-16 16:51:14,598 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:14] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-10-16 16:51:14,690 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:14] "GET /static/js/script.js HTTP/1.1" 200 -
+2024-10-16 16:51:14,746 - INFO - Fetching all maps
+2024-10-16 16:51:14,869 - INFO - Fetching all maps
+2024-10-16 16:51:14,974 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:14] "GET /api/maps HTTP/1.1" 200 -
+2024-10-16 16:51:15,063 - INFO - Fetching map with ID: 1
+2024-10-16 16:51:15,097 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:15] "GET /api/maps HTTP/1.1" 200 -
+2024-10-16 16:51:15,182 - INFO - Fetching map with ID: 1
+2024-10-16 16:51:15,291 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:15] "GET /api/maps/1 HTTP/1.1" 200 -
+2024-10-16 16:51:15,380 - INFO - Attempting to serve static file: /home/runner/workspace/static/maps/main.svg
+2024-10-16 16:51:15,381 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:15] "[36mGET /static/maps/main.svg HTTP/1.1[0m" 304 -
+2024-10-16 16:51:15,413 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:15] "GET /api/maps/1 HTTP/1.1" 200 -
+2024-10-16 16:51:15,476 - INFO - Fetching items for map ID: 1
+2024-10-16 16:51:15,554 - INFO - Attempting to serve static file: /home/runner/workspace/static/maps/main.svg
+2024-10-16 16:51:15,555 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:15] "[36mGET /static/maps/main.svg HTTP/1.1[0m" 304 -
+2024-10-16 16:51:15,656 - INFO - Fetching items for map ID: 1
+2024-10-16 16:51:15,712 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:15] "GET /api/items?map_id=1 HTTP/1.1" 200 -
+2024-10-16 16:51:15,811 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:15] "[36mGET /static/thumbnails/placeholder.png HTTP/1.1[0m" 304 -
+2024-10-16 16:51:15,887 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:15] "GET /api/items?map_id=1 HTTP/1.1" 200 -
+2024-10-16 16:51:15,919 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:15] "[36mGET /static/thumbnails/150219_14_08_53__MG_0131.jpg HTTP/1.1[0m" 304 -
+2024-10-16 16:51:15,982 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:15] "[33mGET /static/thumbnails/20241016_150949_97dfe681.jpg HTTP/1.1[0m" 404 -
+2024-10-16 16:51:15,983 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:15] "[33mGET /static/thumbnails/20241016_150500_9c9a4706.jpg HTTP/1.1[0m" 404 -
+2024-10-16 16:51:16,009 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:16] "[33mGET /static/thumbnails/20241016_150500_9c9a4706.jpg HTTP/1.1[0m" 404 -
+2024-10-16 16:51:16,070 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:16] "[33mGET /static/thumbnails/20241016_150801_fa740da3.jpg HTTP/1.1[0m" 404 -
+2024-10-16 16:51:16,074 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:16] "[33mGET /static/thumbnails/20241016_153437_794ce8a8.jpg HTTP/1.1[0m" 404 -
+2024-10-16 16:51:16,079 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:16] "[33mGET /static/thumbnails/20241016_150949_97dfe681.jpg HTTP/1.1[0m" 404 -
+2024-10-16 16:51:16,114 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:16] "[33mGET /static/thumbnails/20241016_150801_fa740da3.jpg HTTP/1.1[0m" 404 -
+2024-10-16 16:51:16,184 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:16] "[33mGET /static/thumbnails/20241016_152337_9f6c01cb.jpg HTTP/1.1[0m" 404 -
+2024-10-16 16:51:16,199 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:16] "[33mGET /static/thumbnails/20241016_153437_794ce8a8.jpg HTTP/1.1[0m" 404 -
+2024-10-16 16:51:16,204 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:16] "[33mGET /static/thumbnails/20241016_153624_1dbede16.jpg HTTP/1.1[0m" 404 -
+2024-10-16 16:51:16,232 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:16] "[33mGET /static/thumbnails/20241016_153624_1dbede16.jpg HTTP/1.1[0m" 404 -
+2024-10-16 16:51:16,291 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:16] "[33mGET /static/thumbnails/20241016_152718_35e840c7.jpg HTTP/1.1[0m" 404 -
+2024-10-16 16:51:16,296 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:16] "[33mGET /static/thumbnails/20241016_150011_83503f4f.jpg HTTP/1.1[0m" 404 -
+2024-10-16 16:51:16,299 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:16] "[33mGET /static/thumbnails/20241016_152337_9f6c01cb.jpg HTTP/1.1[0m" 404 -
+2024-10-16 16:51:16,320 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:16] "[33mGET /static/thumbnails/20241016_150011_83503f4f.jpg HTTP/1.1[0m" 404 -
+2024-10-16 16:51:16,378 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:16] "[33mGET /static/thumbnails/20241016_153805_174c39e3.jpg HTTP/1.1[0m" 404 -
+2024-10-16 16:51:16,380 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:16] "[33mGET /static/thumbnails/20241016_150630_28250964.jpg HTTP/1.1[0m" 404 -
+2024-10-16 16:51:16,387 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:16] "[33mGET /static/thumbnails/20241016_152718_35e840c7.jpg HTTP/1.1[0m" 404 -
+2024-10-16 16:51:16,421 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:16] "[33mGET /static/thumbnails/20241016_150630_28250964.jpg HTTP/1.1[0m" 404 -
+2024-10-16 16:51:16,466 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:16] "[33mGET /static/thumbnails/20241016_153248_e8ca3fe5.jpg HTTP/1.1[0m" 404 -
+2024-10-16 16:51:16,476 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:16] "[33mGET /static/thumbnails/20241016_153208_247e423e.jpg HTTP/1.1[0m" 404 -
+2024-10-16 16:51:16,481 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:16] "[33mGET /static/thumbnails/20241016_153805_174c39e3.jpg HTTP/1.1[0m" 404 -
+2024-10-16 16:51:16,522 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:16] "[33mGET /static/thumbnails/20241016_153248_e8ca3fe5.jpg HTTP/1.1[0m" 404 -
+2024-10-16 16:51:16,555 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:16] "[33mGET /static/thumbnails/20241016_154030_89cfc546.jpg HTTP/1.1[0m" 404 -
+2024-10-16 16:51:16,563 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:16] "[33mGET /static/thumbnails/20241016_153707_39faf826.jpg HTTP/1.1[0m" 404 -
+2024-10-16 16:51:16,574 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:16] "[33mGET /static/thumbnails/20241016_153208_247e423e.jpg HTTP/1.1[0m" 404 -
+2024-10-16 16:51:16,612 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:16] "[33mGET /static/thumbnails/20241016_154030_89cfc546.jpg HTTP/1.1[0m" 404 -
+2024-10-16 16:51:16,639 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:16] "[36mGET /static/thumbnails/150219_14_08_53__MG_0131.jpg HTTP/1.1[0m" 304 -
+2024-10-16 16:51:16,658 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:16] "[36mGET /static/thumbnails/placeholder.png HTTP/1.1[0m" 304 -
+2024-10-16 16:51:16,663 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:16] "[33mGET /static/thumbnails/20241016_153707_39faf826.jpg HTTP/1.1[0m" 404 -
+2024-10-16 16:51:16,705 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:16] "[33mGET /static/thumbnails/20241016_150257_963dd53a.jpg HTTP/1.1[0m" 404 -
+2024-10-16 16:51:16,726 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:16] "[33mGET /static/thumbnails/20241016_150257_963dd53a.jpg HTTP/1.1[0m" 404 -
+2024-10-16 16:51:16,747 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:16] "[33mGET /static/thumbnails/20241016_151142_bf6008cc.jpg HTTP/1.1[0m" 404 -
+2024-10-16 16:51:16,754 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:16] "[33mGET /static/thumbnails/20241016_151142_bf6008cc.jpg HTTP/1.1[0m" 404 -
+2024-10-16 16:51:16,802 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:16] "[33mGET /static/thumbnails/20241016_153838_afad48e8.jpg HTTP/1.1[0m" 404 -
+2024-10-16 16:51:16,816 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:16] "[33mGET /static/thumbnails/20241016_153838_afad48e8.jpg HTTP/1.1[0m" 404 -
+2024-10-16 16:51:16,832 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:16] "[33mGET /static/thumbnails/20241016_152258_1f8a6141.jpg HTTP/1.1[0m" 404 -
+2024-10-16 16:51:16,847 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:16] "[33mGET /static/thumbnails/20241016_152258_1f8a6141.jpg HTTP/1.1[0m" 404 -
+2024-10-16 16:51:22,400 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:22] "GET / HTTP/1.1" 200 -
+2024-10-16 16:51:22,524 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:22] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-10-16 16:51:22,576 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:22] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2024-10-16 16:51:22,673 - INFO - Fetching all maps
+2024-10-16 16:51:22,902 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:22] "GET /api/maps HTTP/1.1" 200 -
+2024-10-16 16:51:23,027 - INFO - Fetching map with ID: 1
+2024-10-16 16:51:23,254 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:23] "GET /api/maps/1 HTTP/1.1" 200 -
+2024-10-16 16:51:23,345 - INFO - Attempting to serve static file: /home/runner/workspace/static/maps/main.svg
+2024-10-16 16:51:23,346 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:23] "[36mGET /static/maps/main.svg HTTP/1.1[0m" 304 -
+2024-10-16 16:51:23,438 - INFO - Fetching items for map ID: 1
+2024-10-16 16:51:23,669 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:23] "GET /api/items?map_id=1 HTTP/1.1" 200 -
+2024-10-16 16:51:23,776 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:23] "[33mGET /static/thumbnails/20241016_150500_9c9a4706.jpg HTTP/1.1[0m" 404 -
+2024-10-16 16:51:23,777 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:23] "[33mGET /static/thumbnails/20241016_150949_97dfe681.jpg HTTP/1.1[0m" 404 -
+2024-10-16 16:51:23,863 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:23] "[33mGET /static/thumbnails/20241016_153624_1dbede16.jpg HTTP/1.1[0m" 404 -
+2024-10-16 16:51:23,864 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:23] "[33mGET /static/thumbnails/20241016_150801_fa740da3.jpg HTTP/1.1[0m" 404 -
+2024-10-16 16:51:23,951 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:23] "[33mGET /static/thumbnails/20241016_153437_794ce8a8.jpg HTTP/1.1[0m" 404 -
+2024-10-16 16:51:23,953 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:23] "[36mGET /static/thumbnails/150219_14_08_53__MG_0131.jpg HTTP/1.1[0m" 304 -
+2024-10-16 16:51:24,041 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:24] "[33mGET /static/thumbnails/20241016_150630_28250964.jpg HTTP/1.1[0m" 404 -
+2024-10-16 16:51:24,042 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:24] "[33mGET /static/thumbnails/20241016_153805_174c39e3.jpg HTTP/1.1[0m" 404 -
+2024-10-16 16:51:24,049 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:24] "[33mGET /static/thumbnails/20241016_152718_35e840c7.jpg HTTP/1.1[0m" 404 -
+2024-10-16 16:51:24,058 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:24] "[33mGET /static/thumbnails/20241016_150011_83503f4f.jpg HTTP/1.1[0m" 404 -
+2024-10-16 16:51:24,060 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:24] "[33mGET /static/thumbnails/20241016_152337_9f6c01cb.jpg HTTP/1.1[0m" 404 -
+2024-10-16 16:51:24,061 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:24] "[36mGET /static/thumbnails/placeholder.png HTTP/1.1[0m" 304 -
+2024-10-16 16:51:24,146 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:24] "[33mGET /static/thumbnails/20241016_153248_e8ca3fe5.jpg HTTP/1.1[0m" 404 -
+2024-10-16 16:51:24,149 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:24] "[33mGET /static/thumbnails/20241016_154030_89cfc546.jpg HTTP/1.1[0m" 404 -
+2024-10-16 16:51:24,149 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:24] "[33mGET /static/thumbnails/20241016_153208_247e423e.jpg HTTP/1.1[0m" 404 -
+2024-10-16 16:51:24,160 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:24] "[33mGET /static/thumbnails/20241016_151142_bf6008cc.jpg HTTP/1.1[0m" 404 -
+2024-10-16 16:51:24,161 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:24] "[33mGET /static/thumbnails/20241016_153707_39faf826.jpg HTTP/1.1[0m" 404 -
+2024-10-16 16:51:24,162 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:24] "[33mGET /static/thumbnails/20241016_150257_963dd53a.jpg HTTP/1.1[0m" 404 -
+2024-10-16 16:51:24,238 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:24] "[33mGET /static/thumbnails/20241016_153838_afad48e8.jpg HTTP/1.1[0m" 404 -
+2024-10-16 16:51:24,245 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:24] "[33mGET /static/thumbnails/20241016_152258_1f8a6141.jpg HTTP/1.1[0m" 404 -
+2024-10-16 16:51:26,854 - INFO - Fetching map with ID: 2
+2024-10-16 16:51:27,082 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:27] "GET /api/maps/2 HTTP/1.1" 200 -
+2024-10-16 16:51:27,174 - INFO - Attempting to serve static file: /home/runner/workspace/static/maps/closet.svg
+2024-10-16 16:51:27,175 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:27] "[36mGET /static/maps/closet.svg HTTP/1.1[0m" 304 -
+2024-10-16 16:51:27,267 - INFO - Fetching items for map ID: 2
+2024-10-16 16:51:27,497 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:27] "GET /api/items?map_id=2 HTTP/1.1" 200 -
+2024-10-16 16:51:33,295 - INFO - Attempting to delete item with ID: 49
+2024-10-16 16:51:33,612 - INFO - Item with id 49 deleted successfully
+2024-10-16 16:51:33,613 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:33] "DELETE /api/items/49 HTTP/1.1" 200 -
+2024-10-16 16:51:33,717 - INFO - Fetching items for map ID: 2
+2024-10-16 16:51:33,948 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:33] "GET /api/items?map_id=2 HTTP/1.1" 200 -
+2024-10-16 16:51:38,512 - INFO - Received POST data: ImmutableMultiDict([('name', 'asdasd'), ('tags', 'asd'), ('x_coord', '196.74923547400616'), ('y_coord', '583.3051821753476'), ('map_id', '2'), ('color', 'red'), ('zone', ''), ('quantity', '1'), ('warning', 'hand')])
+2024-10-16 16:51:38,713 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:38] "PUT /api/items/126 HTTP/1.1" 200 -
+2024-10-16 16:51:38,865 - INFO - Fetching items for map ID: 2
+2024-10-16 16:51:38,934 - INFO - New item added with ID: 128
+2024-10-16 16:51:38,992 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:38] "[35m[1mPOST /api/items HTTP/1.1[0m" 201 -
+2024-10-16 16:51:39,093 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:39] "GET /api/items?map_id=2 HTTP/1.1" 200 -
+2024-10-16 16:51:39,180 - INFO - Fetching items for map ID: 2
+2024-10-16 16:51:39,406 - INFO - 172.31.196.108 - - [16/Oct/2024 16:51:39] "GET /api/items?map_id=2 HTTP/1.1" 200 -
+2024-10-16 16:53:39,361 - INFO - Received POST data: ImmutableMultiDict([('name', 'thing'), ('tags', 'thing'), ('x_coord', '733.8523466610035'), ('y_coord', '197.06378343124817'), ('map_id', '2'), ('color', 'red'), ('zone', ''), ('quantity', '1'), ('warning', '')])
+2024-10-16 16:53:39,662 - INFO - 172.31.196.108 - - [16/Oct/2024 16:53:39] "PUT /api/items/22 HTTP/1.1" 200 -
+2024-10-16 16:53:39,761 - INFO - Fetching items for map ID: 2
+2024-10-16 16:53:39,771 - INFO - New item added with ID: 129
+2024-10-16 16:53:39,829 - INFO - 172.31.196.108 - - [16/Oct/2024 16:53:39] "[35m[1mPOST /api/items HTTP/1.1[0m" 201 -
+2024-10-16 16:53:39,993 - INFO - 172.31.196.108 - - [16/Oct/2024 16:53:39] "GET /api/items?map_id=2 HTTP/1.1" 200 -
+2024-10-16 16:53:40,140 - INFO - Fetching items for map ID: 2
+2024-10-16 16:53:40,372 - INFO - 172.31.196.108 - - [16/Oct/2024 16:53:40] "GET /api/items?map_id=2 HTTP/1.1" 200 -
+2024-10-16 16:56:57,926 - INFO -  * Detected change in '/home/runner/workspace/routes.py', reloading
+2024-10-16 16:56:58,070 - INFO -  * Restarting with stat
