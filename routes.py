@@ -11,7 +11,6 @@ import datetime
 main_blueprint = Blueprint('main', __name__)
 
 def generate_unique_filename(filename):
-    """Generate a unique filename using timestamp and UUID."""
     _, file_extension = os.path.splitext(filename)
     timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
     random_string = str(uuid.uuid4())[:8]
@@ -29,8 +28,11 @@ def index():
 
 @main_blueprint.route('/api/items/<int:item_id>', methods=['PUT'])
 def update_item(item_id):
+    print(f"Updating item with ID: {item_id}")
     item = Item.query.get_or_404(item_id)
     
+    print(f"Current item data: {item.__dict__}")
+
     name = request.form.get('name')
     tags = request.form.get('tags')
     color = request.form.get('color')
@@ -40,6 +42,10 @@ def update_item(item_id):
     map_id = request.form.get('map_id')
     x_coord = request.form.get('x_coord')
     y_coord = request.form.get('y_coord')
+
+    print(f"Received data: name={name}, tags={tags}, color={color}, zone={zone}, "
+          f"quantity={quantity}, warning={warning}, map_id={map_id}, "
+          f"x_coord={x_coord}, y_coord={y_coord}")
 
     if name:
         item.name = name
@@ -60,7 +66,6 @@ def update_item(item_id):
     if y_coord:
         item.y_coord = float(y_coord)
 
-    # Handle image upload
     if 'image' in request.files:
         file = request.files['image']
         if file and allowed_file(file.filename):
@@ -68,12 +73,15 @@ def update_item(item_id):
             file_path = os.path.join(current_app.config['UPLOAD_FOLDER'], filename)
             file.save(file_path)
             item.image_path = f'/static/thumbnails/{filename}'
+            print(f"New image saved: {item.image_path}")
 
     try:
         db.session.commit()
+        print(f"Item updated successfully. New data: {item.__dict__}")
         return jsonify({'message': 'Item updated successfully'}), 200
     except SQLAlchemyError as e:
         db.session.rollback()
+        print(f"Error updating item (ID: {item_id}): {str(e)}")
         current_app.logger.error(f"Error updating item (ID: {item_id}): {str(e)}")
         return jsonify({"error": "An error occurred while updating the item"}), 500
 

@@ -384,6 +384,8 @@ document.addEventListener('DOMContentLoaded', function() {
         formData.append('quantity', parseInt(document.getElementById('itemQuantity').value, 10) || 1);
         formData.append('map_id', currentMapId);
 
+        console.log('Selected Location:', selectedLocation);
+
         formData.append('x_coord', (selectedLocation ? selectedLocation.x / scale : item.x_coord).toString());
         formData.append('y_coord', (selectedLocation ? selectedLocation.y / scale : item.y_coord).toString());
 
@@ -397,6 +399,10 @@ document.addEventListener('DOMContentLoaded', function() {
             .join(',');
         formData.append('warning', warnings);
 
+        for (let [key, value] of formData.entries()) {
+            console.log(`${key}: ${value}`);
+        }
+
         fetch(`/api/items/${item.id}`, {
             method: 'PUT',
             body: formData
@@ -408,6 +414,8 @@ document.addEventListener('DOMContentLoaded', function() {
             return response.json();
         })
         .then(data => {
+            console.log('Server response:', data);
+
             addItemForm.style.display = 'none';
             loadItems();
             displaySuccessMessage('Item updated successfully');
