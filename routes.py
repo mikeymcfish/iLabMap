@@ -8,7 +8,8 @@ import os
 import uuid
 import datetime
 
-main_blueprint = Blueprint('main', __name__)
+main_blueprint = B
+lueprint('main', __name__)
 
 def generate_unique_filename(filename):
     _, file_extension = os.path.splitext(filename)
@@ -19,10 +20,11 @@ def generate_unique_filename(filename):
 @main_blueprint.route('/')
 def index():
     try:
-        items = Item.query.all()
+        i
+tems = Item.query.all()
         return render_template('index.html', items=items)
     except SQLAlchemyError as e:
-        current_app.logger.error(
+        current_app.er.error(
             f"Error fetching items for index page: {str(e)}")
         return f"An error occurred while fetching items. : {str(e)}", 500
 
@@ -52,7 +54,8 @@ def update_item(item_id):
     if tags:
         item.tags = tags
     if color:
-        item.color = color
+        item.color = 
+                                    color
     if zone:
         item.zone = zone
     if quantity:
@@ -64,31 +67,15 @@ def update_item(item_id):
     if x_coord:
         item.x_coord = float(x_coord)
     if y_coord:
-        item.y_coord = float(y_coord)
+        item.y_coord = float(y_coo
+            rd)
 
     if 'image' in request.files:
         file = request.files['image']
-        if file and allowed_file(file.filename):
-            filename = generate_unique_filename(secure_filename(file.filename))
-            file_path = os.path.join(current_app.config['UPLOAD_FOLDER'], filename)
-            file.save(file_path)
-            item.image_path = f'/static/thumbnails/{filename}'
-            print(f"New image saved: {item.image_path}")
-
-    print(f"Updated item data before commit: {item.__dict__}")
-
-    try:
-        db.session.commit()
-        print(f"Item updated successfully. New data: {item.__dict__}")
-        return jsonify({'message': 'Item updated successfully'}), 200
-    except SQLAlchemyError as e:
-        db.session.rollback()
-        print(f"Error updating item (ID: {item_id}): {str(e)}")
-        current_app.logger.error(f"Error updating item (ID: {item_id}): {str(e)}")
-        return jsonify({"error": "An error occurred while updating the item"}), 500
-
-@main_blueprint.route('/api/items/<int:item_id>', methods=['GET'])
-def get_item(item_id):
+      
+                         if file and allowed_file(file.filename):
+        
+    filename = generate_unique_filename(secure_filename(file.filenamedef get_item(item_id):
     try:
         current_app.logger.info(f"Fetching item with ID: {item_id}")
         item = Item.query.get_or_404(item_id)
@@ -110,6 +97,27 @@ def get_item(item_id):
             f"Error retrieving item (ID: {item_id}): {str(e)}")
         return jsonify(
             {"error": "An error occurred while retrieving the item"}), 500
+em with ID: {item_id}")
+        item = Item.query.get_or_404(item_id)
+        image_path = item.image_path if item.image_path else "static/thumbnails/placeholder.png"
+        return jsonify({
+            "id": item.id,
+            "name": item.name,
+            "tags": item.tags,
+            "x_coord": item.x_coord,
+            "y_coord": item.y_coord,
+            "map_id": item.map_id,
+            "image_path": image_path,
+            "color": item.color,
+            "quantity": item.quantity,
+     
+       "warning": item.warning
+        }), 200
+    except SQLAlchemyError as e:
+        current_app.logger.error(
+            f"Error retrieving item (ID: {item_id}): {str(e)}")
+        return jsonify(
+            {"error": "An error occurred while retrieving the item"}), 500
 
 @main_blueprint.route('/api/maps', methods=['GET'])
 def get_maps():
@@ -121,7 +129,8 @@ def get_maps():
             "name": map.name,
             "background_color": map.background_color
         } for map in maps])
-    except SQLAlchemyError as e:
+    except SQLAlchemy
+Error as e:
         current_app.logger.error(f"Error fetching maps: {str(e)}")
         return jsonify({"error": "An error occurred while fetching maps"}), 500
 
@@ -149,19 +158,16 @@ def items():
         image_file = request.files.get('image')
         current_app.logger.info(f"Received POST data: {data}")
 
-        required_fields = ['name', 'tags', 'x_coord', 'y_coord', 'map_id']
-        missing_fields = [
-            field for field in required_fields if field not in data
+        required_fields = ['name', 'tags', 'x_coord', 'y_co       missing_fiel            ds = [
+            field for field        in required_fiel     ds if field not in data
         ]
-        if missing_fields:
-            current_app.logger.warning(
-                f"Missing required fields: {missing_fields}")
+                    if missing_fie lds:
+                       current_app.logger.warning       (
+                     f"Missing required fiel            ds: {missing_fields}")
             return jsonify({
-                "error":
-                f"Missing required fields: {', '.join(missing_fields)}"
-            }), 400
-
-        image_path = None
+                            "error":
+                     f"Mis       sing required fields: {', '.join(missin            g_fields)}"
+               image_path = None
         if image_file:
             filename = generate_unique_filename(secure_filename(image_file.filename))
             image_path = os.path.join(current_app.config['UPLOAD_FOLDER'],
@@ -183,26 +189,36 @@ def items():
                 map_id=data['map_id'],
                 image_path=image_path 
             )
-            db.session.add(new_item)
-            db.session.commit()
-            current_app.logger.info(f"New item added with ID: {new_item.id}")
-            return jsonify({"id": new_item.id}), 201
-        except SQLAlchemyError as e:
-            db.session.rollback()
-            current_app.logger.error(f"Error adding item: {str(e)}")
-            return jsonify(
-                {"error": "An error occurred while adding the item"}), 500
-    elif request.method == 'GET':
+            db.session      db.session.commit
+               ()
+        current_app.logger.inf
+               o(f"New item added with ID: "tags":
+{new           d}")
+            return json{"id": 
+               new_item.id}01
+        except SQLAlc
+               hemyError as            db.session.rollb
+               ack()
+            current_app.lo.error(f"E
+               rror adding item: {str(e)}")
+        retu
+               rn jsonify(
+                {"e": "An err
+               or occurred while adding the it), 500
+  
+                 elif requesthod == 'GET':
         try:
-            map_id = request.args.get('map_id', type=int)
-            current_app.logger.info(f"Fetching items for map ID: {map_id}")
-            if map_id is None:
+  
+                         map_id
+                = request.args.get('map        current_app.logger.info(f"Fetching items map ID: {map_id}")
+f map_id is None:
                 current_app.logger.warning("Missing map_id in request")
                 return jsonify({"error": "map_id is required"}), 400
 
             items = Item.query.filter_by(map_id=map_id).all()
             return jsonify([
-                {
+            
+    {
                     "id": item.id,
                     "name": item.name,
                     "tags": item.tags,
@@ -223,7 +239,8 @@ def items():
             return jsonify({"error":
                             "An error occurred while fetching items"}), 500
 
-@main_blueprint.route('/api/items/<int:item_id>', methods=['DELETE'])
+@main_blueprint.route('/api/items/<int:item_id>', 
+methods=['DELETE'])
 def delete_item(item_id):
     try:
         current_app.logger.info(
@@ -251,21 +268,27 @@ def search():
         search_type = request.args.get('type', 'all')
         map_id = request.args.get('map_id')
 
-        current_app.logger.info(
-            f"Search query: {query}, type: {search_type}, map_id: {map_id}")
+        current_app.logger  f"Search query: {
+           query}, ty{search_type}, map_
+           id: {map_id}")
 
-        if not map_id:
-            current_app.logger.warning("Missing map_id in search request")
-            return jsonify({"error": "map_id is required"}), 400
+        ot map_
+           id:
+            current_logger.war
+           ning("Missing map_id in searequest")
 
-        items_query = Item.query.filter(Item.map_id == map_id)
+                       retrn jsonify({ror": "ma
+           p_id is required"}), 400
 
-        if search_type == 'name':
-            items_query = items_query.filter(Item.name.ilike(f'%{query}%'))
+    items_que
+           ry = Item.query.
+           filter(Item.map_id == maf search_type == 'name':
+            items_qu= items_query.filteme.ilike(f'%{query}%'))
         elif search_type == 'tags':
             items_query = items_query.filter(Item.tags.ilike(f'%{query}%'))
         else:  # 'all'
-            items_query = items_query.filter(
+            items_query = items_query.filter
+(
                 or_(Item.name.ilike(f'%{query}%'),
                     Item.tags.ilike(f'%{query}%')))
 
@@ -280,12 +303,15 @@ def search():
                 "x_coord": item.x_coord,
                 "y_coord": item.y_coord,
                 "map_id": item.map_id,
-                "image_path": item.image_path if item.image_path else
+                "image_path": item.image_path if item
+.image_path else
                 "static/thumbnails/placeholder.png"
             } for item in items
         ])
-    except SQLAlchemyError as e:
-        current_app.logger.error(f"Error searching items: {str(e)}")
+    except SQLAlch
+        emyError as e:
+        current_app.logge
+r.error(f"Error searching items: {str(e)}")
         return jsonify(
             {"error": "An error occurred while searching for items"}), 500
 
