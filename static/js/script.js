@@ -367,6 +367,7 @@ document.addEventListener('DOMContentLoaded', function() {
             x: item.x_coord * scale,
             y: item.y_coord * scale
         };
+        console.log('Edit mode: Selected location set to', selectedLocation);
         drawMap();
     }
 
@@ -384,8 +385,12 @@ document.addEventListener('DOMContentLoaded', function() {
         formData.append('quantity', parseInt(document.getElementById('itemQuantity').value, 10) || 1);
         formData.append('map_id', currentMapId);
 
-        formData.append('x_coord', (selectedLocation ? selectedLocation.x / scale : item.x_coord).toString());
-        formData.append('y_coord', (selectedLocation ? selectedLocation.y / scale : item.y_coord).toString());
+        const newX = selectedLocation ? selectedLocation.x / scale : item.x_coord;
+        const newY = selectedLocation ? selectedLocation.y / scale : item.y_coord;
+        formData.append('x_coord', newX.toString());
+        formData.append('y_coord', newY.toString());
+
+        console.log('Updating item coordinates:', { x: newX, y: newY });
 
         const itemImageFile = document.getElementById('itemImage').files[0];
         if (itemImageFile) {
@@ -408,11 +413,13 @@ document.addEventListener('DOMContentLoaded', function() {
             return response.json();
         })
         .then(data => {
+            console.log('Item updated successfully:', data);
             addItemForm.style.display = 'none';
             loadItems();
             displaySuccessMessage('Item updated successfully');
             resetForm();
             selectedLocation = null;
+            drawMap();
         })
         .catch(error => {
             console.error('Error updating item:', error);
