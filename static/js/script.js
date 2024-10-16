@@ -337,8 +337,12 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function editItem(itemId) {
+        console.log('Editing item:', itemId);
         const item = items.find(item => item.id === parseInt(itemId));
-        if (!item) return;
+        if (!item) {
+            console.error('Item not found:', itemId);
+            return;
+        }
 
         document.getElementById('itemName').value = item.name;
         document.getElementById('itemTags').value = item.tags;
@@ -397,6 +401,9 @@ document.addEventListener('DOMContentLoaded', function() {
             .join(',');
         formData.append('warning', warnings);
 
+        console.log('Updating item:', item.id);
+        console.log('Form data:', Object.fromEntries(formData));
+
         fetch(`/api/items/${item.id}`, {
             method: 'PUT',
             body: formData
@@ -408,6 +415,7 @@ document.addEventListener('DOMContentLoaded', function() {
             return response.json();
         })
         .then(data => {
+            console.log('Item updated successfully:', data);
             addItemForm.style.display = 'none';
             loadItems();
             displaySuccessMessage('Item updated successfully');

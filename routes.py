@@ -17,6 +17,11 @@ def generate_unique_filename(filename):
     random_string = str(uuid.uuid4())[:8]
     return f"{timestamp}_{random_string}{file_extension}"
 
+
+@main_blueprint.before_request
+def log_request_info():
+    current_app.logger.debug('Request Method: %s, URL: %s', request.method, request.url)
+    
 @main_blueprint.route('/')
 def index():
     try:
