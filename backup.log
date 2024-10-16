@@ -6410,3 +6410,37 @@ FROM item]
 2024-10-16 19:00:36,572 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/items?map_id=1
 2024-10-16 19:00:36,572 - INFO - Fetching items for map ID: 1
 2024-10-16 19:00:36,800 - INFO - 172.31.196.108 - - [16/Oct/2024 19:00:36] "GET /api/items?map_id=1 HTTP/1.1" 200 -
+2024-10-16 19:01:00,167 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-16 19:01:00,399 - INFO - 172.31.196.108 - - [16/Oct/2024 19:01:00] "GET / HTTP/1.1" 200 -
+2024-10-16 19:01:00,918 - INFO - 172.31.196.108 - - [16/Oct/2024 19:01:00] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2024-10-16 19:01:00,919 - INFO - 172.31.196.108 - - [16/Oct/2024 19:01:00] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-10-16 19:01:01,446 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps
+2024-10-16 19:01:01,447 - INFO - Fetching all maps
+2024-10-16 19:01:01,674 - INFO - 172.31.196.108 - - [16/Oct/2024 19:01:01] "GET /api/maps HTTP/1.1" 200 -
+2024-10-16 19:01:01,787 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps/1
+2024-10-16 19:01:01,787 - INFO - Fetching map with ID: 1
+2024-10-16 19:01:02,015 - INFO - 172.31.196.108 - - [16/Oct/2024 19:01:02] "GET /api/maps/1 HTTP/1.1" 200 -
+2024-10-16 19:01:02,255 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/static/maps/main.svg
+2024-10-16 19:01:02,256 - INFO - Attempting to serve static file: /home/runner/workspace/static/maps/main.svg
+2024-10-16 19:01:02,256 - INFO - 172.31.196.108 - - [16/Oct/2024 19:01:02] "[36mGET /static/maps/main.svg HTTP/1.1[0m" 304 -
+2024-10-16 19:01:02,362 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/items?map_id=1
+2024-10-16 19:01:02,363 - INFO - Fetching items for map ID: 1
+2024-10-16 19:01:02,590 - INFO - 172.31.196.108 - - [16/Oct/2024 19:01:02] "GET /api/items?map_id=1 HTTP/1.1" 200 -
+2024-10-16 19:01:02,760 - INFO - 172.31.196.108 - - [16/Oct/2024 19:01:02] "[36mGET /static/thumbnails/placeholder.png HTTP/1.1[0m" 304 -
+2024-10-16 19:03:08,803 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-16 19:03:09,031 - INFO - 172.31.196.108 - - [16/Oct/2024 19:03:09] "GET / HTTP/1.1" 200 -
+2024-10-16 19:03:09,126 - INFO - 172.31.196.108 - - [16/Oct/2024 19:03:09] "GET /static/css/styles.css HTTP/1.1" 200 -
+2024-10-16 19:03:09,163 - INFO - 172.31.196.108 - - [16/Oct/2024 19:03:09] "GET /static/js/script.js HTTP/1.1" 200 -
+2024-10-16 19:03:09,331 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps
+2024-10-16 19:03:09,331 - INFO - Fetching all maps
+2024-10-16 19:03:09,559 - INFO - 172.31.196.108 - - [16/Oct/2024 19:03:09] "GET /api/maps HTTP/1.1" 200 -
+2024-10-16 19:03:09,614 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps/1
+2024-10-16 19:03:09,615 - INFO - Fetching map with ID: 1
+2024-10-16 19:03:09,842 - INFO - 172.31.196.108 - - [16/Oct/2024 19:03:09] "GET /api/maps/1 HTTP/1.1" 200 -
+2024-10-16 19:03:09,920 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/static/maps/main.svg
+2024-10-16 19:03:09,920 - INFO - Attempting to serve static file: /home/runner/workspace/static/maps/main.svg
+2024-10-16 19:03:09,925 - INFO - 172.31.196.108 - - [16/Oct/2024 19:03:09] "GET /static/maps/main.svg HTTP/1.1" 200 -
+2024-10-16 19:03:10,022 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/items?map_id=1
+2024-10-16 19:03:10,022 - INFO - Fetching items for map ID: 1
+2024-10-16 19:03:10,251 - INFO - 172.31.196.108 - - [16/Oct/2024 19:03:10] "GET /api/items?map_id=1 HTTP/1.1" 200 -
+2024-10-16 19:03:10,281 - INFO - 172.31.196.108 - - [16/Oct/2024 19:03:10] "GET /static/thumbnails/placeholder.png HTTP/1.1" 200 -

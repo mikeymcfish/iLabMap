@@ -555,6 +555,8 @@ document.addEventListener('DOMContentLoaded', function() {
                         item.y_coord = selectedLocation.y / scale;
                         displaySuccessMessage('Item location updated. Click "Update Item" to save changes.');
                     }
+                } else {
+                    positionAddItemForm();
                 }
             }
         });
@@ -562,7 +564,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (addItemBtn) {
         addItemBtn.addEventListener('click', function() {
-            if (selectedLocation && addItemForm) {
+            if (selectedLocation) {
                 if (addItemForm.style.display === 'none' || addItemForm.style.display === '') {
                     resetForm();
                     positionAddItemForm();
@@ -570,6 +572,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 } else {
                     addItemForm.style.display = 'none';
                 }
+            } else {
+                displayErrorMessage('Please select a location on the map first.');
             }
         });
     }
