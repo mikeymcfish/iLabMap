@@ -280,13 +280,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function displayErrorMessage(message) {
         const errorDiv = document.createElement('div');
-        errorDiv.className = 'alert alert-danger alert-dismissible fade show';
+        errorDiv.className = 'alert alert-danger alert-dismissible fade show notification';
         errorDiv.role = 'alert';
         errorDiv.innerHTML = `
             ${message}
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         `;
-        document.body.insertBefore(errorDiv, document.body.firstChild);
+        document.body.appendChild(errorDiv);
         setTimeout(() => {
             errorDiv.remove();
         }, 5000);
@@ -294,13 +294,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function displaySuccessMessage(message) {
         const successDiv = document.createElement('div');
-        successDiv.className = 'alert alert-success alert-dismissible fade show';
+        successDiv.className = 'alert alert-success alert-dismissible fade show notification';
         successDiv.role = 'alert';
         successDiv.innerHTML = `
             ${message}
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         `;
-        document.body.insertBefore(successDiv, document.body.firstChild);
+        document.body.appendChild(successDiv);
         setTimeout(() => {
             successDiv.remove();
         }, 5000);
