@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const itemImageInput = document.getElementById('itemImage');
     const mapSelector = document.getElementById('mapSelector');
     const dropArea = document.getElementById('dropArea');
+    const updateItemBtn = document.getElementById('updateItemBtn');
 
     let items = [];
     let mapImage = new Image();
@@ -360,10 +361,9 @@ document.addEventListener('DOMContentLoaded', function() {
         addItemForm.style.display = 'block';
         positionAddItemForm();
 
-        const saveItemBtn = document.getElementById('saveItemBtn');
-        saveItemBtn.textContent = 'Update Item';
-        saveItemBtn.setAttribute('data-item-id', itemId);
-        saveItemBtn.onclick = function() {
+        updateItemBtn.textContent = 'Update Item';
+        updateItemBtn.setAttribute('data-item-id', itemId);
+        updateItemBtn.onclick = function() {
             updateItem(item);
         };
 
@@ -426,74 +426,6 @@ document.addEventListener('DOMContentLoaded', function() {
             console.error('Error updating item:', error);
             displayErrorMessage('Error updating item. Please try again later.');
         });
-    }
-
-    if (searchInput) {
-        searchInput.addEventListener('input', performSearch);
-    }
-
-    if (searchType) {
-        searchType.addEventListener('change', performSearch);
-    }
-
-    if (mapCanvas) {
-        mapCanvas.addEventListener('click', function(event) {
-            const rect = mapCanvas.getBoundingClientRect();
-            const scaleX = mapCanvas.width / rect.width;
-            const scaleY = mapCanvas.height / rect.height;
-            selectedLocation = {
-                x: (event.clientX - rect.left) * scaleX,
-                y: (event.clientY - rect.top) * scaleY
-            };
-            drawMap();
-            if (addItemBtn) {
-                addItemBtn.disabled = false;
-            }
-            
-            if (addItemForm.style.display === 'block') {
-                const saveItemBtn = document.getElementById('saveItemBtn');
-                if (saveItemBtn.textContent === 'Update Item') {
-                    const itemId = saveItemBtn.getAttribute('data-item-id');
-                    const item = items.find(item => item.id === parseInt(itemId));
-                    if (item) {
-                        item.x_coord = selectedLocation.x / scale;
-                        item.y_coord = selectedLocation.y / scale;
-                        displaySuccessMessage('Item location updated. Click "Update Item" to save changes.');
-                    }
-                }
-            }
-        });
-    }
-
-    if (addItemBtn) {
-        addItemBtn.addEventListener('click', function() {
-            if (selectedLocation && addItemForm) {
-                if (addItemForm.style.display === 'none' || addItemForm.style.display === '') {
-                    resetForm();
-                    positionAddItemForm();
-                    addItemForm.style.display = 'block';
-                } else {
-                    addItemForm.style.display = 'none';
-                }
-            }
-        });
-    }
-
-    if (clearBtn) {
-        clearBtn.addEventListener('click', function() {
-            selectedLocation = null;
-            if (addItemBtn) {
-                addItemBtn.disabled = true;
-            }
-            if (addItemForm) {
-                addItemForm.style.display = 'none';
-            }
-            drawMap();
-        });
-    }
-
-    if (saveItemBtn) {
-        saveItemBtn.addEventListener('click', saveItem);
     }
 
     function saveItem() {
@@ -568,10 +500,86 @@ document.addEventListener('DOMContentLoaded', function() {
         selectedLocation = null;
         addItemBtn.disabled = true;
         
-        const saveItemBtn = document.getElementById('saveItemBtn');
-        saveItemBtn.textContent = 'Save Item';
-        saveItemBtn.onclick = saveItem;
-        saveItemBtn.removeAttribute('data-item-id');
+        updateItemBtn.textContent = 'Save Item';
+        updateItemBtn.onclick = saveItem;
+        updateItemBtn.removeAttribute('data-item-id');
+    }
+
+    if (searchInput) {
+        searchInput.addEventListener('input', performSearch);
+    }
+
+    if (searchType) {
+        searchType.addEventListener('change', performSearch);
+    }
+
+    if (mapCanvas) {
+        mapCanvas.addEventListener('click', function(event) {
+            const rect = mapCanvas.getBoundingClientRect();
+            const scaleX = mapCanvas.width / rect.width;
+            const scaleY = mapCanvas.height / rect.height;
+            selectedLocation = {
+                x: (event.clientX - rect.left) * scaleX,
+                y: (event.clientY - rect.top) * scaleY
+            };
+            drawMap();
+            if (addItemBtn) {
+                addItemBtn.disabled = false;
+            }
+            
+            if (addItemForm.style.display === 'block') {
+                if (updateItemBtn.textContent === 'Update Item') {
+                    const itemId = updateItemBtn.getAttribute('data-item-id');
+                    const item = items.find(item => item.id === parseInt(itemId));
+                    if (item) {
+                        item.x_coord = selectedLocation.x / scale;
+                        item.y_coord = selectedLocation.y / scale;
+                        displaySuccessMessage('Item location updated. Click "Update Item" to save changes.');
+                    }
+                }
+            }
+        });
+    }
+
+    if (addItemBtn) {
+        addItemBtn.addEventListener('click', function() {
+            if (selectedLocation && addItemForm) {
+                if (addItemForm.style.display === 'none' || addItemForm.style.display === '') {
+                    resetForm();
+                    positionAddItemForm();
+                    addItemForm.style.display = 'block';
+                } else {
+                    addItemForm.style.display = 'none';
+                }
+            }
+        });
+    }
+
+    if (clearBtn) {
+        clearBtn.addEventListener('click', function() {
+            selectedLocation = null;
+            if (addItemBtn) {
+                addItemBtn.disabled = true;
+            }
+            if (addItemForm) {
+                addItemForm.style.display = 'none';
+            }
+            drawMap();
+        });
+    }
+
+    if (updateItemBtn) {
+        updateItemBtn.addEventListener('click', function() {
+            if (this.textContent === 'Update Item') {
+                const itemId = this.getAttribute('data-item-id');
+                const item = items.find(item => item.id === parseInt(itemId));
+                if (item) {
+                    updateItem(item);
+                }
+            } else {
+                saveItem();
+            }
+        });
     }
 
     if (cancelAddBtn) {
@@ -668,9 +676,8 @@ document.addEventListener('DOMContentLoaded', function() {
             itemImageInput.files = files;
             updateDropAreaUI(files[0]);
             
-            const saveItemBtn = document.getElementById('saveItemBtn');
-            if (saveItemBtn.textContent === 'Update Item') {
-                const itemId = saveItemBtn.getAttribute('data-item-id');
+            if (updateItemBtn.textContent === 'Update Item') {
+                const itemId = updateItemBtn.getAttribute('data-item-id');
                 updateItemImage(itemId, files[0]);
             }
         }
@@ -715,9 +722,8 @@ document.addEventListener('DOMContentLoaded', function() {
         if (this.files[0]) {
             updateDropAreaUI(this.files[0]);
             
-            const saveItemBtn = document.getElementById('saveItemBtn');
-            if (saveItemBtn.textContent === 'Update Item') {
-                const itemId = saveItemBtn.getAttribute('data-item-id');
+            if (updateItemBtn.textContent === 'Update Item') {
+                const itemId = updateItemBtn.getAttribute('data-item-id');
                 updateItemImage(itemId, this.files[0]);
             }
         }

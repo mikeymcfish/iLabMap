@@ -77,10 +77,10 @@
     font-size: 1.2em;
 }
 
-/* New styles for notification pop-ups */
+/* Updated styles for notification pop-ups */
 .notification {
     position: fixed;
-    top: 20px;
+    top: 0;
     left: 50%;
     transform: translateX(-50%);
     z-index: 9999;
