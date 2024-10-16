@@ -77,7 +77,8 @@ def update_item(item_id):
 
     print(f"Updated item data before commit: {item.__dict__}")
 
-    try:      db.session.commit()
+    try:
+        db.session.commit()
         print(f"Item updated successfully. New data: {item.__dict__}")
         return jsonify({'message': 'Item updated successfully'}), 200
     except SQLAlchemyError as e:
