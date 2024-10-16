@@ -5,8 +5,17 @@ from werkzeug.utils import secure_filename
 from app import db
 from models import Map, Item
 import os
+import uuid
+import datetime
 
 main_blueprint = Blueprint('main', __name__)
+
+def generate_unique_filename(filename):
+    """Generate a unique filename using timestamp and UUID."""
+    _, file_extension = os.path.splitext(filename)
+    timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+    random_string = str(uuid.uuid4())[:8]
+    return f"{timestamp}_{random_string}{file_extension}"
 
 @main_blueprint.route('/')
 def index():
@@ -55,7 +64,7 @@ def update_item(item_id):
     if 'image' in request.files:
         file = request.files['image']
         if file and allowed_file(file.filename):
-            filename = secure_filename(file.filename)
+            filename = generate_unique_filename(secure_filename(file.filename))
             file_path = os.path.join(current_app.config['UPLOAD_FOLDER'], filename)
             file.save(file_path)
             item.image_path = f'/static/thumbnails/{filename}'
@@ -144,11 +153,12 @@ def items():
 
         image_path = None
         if image_file:
-            filename = secure_filename(image_file.filename)
+            filename = generate_unique_filename(secure_filename(image_file.filename))
             image_path = os.path.join(current_app.config['UPLOAD_FOLDER'],
                                       filename)
             current_app.logger.info(f"Saving image to: {image_path}")
             image_file.save(image_path)
+            image_path = f'/static/thumbnails/{filename}'
 
         try:
             new_item = Item(
