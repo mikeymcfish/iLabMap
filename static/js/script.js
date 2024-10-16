@@ -376,8 +376,6 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
-        console.log('updateItem function called with item:', item);
-
         const formData = new FormData();
         formData.append('name', document.getElementById('itemName').value);
         formData.append('tags', document.getElementById('itemTags').value);
@@ -386,20 +384,11 @@ document.addEventListener('DOMContentLoaded', function() {
         formData.append('quantity', parseInt(document.getElementById('itemQuantity').value, 10) || 1);
         formData.append('map_id', currentMapId);
 
-        console.log('Selected Location:', selectedLocation);
-        console.log('Current item coordinates:', { x: item.x_coord, y: item.y_coord });
-
-        const newXCoord = selectedLocation ? selectedLocation.x / scale : item.x_coord;
-        const newYCoord = selectedLocation ? selectedLocation.y / scale : item.y_coord;
-
-        console.log('New coordinates to be sent:', { x: newXCoord, y: newYCoord });
-
-        formData.append('x_coord', newXCoord.toString());
-        formData.append('y_coord', newYCoord.toString());
+        formData.append('x_coord', (selectedLocation ? selectedLocation.x / scale : item.x_coord).toString());
+        formData.append('y_coord', (selectedLocation ? selectedLocation.y / scale : item.y_coord).toString());
 
         const itemImageFile = document.getElementById('itemImage').files[0];
         if (itemImageFile) {
-            console.log('New image file detected:', itemImageFile.name);
             formData.append('image', itemImageFile);
         }
 
@@ -408,25 +397,17 @@ document.addEventListener('DOMContentLoaded', function() {
             .join(',');
         formData.append('warning', warnings);
 
-        console.log('FormData contents:');
-        for (let [key, value] of formData.entries()) {
-            console.log(`${key}: ${value}`);
-        }
-
         fetch(`/api/items/${item.id}`, {
             method: 'PUT',
             body: formData
         })
         .then(response => {
-            console.log('Server response status:', response.status);
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
             return response.json();
         })
         .then(data => {
-            console.log('Server response data:', data);
-
             addItemForm.style.display = 'none';
             loadItems();
             displaySuccessMessage('Item updated successfully');
