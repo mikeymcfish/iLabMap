@@ -442,11 +442,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 addItemBtn.disabled = false;
             }
             
-            // If we're in edit mode (addItemForm is visible), update the form
             if (addItemForm.style.display === 'block') {
                 const saveItemBtn = document.getElementById('saveItemBtn');
                 if (saveItemBtn.textContent === 'Update Item') {
-                    // We're in edit mode, so update the location
                     const itemId = saveItemBtn.getAttribute('data-item-id');
                     const item = items.find(item => item.id === parseInt(itemId));
                     if (item) {

@@ -5265,3 +5265,96 @@ FROM item]
 2024-10-16 12:56:48,262 - INFO - 172.31.196.108 - - [16/Oct/2024 12:56:48] "GET /api/items?map_id=1 HTTP/1.1" 200 -
 2024-10-16 12:56:48,404 - INFO - 172.31.196.108 - - [16/Oct/2024 12:56:48] "GET /static/thumbnails/150219_14_08_53__MG_0131.jpg HTTP/1.1" 200 -
 2024-10-16 12:56:48,406 - INFO - 172.31.196.108 - - [16/Oct/2024 12:56:48] "GET /static/thumbnails/placeholder.png HTTP/1.1" 200 -
+2024-10-16 12:57:30,767 - INFO - 172.31.196.108 - - [16/Oct/2024 12:57:30] "GET / HTTP/1.1" 200 -
+2024-10-16 12:57:31,352 - INFO - 172.31.196.108 - - [16/Oct/2024 12:57:31] "GET /static/css/styles.css HTTP/1.1" 200 -
+2024-10-16 12:57:31,425 - INFO - 172.31.196.108 - - [16/Oct/2024 12:57:31] "GET /static/js/script.js HTTP/1.1" 200 -
+2024-10-16 12:57:31,522 - INFO - Fetching all maps
+2024-10-16 12:57:32,128 - INFO - 172.31.196.108 - - [16/Oct/2024 12:57:32] "GET /api/maps HTTP/1.1" 200 -
+2024-10-16 12:57:32,226 - INFO - Fetching map with ID: 1
+2024-10-16 12:57:32,822 - INFO - 172.31.196.108 - - [16/Oct/2024 12:57:32] "GET /api/maps/1 HTTP/1.1" 200 -
+2024-10-16 12:57:32,919 - INFO - Attempting to serve static file: /home/runner/workspace/static/maps/main.svg
+2024-10-16 12:57:32,920 - INFO - 172.31.196.108 - - [16/Oct/2024 12:57:32] "[36mGET /static/maps/main.svg HTTP/1.1[0m" 304 -
+2024-10-16 12:57:33,011 - INFO - Fetching items for map ID: 1
+2024-10-16 12:57:33,627 - INFO - 172.31.196.108 - - [16/Oct/2024 12:57:33] "GET /api/items?map_id=1 HTTP/1.1" 200 -
+2024-10-16 12:57:33,720 - INFO - 172.31.196.108 - - [16/Oct/2024 12:57:33] "GET /static/thumbnails/150219_14_08_53__MG_0131.jpg HTTP/1.1" 200 -
+2024-10-16 12:57:33,723 - INFO - 172.31.196.108 - - [16/Oct/2024 12:57:33] "[36mGET /static/thumbnails/placeholder.png HTTP/1.1[0m" 304 -
+2024-10-16 13:00:50,652 - INFO - 172.31.196.108 - - [16/Oct/2024 13:00:50] "GET / HTTP/1.1" 200 -
+2024-10-16 13:00:50,758 - INFO - 172.31.196.108 - - [16/Oct/2024 13:00:50] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-10-16 13:00:50,770 - INFO - 172.31.196.108 - - [16/Oct/2024 13:00:50] "GET /static/js/script.js HTTP/1.1" 200 -
+2024-10-16 13:00:50,963 - INFO - Fetching all maps
+2024-10-16 13:00:51,224 - INFO - 172.31.196.108 - - [16/Oct/2024 13:00:51] "GET /api/maps HTTP/1.1" 200 -
+2024-10-16 13:00:51,318 - INFO - Fetching map with ID: 1
+2024-10-16 13:00:51,583 - INFO - 172.31.196.108 - - [16/Oct/2024 13:00:51] "GET /api/maps/1 HTTP/1.1" 200 -
+2024-10-16 13:00:51,684 - INFO - Attempting to serve static file: /home/runner/workspace/static/maps/main.svg
+2024-10-16 13:00:51,685 - INFO - 172.31.196.108 - - [16/Oct/2024 13:00:51] "[36mGET /static/maps/main.svg HTTP/1.1[0m" 304 -
+2024-10-16 13:00:51,788 - INFO - Fetching items for map ID: 1
+2024-10-16 13:00:52,052 - INFO - 172.31.196.108 - - [16/Oct/2024 13:00:52] "GET /api/items?map_id=1 HTTP/1.1" 200 -
+2024-10-16 13:00:52,176 - INFO - 172.31.196.108 - - [16/Oct/2024 13:00:52] "[36mGET /static/thumbnails/placeholder.png HTTP/1.1[0m" 304 -
+2024-10-16 13:00:52,177 - INFO - 172.31.196.108 - - [16/Oct/2024 13:00:52] "[36mGET /static/thumbnails/150219_14_08_53__MG_0131.jpg HTTP/1.1[0m" 304 -
+2024-10-16 13:01:02,666 - INFO - Received POST data: ImmutableMultiDict([('name', 'shelf'), ('tags', 'tags'), ('x_coord', '400.9478845473387'), ('y_coord', '147.21002881261688'), ('map_id', '1'), ('color', 'red'), ('zone', ''), ('quantity', '1'), ('warning', 'bolt')])
+2024-10-16 13:01:03,001 - INFO - 172.31.196.108 - - [16/Oct/2024 13:01:03] "PUT /api/items/51 HTTP/1.1" 200 -
+2024-10-16 13:01:03,090 - INFO - Fetching items for map ID: 1
+2024-10-16 13:01:03,127 - INFO - New item added with ID: 72
+2024-10-16 13:01:03,192 - INFO - 172.31.196.108 - - [16/Oct/2024 13:01:03] "[35m[1mPOST /api/items HTTP/1.1[0m" 201 -
+2024-10-16 13:01:03,356 - INFO - 172.31.196.108 - - [16/Oct/2024 13:01:03] "GET /api/items?map_id=1 HTTP/1.1" 200 -
+2024-10-16 13:01:03,449 - INFO - Fetching items for map ID: 1
+2024-10-16 13:01:03,713 - INFO - 172.31.196.108 - - [16/Oct/2024 13:01:03] "GET /api/items?map_id=1 HTTP/1.1" 200 -
+2024-10-16 13:01:12,740 - INFO - Received POST data: ImmutableMultiDict([('name', 'Test2'), ('tags', ''), ('x_coord', '165.22549663852803'), ('y_coord', '314.917656573826'), ('map_id', '1'), ('color', 'red'), ('zone', ''), ('quantity', '2'), ('warning', '')])
+2024-10-16 13:01:13,060 - INFO - 172.31.196.108 - - [16/Oct/2024 13:01:13] "PUT /api/items/71 HTTP/1.1" 200 -
+2024-10-16 13:01:13,152 - INFO - Fetching items for map ID: 1
+2024-10-16 13:01:13,215 - INFO - New item added with ID: 73
+2024-10-16 13:01:13,286 - INFO - 172.31.196.108 - - [16/Oct/2024 13:01:13] "[35m[1mPOST /api/items HTTP/1.1[0m" 201 -
+2024-10-16 13:01:13,416 - INFO - 172.31.196.108 - - [16/Oct/2024 13:01:13] "GET /api/items?map_id=1 HTTP/1.1" 200 -
+2024-10-16 13:01:13,508 - INFO - Fetching items for map ID: 1
+2024-10-16 13:01:13,771 - INFO - 172.31.196.108 - - [16/Oct/2024 13:01:13] "GET /api/items?map_id=1 HTTP/1.1" 200 -
+2024-10-16 13:01:18,217 - INFO - Attempting to delete item with ID: 71
+2024-10-16 13:01:18,542 - INFO - Item with id 71 deleted successfully
+2024-10-16 13:01:18,543 - INFO - 172.31.196.108 - - [16/Oct/2024 13:01:18] "DELETE /api/items/71 HTTP/1.1" 200 -
+2024-10-16 13:01:18,631 - INFO - Fetching items for map ID: 1
+2024-10-16 13:01:18,896 - INFO - 172.31.196.108 - - [16/Oct/2024 13:01:18] "GET /api/items?map_id=1 HTTP/1.1" 200 -
+2024-10-16 13:01:20,794 - INFO - Attempting to delete item with ID: 73
+2024-10-16 13:01:21,121 - INFO - Item with id 73 deleted successfully
+2024-10-16 13:01:21,121 - INFO - 172.31.196.108 - - [16/Oct/2024 13:01:21] "DELETE /api/items/73 HTTP/1.1" 200 -
+2024-10-16 13:01:21,212 - INFO - Fetching items for map ID: 1
+2024-10-16 13:01:21,472 - INFO - 172.31.196.108 - - [16/Oct/2024 13:01:21] "GET /api/items?map_id=1 HTTP/1.1" 200 -
+2024-10-16 13:01:23,519 - INFO - Attempting to delete item with ID: 58
+2024-10-16 13:01:23,845 - INFO - Item with id 58 deleted successfully
+2024-10-16 13:01:23,846 - INFO - 172.31.196.108 - - [16/Oct/2024 13:01:23] "DELETE /api/items/58 HTTP/1.1" 200 -
+2024-10-16 13:01:23,936 - INFO - Fetching items for map ID: 1
+2024-10-16 13:01:24,201 - INFO - 172.31.196.108 - - [16/Oct/2024 13:01:24] "GET /api/items?map_id=1 HTTP/1.1" 200 -
+2024-10-16 13:01:34,656 - INFO - Attempting to delete item with ID: 70
+2024-10-16 13:01:34,985 - INFO - Item with id 70 deleted successfully
+2024-10-16 13:01:34,985 - INFO - 172.31.196.108 - - [16/Oct/2024 13:01:34] "DELETE /api/items/70 HTTP/1.1" 200 -
+2024-10-16 13:01:35,076 - INFO - Fetching items for map ID: 1
+2024-10-16 13:01:35,340 - INFO - 172.31.196.108 - - [16/Oct/2024 13:01:35] "GET /api/items?map_id=1 HTTP/1.1" 200 -
+2024-10-16 13:01:42,824 - INFO - Attempting to delete item with ID: 54
+2024-10-16 13:01:43,157 - INFO - Item with id 54 deleted successfully
+2024-10-16 13:01:43,157 - INFO - 172.31.196.108 - - [16/Oct/2024 13:01:43] "DELETE /api/items/54 HTTP/1.1" 200 -
+2024-10-16 13:01:43,248 - INFO - Fetching items for map ID: 1
+2024-10-16 13:01:43,513 - INFO - 172.31.196.108 - - [16/Oct/2024 13:01:43] "GET /api/items?map_id=1 HTTP/1.1" 200 -
+2024-10-16 13:01:49,154 - INFO - Received POST data: ImmutableMultiDict([('name', 'shelf'), ('tags', 'tags'), ('x_coord', '270.50861851084267'), ('y_coord', '239.44922408128193'), ('map_id', '1'), ('color', 'red'), ('zone', ''), ('quantity', '1'), ('warning', 'bolt')])
+2024-10-16 13:01:49,483 - INFO - 172.31.196.108 - - [16/Oct/2024 13:01:49] "PUT /api/items/51 HTTP/1.1" 200 -
+2024-10-16 13:01:49,574 - INFO - Fetching items for map ID: 1
+2024-10-16 13:01:49,611 - INFO - New item added with ID: 74
+2024-10-16 13:01:49,676 - INFO - 172.31.196.108 - - [16/Oct/2024 13:01:49] "[35m[1mPOST /api/items HTTP/1.1[0m" 201 -
+2024-10-16 13:01:49,838 - INFO - 172.31.196.108 - - [16/Oct/2024 13:01:49] "GET /api/items?map_id=1 HTTP/1.1" 200 -
+2024-10-16 13:01:49,927 - INFO - Fetching items for map ID: 1
+2024-10-16 13:01:50,188 - INFO - 172.31.196.108 - - [16/Oct/2024 13:01:50] "GET /api/items?map_id=1 HTTP/1.1" 200 -
+2024-10-16 13:02:10,517 - INFO - Attempting to delete item with ID: 74
+2024-10-16 13:02:10,848 - INFO - Item with id 74 deleted successfully
+2024-10-16 13:02:10,850 - INFO - 172.31.196.108 - - [16/Oct/2024 13:02:10] "DELETE /api/items/74 HTTP/1.1" 200 -
+2024-10-16 13:02:10,978 - INFO - Fetching items for map ID: 1
+2024-10-16 13:02:11,240 - INFO - 172.31.196.108 - - [16/Oct/2024 13:02:11] "GET /api/items?map_id=1 HTTP/1.1" 200 -
+2024-10-16 13:04:49,948 - INFO - 172.31.196.108 - - [16/Oct/2024 13:04:49] "GET / HTTP/1.1" 200 -
+2024-10-16 13:04:49,968 - INFO - 172.31.196.108 - - [16/Oct/2024 13:04:49] "GET /static/css/styles.css HTTP/1.1" 200 -
+2024-10-16 13:04:50,040 - INFO - 172.31.196.108 - - [16/Oct/2024 13:04:50] "GET /static/js/script.js HTTP/1.1" 200 -
+2024-10-16 13:04:50,088 - INFO - Fetching all maps
+2024-10-16 13:04:50,682 - INFO - 172.31.196.108 - - [16/Oct/2024 13:04:50] "GET /api/maps HTTP/1.1" 200 -
+2024-10-16 13:04:50,699 - INFO - Fetching map with ID: 1
+2024-10-16 13:04:51,292 - INFO - 172.31.196.108 - - [16/Oct/2024 13:04:51] "GET /api/maps/1 HTTP/1.1" 200 -
+2024-10-16 13:04:51,301 - INFO - Attempting to serve static file: /home/runner/workspace/static/maps/main.svg
+2024-10-16 13:04:51,302 - INFO - 172.31.196.108 - - [16/Oct/2024 13:04:51] "GET /static/maps/main.svg HTTP/1.1" 200 -
+2024-10-16 13:04:51,373 - INFO - Fetching items for map ID: 1
+2024-10-16 13:04:51,960 - INFO - 172.31.196.108 - - [16/Oct/2024 13:04:51] "GET /api/items?map_id=1 HTTP/1.1" 200 -
+2024-10-16 13:04:51,981 - INFO - 172.31.196.108 - - [16/Oct/2024 13:04:51] "GET /static/thumbnails/placeholder.png HTTP/1.1" 200 -
+2024-10-16 13:04:51,987 - INFO - 172.31.196.108 - - [16/Oct/2024 13:04:51] "GET /static/thumbnails/150219_14_08_53__MG_0131.jpg HTTP/1.1" 200 -
