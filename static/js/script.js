@@ -153,11 +153,14 @@ document.addEventListener('DOMContentLoaded', function() {
             const infoElement = document.createElement('div');
             infoElement.classList.add('d-flex', 'flex-column', 'info-box', 'flex-grow-1');
 
-            const tagContainer = document.createElement('div');
-            tagContainer.classList.add('tag-container', 'mt-2');
-            tagContainer.innerHTML = item.tags.split(',')
-                .map(tag => `<span class="item-tag">${tag.trim()}</span>`)
-                .join('');
+            if (item.tags && item.tags.trim() !== '') {
+                const tagContainer = document.createElement('div');
+                tagContainer.classList.add('tag-container', 'mt-2');
+                tagContainer.innerHTML = item.tags.split(',')
+                    .map(tag => `<span class="item-tag">${tag.trim()}</span>`)
+                    .join('');
+                infoElement.appendChild(tagContainer);
+            }
             
             const nameElement = document.createElement('div');
             nameElement.classList.add('mb-1', 'flex-grow-1', 'item-name');
@@ -168,8 +171,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             
             imageNameContainer.appendChild(imageElement);
-            infoElement.appendChild(nameElement);
-            infoElement.appendChild(tagContainer);
+            infoElement.insertBefore(nameElement, infoElement.firstChild);
             imageNameContainer.appendChild(infoElement);
 
             if (item.warning) {
