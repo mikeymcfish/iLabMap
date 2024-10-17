@@ -131,77 +131,76 @@ document.addEventListener('DOMContentLoaded', function() {
 
         items.forEach(item => {
             const li = document.createElement('div');
-            li.classList.add('list-group-item', 'd-flex', 'flex-column');
+            li.classList.add('list-group-item', 'd-flex', 'flex-column', 'align-items-start', 'p-3', 'mb-2');
 
             const mainContent = document.createElement('div');
-            mainContent.classList.add('d-flex', 'align-items-center', 'justify-content-between');
+            mainContent.classList.add('d-flex', 'w-100', 'justify-content-between', 'align-items-center');
 
             const imageNameContainer = document.createElement('div');
-            imageNameContainer.classList.add('d-flex', 'align-items-center', 'flex-grow-1');
-            mainContent.style.width = '100%';
+            imageNameContainer.classList.add('d-flex', 'align-items-center');
             
             const imageElement = document.createElement('img');
             imageElement.src = item.image_path || '/static/thumbnails/placeholder.png';
-            imageElement.width = 75;
-            imageElement.height = 75;
+            imageElement.width = 60;
+            imageElement.height = 60;
             imageElement.alt = item.name;
-            imageElement.style.marginRight = '10px';
+            imageElement.classList.add('me-3', 'rounded');
+            imageElement.style.objectFit = 'cover';
             imageElement.onerror = function() {
                 this.src = '/static/thumbnails/placeholder.png';
             };
 
             const infoElement = document.createElement('div');
-            infoElement.classList.add('d-flex', 'flex-column', 'info-box', 'flex-grow-1');
+            infoElement.classList.add('d-flex', 'flex-column');
+
+            const nameElement = document.createElement('h5');
+            nameElement.classList.add('mb-1', 'item-name');
+            nameElement.textContent = item.quantity !== null && item.quantity !== 1 ? `${item.name} (${item.quantity})` : item.name;
+
+            infoElement.appendChild(nameElement);
 
             if (item.tags && item.tags.trim() !== '') {
                 const tagContainer = document.createElement('div');
-                tagContainer.classList.add('tag-container', 'mt-2');
+                tagContainer.classList.add('tag-container');
                 tagContainer.innerHTML = item.tags.split(',')
                     .map(tag => `<span class="item-tag">${tag.trim()}</span>`)
                     .join('');
                 infoElement.appendChild(tagContainer);
             }
-            
-            const nameElement = document.createElement('div');
-            nameElement.classList.add('mb-1', 'flex-grow-1', 'item-name');
-            if (item.quantity !== null && item.quantity !== 1) {
-                nameElement.textContent = item.name + " (" + item.quantity + ")";
-            } else {
-                nameElement.textContent = item.name;
-            }
-            
+
             imageNameContainer.appendChild(imageElement);
-            infoElement.insertBefore(nameElement, infoElement.firstChild);
             imageNameContainer.appendChild(infoElement);
+
+            const buttonsContainer = document.createElement('div');
+            buttonsContainer.classList.add('d-flex', 'align-items-center');
 
             if (item.warning) {
                 const warnings = item.warning.split(',').filter(warning => warning.trim() !== "");
                 warnings.forEach(warning => {
                     const warningBadge = document.createElement('div');
-                    warningBadge.classList.add('warning-badges');
+                    warningBadge.classList.add('warning-badges', 'me-2');
                     const warningIcon = document.createElement('i');
-                    warningIcon.classList.add('fas', 'fa-md', `fa-${warning.trim()}`);
+                    warningIcon.classList.add('fas', 'fa-sm', `fa-${warning.trim()}`);
                     warningBadge.appendChild(warningIcon);
-                    imageNameContainer.appendChild(warningBadge);
+                    buttonsContainer.appendChild(warningBadge);
                 });
             }
 
-            const buttons = document.createElement('div');
-
             const editButton = document.createElement('button');
-            editButton.classList.add('btn', 'btn-secondary', 'btn-sm', 'edit-item', 'me-2');
+            editButton.classList.add('btn', 'btn-outline-secondary', 'btn-sm', 'me-2', 'edit-item');
             editButton.innerHTML = '<i class="fas fa-edit"></i>';
             editButton.setAttribute('data-item-id', item.id);
             
             const deleteButton = document.createElement('button');
-            deleteButton.classList.add('btn', 'btn-danger', 'btn-sm', 'delete-item');
+            deleteButton.classList.add('btn', 'btn-outline-danger', 'btn-sm', 'delete-item');
             deleteButton.innerHTML = '<i class="fas fa-trash-alt"></i>';
             deleteButton.setAttribute('data-item-id', item.id);
 
+            buttonsContainer.appendChild(editButton);
+            buttonsContainer.appendChild(deleteButton);
+
             mainContent.appendChild(imageNameContainer);
-            buttons.appendChild(editButton);
-            buttons.appendChild(deleteButton);
-            mainContent.appendChild(buttons);
+            mainContent.appendChild(buttonsContainer);
 
             li.appendChild(mainContent);
 

@@ -1,38 +1,45 @@
+/* Use Replit-themed bootstrap CSS */
+@import url('https://cdn.replit.com/agent/bootstrap-agent-dark-theme.min.css');
+
+body {
+    background-color: var(--bs-body-bg);
+    color: var(--bs-body-color);
+}
+
 #mapCanvas {
-    border: 1px solid #ccc;
+    border: 1px solid var(--bs-border-color);
     width: 100%;
     height: auto;
 }
 
 .list-group-item:hover {
-    background-color: var(--bs-secondary);
+    background-color: var(--bs-secondary-bg);
 }
+
 .list-group-item {
     border: none !important;
+    transition: background-color 0.3s ease;
 }
 
 #addItemForm {
     max-width: 300px;
     z-index: 1000;
     display: none;
-    /* background-color: var(--bs-primary); */
-    border: 1px solid var(--bs-secondary);
-    border-radius: 5px;
-    padding: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--bs-border-color);
+    border-radius: 0.25rem;
+    padding: 1rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }
 
 .warning-badges {
-    background-color: red;
-    color: white;
-    border-radius: 25px;
+    background-color: var(--bs-danger);
+    color: var(--bs-light);
+    border-radius: 50%;
     width: 30px;
     height: 30px;
-    margin-right:3px;
-    align-content: center;
+    margin-right: 0.5rem;
     display: flex;
-    justify-content: center; /* Center horizontally */
-    justify-items:center;
+    justify-content: center;
     align-items: center;
 }
 
@@ -48,42 +55,60 @@
 .tag-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
-    width: 100%;
-    margin-top: 0px !important;
+    gap: 0.25rem;
+    margin-top: 0.5rem !important;
 }
 
 .item-tag {
     display: inline-block;
-    padding: 0.25em 0.5em; /* Adjust padding for size */
-    margin-right: 2px; /* Space between tags */
-    font-size: 1em; /* Relative size of text */
-    font-weight: 600; /* Make text bold */
+    padding: 0.25em 0.5em;
+    font-size: 0.875em;
+    font-weight: 600;
     line-height: 1;
     text-align: center;
     white-space: nowrap;
-    vertical-align: center;
-    border-radius: 0.25rem; /* Rounded corners */
-    background-color: var(--bs-info); /* Background color */
-    color: var(--bs-dark); /* Text color */
-    border: 1px solid var(--bs-dark); /* Optional border */
+    vertical-align: baseline;
+    border-radius: 0.25rem;
+    background-color: var(--bs-info);
+    color: var(--bs-dark);
 }
 
 .selector-box {
-    margin-top: 20px;
+    margin-top: 1.25rem;
 }
 
 .item-name {
-    font-size: 1.2em;
+    font-size: 1.1em;
+    font-weight: 500;
 }
 
-/* Updated styles for notification pop-ups */
 .notification {
     position: fixed;
-    top: 0;
+    top: 1rem;
     left: 50%;
     transform: translateX(-50%);
     z-index: 9999;
     max-width: 90%;
     width: 400px;
+}
+
+#dropArea {
+    border: 2px dashed var(--bs-border-color);
+    border-radius: 0.25rem;
+    padding: 1rem;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#dropArea:hover, #dropArea.bg-info {
+    background-color: var(--bs-info-bg-subtle);
+}
+
+.btn-icon {
+    padding: 0.375rem 0.75rem;
+}
+
+.btn-icon i {
+    margin-right: 0.5rem;
 }
