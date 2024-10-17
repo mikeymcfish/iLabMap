@@ -17,5 +17,10 @@ body {
     filter: invert(1) hue-rotate(180deg);
 }
 
+/* Ensure SVG lines are visible in both light and dark modes */
+#mapCanvas svg * {
+    stroke: currentColor;
+}
+
 /* Rest of the CSS remains the same */
 /* ... */
