@@ -7208,3 +7208,406 @@ FROM item]
 2024-10-17 12:06:40,052 - INFO - 172.31.196.88 - - [17/Oct/2024 12:06:40] "GET /api/items?map_id=1 HTTP/1.1" 200 -
 2024-10-17 12:06:40,086 - INFO - 172.31.196.88 - - [17/Oct/2024 12:06:40] "[36mGET /static/thumbnails/placeholder.png HTTP/1.1[0m" 304 -
 2024-10-17 12:06:40,144 - INFO - 172.31.196.88 - - [17/Oct/2024 12:06:40] "[36mGET /static/thumbnails/placeholder.png HTTP/1.1[0m" 304 -
+2024-10-17 12:06:54,472 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-17 12:06:54,529 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-17 12:06:54,699 - INFO - 172.31.196.88 - - [17/Oct/2024 12:06:54] "GET / HTTP/1.1" 200 -
+2024-10-17 12:06:54,757 - INFO - 172.31.196.88 - - [17/Oct/2024 12:06:54] "GET / HTTP/1.1" 200 -
+2024-10-17 12:06:54,898 - INFO - 172.31.196.88 - - [17/Oct/2024 12:06:54] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-10-17 12:06:54,901 - INFO - 172.31.196.88 - - [17/Oct/2024 12:06:54] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-10-17 12:06:54,983 - INFO - 172.31.196.88 - - [17/Oct/2024 12:06:54] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2024-10-17 12:06:55,159 - INFO - 172.31.196.88 - - [17/Oct/2024 12:06:55] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2024-10-17 12:06:55,305 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps
+2024-10-17 12:06:55,325 - INFO - Fetching all maps
+2024-10-17 12:06:55,504 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps
+2024-10-17 12:06:55,505 - INFO - Fetching all maps
+2024-10-17 12:06:55,552 - INFO - 172.31.196.88 - - [17/Oct/2024 12:06:55] "GET /api/maps HTTP/1.1" 200 -
+2024-10-17 12:06:55,635 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps/1
+2024-10-17 12:06:55,635 - INFO - Fetching map with ID: 1
+2024-10-17 12:06:55,730 - INFO - 172.31.196.88 - - [17/Oct/2024 12:06:55] "GET /api/maps HTTP/1.1" 200 -
+2024-10-17 12:06:55,815 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps/1
+2024-10-17 12:06:55,815 - INFO - Fetching map with ID: 1
+2024-10-17 12:06:55,862 - INFO - 172.31.196.88 - - [17/Oct/2024 12:06:55] "GET /api/maps/1 HTTP/1.1" 200 -
+2024-10-17 12:06:55,945 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/static/maps/main.svg
+2024-10-17 12:06:55,945 - INFO - Attempting to serve static file: /home/runner/workspace/static/maps/main.svg
+2024-10-17 12:06:55,946 - INFO - 172.31.196.88 - - [17/Oct/2024 12:06:55] "[36mGET /static/maps/main.svg HTTP/1.1[0m" 304 -
+2024-10-17 12:06:56,027 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/items?map_id=1
+2024-10-17 12:06:56,027 - INFO - Fetching items for map ID: 1
+2024-10-17 12:06:56,042 - INFO - 172.31.196.88 - - [17/Oct/2024 12:06:56] "GET /api/maps/1 HTTP/1.1" 200 -
+2024-10-17 12:06:56,128 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/static/maps/main.svg
+2024-10-17 12:06:56,128 - INFO - Attempting to serve static file: /home/runner/workspace/static/maps/main.svg
+2024-10-17 12:06:56,129 - INFO - 172.31.196.88 - - [17/Oct/2024 12:06:56] "[36mGET /static/maps/main.svg HTTP/1.1[0m" 304 -
+2024-10-17 12:06:56,215 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/items?map_id=1
+2024-10-17 12:06:56,215 - INFO - Fetching items for map ID: 1
+2024-10-17 12:06:56,254 - INFO - 172.31.196.88 - - [17/Oct/2024 12:06:56] "GET /api/items?map_id=1 HTTP/1.1" 200 -
+2024-10-17 12:06:56,337 - INFO - 172.31.196.88 - - [17/Oct/2024 12:06:56] "[36mGET /static/thumbnails/placeholder.png HTTP/1.1[0m" 304 -
+2024-10-17 12:06:56,442 - INFO - 172.31.196.88 - - [17/Oct/2024 12:06:56] "GET /api/items?map_id=1 HTTP/1.1" 200 -
+2024-10-17 12:06:56,536 - INFO - 172.31.196.88 - - [17/Oct/2024 12:06:56] "[36mGET /static/thumbnails/placeholder.png HTTP/1.1[0m" 304 -
+2024-10-17 12:07:14,871 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-17 12:07:15,098 - INFO - 172.31.196.88 - - [17/Oct/2024 12:07:15] "GET / HTTP/1.1" 200 -
+2024-10-17 12:07:15,233 - INFO - 172.31.196.88 - - [17/Oct/2024 12:07:15] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-10-17 12:07:15,243 - INFO - 172.31.196.88 - - [17/Oct/2024 12:07:15] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2024-10-17 12:07:15,341 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps
+2024-10-17 12:07:15,341 - INFO - Fetching all maps
+2024-10-17 12:07:15,567 - INFO - 172.31.196.88 - - [17/Oct/2024 12:07:15] "GET /api/maps HTTP/1.1" 200 -
+2024-10-17 12:07:15,713 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps/1
+2024-10-17 12:07:15,714 - INFO - Fetching map with ID: 1
+2024-10-17 12:07:15,940 - INFO - 172.31.196.88 - - [17/Oct/2024 12:07:15] "GET /api/maps/1 HTTP/1.1" 200 -
+2024-10-17 12:07:16,028 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/static/maps/main.svg
+2024-10-17 12:07:16,028 - INFO - Attempting to serve static file: /home/runner/workspace/static/maps/main.svg
+2024-10-17 12:07:16,029 - INFO - 172.31.196.88 - - [17/Oct/2024 12:07:16] "[36mGET /static/maps/main.svg HTTP/1.1[0m" 304 -
+2024-10-17 12:07:16,124 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/items?map_id=1
+2024-10-17 12:07:16,124 - INFO - Fetching items for map ID: 1
+2024-10-17 12:07:16,351 - INFO - 172.31.196.88 - - [17/Oct/2024 12:07:16] "GET /api/items?map_id=1 HTTP/1.1" 200 -
+2024-10-17 12:07:16,446 - INFO - 172.31.196.88 - - [17/Oct/2024 12:07:16] "[36mGET /static/thumbnails/placeholder.png HTTP/1.1[0m" 304 -
+2024-10-17 12:11:37,808 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-17 12:11:37,809 - INFO - Added job "create_backup" to job store "default"
+2024-10-17 12:11:37,809 - INFO - Scheduler started
+2024-10-17 12:11:37,810 - INFO - Scheduler started
+2024-10-17 12:11:37,829 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.196.88:5000
+2024-10-17 12:11:37,829 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-17 12:11:37,830 - INFO -  * Restarting with stat
+2024-10-17 12:11:39,280 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-17 12:11:39,281 - INFO - Added job "create_backup" to job store "default"
+2024-10-17 12:11:39,281 - INFO - Scheduler started
+2024-10-17 12:11:39,281 - INFO - Scheduler started
+2024-10-17 12:11:39,294 - WARNING -  * Debugger is active!
+2024-10-17 12:11:39,296 - INFO -  * Debugger PIN: 615-608-305
+2024-10-17 12:11:39,327 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-17 12:11:39,329 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-17 12:11:40,346 - INFO - 172.31.196.88 - - [17/Oct/2024 12:11:40] "GET / HTTP/1.1" 200 -
+2024-10-17 12:11:40,348 - INFO - 172.31.196.88 - - [17/Oct/2024 12:11:40] "GET / HTTP/1.1" 200 -
+2024-10-17 12:11:40,815 - INFO - 172.31.196.88 - - [17/Oct/2024 12:11:40] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2024-10-17 12:11:40,823 - INFO - 172.31.196.88 - - [17/Oct/2024 12:11:40] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-10-17 12:11:40,851 - INFO - 172.31.196.88 - - [17/Oct/2024 12:11:40] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2024-10-17 12:11:40,860 - INFO - 172.31.196.88 - - [17/Oct/2024 12:11:40] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-10-17 12:11:40,941 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps
+2024-10-17 12:11:40,941 - INFO - Fetching all maps
+2024-10-17 12:11:41,163 - INFO - 172.31.196.88 - - [17/Oct/2024 12:11:41] "GET /api/maps HTTP/1.1" 200 -
+2024-10-17 12:11:41,253 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps/1
+2024-10-17 12:11:41,253 - INFO - Fetching map with ID: 1
+2024-10-17 12:11:41,427 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps
+2024-10-17 12:11:41,427 - INFO - Fetching all maps
+2024-10-17 12:11:41,478 - INFO - 172.31.196.88 - - [17/Oct/2024 12:11:41] "GET /api/maps/1 HTTP/1.1" 200 -
+2024-10-17 12:11:41,559 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/static/maps/main.svg
+2024-10-17 12:11:41,559 - INFO - Attempting to serve static file: /home/runner/workspace/static/maps/main.svg
+2024-10-17 12:11:41,559 - INFO - 172.31.196.88 - - [17/Oct/2024 12:11:41] "[36mGET /static/maps/main.svg HTTP/1.1[0m" 304 -
+2024-10-17 12:11:41,647 - INFO - 172.31.196.88 - - [17/Oct/2024 12:11:41] "GET /api/maps HTTP/1.1" 200 -
+2024-10-17 12:11:41,651 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/items?map_id=1
+2024-10-17 12:11:41,651 - INFO - Fetching items for map ID: 1
+2024-10-17 12:11:41,733 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps/1
+2024-10-17 12:11:41,733 - INFO - Fetching map with ID: 1
+2024-10-17 12:11:41,875 - INFO - 172.31.196.88 - - [17/Oct/2024 12:11:41] "GET /api/items?map_id=1 HTTP/1.1" 200 -
+2024-10-17 12:11:41,954 - INFO - 172.31.196.88 - - [17/Oct/2024 12:11:41] "GET /api/maps/1 HTTP/1.1" 200 -
+2024-10-17 12:11:41,959 - INFO - 172.31.196.88 - - [17/Oct/2024 12:11:41] "[36mGET /static/thumbnails/placeholder.png HTTP/1.1[0m" 304 -
+2024-10-17 12:11:42,040 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/static/maps/main.svg
+2024-10-17 12:11:42,040 - INFO - Attempting to serve static file: /home/runner/workspace/static/maps/main.svg
+2024-10-17 12:11:42,041 - INFO - 172.31.196.88 - - [17/Oct/2024 12:11:42] "[36mGET /static/maps/main.svg HTTP/1.1[0m" 304 -
+2024-10-17 12:11:42,262 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/items?map_id=1
+2024-10-17 12:11:42,262 - INFO - Fetching items for map ID: 1
+2024-10-17 12:11:42,486 - INFO - 172.31.196.88 - - [17/Oct/2024 12:11:42] "GET /api/items?map_id=1 HTTP/1.1" 200 -
+2024-10-17 12:11:42,636 - INFO - 172.31.196.88 - - [17/Oct/2024 12:11:42] "[36mGET /static/thumbnails/placeholder.png HTTP/1.1[0m" 304 -
+2024-10-17 12:13:19,835 - INFO -  * Detected change in '/home/runner/workspace/routes.py', reloading
+2024-10-17 12:13:19,947 - INFO -  * Restarting with stat
+2024-10-17 12:13:22,174 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-17 12:13:22,175 - INFO - Added job "create_backup" to job store "default"
+2024-10-17 12:13:22,175 - INFO - Scheduler started
+2024-10-17 12:13:22,175 - INFO - Scheduler started
+2024-10-17 12:13:22,190 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.196.88:5000
+2024-10-17 12:13:22,191 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-17 12:13:22,192 - INFO -  * Restarting with stat
+2024-10-17 12:13:23,655 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-17 12:13:23,656 - INFO - Added job "create_backup" to job store "default"
+2024-10-17 12:13:23,657 - INFO - Scheduler started
+2024-10-17 12:13:23,657 - INFO - Scheduler started
+2024-10-17 12:13:23,671 - WARNING -  * Debugger is active!
+2024-10-17 12:13:23,672 - INFO -  * Debugger PIN: 760-647-443
+2024-10-17 12:13:23,709 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-17 12:13:23,713 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-17 12:13:23,716 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/check_image_paths
+2024-10-17 12:13:24,748 - INFO - 172.31.196.88 - - [17/Oct/2024 12:13:24] "GET / HTTP/1.1" 200 -
+2024-10-17 12:13:24,750 - INFO - 172.31.196.88 - - [17/Oct/2024 12:13:24] "GET / HTTP/1.1" 200 -
+2024-10-17 12:13:24,750 - INFO - 172.31.196.88 - - [17/Oct/2024 12:13:24] "GET /api/check_image_paths HTTP/1.1" 200 -
+2024-10-17 12:13:24,854 - INFO - 172.31.196.88 - - [17/Oct/2024 12:13:24] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-10-17 12:13:25,163 - INFO - 172.31.196.88 - - [17/Oct/2024 12:13:25] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-10-17 12:13:25,238 - INFO - 172.31.196.88 - - [17/Oct/2024 12:13:25] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2024-10-17 12:13:25,310 - INFO - 172.31.196.88 - - [17/Oct/2024 12:13:25] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2024-10-17 12:13:25,399 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps
+2024-10-17 12:13:25,399 - INFO - Fetching all maps
+2024-10-17 12:13:25,622 - INFO - 172.31.196.88 - - [17/Oct/2024 12:13:25] "GET /api/maps HTTP/1.1" 200 -
+2024-10-17 12:13:25,705 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps/1
+2024-10-17 12:13:25,707 - INFO - Fetching map with ID: 1
+2024-10-17 12:13:25,779 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps
+2024-10-17 12:13:25,780 - INFO - Fetching all maps
+2024-10-17 12:13:25,935 - INFO - 172.31.196.88 - - [17/Oct/2024 12:13:25] "GET /api/maps/1 HTTP/1.1" 200 -
+2024-10-17 12:13:26,006 - INFO - 172.31.196.88 - - [17/Oct/2024 12:13:26] "GET /api/maps HTTP/1.1" 200 -
+2024-10-17 12:13:26,019 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/static/maps/main.svg
+2024-10-17 12:13:26,019 - INFO - Attempting to serve static file: /home/runner/workspace/static/maps/main.svg
+2024-10-17 12:13:26,020 - INFO - 172.31.196.88 - - [17/Oct/2024 12:13:26] "[36mGET /static/maps/main.svg HTTP/1.1[0m" 304 -
+2024-10-17 12:13:26,111 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/items?map_id=1
+2024-10-17 12:13:26,112 - INFO - Fetching items for map ID: 1
+2024-10-17 12:13:26,117 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps/1
+2024-10-17 12:13:26,117 - INFO - Fetching map with ID: 1
+2024-10-17 12:13:26,335 - INFO - 172.31.196.88 - - [17/Oct/2024 12:13:26] "GET /api/items?map_id=1 HTTP/1.1" 200 -
+2024-10-17 12:13:26,342 - INFO - 172.31.196.88 - - [17/Oct/2024 12:13:26] "GET /api/maps/1 HTTP/1.1" 200 -
+2024-10-17 12:13:26,426 - INFO - 172.31.196.88 - - [17/Oct/2024 12:13:26] "[36mGET /static/thumbnails/placeholder.png HTTP/1.1[0m" 304 -
+2024-10-17 12:13:26,479 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/static/maps/main.svg
+2024-10-17 12:13:26,479 - INFO - Attempting to serve static file: /home/runner/workspace/static/maps/main.svg
+2024-10-17 12:13:26,480 - INFO - 172.31.196.88 - - [17/Oct/2024 12:13:26] "[36mGET /static/maps/main.svg HTTP/1.1[0m" 304 -
+2024-10-17 12:13:26,574 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/items?map_id=1
+2024-10-17 12:13:26,574 - INFO - Fetching items for map ID: 1
+2024-10-17 12:13:26,801 - INFO - 172.31.196.88 - - [17/Oct/2024 12:13:26] "GET /api/items?map_id=1 HTTP/1.1" 200 -
+2024-10-17 12:13:26,944 - INFO - 172.31.196.88 - - [17/Oct/2024 12:13:26] "[36mGET /static/thumbnails/placeholder.png HTTP/1.1[0m" 304 -
+2024-10-17 12:13:39,606 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/check_image_paths
+2024-10-17 12:13:39,774 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/check_image_paths
+2024-10-17 12:13:39,782 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/check_image_paths
+2024-10-17 12:13:39,828 - INFO - 172.31.196.88 - - [17/Oct/2024 12:13:39] "GET /api/check_image_paths HTTP/1.1" 200 -
+2024-10-17 12:13:40,001 - INFO - 172.31.196.88 - - [17/Oct/2024 12:13:40] "GET /api/check_image_paths HTTP/1.1" 200 -
+2024-10-17 12:13:40,008 - INFO - 172.31.196.88 - - [17/Oct/2024 12:13:40] "GET /api/check_image_paths HTTP/1.1" 200 -
+2024-10-17 12:13:40,714 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/check_image_paths
+2024-10-17 12:13:40,937 - INFO - 172.31.196.88 - - [17/Oct/2024 12:13:40] "GET /api/check_image_paths HTTP/1.1" 200 -
+2024-10-17 12:14:05,828 - INFO -  * Detected change in '/home/runner/workspace/check_image_paths.py', reloading
+2024-10-17 12:14:05,906 - INFO -  * Restarting with stat
+2024-10-17 12:14:07,386 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-17 12:14:07,387 - INFO - Added job "create_backup" to job store "default"
+2024-10-17 12:14:07,387 - INFO - Scheduler started
+2024-10-17 12:14:07,388 - INFO - Scheduler started
+2024-10-17 12:14:07,401 - WARNING -  * Debugger is active!
+2024-10-17 12:14:07,402 - INFO -  * Debugger PIN: 110-349-905
+2024-10-17 17:07:00,099 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-17 17:07:00,100 - INFO - Added job "create_backup" to job store "default"
+2024-10-17 17:07:00,100 - INFO - Scheduler started
+2024-10-17 17:07:00,101 - INFO - Scheduler started
+2024-10-17 17:07:00,118 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-17 17:07:00,118 - INFO - Added job "create_backup" to job store "default"
+2024-10-17 17:07:00,118 - INFO - Scheduler started
+2024-10-17 17:07:00,119 - INFO - Scheduler started
+2024-10-17 17:07:00,135 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.196.16:5000
+2024-10-17 17:07:00,136 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-17 17:07:00,137 - INFO -  * Restarting with stat
+2024-10-17 17:07:01,629 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-17 17:07:01,630 - INFO - Added job "create_backup" to job store "default"
+2024-10-17 17:07:01,630 - INFO - Scheduler started
+2024-10-17 17:07:01,630 - INFO - Scheduler started
+2024-10-17 17:07:01,641 - WARNING -  * Debugger is active!
+2024-10-17 17:07:01,642 - INFO -  * Debugger PIN: 234-567-190
+2024-10-17 17:07:01,671 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/check_image_paths
+2024-10-17 17:07:01,673 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-17 17:07:02,712 - INFO - 172.31.196.16 - - [17/Oct/2024 17:07:02] "GET /api/check_image_paths HTTP/1.1" 200 -
+2024-10-17 17:07:02,717 - INFO - 172.31.196.16 - - [17/Oct/2024 17:07:02] "GET / HTTP/1.1" 200 -
+2024-10-17 17:07:02,867 - INFO - 172.31.196.16 - - [17/Oct/2024 17:07:02] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-10-17 17:07:02,867 - INFO - 172.31.196.16 - - [17/Oct/2024 17:07:02] "GET /static/js/script.js HTTP/1.1" 200 -
+2024-10-17 17:07:03,084 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps
+2024-10-17 17:07:03,084 - INFO - Fetching all maps
+2024-10-17 17:07:03,312 - INFO - 172.31.196.16 - - [17/Oct/2024 17:07:03] "GET /api/maps HTTP/1.1" 200 -
+2024-10-17 17:07:03,397 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps/1
+2024-10-17 17:07:03,397 - INFO - Fetching map with ID: 1
+2024-10-17 17:07:03,631 - INFO - 172.31.196.16 - - [17/Oct/2024 17:07:03] "GET /api/maps/1 HTTP/1.1" 200 -
+2024-10-17 17:07:03,744 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/static/maps/main.svg
+2024-10-17 17:07:03,744 - INFO - Attempting to serve static file: /home/runner/workspace/static/maps/main.svg
+2024-10-17 17:07:03,745 - INFO - 172.31.196.16 - - [17/Oct/2024 17:07:03] "[36mGET /static/maps/main.svg HTTP/1.1[0m" 304 -
+2024-10-17 17:07:03,843 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/items?map_id=1
+2024-10-17 17:07:03,843 - INFO - Fetching items for map ID: 1
+2024-10-17 17:07:04,075 - INFO - 172.31.196.16 - - [17/Oct/2024 17:07:04] "GET /api/items?map_id=1 HTTP/1.1" 200 -
+2024-10-17 17:07:04,175 - INFO - 172.31.196.16 - - [17/Oct/2024 17:07:04] "[36mGET /static/thumbnails/placeholder.png HTTP/1.1[0m" 304 -
+2024-10-17 17:07:06,558 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/search?q=g&type=all&map_id=1
+2024-10-17 17:07:06,558 - INFO - Search query: g, type: all, map_id: 1
+2024-10-17 17:07:06,654 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/search?q=gl&type=all&map_id=1
+2024-10-17 17:07:06,655 - INFO - Search query: gl, type: all, map_id: 1
+2024-10-17 17:07:06,731 - INFO - Found 7 items matching search criteria
+2024-10-17 17:07:06,788 - INFO - 172.31.196.16 - - [17/Oct/2024 17:07:06] "GET /api/search?q=g&type=all&map_id=1 HTTP/1.1" 200 -
+2024-10-17 17:07:06,826 - INFO - Found 2 items matching search criteria
+2024-10-17 17:07:06,883 - INFO - 172.31.196.16 - - [17/Oct/2024 17:07:06] "GET /api/search?q=gl&type=all&map_id=1 HTTP/1.1" 200 -
+2024-10-17 17:07:06,901 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/search?q=glu&type=all&map_id=1
+2024-10-17 17:07:06,901 - INFO - Search query: glu, type: all, map_id: 1
+2024-10-17 17:07:06,981 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/search?q=glue&type=all&map_id=1
+2024-10-17 17:07:06,981 - INFO - Search query: glue, type: all, map_id: 1
+2024-10-17 17:07:07,073 - INFO - Found 1 items matching search criteria
+2024-10-17 17:07:07,131 - INFO - 172.31.196.16 - - [17/Oct/2024 17:07:07] "GET /api/search?q=glu&type=all&map_id=1 HTTP/1.1" 200 -
+2024-10-17 17:07:07,151 - INFO - Found 1 items matching search criteria
+2024-10-17 17:07:07,209 - INFO - 172.31.196.16 - - [17/Oct/2024 17:07:07] "GET /api/search?q=glue&type=all&map_id=1 HTTP/1.1" 200 -
+2024-10-17 17:07:13,627 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/search?q=&type=all&map_id=1
+2024-10-17 17:07:13,627 - INFO - Search query: , type: all, map_id: 1
+2024-10-17 17:07:13,798 - INFO - Found 18 items matching search criteria
+2024-10-17 17:07:13,855 - INFO - 172.31.196.16 - - [17/Oct/2024 17:07:13] "GET /api/search?q=&type=all&map_id=1 HTTP/1.1" 200 -
+2024-10-17 17:07:36,832 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-17 17:07:37,061 - INFO - 172.31.196.16 - - [17/Oct/2024 17:07:37] "GET / HTTP/1.1" 200 -
+2024-10-17 17:07:37,207 - INFO - 172.31.196.16 - - [17/Oct/2024 17:07:37] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2024-10-17 17:07:37,208 - INFO - 172.31.196.16 - - [17/Oct/2024 17:07:37] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-10-17 17:07:37,308 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps
+2024-10-17 17:07:37,310 - INFO - Fetching all maps
+2024-10-17 17:07:37,537 - INFO - 172.31.196.16 - - [17/Oct/2024 17:07:37] "GET /api/maps HTTP/1.1" 200 -
+2024-10-17 17:07:37,682 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps/1
+2024-10-17 17:07:37,682 - INFO - Fetching map with ID: 1
+2024-10-17 17:07:37,910 - INFO - 172.31.196.16 - - [17/Oct/2024 17:07:37] "GET /api/maps/1 HTTP/1.1" 200 -
+2024-10-17 17:07:38,000 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/static/maps/main.svg
+2024-10-17 17:07:38,000 - INFO - Attempting to serve static file: /home/runner/workspace/static/maps/main.svg
+2024-10-17 17:07:38,001 - INFO - 172.31.196.16 - - [17/Oct/2024 17:07:38] "[36mGET /static/maps/main.svg HTTP/1.1[0m" 304 -
+2024-10-17 17:07:38,099 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/items?map_id=1
+2024-10-17 17:07:38,099 - INFO - Fetching items for map ID: 1
+2024-10-17 17:07:38,345 - INFO - 172.31.196.16 - - [17/Oct/2024 17:07:38] "GET /api/items?map_id=1 HTTP/1.1" 200 -
+2024-10-17 17:07:38,490 - INFO - 172.31.196.16 - - [17/Oct/2024 17:07:38] "[36mGET /static/thumbnails/placeholder.png HTTP/1.1[0m" 304 -
+2024-10-17 17:07:49,079 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps/2
+2024-10-17 17:07:49,079 - INFO - Fetching map with ID: 2
+2024-10-17 17:07:49,306 - INFO - 172.31.196.16 - - [17/Oct/2024 17:07:49] "GET /api/maps/2 HTTP/1.1" 200 -
+2024-10-17 17:07:49,396 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/static/maps/closet.svg
+2024-10-17 17:07:49,396 - INFO - Attempting to serve static file: /home/runner/workspace/static/maps/closet.svg
+2024-10-17 17:07:49,398 - INFO - 172.31.196.16 - - [17/Oct/2024 17:07:49] "GET /static/maps/closet.svg HTTP/1.1" 200 -
+2024-10-17 17:07:49,493 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/items?map_id=2
+2024-10-17 17:07:49,493 - INFO - Fetching items for map ID: 2
+2024-10-17 17:07:49,723 - INFO - 172.31.196.16 - - [17/Oct/2024 17:07:49] "GET /api/items?map_id=2 HTTP/1.1" 200 -
+2024-10-17 17:10:34,548 - INFO -  * Detected change in '/home/runner/workspace/routes.py', reloading
+2024-10-17 17:10:34,699 - INFO -  * Restarting with stat
+2024-10-17 17:10:38,237 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-17 17:10:38,238 - INFO - Added job "create_backup" to job store "default"
+2024-10-17 17:10:38,238 - INFO - Scheduler started
+2024-10-17 17:10:38,238 - INFO - Scheduler started
+2024-10-17 17:10:38,252 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.196.16:5000
+2024-10-17 17:10:38,252 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-17 17:10:38,253 - INFO -  * Restarting with stat
+2024-10-17 17:10:39,735 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-17 17:10:39,736 - INFO - Added job "create_backup" to job store "default"
+2024-10-17 17:10:39,736 - INFO - Scheduler started
+2024-10-17 17:10:39,736 - INFO - Scheduler started
+2024-10-17 17:10:39,748 - WARNING -  * Debugger is active!
+2024-10-17 17:10:39,749 - INFO -  * Debugger PIN: 821-006-814
+2024-10-17 17:10:39,778 - INFO - 172.31.196.16 - - [17/Oct/2024 17:10:39] "[33mGET /api/check_image_paths HTTP/1.1[0m" 404 -
+2024-10-17 17:10:39,780 - INFO - 172.31.196.16 - - [17/Oct/2024 17:10:39] "[33mGET / HTTP/1.1[0m" 404 -
+2024-10-17 17:11:01,619 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-17 17:11:01,619 - INFO - Added job "create_backup" to job store "default"
+2024-10-17 17:11:01,619 - INFO - Scheduler started
+2024-10-17 17:11:01,620 - INFO - Scheduler started
+2024-10-17 17:11:01,633 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.196.16:5000
+2024-10-17 17:11:01,633 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-17 17:11:01,634 - INFO -  * Restarting with stat
+2024-10-17 17:11:06,015 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-17 17:11:06,015 - INFO - Added job "create_backup" to job store "default"
+2024-10-17 17:11:06,016 - INFO - Scheduler started
+2024-10-17 17:11:06,016 - INFO - Scheduler started
+2024-10-17 17:11:06,029 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.196.16:5000
+2024-10-17 17:11:06,029 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-17 17:11:06,030 - INFO -  * Restarting with stat
+2024-10-17 17:11:07,491 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-17 17:11:07,492 - INFO - Added job "create_backup" to job store "default"
+2024-10-17 17:11:07,492 - INFO - Scheduler started
+2024-10-17 17:11:07,493 - INFO - Scheduler started
+2024-10-17 17:11:07,502 - WARNING -  * Debugger is active!
+2024-10-17 17:11:07,503 - INFO -  * Debugger PIN: 463-161-726
+2024-10-17 17:11:07,530 - INFO - 172.31.196.16 - - [17/Oct/2024 17:11:07] "[33mGET / HTTP/1.1[0m" 404 -
+2024-10-17 17:11:07,531 - INFO - 172.31.196.16 - - [17/Oct/2024 17:11:07] "[33mGET /api/check_image_paths HTTP/1.1[0m" 404 -
+2024-10-17 17:12:07,712 - INFO -  * Detected change in '/home/runner/workspace/routes.py', reloading
+2024-10-17 17:12:07,812 - INFO -  * Restarting with stat
+2024-10-17 17:12:10,196 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-17 17:12:10,196 - INFO - Added job "create_backup" to job store "default"
+2024-10-17 17:12:10,197 - INFO - Scheduler started
+2024-10-17 17:12:10,197 - INFO - Scheduler started
+2024-10-17 17:12:10,225 - WARNING -  * Debugger is active!
+2024-10-17 17:12:10,227 - INFO -  * Debugger PIN: 125-523-258
+2024-10-17 17:14:58,385 - INFO -  * Detected change in '/home/runner/workspace/routes.py', reloading
+2024-10-17 17:14:58,466 - INFO -  * Restarting with stat
+2024-10-17 17:15:00,010 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-17 17:15:00,011 - INFO - Added job "create_backup" to job store "default"
+2024-10-17 17:15:00,011 - INFO - Scheduler started
+2024-10-17 17:15:00,011 - INFO - Scheduler started
+2024-10-17 17:15:00,022 - WARNING -  * Debugger is active!
+2024-10-17 17:15:00,024 - INFO -  * Debugger PIN: 313-531-494
+2024-10-17 17:15:04,734 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-17 17:15:04,735 - INFO - Added job "create_backup" to job store "default"
+2024-10-17 17:15:04,735 - INFO - Scheduler started
+2024-10-17 17:15:04,736 - INFO - Scheduler started
+2024-10-17 17:15:04,750 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.196.16:5000
+2024-10-17 17:15:04,750 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-17 17:15:04,751 - INFO -  * Restarting with stat
+2024-10-17 17:15:06,220 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-17 17:15:06,221 - INFO - Added job "create_backup" to job store "default"
+2024-10-17 17:15:06,221 - INFO - Scheduler started
+2024-10-17 17:15:06,221 - INFO - Scheduler started
+2024-10-17 17:15:06,232 - WARNING -  * Debugger is active!
+2024-10-17 17:15:06,233 - INFO -  * Debugger PIN: 249-045-286
+2024-10-17 17:15:06,261 - INFO - 172.31.196.16 - - [17/Oct/2024 17:15:06] "[33mGET /api/check_image_paths HTTP/1.1[0m" 404 -
+2024-10-17 17:15:06,263 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-17 17:15:06,267 - INFO - 172.31.196.16 - - [17/Oct/2024 17:15:06] "GET / HTTP/1.1" 200 -
+2024-10-17 17:15:06,279 - INFO - 172.31.196.16 - - [17/Oct/2024 17:15:06] "GET /static/css/styles.css HTTP/1.1" 200 -
+2024-10-17 17:15:06,370 - INFO - 172.31.196.16 - - [17/Oct/2024 17:15:06] "GET /static/js/script.js HTTP/1.1" 200 -
+2024-10-17 17:15:06,392 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps
+2024-10-17 17:15:07,414 - INFO - 172.31.196.16 - - [17/Oct/2024 17:15:07] "GET /api/maps HTTP/1.1" 200 -
+2024-10-17 17:15:07,422 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps/1
+2024-10-17 17:15:07,651 - INFO - 172.31.196.16 - - [17/Oct/2024 17:15:07] "GET /api/maps/1 HTTP/1.1" 200 -
+2024-10-17 17:15:07,659 - INFO - 172.31.196.16 - - [17/Oct/2024 17:15:07] "GET /static/maps/main.svg HTTP/1.1" 200 -
+2024-10-17 17:15:07,681 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/items?map_id=1
+2024-10-17 17:15:07,914 - INFO - 172.31.196.16 - - [17/Oct/2024 17:15:07] "[35m[1mGET /api/items?map_id=1 HTTP/1.1[0m" 500 -
+2024-10-17 17:15:25,076 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-17 17:15:25,076 - INFO - 172.31.196.16 - - [17/Oct/2024 17:15:25] "GET / HTTP/1.1" 200 -
+2024-10-17 17:15:25,086 - INFO - 172.31.196.16 - - [17/Oct/2024 17:15:25] "GET /static/css/styles.css HTTP/1.1" 200 -
+2024-10-17 17:15:25,094 - INFO - 172.31.196.16 - - [17/Oct/2024 17:15:25] "GET /static/js/script.js HTTP/1.1" 200 -
+2024-10-17 17:15:25,191 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps
+2024-10-17 17:15:25,419 - INFO - 172.31.196.16 - - [17/Oct/2024 17:15:25] "GET /api/maps HTTP/1.1" 200 -
+2024-10-17 17:15:25,427 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps/1
+2024-10-17 17:15:25,523 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-17 17:15:25,523 - INFO - 172.31.196.16 - - [17/Oct/2024 17:15:25] "GET / HTTP/1.1" 200 -
+2024-10-17 17:15:25,660 - INFO - 172.31.196.16 - - [17/Oct/2024 17:15:25] "GET /api/maps/1 HTTP/1.1" 200 -
+2024-10-17 17:15:25,670 - INFO - 172.31.196.16 - - [17/Oct/2024 17:15:25] "GET /static/maps/main.svg HTTP/1.1" 200 -
+2024-10-17 17:15:25,692 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/items?map_id=1
+2024-10-17 17:15:25,723 - INFO - 172.31.196.16 - - [17/Oct/2024 17:15:25] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-10-17 17:15:25,809 - INFO - 172.31.196.16 - - [17/Oct/2024 17:15:25] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2024-10-17 17:15:25,938 - INFO - 172.31.196.16 - - [17/Oct/2024 17:15:25] "[35m[1mGET /api/items?map_id=1 HTTP/1.1[0m" 500 -
+2024-10-17 17:15:26,201 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps
+2024-10-17 17:15:26,428 - INFO - 172.31.196.16 - - [17/Oct/2024 17:15:26] "GET /api/maps HTTP/1.1" 200 -
+2024-10-17 17:15:26,516 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps/1
+2024-10-17 17:15:26,742 - INFO - 172.31.196.16 - - [17/Oct/2024 17:15:26] "GET /api/maps/1 HTTP/1.1" 200 -
+2024-10-17 17:15:26,882 - INFO - 172.31.196.16 - - [17/Oct/2024 17:15:26] "GET /static/maps/main.svg HTTP/1.1" 200 -
+2024-10-17 17:15:27,020 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/items?map_id=1
+2024-10-17 17:15:27,248 - INFO - 172.31.196.16 - - [17/Oct/2024 17:15:27] "[35m[1mGET /api/items?map_id=1 HTTP/1.1[0m" 500 -
+2024-10-17 17:15:29,389 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-17 17:15:29,389 - INFO - 172.31.196.16 - - [17/Oct/2024 17:15:29] "GET / HTTP/1.1" 200 -
+2024-10-17 17:15:29,939 - INFO - 172.31.196.16 - - [17/Oct/2024 17:15:29] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-10-17 17:15:30,034 - INFO - 172.31.196.16 - - [17/Oct/2024 17:15:30] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2024-10-17 17:15:30,242 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps
+2024-10-17 17:15:30,469 - INFO - 172.31.196.16 - - [17/Oct/2024 17:15:30] "GET /api/maps HTTP/1.1" 200 -
+2024-10-17 17:15:30,554 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps/1
+2024-10-17 17:15:30,781 - INFO - 172.31.196.16 - - [17/Oct/2024 17:15:30] "GET /api/maps/1 HTTP/1.1" 200 -
+2024-10-17 17:15:30,864 - INFO - 172.31.196.16 - - [17/Oct/2024 17:15:30] "[36mGET /static/maps/main.svg HTTP/1.1[0m" 304 -
+2024-10-17 17:15:30,954 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/items?map_id=1
+2024-10-17 17:15:31,183 - INFO - 172.31.196.16 - - [17/Oct/2024 17:15:31] "[35m[1mGET /api/items?map_id=1 HTTP/1.1[0m" 500 -
+2024-10-17 17:15:33,055 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-17 17:15:33,056 - INFO - 172.31.196.16 - - [17/Oct/2024 17:15:33] "GET / HTTP/1.1" 200 -
+2024-10-17 17:15:33,158 - INFO - 172.31.196.16 - - [17/Oct/2024 17:15:33] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-10-17 17:15:33,179 - INFO - 172.31.196.16 - - [17/Oct/2024 17:15:33] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2024-10-17 17:15:33,264 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps
+2024-10-17 17:15:33,489 - INFO - 172.31.196.16 - - [17/Oct/2024 17:15:33] "GET /api/maps HTTP/1.1" 200 -
+2024-10-17 17:15:33,582 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps/1
+2024-10-17 17:15:33,808 - INFO - 172.31.196.16 - - [17/Oct/2024 17:15:33] "GET /api/maps/1 HTTP/1.1" 200 -
+2024-10-17 17:15:33,904 - INFO - 172.31.196.16 - - [17/Oct/2024 17:15:33] "[36mGET /static/maps/main.svg HTTP/1.1[0m" 304 -
+2024-10-17 17:15:33,993 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/items?map_id=1
+2024-10-17 17:15:34,222 - INFO - 172.31.196.16 - - [17/Oct/2024 17:15:34] "[35m[1mGET /api/items?map_id=1 HTTP/1.1[0m" 500 -
+2024-10-17 17:15:36,772 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-17 17:15:36,773 - INFO - 172.31.196.16 - - [17/Oct/2024 17:15:36] "GET / HTTP/1.1" 200 -
+2024-10-17 17:15:36,874 - INFO - 172.31.196.16 - - [17/Oct/2024 17:15:36] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-10-17 17:15:36,874 - INFO - 172.31.196.16 - - [17/Oct/2024 17:15:36] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2024-10-17 17:15:36,974 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps
+2024-10-17 17:15:37,200 - INFO - 172.31.196.16 - - [17/Oct/2024 17:15:37] "GET /api/maps HTTP/1.1" 200 -
+2024-10-17 17:15:37,285 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps/1
+2024-10-17 17:15:37,512 - INFO - 172.31.196.16 - - [17/Oct/2024 17:15:37] "GET /api/maps/1 HTTP/1.1" 200 -
+2024-10-17 17:15:37,600 - INFO - 172.31.196.16 - - [17/Oct/2024 17:15:37] "[36mGET /static/maps/main.svg HTTP/1.1[0m" 304 -
+2024-10-17 17:15:37,686 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/items?map_id=1
+2024-10-17 17:15:37,916 - INFO - 172.31.196.16 - - [17/Oct/2024 17:15:37] "[35m[1mGET /api/items?map_id=1 HTTP/1.1[0m" 500 -
