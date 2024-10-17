@@ -17,6 +17,10 @@ def generate_unique_filename(filename):
     random_string = str(uuid.uuid4())[:8]
     return f"{timestamp}_{random_string}{file_extension}"
 
+def file_exists(file_path):
+    """Check if a file exists in the static folder."""
+    full_path = os.path.join(current_app.static_folder, file_path.lstrip('/'))
+    return os.path.exists(full_path)
 
 @main_blueprint.before_request
 def log_request_info():
@@ -87,7 +91,7 @@ def get_item(item_id):
     try:
         current_app.logger.info(f"Fetching item with ID: {item_id}")
         item = Item.query.get_or_404(item_id)
-        image_path = item.image_path if item.image_path else "static/thumbnails/placeholder.png"
+        image_path = item.image_path if item.image_path and file_exists(item.image_path) else "/static/thumbnails/placeholder.png"
         return jsonify({
             "id": item.id,
             "name": item.name,
@@ -208,7 +212,7 @@ def items():
                     "x_coord": item.x_coord,
                     "y_coord": item.y_coord,
                     "map_id": item.map_id,
-                    "image_path": item.image_path if item.image_path and os.path.exists(os.path.join(current_app.static_folder, item.image_path.lstrip('/'))) else "/static/thumbnails/placeholder.png"
+                    "image_path": item.image_path if item.image_path and file_exists(item.image_path) else "/static/thumbnails/placeholder.png"
                 } for item in items
             ])
         except SQLAlchemyError as e:
@@ -274,8 +278,7 @@ def search():
                 "x_coord": item.x_coord,
                 "y_coord": item.y_coord,
                 "map_id": item.map_id,
-                "image_path": item.image_path if item.image_path else
-                "static/thumbnails/placeholder.png"
+                "image_path": item.image_path if item.image_path and file_exists(item.image_path) else "/static/thumbnails/placeholder.png"
             } for item in items
         ])
     except SQLAlchemyError as e:
