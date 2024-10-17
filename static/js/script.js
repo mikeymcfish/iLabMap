@@ -58,19 +58,46 @@ document.addEventListener('DOMContentLoaded', function() {
     function drawMap() {
         if (ctx && mapImage.complete && mapImage.naturalHeight !== 0) {
             ctx.clearRect(0, 0, mapCanvas.width, mapCanvas.height);
-            ctx.drawImage(mapImage, 0, 0, mapCanvas.width, mapCanvas.height);
-            items.forEach(item => {
-                ctx.fillStyle = 'red';
-                ctx.beginPath();
-                ctx.arc(item.x_coord * scale, item.y_coord * scale, 5, 0, 2 * Math.PI);
-                ctx.fill();
-            });
-            if (selectedLocation) {
-                ctx.fillStyle = 'blue';
-                ctx.beginPath();
-                ctx.arc(selectedLocation.x, selectedLocation.y, 5, 0, 2 * Math.PI);
-                ctx.fill();
-            }
+            
+            // Create a temporary div to hold the SVG content
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = mapImage.outerHTML;
+            
+            // Get the SVG element
+            const svgElement = tempDiv.querySelector('svg');
+            
+            // Set the SVG dimensions to match the canvas
+            svgElement.setAttribute('width', mapCanvas.width);
+            svgElement.setAttribute('height', mapCanvas.height);
+            
+            // Convert SVG to a data URL
+            const svgData = new XMLSerializer().serializeToString(svgElement);
+            const svgBlob = new Blob([svgData], {type: 'image/svg+xml;charset=utf-8'});
+            const url = URL.createObjectURL(svgBlob);
+            
+            // Create a new image with the SVG data URL
+            const img = new Image();
+            img.onload = function() {
+                ctx.drawImage(img, 0, 0, mapCanvas.width, mapCanvas.height);
+                URL.revokeObjectURL(url);
+                
+                // Draw items
+                items.forEach(item => {
+                    ctx.fillStyle = item.color || 'red';
+                    ctx.beginPath();
+                    ctx.arc(item.x_coord * scale, item.y_coord * scale, 5, 0, 2 * Math.PI);
+                    ctx.fill();
+                });
+                
+                // Draw selected location
+                if (selectedLocation) {
+                    ctx.fillStyle = 'blue';
+                    ctx.beginPath();
+                    ctx.arc(selectedLocation.x, selectedLocation.y, 5, 0, 2 * Math.PI);
+                    ctx.fill();
+                }
+            };
+            img.src = url;
         } else {
             console.error('Unable to draw map: Canvas context or image not ready');
         }
