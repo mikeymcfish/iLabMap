@@ -140,9 +140,7 @@ document.addEventListener('DOMContentLoaded', function() {
             imageNameContainer.classList.add('d-flex', 'align-items-center');
             
             const imageElement = document.createElement('img');
-            imageElement.src = item.image_path && item.image_path !== '/static/thumbnails/placeholder.png'
-                ? item.image_path
-                : '/static/thumbnails/placeholder.png';
+            imageElement.src = item.image_path || '/static/thumbnails/placeholder.png';
             imageElement.width = 60;
             imageElement.height = 60;
             imageElement.alt = item.name;
@@ -150,7 +148,6 @@ document.addEventListener('DOMContentLoaded', function() {
             imageElement.style.objectFit = 'cover';
             imageElement.onerror = function() {
                 this.src = '/static/thumbnails/placeholder.png';
-                console.error('Failed to load image:', item.image_path);
             };
 
             const infoElement = document.createElement('div');
