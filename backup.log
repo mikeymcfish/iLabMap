@@ -10007,3 +10007,57 @@ A detailed migration guide is available here: https://github.com/openai/openai-p
 2024-10-18 18:24:08,308 - INFO - 172.31.196.37 - - [18/Oct/2024 18:24:08] "GET / HTTP/1.1" 200 -
 2024-10-18 18:24:08,321 - INFO - 172.31.196.37 - - [18/Oct/2024 18:24:08] "GET /static/css/styles.css HTTP/1.1" 200 -
 2024-10-18 18:24:08,327 - INFO - 172.31.196.37 - - [18/Oct/2024 18:24:08] "GET /static/js/script.js HTTP/1.1" 200 -
+2024-10-18 18:24:22,893 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-18 18:24:23,117 - INFO - 172.31.196.37 - - [18/Oct/2024 18:24:23] "GET / HTTP/1.1" 200 -
+2024-10-18 18:24:23,640 - INFO - 172.31.196.37 - - [18/Oct/2024 18:24:23] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2024-10-18 18:24:23,641 - INFO - 172.31.196.37 - - [18/Oct/2024 18:24:23] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-10-18 18:25:06,344 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-18 18:25:06,572 - INFO - 172.31.196.37 - - [18/Oct/2024 18:25:06] "GET / HTTP/1.1" 200 -
+2024-10-18 18:25:06,739 - INFO - 172.31.196.37 - - [18/Oct/2024 18:25:06] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-10-18 18:25:06,740 - INFO - 172.31.196.37 - - [18/Oct/2024 18:25:06] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2024-10-18 18:25:11,052 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/chat
+2024-10-18 18:25:11,052 - INFO - Sending message to OpenAI: hi
+2024-10-18 18:25:11,894 - INFO - Received response from OpenAI: Hello! How can I assist you today?
+2024-10-18 18:25:11,894 - INFO - 172.31.196.37 - - [18/Oct/2024 18:25:11] "POST /api/chat HTTP/1.1" 200 -
+2024-10-18 18:25:18,516 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/chat
+2024-10-18 18:25:18,516 - INFO - Sending message to OpenAI: what is your name
+2024-10-18 18:25:19,227 - INFO - Received response from OpenAI: I'm an AI assistant, so you can just call me Assistant. How can I help you today?
+2024-10-18 18:25:19,227 - INFO - 172.31.196.37 - - [18/Oct/2024 18:25:19] "POST /api/chat HTTP/1.1" 200 -
+2024-10-18 18:25:58,925 - INFO -  * Detected change in '/home/runner/workspace/chat.py', reloading
+2024-10-18 18:25:59,036 - INFO -  * Restarting with stat
+2024-10-18 18:26:00,693 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-18 18:26:00,693 - INFO - Added job "create_backup" to job store "default"
+2024-10-18 18:26:00,693 - INFO - Scheduler started
+2024-10-18 18:26:00,694 - INFO - Scheduler started
+2024-10-18 18:26:00,704 - WARNING -  * Debugger is active!
+2024-10-18 18:26:00,706 - INFO -  * Debugger PIN: 131-785-571
+2024-10-18 18:28:39,194 - INFO -  * Detected change in '/home/runner/workspace/routes.py', reloading
+2024-10-18 18:28:39,318 - INFO -  * Restarting with stat
+2024-10-18 18:28:58,999 - INFO - HTTP Request: POST https://api.openai.com/v1/assistants "HTTP/1.1 400 Bad Request"
+2024-10-18 18:29:00,638 - INFO - HTTP Request: POST https://api.openai.com/v1/assistants "HTTP/1.1 400 Bad Request"
+2024-10-18 18:29:20,400 - INFO - HTTP Request: POST https://api.openai.com/v1/assistants "HTTP/1.1 400 Bad Request"
+2024-10-18 18:29:22,037 - INFO - HTTP Request: POST https://api.openai.com/v1/assistants "HTTP/1.1 400 Bad Request"
+2024-10-18 18:30:31,755 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-18 18:30:31,755 - INFO - Added job "create_backup" to job store "default"
+2024-10-18 18:30:31,755 - INFO - Scheduler started
+2024-10-18 18:30:31,756 - INFO - Scheduler started
+2024-10-18 18:30:31,769 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.196.37:5000
+2024-10-18 18:30:31,769 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-18 18:30:31,770 - INFO -  * Restarting with stat
+2024-10-18 18:30:33,683 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-18 18:30:33,684 - INFO - Added job "create_backup" to job store "default"
+2024-10-18 18:30:33,684 - INFO - Scheduler started
+2024-10-18 18:30:33,684 - INFO - Scheduler started
+2024-10-18 18:30:33,696 - WARNING -  * Debugger is active!
+2024-10-18 18:30:33,697 - INFO -  * Debugger PIN: 864-587-700
+2024-10-18 18:30:33,742 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-18 18:30:33,743 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-18 18:30:34,806 - INFO - 172.31.196.37 - - [18/Oct/2024 18:30:34] "GET / HTTP/1.1" 200 -
+2024-10-18 18:30:34,807 - INFO - 172.31.196.37 - - [18/Oct/2024 18:30:34] "GET / HTTP/1.1" 200 -
+2024-10-18 18:30:34,820 - INFO - 172.31.196.37 - - [18/Oct/2024 18:30:34] "GET /static/css/styles.css HTTP/1.1" 200 -
+2024-10-18 18:30:34,881 - INFO - 172.31.196.37 - - [18/Oct/2024 18:30:34] "GET /static/js/script.js HTTP/1.1" 200 -
+2024-10-18 18:30:35,331 - INFO - 172.31.196.37 - - [18/Oct/2024 18:30:35] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-10-18 18:30:35,401 - INFO - 172.31.196.37 - - [18/Oct/2024 18:30:35] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -

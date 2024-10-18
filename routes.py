@@ -10,6 +10,7 @@ import datetime
 import openai
 import logging
 from typing import Optional
+from chat import system_prompt, get_ai_response
 
 main_blueprint = Blueprint('main', __name__)
 
@@ -327,29 +328,11 @@ def chat():
             current_app.logger.error("No message provided in the request")
             return jsonify({"error": "No message provided"}), 400
 
-        openai.api_key = os.environ.get('OPENAI_API_KEY')
-        
-        if not openai.api_key:
-            current_app.logger.error("OpenAI API key is not set in the environment")
-            return jsonify({"error": "OpenAI API key is not set"}), 500
+        current_app.logger.info(f"Sending message to AI: {user_message}")
 
-        current_app.logger.info(f"Sending message to OpenAI: {user_message}")
-
-        try:
-            response = openai.ChatCompletion.create(
-                model="gpt-3.5-turbo",
-                messages=[
-                    {"role": "system", "content": "You are a helpful assistant."},
-                    {"role": "user", "content": user_message}
-                ]
-            )
-
-            ai_message = response.choices[0].message['content'].strip()
-            current_app.logger.info(f"Received response from OpenAI: {ai_message}")
-            return jsonify({"message": ai_message})
-        except openai.error.OpenAIError as e:
-            current_app.logger.error(f"OpenAI API error: {str(e)}")
-            return jsonify({"error": f"OpenAI API error: {str(e)}"}), 500
+        ai_message = get_ai_response(user_message)
+        current_app.logger.info(f"Received response from AI: {ai_message}")
+        return jsonify({"message": ai_message})
 
     except Exception as e:
         current_app.logger.error(f"Unexpected error in chat API: {str(e)}")
