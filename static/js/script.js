@@ -48,9 +48,29 @@ document.addEventListener('DOMContentLoaded', function() {
         if (mapCanvas) {
             const container = mapCanvas.parentElement;
             const containerWidth = container.clientWidth;
-            mapCanvas.width = containerWidth;
-            mapCanvas.height = (mapImage.height / mapImage.width) * containerWidth;
-            scale = containerWidth / mapImage.width;
+            const containerHeight = container.clientHeight;
+            
+            const imageAspectRatio = mapImage.width / mapImage.height;
+            const containerAspectRatio = containerWidth / containerHeight;
+            
+            let newWidth, newHeight;
+            
+            if (containerAspectRatio > imageAspectRatio) {
+                newHeight = containerHeight;
+                newWidth = newHeight * imageAspectRatio;
+            } else {
+                newWidth = containerWidth;
+                newHeight = newWidth / imageAspectRatio;
+            }
+            
+            mapCanvas.width = newWidth;
+            mapCanvas.height = newHeight;
+            
+            mapCanvas.style.position = 'absolute';
+            mapCanvas.style.left = `${(containerWidth - newWidth) / 2}px`;
+            mapCanvas.style.top = `${(containerHeight - newHeight) / 2}px`;
+            
+            scale = newWidth / mapImage.width;
             drawMap();
         }
     }
@@ -707,6 +727,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     window.addEventListener('resize', function() {
+        resizeCanvas();
         if (addItemForm && addItemForm.style.display === 'block') {
             positionAddItemForm();
         }
