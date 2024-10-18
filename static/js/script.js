@@ -602,6 +602,90 @@ document.addEventListener('DOMContentLoaded', function() {
         updateItemBtn.removeAttribute('data-item-id');
     }
 
+    function initializeDropArea() {
+        if (!dropArea) return;
+
+        ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+            dropArea.addEventListener(eventName, preventDefaults, false);
+        });
+
+        ['dragenter', 'dragover'].forEach(eventName => {
+            dropArea.addEventListener(eventName, highlight, false);
+        });
+
+        ['dragleave', 'drop'].forEach(eventName => {
+            dropArea.addEventListener(eventName, unhighlight, false);
+        });
+
+        dropArea.addEventListener('drop', handleDrop, false);
+    }
+
+    function preventDefaults(e) {
+        e.preventDefault();
+        e.stopPropagation();
+    }
+
+    function highlight(e) {
+        console.log('Highlight');
+        dropArea.classList.add('bg-info');
+    }
+
+    function unhighlight(e) {
+        console.log('Unhighlight');
+        dropArea.classList.remove('bg-info');
+    }
+
+    function handleDrop(e) {
+        console.log('File dropped');
+        const dt = e.dataTransfer;
+        const files = dt.files;
+        
+        if (files.length > 0) {
+            console.log('File detected:', files[0].name);
+            itemImageInput.files = files;
+            updateDropAreaUI(files[0]);
+            
+            if (updateItemBtn.textContent === 'Update Item') {
+                const itemId = updateItemBtn.getAttribute('data-item-id');
+                updateItemImage(itemId, files[0]);
+            }
+        }
+    }
+
+    function updateDropAreaUI(file) {
+        console.log('Updating UI with dropped file');
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            dropArea.innerHTML = `<img src="${e.target.result}" style="max-width: 100%; max-height: 200px;">`;
+        }
+        reader.readAsDataURL(file);
+    }
+
+    function updateItemImage(itemId, file) {
+        const formData = new FormData();
+        formData.append('image', file);
+
+        fetch(`/api/items/${itemId}`, {
+            method: 'PUT',
+            body: formData
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log('Image updated successfully');
+            loadItems();
+            displaySuccessMessage('Item image updated successfully');
+        })
+        .catch(error => {
+            console.error('Error updating item image:', error);
+            displayErrorMessage('Error updating item image. Please try again later.');
+        });
+    }
+
     if (searchInput) {
         searchInput.addEventListener('input', performSearch);
     }
@@ -739,86 +823,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
-        window.addEventListener(eventName, preventDefaults, false);
-    });
-
-    ['dragenter', 'dragover'].forEach(eventName => {
-        dropArea.addEventListener(eventName, highlight, false);
-    });
-
-    ['dragleave', 'drop'].forEach(eventName => {
-        dropArea.addEventListener(eventName, unhighlight, false);
-    });
-
-    window.addEventListener('drop', handleDrop, false);
-
-    function preventDefaults(e) {
-        e.preventDefault();
-        e.stopPropagation();
-    }
-
-    function highlight(e) {
-        console.log('Highlight');
-        dropArea.classList.add('bg-info');
-    }
-
-    function unhighlight(e) {
-        console.log('Unhighlight');
-        dropArea.classList.remove('bg-info');
-    }
-
-    function handleDrop(e) {
-        console.log('File dropped');
-        const dt = e.dataTransfer;
-        const files = dt.files;
-        
-        if (files.length > 0) {
-            console.log('File detected:', files[0].name);
-            itemImageInput.files = files;
-            updateDropAreaUI(files[0]);
-            
-            if (updateItemBtn.textContent === 'Update Item') {
-                const itemId = updateItemBtn.getAttribute('data-item-id');
-                updateItemImage(itemId, files[0]);
-            }
-        }
-    }
-
-    function updateDropAreaUI(file) {
-        console.log('Updating UI with dropped file');
-        const reader = new FileReader();
-        reader.onload = function(e) {
-            dropArea.innerHTML = `<img src="${e.target.result}" style="max-width: 100%; max-height: 200px;">`;
-        }
-        reader.readAsDataURL(file);
-    }
-
-    function updateItemImage(itemId, file) {
-        const formData = new FormData();
-        formData.append('image', file);
-
-        fetch(`/api/items/${itemId}`, {
-            method: 'PUT',
-            body: formData
-        })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-            return response.json();
-        })
-        .then(data => {
-            console.log('Image updated successfully');
-            loadItems();
-            displaySuccessMessage('Item image updated successfully');
-        })
-        .catch(error => {
-            console.error('Error updating item image:', error);
-            displayErrorMessage('Error updating item image. Please try again later.');
-        });
-    }
-
     itemImageInput.addEventListener('change', function(e) {
         console.log('File input changed');
         if (this.files[0]) {
@@ -831,5 +835,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    initializeDropArea();
     loadMaps();
 });
