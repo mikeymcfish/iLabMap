@@ -294,6 +294,10 @@ def search():
         return jsonify(
             {"error": "An error occurred while searching for items"}), 500
 
+@main_blueprint.route('/static/<path:filename>')
+def static_files(filename):
+    return send_from_directory('static', filename)
+    
 @main_blueprint.route('/static/maps/<path:filename>')
 def serve_static(filename):
     file_path = os.path.join(current_app.static_folder, 'maps', filename)
@@ -306,5 +310,5 @@ def serve_static(filename):
                                filename)
 
 def allowed_file(filename):
-    ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
+    ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif', 'webm'}
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
