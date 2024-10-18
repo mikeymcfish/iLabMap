@@ -9959,3 +9959,29 @@ FROM item]
 2024-10-18 16:03:03,105 - INFO - 172.31.196.83 - - [18/Oct/2024 16:03:03] "GET / HTTP/1.1" 200 -
 2024-10-18 16:03:03,205 - INFO - 172.31.196.83 - - [18/Oct/2024 16:03:03] "GET /static/css/styles.css HTTP/1.1" 200 -
 2024-10-18 16:03:03,423 - INFO - 172.31.196.83 - - [18/Oct/2024 16:03:03] "GET /static/js/script.js HTTP/1.1" 200 -
+2024-10-18 16:03:19,908 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-18 16:03:20,138 - INFO - 172.31.196.83 - - [18/Oct/2024 16:03:20] "GET / HTTP/1.1" 200 -
+2024-10-18 16:03:20,349 - INFO - 172.31.196.83 - - [18/Oct/2024 16:03:20] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-10-18 16:03:20,439 - INFO - 172.31.196.83 - - [18/Oct/2024 16:03:20] "GET /static/js/script.js HTTP/1.1" 200 -
+2024-10-18 16:05:19,418 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-18 16:05:19,976 - INFO - 172.31.196.83 - - [18/Oct/2024 16:05:19] "GET / HTTP/1.1" 200 -
+2024-10-18 16:05:20,227 - INFO - 172.31.196.83 - - [18/Oct/2024 16:05:20] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2024-10-18 16:05:20,228 - INFO - 172.31.196.83 - - [18/Oct/2024 16:05:20] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-10-18 16:05:33,327 - INFO - 172.31.196.83 - - [18/Oct/2024 16:05:33] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-10-18 16:05:47,577 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-18 16:05:48,186 - INFO - 172.31.196.83 - - [18/Oct/2024 16:05:48] "GET / HTTP/1.1" 200 -
+2024-10-18 16:05:48,353 - INFO - 172.31.196.83 - - [18/Oct/2024 16:05:48] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-10-18 16:05:48,376 - INFO - 172.31.196.83 - - [18/Oct/2024 16:05:48] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2024-10-18 16:08:03,790 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-18 16:08:04,017 - INFO - 172.31.196.83 - - [18/Oct/2024 16:08:04] "GET / HTTP/1.1" 200 -
+2024-10-18 16:08:04,041 - INFO - 172.31.196.83 - - [18/Oct/2024 16:08:04] "GET /static/css/styles.css HTTP/1.1" 200 -
+2024-10-18 16:08:04,080 - INFO - 172.31.196.83 - - [18/Oct/2024 16:08:04] "GET /static/js/script.js HTTP/1.1" 200 -
+2024-10-18 16:08:04,895 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps
+2024-10-18 16:08:04,895 - INFO - Fetching all maps
+2024-10-18 16:08:05,126 - INFO - 172.31.196.83 - - [18/Oct/2024 16:08:05] "GET /api/maps HTTP/1.1" 200 -
+2024-10-18 16:08:05,203 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps/1
+2024-10-18 16:08:05,203 - INFO - Fetching map with ID: 1
+2024-10-18 16:08:05,432 - INFO - 172.31.196.83 - - [18/Oct/2024 16:08:05] "GET /api/maps/1 HTTP/1.1" 200 -
+2024-10-18 16:08:05,502 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/static/maps/main.svg
+2024-10-18 16:08:05,502 - INFO - Attempting to serve static file: /home/runner/workspace/static/maps/main.svg
+2024-10-18 16:08:05,503 - INFO - 172.31.196.83 - - [18/Oct/2024 16:08:05] "GET /static/maps/main.svg HTTP/1.1" 200 -
