@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const mapCanvas = document.getElementById('mapCanvas');
-    const ctx = mapCanvas.getContext('2d');
+    const ctx = mapCanvas ? mapCanvas.getContext('2d') : null;
     const itemList = document.getElementById('itemList');
     const searchInput = document.getElementById('searchInput');
     const searchType = document.getElementById('searchType');
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function submitOnEnter(event) {
         if (event.key === 'Enter') {
             event.preventDefault();
-            saveItemBtn.click();
+            if (saveItemBtn) saveItemBtn.click();
         }
     }
     
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function resizeCanvas() {
-        if (mapCanvas) {
+        if (mapCanvas && ctx) {
             const container = mapCanvas.parentElement;
             const containerWidth = container.clientWidth;
             const containerHeight = container.clientHeight;
@@ -735,7 +735,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     window.addEventListener('scroll', function() {
         if (addItemForm && addItemForm.style.display === 'block') {
-            // positionAddItemForm();
+            positionAddItemForm();
         }
     });
 

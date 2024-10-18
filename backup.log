@@ -8290,3 +8290,24 @@ FROM item]
 2024-10-18 12:35:04,270 - INFO - 172.31.196.96 - - [18/Oct/2024 12:35:04] "GET / HTTP/1.1" 200 -
 2024-10-18 12:35:04,333 - INFO - 172.31.196.96 - - [18/Oct/2024 12:35:04] "GET /static/css/styles.css HTTP/1.1" 200 -
 2024-10-18 12:35:04,349 - INFO - 172.31.196.96 - - [18/Oct/2024 12:35:04] "GET /static/js/script.js HTTP/1.1" 200 -
+2024-10-18 12:35:18,512 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-18 12:35:19,034 - INFO - 172.31.196.96 - - [18/Oct/2024 12:35:19] "GET / HTTP/1.1" 200 -
+2024-10-18 12:35:19,502 - INFO - 172.31.196.96 - - [18/Oct/2024 12:35:19] "GET /static/css/styles.css HTTP/1.1" 200 -
+2024-10-18 12:35:19,643 - INFO - 172.31.196.96 - - [18/Oct/2024 12:35:19] "GET /static/js/script.js HTTP/1.1" 200 -
+2024-10-18 12:35:20,191 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-18 12:35:20,416 - INFO - 172.31.196.96 - - [18/Oct/2024 12:35:20] "GET / HTTP/1.1" 200 -
+2024-10-18 12:35:20,968 - INFO - 172.31.196.96 - - [18/Oct/2024 12:35:20] "GET /static/css/styles.css HTTP/1.1" 200 -
+2024-10-18 12:35:21,107 - INFO - 172.31.196.96 - - [18/Oct/2024 12:35:21] "GET /static/js/script.js HTTP/1.1" 200 -
+2024-10-18 12:48:27,270 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-18 12:48:28,149 - INFO - 172.31.196.96 - - [18/Oct/2024 12:48:28] "GET / HTTP/1.1" 200 -
+2024-10-18 12:48:28,454 - INFO - 172.31.196.96 - - [18/Oct/2024 12:48:28] "GET /static/css/styles.css HTTP/1.1" 200 -
+2024-10-18 12:48:28,592 - INFO - 172.31.196.96 - - [18/Oct/2024 12:48:28] "GET /static/js/script.js HTTP/1.1" 200 -
+2024-10-18 12:48:34,277 - INFO - 172.31.196.96 - - [18/Oct/2024 12:48:34] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-10-18 12:48:37,055 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-18 12:48:37,581 - INFO - 172.31.196.96 - - [18/Oct/2024 12:48:37] "GET / HTTP/1.1" 200 -
+2024-10-18 12:48:37,725 - INFO - 172.31.196.96 - - [18/Oct/2024 12:48:37] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-10-18 12:48:37,798 - INFO - 172.31.196.96 - - [18/Oct/2024 12:48:37] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2024-10-18 12:51:39,289 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-18 12:51:39,516 - INFO - 172.31.196.96 - - [18/Oct/2024 12:51:39] "GET / HTTP/1.1" 200 -
+2024-10-18 12:51:39,525 - INFO - 172.31.196.96 - - [18/Oct/2024 12:51:39] "GET /static/css/styles.css HTTP/1.1" 200 -
+2024-10-18 12:51:39,529 - INFO - 172.31.196.96 - - [18/Oct/2024 12:51:39] "GET /static/js/script.js HTTP/1.1" 200 -
