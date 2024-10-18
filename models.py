@@ -16,7 +16,9 @@ class Item(db.Model):
     y_coord = db.Column(db.Float, nullable=False)
     map_id = db.Column(db.Integer, db.ForeignKey('map.id'), nullable=False)
     image_path = db.Column(db.String(200), nullable=True)
-    color = db.Column(db.String(20), nullable=True, default="red")  # New field
-    zone = db.Column(db.String(100), nullable=True, default="")      # New field
-    quantity = db.Column(db.Integer, nullable=True, default=1)      # New field
-    warning = db.Column(db.String(255), nullable=True, default="")   # New field
+    color = db.Column(db.String(20), nullable=True, default="red")
+    zone = db.Column(db.String(100), nullable=True, default="")
+    quantity = db.Column(db.Integer, nullable=True, default=1)
+    warning = db.Column(db.String(255), nullable=True, default="")
+    description = db.Column(db.Text, nullable=True)
+    link = db.Column(db.String(500), nullable=True)

@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             const imageNameContainer = document.createElement('div');
             imageNameContainer.classList.add('d-flex', 'align-items-center');
-            console.log(item.image_path);
+
             const imageElement = document.createElement('img');
             imageElement.src = item.image_path;
             imageElement.width = 60;
@@ -183,6 +183,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             }
 
+            const detailsButton = document.createElement('button');
+            detailsButton.classList.add('btn', 'btn-outline-info', 'btn-sm', 'me-2', 'view-details');
+            detailsButton.innerHTML = '<i class="fas fa-expand-alt"></i>';
+            detailsButton.setAttribute('data-item-id', item.id);
+
             const editButton = document.createElement('button');
             editButton.classList.add('btn', 'btn-outline-secondary', 'btn-sm', 'me-2', 'edit-item');
             editButton.innerHTML = '<i class="fas fa-edit"></i>';
@@ -193,6 +198,7 @@ document.addEventListener('DOMContentLoaded', function() {
             deleteButton.innerHTML = '<i class="fas fa-trash-alt"></i>';
             deleteButton.setAttribute('data-item-id', item.id);
 
+            buttonsContainer.appendChild(detailsButton);
             buttonsContainer.appendChild(editButton);
             buttonsContainer.appendChild(deleteButton);
 
@@ -220,6 +226,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 event.stopPropagation();
                 const itemId = this.getAttribute('data-item-id');
                 editItem(itemId);
+            });
+        });
+
+        document.querySelectorAll('.view-details').forEach(button => {
+            button.addEventListener('click', function(event) {
+                event.stopPropagation();
+                const itemId = this.getAttribute('data-item-id');
+                showItemDetails(itemId);
             });
         });
     }
@@ -338,6 +352,46 @@ document.addEventListener('DOMContentLoaded', function() {
         addItemForm.style.top = `${top}px`;
     }
 
+    function showItemDetails(itemId) {
+        const item = items.find(item => item.id === parseInt(itemId));
+        if (!item) {
+            console.error('Item not found:', itemId);
+            return;
+        }
+
+        const modal = new bootstrap.Modal(document.getElementById('itemDetailsModal'));
+        
+        document.getElementById('itemDetailsImage').src = item.image_path;
+        document.getElementById('itemDetailsName').textContent = item.name;
+        document.getElementById('itemDetailsTags').textContent = item.tags;
+        document.getElementById('itemDetailsQuantity').textContent = `Quantity: ${item.quantity}`;
+        document.getElementById('itemDetailsDescription').textContent = item.description || 'No description available';
+        
+        const linkElement = document.getElementById('itemDetailsLink');
+        if (item.link) {
+            linkElement.href = item.link;
+            linkElement.style.display = 'inline';
+        } else {
+            linkElement.style.display = 'none';
+        }
+
+        const warningsContainer = document.getElementById('itemDetailsWarnings');
+        warningsContainer.innerHTML = '';
+        if (item.warning) {
+            const warnings = item.warning.split(',').filter(warning => warning.trim() !== "");
+            warnings.forEach(warning => {
+                const warningBadge = document.createElement('div');
+                warningBadge.classList.add('warning-badges', 'me-2', 'd-inline-block');
+                const warningIcon = document.createElement('i');
+                warningIcon.classList.add('fas', 'fa-sm', `fa-${warning.trim()}`);
+                warningBadge.appendChild(warningIcon);
+                warningsContainer.appendChild(warningBadge);
+            });
+        }
+
+        modal.show();
+    }
+
     function editItem(itemId) {
         console.log('Editing item:', itemId);
         const item = items.find(item => item.id === parseInt(itemId));
@@ -351,6 +405,8 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('itemColor').value = item.color || 'red';
         document.getElementById('itemZone').value = item.zone || '';
         document.getElementById('itemQuantity').value = item.quantity || 1;
+        document.getElementById('itemDescription').value = item.description || '';
+        document.getElementById('itemLink').value = item.link || '';
 
         const warnings = item.warning ? item.warning.split(',') : [];
         document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
@@ -392,6 +448,8 @@ document.addEventListener('DOMContentLoaded', function() {
         formData.append('zone', document.getElementById('itemZone').value || '');
         formData.append('quantity', parseInt(document.getElementById('itemQuantity').value, 10) || 1);
         formData.append('map_id', currentMapId);
+        formData.append('description', document.getElementById('itemDescription').value);
+        formData.append('link', document.getElementById('itemLink').value);
 
         formData.append('x_coord', (selectedLocation ? selectedLocation.x / scale : item.x_coord).toString());
         formData.append('y_coord', (selectedLocation ? selectedLocation.y / scale : item.y_coord).toString());
@@ -512,6 +570,8 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('itemColor').value = 'red';
         document.getElementById('itemZone').value = '';
         document.getElementById('itemQuantity').value = 1;
+        document.getElementById('itemDescription').value = '';
+        document.getElementById('itemLink').value = '';
         document.querySelectorAll('input[type="checkbox"]').forEach(input => input.checked = false);
         dropArea.innerHTML = 'Drag and drop image here';
         selectedLocation = null;

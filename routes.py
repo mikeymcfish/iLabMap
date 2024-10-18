@@ -17,7 +17,6 @@ def generate_unique_filename(filename):
     random_string = str(uuid.uuid4())[:8]
     return f"{timestamp}_{random_string}{file_extension}"
 
-
 @main_blueprint.before_request
 def log_request_info():
     current_app.logger.debug('Request Method: %s, URL: %s', request.method, request.url)
@@ -45,6 +44,8 @@ def update_item(item_id):
     map_id = request.form.get('map_id')
     x_coord = request.form.get('x_coord')
     y_coord = request.form.get('y_coord')
+    description = request.form.get('description')
+    link = request.form.get('link')
 
     if name:
         item.name = name
@@ -64,8 +65,11 @@ def update_item(item_id):
         item.x_coord = float(x_coord)
     if y_coord:
         item.y_coord = float(y_coord)
+    if description:
+        item.description = description
+    if link:
+        item.link = link
 
-    # Handle image upload
     if 'image' in request.files:
         file = request.files['image']
         if file and allowed_file(file.filename):
@@ -98,7 +102,9 @@ def get_item(item_id):
             "image_path": image_path,
             "color": item.color,
             "quantity": item.quantity,
-            "warning": item.warning
+            "warning": item.warning,
+            "description": item.description,
+            "link": item.link
         }), 200
     except SQLAlchemyError as e:
         current_app.logger.error(
@@ -174,7 +180,9 @@ def items():
                 x_coord=data['x_coord'],
                 y_coord=data['y_coord'],
                 map_id=data['map_id'],
-                image_path=image_path 
+                image_path=image_path,
+                description=data.get('description', ''),
+                link=data.get('link', '')
             )
             db.session.add(new_item)
             db.session.commit()
@@ -206,7 +214,9 @@ def items():
                     "x_coord": item.x_coord,
                     "y_coord": item.y_coord,
                     "map_id": item.map_id,
-                    "image_path": item.image_path
+                    "image_path": item.image_path,
+                    "description": item.description,
+                    "link": item.link
                 } for item in items
             ])
         except SQLAlchemyError as e:
@@ -272,7 +282,11 @@ def search():
                 "x_coord": item.x_coord,
                 "y_coord": item.y_coord,
                 "map_id": item.map_id,
-                "image_path": item.image_path
+                "image_path": item.image_path,
+                "description": item.description,
+                "link": item.link,
+                "quantity": item.quantity,
+                "warning": item.warning
             } for item in items
         ])
     except SQLAlchemyError as e:
