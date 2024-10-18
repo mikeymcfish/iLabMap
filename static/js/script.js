@@ -138,17 +138,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
             const imageNameContainer = document.createElement('div');
             imageNameContainer.classList.add('d-flex', 'align-items-center');
-            
+            console.log(item.image_path);
             const imageElement = document.createElement('img');
-            imageElement.src = item.image_path || '/static/thumbnails/placeholder.png';
+            imageElement.src = item.image_path;
             imageElement.width = 60;
             imageElement.height = 60;
             imageElement.alt = item.name;
             imageElement.classList.add('me-3', 'rounded');
             imageElement.style.objectFit = 'cover';
-            imageElement.onerror = function() {
-                this.src = '/static/thumbnails/placeholder.png';
-            };
 
             const infoElement = document.createElement('div');
             infoElement.classList.add('d-flex', 'flex-column');

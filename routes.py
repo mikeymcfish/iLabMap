@@ -87,7 +87,7 @@ def get_item(item_id):
     try:
         current_app.logger.info(f"Fetching item with ID: {item_id}")
         item = Item.query.get_or_404(item_id)
-        image_path = item.image_path if item.image_path else "static/thumbnails/placeholder.png"
+        image_path = item.image_path
         return jsonify({
             "id": item.id,
             "name": item.name,
@@ -113,8 +113,7 @@ def get_maps():
         maps = Map.query.all()
         return jsonify([{
             "id": map.id,
-            "name": map.name,
-            "background_color": map.background_color
+            "name": map.name
         } for map in maps])
     except SQLAlchemyError as e:
         current_app.logger.error(f"Error fetching maps: {str(e)}")
@@ -128,8 +127,7 @@ def get_map(map_id):
         return jsonify({
             "id": map.id,
             "name": map.name,
-            "svg_path": map.svg_path,
-            "background_color": map.background_color
+            "svg_path": map.svg_path
         })
     except SQLAlchemyError as e:
         current_app.logger.error(
@@ -208,7 +206,7 @@ def items():
                     "x_coord": item.x_coord,
                     "y_coord": item.y_coord,
                     "map_id": item.map_id,
-                    "image_path": item.image_path if item.image_path and os.path.exists(os.path.join(current_app.static_folder, item.image_path.lstrip('/'))) else "/static/thumbnails/placeholder.png"
+                    "image_path": item.image_path
                 } for item in items
             ])
         except SQLAlchemyError as e:
@@ -274,8 +272,7 @@ def search():
                 "x_coord": item.x_coord,
                 "y_coord": item.y_coord,
                 "map_id": item.map_id,
-                "image_path": item.image_path if item.image_path else
-                "static/thumbnails/placeholder.png"
+                "image_path": item.image_path
             } for item in items
         ])
     except SQLAlchemyError as e:
