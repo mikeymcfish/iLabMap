@@ -9941,3 +9941,69 @@ FROM item]
 2024-10-18 18:19:43,279 - INFO - 172.31.196.37 - - [18/Oct/2024 18:19:43] "GET / HTTP/1.1" 200 -
 2024-10-18 18:19:43,292 - INFO - 172.31.196.37 - - [18/Oct/2024 18:19:43] "GET /static/css/styles.css HTTP/1.1" 200 -
 2024-10-18 18:19:43,307 - INFO - 172.31.196.37 - - [18/Oct/2024 18:19:43] "GET /static/js/script.js HTTP/1.1" 200 -
+2024-10-18 18:20:09,285 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-18 18:20:09,512 - INFO - 172.31.196.37 - - [18/Oct/2024 18:20:09] "GET / HTTP/1.1" 200 -
+2024-10-18 18:20:09,725 - INFO - 172.31.196.37 - - [18/Oct/2024 18:20:09] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-10-18 18:20:09,736 - INFO - 172.31.196.37 - - [18/Oct/2024 18:20:09] "GET /static/js/script.js HTTP/1.1" 200 -
+2024-10-18 18:20:14,734 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/chat
+2024-10-18 18:20:14,734 - ERROR - Error in chat API: 
+
+You tried to access openai.Completion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+2024-10-18 18:20:14,734 - INFO - 172.31.196.37 - - [18/Oct/2024 18:20:14] "[35m[1mPOST /api/chat HTTP/1.1[0m" 500 -
+2024-10-18 18:22:11,358 - INFO -  * Detected change in '/home/runner/workspace/routes.py', reloading
+2024-10-18 18:22:11,531 - INFO -  * Restarting with stat
+2024-10-18 18:22:14,020 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-18 18:22:14,020 - INFO - Added job "create_backup" to job store "default"
+2024-10-18 18:22:14,020 - INFO - Scheduler started
+2024-10-18 18:22:14,020 - INFO - Scheduler started
+2024-10-18 18:22:14,051 - WARNING -  * Debugger is active!
+2024-10-18 18:22:14,052 - INFO -  * Debugger PIN: 686-574-707
+2024-10-18 18:22:15,661 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-18 18:22:16,712 - INFO - 172.31.196.37 - - [18/Oct/2024 18:22:16] "GET / HTTP/1.1" 200 -
+2024-10-18 18:22:17,121 - INFO - 172.31.196.37 - - [18/Oct/2024 18:22:17] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-10-18 18:22:17,124 - INFO - 172.31.196.37 - - [18/Oct/2024 18:22:17] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2024-10-18 18:23:53,913 - INFO -  * Detected change in '/home/runner/workspace/routes.py', reloading
+2024-10-18 18:23:54,041 - INFO -  * Restarting with stat
+2024-10-18 18:23:55,891 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-18 18:23:55,892 - INFO - Added job "create_backup" to job store "default"
+2024-10-18 18:23:55,892 - INFO - Scheduler started
+2024-10-18 18:23:55,892 - INFO - Scheduler started
+2024-10-18 18:23:55,905 - WARNING -  * Debugger is active!
+2024-10-18 18:23:55,907 - INFO -  * Debugger PIN: 249-266-880
+2024-10-18 18:24:00,150 - INFO -  * Detected change in '/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/werkzeug/debug/tbtools.py', reloading
+2024-10-18 18:24:00,303 - INFO -  * Restarting with stat
+2024-10-18 18:24:05,038 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-18 18:24:05,039 - INFO - Added job "create_backup" to job store "default"
+2024-10-18 18:24:05,039 - INFO - Scheduler started
+2024-10-18 18:24:05,040 - INFO - Scheduler started
+2024-10-18 18:24:05,052 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.196.37:5000
+2024-10-18 18:24:05,052 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-18 18:24:05,053 - INFO -  * Restarting with stat
+2024-10-18 18:24:06,704 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-18 18:24:06,705 - INFO - Added job "create_backup" to job store "default"
+2024-10-18 18:24:06,705 - INFO - Scheduler started
+2024-10-18 18:24:06,705 - INFO - Scheduler started
+2024-10-18 18:24:06,717 - WARNING -  * Debugger is active!
+2024-10-18 18:24:06,719 - INFO -  * Debugger PIN: 497-768-008
+2024-10-18 18:24:06,751 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-18 18:24:06,873 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-18 18:24:06,875 - INFO - Added job "create_backup" to job store "default"
+2024-10-18 18:24:06,875 - INFO - Scheduler started
+2024-10-18 18:24:06,875 - INFO - Scheduler started
+2024-10-18 18:24:07,767 - INFO - 172.31.196.37 - - [18/Oct/2024 18:24:07] "GET / HTTP/1.1" 200 -
+2024-10-18 18:24:08,085 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-18 18:24:08,247 - INFO - 172.31.196.37 - - [18/Oct/2024 18:24:08] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2024-10-18 18:24:08,297 - INFO - 172.31.196.37 - - [18/Oct/2024 18:24:08] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-10-18 18:24:08,308 - INFO - 172.31.196.37 - - [18/Oct/2024 18:24:08] "GET / HTTP/1.1" 200 -
+2024-10-18 18:24:08,321 - INFO - 172.31.196.37 - - [18/Oct/2024 18:24:08] "GET /static/css/styles.css HTTP/1.1" 200 -
+2024-10-18 18:24:08,327 - INFO - 172.31.196.37 - - [18/Oct/2024 18:24:08] "GET /static/js/script.js HTTP/1.1" 200 -

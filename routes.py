@@ -8,11 +8,14 @@ import os
 import uuid
 import datetime
 import openai
+import logging
+from typing import Optional
 
 main_blueprint = Blueprint('main', __name__)
 
-def generate_unique_filename(filename):
-    """Generate a unique filename using timestamp and UUID."""
+def generate_unique_filename(filename: Optional[str]) -> str:
+    if filename is None:
+        filename = "unnamed_file"
     _, file_extension = os.path.splitext(filename)
     timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
     random_string = str(uuid.uuid4())[:8]
@@ -73,8 +76,8 @@ def update_item(item_id):
 
     if 'image' in request.files:
         file = request.files['image']
-        if file and allowed_file(file.filename):
-            filename = generate_unique_filename(secure_filename(file.filename))
+        if file and allowed_file(file.filename or ''):
+            filename = generate_unique_filename(secure_filename(file.filename or ''))
             file_path = os.path.join(current_app.config['UPLOAD_FOLDER'], filename)
             file.save(file_path)
             item.image_path = f'/static/thumbnails/{filename}'
@@ -163,7 +166,7 @@ def items():
 
         image_path = None
         if image_file:
-            filename = generate_unique_filename(secure_filename(image_file.filename))
+            filename = generate_unique_filename(secure_filename(image_file.filename or ''))
             image_path = os.path.join(current_app.config['UPLOAD_FOLDER'],
                                       filename)
             current_app.logger.info(f"Saving image to: {image_path}")
@@ -171,20 +174,20 @@ def items():
             image_path = f'/static/thumbnails/{filename}'
 
         try:
-            new_item = Item(
-                name=data['name'],
-                tags=data['tags'],
-                color=data['color'],
-                zone=data['zone'],
-                quantity=data['quantity'],
-                warning=data['warning'],
-                x_coord=data['x_coord'],
-                y_coord=data['y_coord'],
-                map_id=data['map_id'],
-                image_path=image_path,
-                description=data.get('description', ''),
-                link=data.get('link', '')
-            )
+            new_item = Item()
+            new_item.name = data['name']
+            new_item.tags = data['tags']
+            new_item.color = data['color']
+            new_item.zone = data['zone']
+            new_item.quantity = int(data['quantity'])
+            new_item.warning = data['warning']
+            new_item.x_coord = float(data['x_coord'])
+            new_item.y_coord = float(data['y_coord'])
+            new_item.map_id = int(data['map_id'])
+            new_item.image_path = image_path
+            new_item.description = data.get('description', '')
+            new_item.link = data.get('link', '')
+
             db.session.add(new_item)
             db.session.commit()
             current_app.logger.info(f"New item added with ID: {new_item.id}")
@@ -318,25 +321,36 @@ def allowed_file(filename):
 def chat():
     try:
         data = request.json
-        user_message = data.get('message')
+        user_message = data.get('message') if data else None
         
-        # Ensure OPENAI_API_KEY is set in the environment
+        if not user_message:
+            current_app.logger.error("No message provided in the request")
+            return jsonify({"error": "No message provided"}), 400
+
         openai.api_key = os.environ.get('OPENAI_API_KEY')
         
         if not openai.api_key:
+            current_app.logger.error("OpenAI API key is not set in the environment")
             return jsonify({"error": "OpenAI API key is not set"}), 500
 
-        response = openai.Completion.create(
-            engine="text-davinci-002",
-            prompt=f"User: {user_message}\nAI:",
-            max_tokens=150,
-            n=1,
-            stop=None,
-            temperature=0.7,
-        )
+        current_app.logger.info(f"Sending message to OpenAI: {user_message}")
 
-        ai_message = response.choices[0].text.strip()
-        return jsonify({"message": ai_message})
+        try:
+            response = openai.ChatCompletion.create(
+                model="gpt-3.5-turbo",
+                messages=[
+                    {"role": "system", "content": "You are a helpful assistant."},
+                    {"role": "user", "content": user_message}
+                ]
+            )
+
+            ai_message = response.choices[0].message['content'].strip()
+            current_app.logger.info(f"Received response from OpenAI: {ai_message}")
+            return jsonify({"message": ai_message})
+        except openai.error.OpenAIError as e:
+            current_app.logger.error(f"OpenAI API error: {str(e)}")
+            return jsonify({"error": f"OpenAI API error: {str(e)}"}), 500
+
     except Exception as e:
-        current_app.logger.error(f"Error in chat API: {str(e)}")
-        return jsonify({"error": "An error occurred while processing your request"}), 500
+        current_app.logger.error(f"Unexpected error in chat API: {str(e)}")
+        return jsonify({"error": "An unexpected error occurred while processing your request"}), 500
