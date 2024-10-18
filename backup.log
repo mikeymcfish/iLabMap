@@ -8331,3 +8331,19 @@ FROM item]
 2024-10-18 12:56:50,201 - INFO - 172.31.196.96 - - [18/Oct/2024 12:56:50] "GET / HTTP/1.1" 200 -
 2024-10-18 12:56:50,210 - INFO - 172.31.196.96 - - [18/Oct/2024 12:56:50] "GET /static/css/styles.css HTTP/1.1" 200 -
 2024-10-18 12:56:50,215 - INFO - 172.31.196.96 - - [18/Oct/2024 12:56:50] "GET /static/js/script.js HTTP/1.1" 200 -
+2024-10-18 12:57:06,031 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-18 12:57:06,252 - INFO - 172.31.196.96 - - [18/Oct/2024 12:57:06] "GET / HTTP/1.1" 200 -
+2024-10-18 12:57:06,719 - INFO - 172.31.196.96 - - [18/Oct/2024 12:57:06] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-10-18 12:57:06,865 - INFO - 172.31.196.96 - - [18/Oct/2024 12:57:06] "GET /static/js/script.js HTTP/1.1" 200 -
+2024-10-18 12:57:07,392 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-18 12:57:07,615 - INFO - 172.31.196.96 - - [18/Oct/2024 12:57:07] "GET / HTTP/1.1" 200 -
+2024-10-18 12:57:08,224 - INFO - 172.31.196.96 - - [18/Oct/2024 12:57:08] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-10-18 12:57:08,309 - INFO - 172.31.196.96 - - [18/Oct/2024 12:57:08] "GET /static/js/script.js HTTP/1.1" 200 -
+2024-10-18 13:11:32,618 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-18 13:11:33,617 - INFO - 172.31.196.96 - - [18/Oct/2024 13:11:33] "GET / HTTP/1.1" 200 -
+2024-10-18 13:11:34,293 - INFO - 172.31.196.96 - - [18/Oct/2024 13:11:34] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-10-18 13:11:34,438 - INFO - 172.31.196.96 - - [18/Oct/2024 13:11:34] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2024-10-18 13:17:43,992 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-18 13:17:44,922 - INFO - 172.31.196.96 - - [18/Oct/2024 13:17:44] "GET / HTTP/1.1" 200 -
+2024-10-18 13:17:44,933 - INFO - 172.31.196.96 - - [18/Oct/2024 13:17:44] "GET /static/css/styles.css HTTP/1.1" 200 -
+2024-10-18 13:17:44,948 - INFO - 172.31.196.96 - - [18/Oct/2024 13:17:44] "GET /static/js/script.js HTTP/1.1" 200 -
