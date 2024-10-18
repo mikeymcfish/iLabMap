@@ -11,6 +11,7 @@ import datetime
 main_blueprint = Blueprint('main', __name__)
 
 def generate_unique_filename(filename):
+    """Generate a unique filename using timestamp and UUID."""
     _, file_extension = os.path.splitext(filename)
     timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
     random_string = str(uuid.uuid4())[:8]
@@ -142,7 +143,57 @@ def get_map(map_id):
 
 @main_blueprint.route('/api/items', methods=['GET', 'POST'])
 def items():
-    if request.method == 'GET':
+    if request.method == 'POST':
+        data = request.form
+        image_file = request.files.get('image')
+        current_app.logger.info(f"Received POST data: {data}")
+
+        required_fields = ['name', 'tags', 'x_coord', 'y_coord', 'map_id']
+        missing_fields = [
+            field for field in required_fields if field not in data
+        ]
+        if missing_fields:
+            current_app.logger.warning(
+                f"Missing required fields: {missing_fields}")
+            return jsonify({
+                "error":
+                f"Missing required fields: {', '.join(missing_fields)}"
+            }), 400
+
+        image_path = None
+        if image_file:
+            filename = generate_unique_filename(secure_filename(image_file.filename))
+            image_path = os.path.join(current_app.config['UPLOAD_FOLDER'],
+                                      filename)
+            current_app.logger.info(f"Saving image to: {image_path}")
+            image_file.save(image_path)
+            image_path = f'/static/thumbnails/{filename}'
+
+        try:
+            new_item = Item(
+                name=data['name'],
+                tags=data['tags'],
+                color=data['color'],
+                zone=data['zone'],
+                quantity=data['quantity'],
+                warning=data['warning'],
+                x_coord=data['x_coord'],
+                y_coord=data['y_coord'],
+                map_id=data['map_id'],
+                image_path=image_path,
+                description=data.get('description', ''),
+                link=data.get('link', '')
+            )
+            db.session.add(new_item)
+            db.session.commit()
+            current_app.logger.info(f"New item added with ID: {new_item.id}")
+            return jsonify({"id": new_item.id}), 201
+        except SQLAlchemyError as e:
+            db.session.rollback()
+            current_app.logger.error(f"Error adding item: {str(e)}")
+            return jsonify(
+                {"error": "An error occurred while adding the item"}), 500
+    elif request.method == 'GET':
         try:
             map_id = request.args.get('map_id', type=int)
             current_app.logger.info(f"Fetching items for map ID: {map_id}")
@@ -151,7 +202,6 @@ def items():
                 return jsonify({"error": "map_id is required"}), 400
 
             items = Item.query.filter_by(map_id=map_id).all()
-            current_app.logger.info(f"Found {len(items)} items for map ID: {map_id}")
             return jsonify([
                 {
                     "id": item.id,
@@ -174,60 +224,6 @@ def items():
                 f"Error fetching items for map ID {map_id}: {str(e)}")
             return jsonify({"error":
                             "An error occurred while fetching items"}), 500
-    elif request.method == 'POST':
-        if request.is_json:
-            data = request.json
-        else:
-            data = request.form
-
-        current_app.logger.info(f"Received POST data: {data}")
-
-        required_fields = ['name', 'tags', 'x_coord', 'y_coord', 'map_id']
-        missing_fields = [
-            field for field in required_fields if field not in data
-        ]
-        if missing_fields:
-            current_app.logger.warning(
-                f"Missing required fields: {missing_fields}")
-            return jsonify({
-                "error":
-                f"Missing required fields: {', '.join(missing_fields)}"
-            }), 400
-
-        image_path = None
-        if 'image' in request.files:
-            image_file = request.files['image']
-            filename = generate_unique_filename(secure_filename(image_file.filename))
-            image_path = os.path.join(current_app.config['UPLOAD_FOLDER'],
-                                      filename)
-            current_app.logger.info(f"Saving image to: {image_path}")
-            image_file.save(image_path)
-            image_path = f'/static/thumbnails/{filename}'
-
-        try:
-            new_item = Item(
-                name=data['name'],
-                tags=data['tags'],
-                color=data.get('color', 'red'),
-                zone=data.get('zone', ''),
-                quantity=int(data.get('quantity', 1)),
-                warning=data.get('warning', ''),
-                x_coord=float(data['x_coord']),
-                y_coord=float(data['y_coord']),
-                map_id=int(data['map_id']),
-                image_path=image_path,
-                description=data.get('description', ''),
-                link=data.get('link', '')
-            )
-            db.session.add(new_item)
-            db.session.commit()
-            current_app.logger.info(f"New item added with ID: {new_item.id}")
-            return jsonify({"id": new_item.id}), 201
-        except SQLAlchemyError as e:
-            db.session.rollback()
-            current_app.logger.error(f"Error adding item: {str(e)}")
-            return jsonify(
-                {"error": "An error occurred while adding the item"}), 500
 
 @main_blueprint.route('/api/items/<int:item_id>', methods=['DELETE'])
 def delete_item(item_id):
@@ -298,10 +294,6 @@ def search():
         return jsonify(
             {"error": "An error occurred while searching for items"}), 500
 
-@main_blueprint.route('/static/<path:filename>')
-def static_files(filename):
-    return send_from_directory('static', filename)
-    
 @main_blueprint.route('/static/maps/<path:filename>')
 def serve_static(filename):
     file_path = os.path.join(current_app.static_folder, 'maps', filename)
@@ -314,5 +306,5 @@ def serve_static(filename):
                                filename)
 
 def allowed_file(filename):
-    ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif', 'webm'}
+    ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS

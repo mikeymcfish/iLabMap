@@ -19,8 +19,6 @@ def create_app():
         "pool_pre_ping": True,
     }
 
-    app.logger.info(f"Database URL: {app.config['SQLALCHEMY_DATABASE_URI']}")
-
     db.init_app(app)
     migrate.init_app(app, db)
 
