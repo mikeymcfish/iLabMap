@@ -26,6 +26,36 @@ document.addEventListener('DOMContentLoaded', function() {
     let scale = 1;
     let currentMapId = null;
 
+    function resizeCanvas() {
+        if (mapCanvas && mapImage.complete && mapImage.naturalHeight !== 0) {
+            const container = mapCanvas.parentElement;
+            const containerWidth = container.clientWidth;
+            mapCanvas.width = containerWidth;
+            mapCanvas.height = (mapImage.height / mapImage.width) * containerWidth;
+            scale = containerWidth / mapImage.width;
+            drawMap();
+        }
+    }
+
+    function drawMap() {
+        if (ctx && mapImage.complete && mapImage.naturalHeight !== 0) {
+            ctx.clearRect(0, 0, mapCanvas.width, mapCanvas.height);
+            ctx.drawImage(mapImage, 0, 0, mapCanvas.width, mapCanvas.height);
+            items.forEach(item => {
+                ctx.fillStyle = item.color || 'red';
+                ctx.beginPath();
+                ctx.arc(item.x_coord * scale, item.y_coord * scale, 5, 0, 2 * Math.PI);
+                ctx.fill();
+            });
+            if (selectedLocation) {
+                ctx.fillStyle = 'blue';
+                ctx.beginPath();
+                ctx.arc(selectedLocation.x, selectedLocation.y, 5, 0, 2 * Math.PI);
+                ctx.fill();
+            }
+        }
+    }
+
     function loadMaps() {
         fetch('/api/maps')
             .then(response => {
@@ -182,4 +212,20 @@ document.addEventListener('DOMContentLoaded', function() {
             saveButton.textContent = 'Save Items';
         });
     }
+
+    function updateItemList() {
+        // Implementation of updateItemList function
+        // (This function should populate the itemList with the loaded items)
+    }
+
+    function displayErrorMessage(message) {
+        // Implementation of displayErrorMessage function
+    }
+
+    function displaySuccessMessage(message) {
+        // Implementation of displaySuccessMessage function
+    }
+
+    // Add event listener for window resize
+    window.addEventListener('resize', resizeCanvas);
 });
