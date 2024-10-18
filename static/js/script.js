@@ -86,6 +86,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function loadItems() {
+        console.log('loadItems called with currentMapId:', currentMapId);
         if (!currentMapId) return;
         fetch(`/api/items?map_id=${currentMapId}`)
             .then(response => {
@@ -95,6 +96,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 return response.json();
             })
             .then(data => {
+                console.log('Items loaded:', data);
                 items = data;
                 updateItemList();
                 drawMap();
@@ -108,6 +110,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (mapSelector) {
         mapSelector.addEventListener('change', function() {
             currentMapId = this.value;
+            console.log('Map selected, currentMapId:', currentMapId);
             if (currentMapId) {
                 fetch(`/api/maps/${currentMapId}`)
                     .then(response => {
@@ -117,6 +120,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         return response.json();
                     })
                     .then(data => {
+                        console.log('Map data loaded:', data);
                         mapImage.src = data.svg_path;
                         mapImage.onload = function() {
                             resizeCanvas();
@@ -214,16 +218,41 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function updateItemList() {
-        // Implementation of updateItemList function
-        // (This function should populate the itemList with the loaded items)
+        console.log('updateItemList called with items:', items);
+        itemList.innerHTML = '';
+        items.forEach(item => {
+            const li = document.createElement('li');
+            li.className = 'list-group-item d-flex justify-content-between align-items-center';
+            li.innerHTML = `
+                <span class="item-name">${item.name}</span>
+                <div class="tag-container">
+                    ${item.tags.split(',').map(tag => `<span class="item-tag">${tag.trim()}</span>`).join('')}
+                </div>
+            `;
+            itemList.appendChild(li);
+        });
     }
 
     function displayErrorMessage(message) {
-        // Implementation of displayErrorMessage function
+        console.error('Error:', message);
+        const errorDiv = document.createElement('div');
+        errorDiv.className = 'alert alert-danger alert-dismissible fade show';
+        errorDiv.innerHTML = `
+            ${message}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        `;
+        document.body.insertBefore(errorDiv, document.body.firstChild);
     }
 
     function displaySuccessMessage(message) {
-        // Implementation of displaySuccessMessage function
+        console.log('Success:', message);
+        const successDiv = document.createElement('div');
+        successDiv.className = 'alert alert-success alert-dismissible fade show';
+        successDiv.innerHTML = `
+            ${message}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        `;
+        document.body.insertBefore(successDiv, document.body.firstChild);
     }
 
     // Add event listener for window resize
