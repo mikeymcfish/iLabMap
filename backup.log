@@ -9882,3 +9882,58 @@ FROM item]
 2024-10-18 15:49:04,799 - INFO - 172.31.196.83 - - [18/Oct/2024 15:49:04] "GET / HTTP/1.1" 200 -
 2024-10-18 15:49:04,840 - INFO - 172.31.196.83 - - [18/Oct/2024 15:49:04] "GET /static/css/styles.css HTTP/1.1" 200 -
 2024-10-18 15:49:04,949 - INFO - 172.31.196.83 - - [18/Oct/2024 15:49:04] "GET /static/js/script.js HTTP/1.1" 200 -
+2024-10-18 15:50:15,319 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-18 15:50:15,551 - INFO - 172.31.196.83 - - [18/Oct/2024 15:50:15] "GET / HTTP/1.1" 200 -
+2024-10-18 15:50:15,724 - INFO - 172.31.196.83 - - [18/Oct/2024 15:50:15] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-10-18 15:50:15,774 - INFO - 172.31.196.83 - - [18/Oct/2024 15:50:15] "GET /static/js/script.js HTTP/1.1" 200 -
+2024-10-18 15:52:24,649 - INFO -  * Detected change in '/home/runner/workspace/routes.py', reloading
+2024-10-18 15:52:24,968 - INFO -  * Restarting with stat
+2024-10-18 15:52:29,908 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-18 15:52:29,908 - INFO - Added job "create_backup" to job store "default"
+2024-10-18 15:52:29,908 - INFO - Scheduler started
+2024-10-18 15:52:29,909 - INFO - Scheduler started
+2024-10-18 15:52:30,063 - WARNING -  * Debugger is active!
+2024-10-18 15:52:30,065 - INFO -  * Debugger PIN: 782-631-031
+2024-10-18 15:52:35,688 - INFO - Database URL: postgresql://neondb_owner:56IAfHiUtPxz@ep-soft-violet-a5xz2oxm.us-east-2.aws.neon.tech/neondb?sslmode=require
+2024-10-18 15:52:36,768 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-18 15:52:36,769 - INFO - Added job "create_backup" to job store "default"
+2024-10-18 15:52:36,769 - INFO - Scheduler started
+2024-10-18 15:52:36,770 - INFO - Scheduler started
+2024-10-18 15:52:36,772 - INFO - Database URL: postgresql://neondb_owner:56IAfHiUtPxz@ep-soft-violet-a5xz2oxm.us-east-2.aws.neon.tech/neondb?sslmode=require
+2024-10-18 15:52:36,880 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.196.83:5000
+2024-10-18 15:52:36,894 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-18 15:52:36,897 - INFO -  * Restarting with stat
+2024-10-18 15:52:39,374 - INFO - Database URL: postgresql://neondb_owner:56IAfHiUtPxz@ep-soft-violet-a5xz2oxm.us-east-2.aws.neon.tech/neondb?sslmode=require
+2024-10-18 15:52:40,579 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-18 15:52:40,580 - INFO - Added job "create_backup" to job store "default"
+2024-10-18 15:52:40,581 - INFO - Scheduler started
+2024-10-18 15:52:40,581 - INFO - Scheduler started
+2024-10-18 15:52:40,582 - INFO - Database URL: postgresql://neondb_owner:56IAfHiUtPxz@ep-soft-violet-a5xz2oxm.us-east-2.aws.neon.tech/neondb?sslmode=require
+2024-10-18 15:52:40,665 - WARNING -  * Debugger is active!
+2024-10-18 15:52:40,674 - INFO -  * Debugger PIN: 562-935-391
+2024-10-18 15:52:41,826 - INFO - 172.31.196.83 - - [18/Oct/2024 15:52:41] "GET / HTTP/1.1" 200 -
+2024-10-18 15:52:42,261 - INFO - 172.31.196.83 - - [18/Oct/2024 15:52:42] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-10-18 15:52:42,366 - INFO - 172.31.196.83 - - [18/Oct/2024 15:52:42] "GET /static/js/script.js HTTP/1.1" 200 -
+2024-10-18 15:52:45,431 - INFO - 172.31.196.83 - - [18/Oct/2024 15:52:45] "GET / HTTP/1.1" 200 -
+2024-10-18 15:52:45,535 - INFO - 172.31.196.83 - - [18/Oct/2024 15:52:45] "GET /static/css/styles.css HTTP/1.1" 200 -
+2024-10-18 15:52:45,671 - INFO - 172.31.196.83 - - [18/Oct/2024 15:52:45] "GET /static/js/script.js HTTP/1.1" 200 -
+2024-10-18 15:53:04,463 - INFO - 172.31.196.83 - - [18/Oct/2024 15:53:04] "GET / HTTP/1.1" 200 -
+2024-10-18 15:53:04,492 - INFO - 172.31.196.83 - - [18/Oct/2024 15:53:04] "GET /static/css/styles.css HTTP/1.1" 200 -
+2024-10-18 15:53:04,504 - INFO - 172.31.196.83 - - [18/Oct/2024 15:53:04] "GET /static/js/script.js HTTP/1.1" 200 -
+2024-10-18 15:53:31,653 - INFO - 172.31.196.83 - - [18/Oct/2024 15:53:31] "GET / HTTP/1.1" 200 -
+2024-10-18 15:53:31,691 - INFO - 172.31.196.83 - - [18/Oct/2024 15:53:31] "GET /static/css/styles.css HTTP/1.1" 200 -
+2024-10-18 15:53:31,732 - INFO - 172.31.196.83 - - [18/Oct/2024 15:53:31] "GET /static/js/script.js HTTP/1.1" 200 -
+2024-10-18 15:53:44,957 - INFO - 172.31.196.83 - - [18/Oct/2024 15:53:44] "GET / HTTP/1.1" 200 -
+2024-10-18 15:53:44,993 - INFO - 172.31.196.83 - - [18/Oct/2024 15:53:44] "GET /static/css/styles.css HTTP/1.1" 200 -
+2024-10-18 15:53:45,027 - INFO - 172.31.196.83 - - [18/Oct/2024 15:53:45] "GET /static/js/script.js HTTP/1.1" 200 -
+2024-10-18 15:53:45,282 - INFO - 172.31.196.83 - - [18/Oct/2024 15:53:45] "GET / HTTP/1.1" 200 -
+2024-10-18 15:53:45,452 - INFO - 172.31.196.83 - - [18/Oct/2024 15:53:45] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-10-18 15:53:45,454 - INFO - 172.31.196.83 - - [18/Oct/2024 15:53:45] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2024-10-18 15:55:21,185 - INFO - 172.31.196.83 - - [18/Oct/2024 15:55:21] "GET / HTTP/1.1" 200 -
+2024-10-18 15:55:21,516 - INFO - 172.31.196.83 - - [18/Oct/2024 15:55:21] "GET /static/css/styles.css HTTP/1.1" 200 -
+2024-10-18 15:55:21,530 - INFO - 172.31.196.83 - - [18/Oct/2024 15:55:21] "GET /static/js/script.js HTTP/1.1" 200 -
+2024-10-18 15:55:22,562 - INFO - Fetching all maps
+2024-10-18 15:55:22,786 - INFO - 172.31.196.83 - - [18/Oct/2024 15:55:22] "GET /api/maps HTTP/1.1" 200 -

@@ -142,7 +142,39 @@ def get_map(map_id):
 
 @main_blueprint.route('/api/items', methods=['GET', 'POST'])
 def items():
-    if request.method == 'POST':
+    if request.method == 'GET':
+        try:
+            map_id = request.args.get('map_id', type=int)
+            current_app.logger.info(f"Fetching items for map ID: {map_id}")
+            if map_id is None:
+                current_app.logger.warning("Missing map_id in request")
+                return jsonify({"error": "map_id is required"}), 400
+
+            items = Item.query.filter_by(map_id=map_id).all()
+            current_app.logger.info(f"Found {len(items)} items for map ID: {map_id}")
+            return jsonify([
+                {
+                    "id": item.id,
+                    "name": item.name,
+                    "tags": item.tags,
+                    "zone": item.zone,
+                    "color": item.color,
+                    "quantity": item.quantity,
+                    "warning": item.warning,
+                    "x_coord": item.x_coord,
+                    "y_coord": item.y_coord,
+                    "map_id": item.map_id,
+                    "image_path": item.image_path,
+                    "description": item.description,
+                    "link": item.link
+                } for item in items
+            ])
+        except SQLAlchemyError as e:
+            current_app.logger.error(
+                f"Error fetching items for map ID {map_id}: {str(e)}")
+            return jsonify({"error":
+                            "An error occurred while fetching items"}), 500
+    elif request.method == 'POST':
         if request.is_json:
             data = request.json
         else:
@@ -196,37 +228,6 @@ def items():
             current_app.logger.error(f"Error adding item: {str(e)}")
             return jsonify(
                 {"error": "An error occurred while adding the item"}), 500
-    elif request.method == 'GET':
-        try:
-            map_id = request.args.get('map_id', type=int)
-            current_app.logger.info(f"Fetching items for map ID: {map_id}")
-            if map_id is None:
-                current_app.logger.warning("Missing map_id in request")
-                return jsonify({"error": "map_id is required"}), 400
-
-            items = Item.query.filter_by(map_id=map_id).all()
-            return jsonify([
-                {
-                    "id": item.id,
-                    "name": item.name,
-                    "tags": item.tags,
-                    "zone": item.zone,
-                    "color": item.color,
-                    "quantity": item.quantity,
-                    "warning": item.warning,
-                    "x_coord": item.x_coord,
-                    "y_coord": item.y_coord,
-                    "map_id": item.map_id,
-                    "image_path": item.image_path,
-                    "description": item.description,
-                    "link": item.link
-                } for item in items
-            ])
-        except SQLAlchemyError as e:
-            current_app.logger.error(
-                f"Error fetching items for map ID {map_id}: {str(e)}")
-            return jsonify({"error":
-                            "An error occurred while fetching items"}), 500
 
 @main_blueprint.route('/api/items/<int:item_id>', methods=['DELETE'])
 def delete_item(item_id):
