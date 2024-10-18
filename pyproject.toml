@@ -13,4 +13,5 @@ dependencies = [
     "sqlalchemy>=2.0.35",
     "werkzeug>=3.0.4",
     "requests>=2.32.3",
+    "openai>=1.52.0",
 ]
