@@ -381,7 +381,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const warnings = item.warning.split(',').filter(warning => warning.trim() !== "");
             warnings.forEach(warning => {
                 const warningBadge = document.createElement('div');
-                warningBadge.classList.add('warning-badges', 'me-2', 'd-inline-block');
+                warningBadge.classList.add('warning-badges', 'me-2');
                 const warningIcon = document.createElement('i');
                 warningIcon.classList.add('fas', 'fa-sm', `fa-${warning.trim()}`);
                 warningBadge.appendChild(warningIcon);

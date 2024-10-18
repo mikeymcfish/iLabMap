@@ -41,6 +41,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    /* 
+    background: linear-gradient(transparent, transparent 50%, red 50%);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%); */
 }
 
 #addItemForm.show {
