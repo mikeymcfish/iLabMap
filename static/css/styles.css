@@ -8,8 +8,8 @@ body {
 
 #mapCanvas {
     border: none;
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: calc(100vh - 75px);
 }
 
 .list-group-item:hover {
