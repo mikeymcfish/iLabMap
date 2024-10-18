@@ -7,6 +7,7 @@ from models import Map, Item
 import os
 import uuid
 import datetime
+import openai
 
 main_blueprint = Blueprint('main', __name__)
 
@@ -312,3 +313,30 @@ def serve_static(filename):
 def allowed_file(filename):
     ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif', 'webm'}
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
+@main_blueprint.route('/api/chat', methods=['POST'])
+def chat():
+    try:
+        data = request.json
+        user_message = data.get('message')
+        
+        # Ensure OPENAI_API_KEY is set in the environment
+        openai.api_key = os.environ.get('OPENAI_API_KEY')
+        
+        if not openai.api_key:
+            return jsonify({"error": "OpenAI API key is not set"}), 500
+
+        response = openai.Completion.create(
+            engine="text-davinci-002",
+            prompt=f"User: {user_message}\nAI:",
+            max_tokens=150,
+            n=1,
+            stop=None,
+            temperature=0.7,
+        )
+
+        ai_message = response.choices[0].text.strip()
+        return jsonify({"message": ai_message})
+    except Exception as e:
+        current_app.logger.error(f"Error in chat API: {str(e)}")
+        return jsonify({"error": "An error occurred while processing your request"}), 500

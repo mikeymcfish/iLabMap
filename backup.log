@@ -9902,3 +9902,42 @@ FROM item]
 2024-10-18 18:11:57,904 - INFO - 172.31.196.37 - - [18/Oct/2024 18:11:57] "[33mGET /static/thumbnails/20241016_151142_bf6008cc.jpg HTTP/1.1[0m" 404 -
 2024-10-18 18:11:57,970 - INFO - 172.31.196.37 - - [18/Oct/2024 18:11:57] "[33mGET /static/thumbnails/20241016_152258_1f8a6141.jpg HTTP/1.1[0m" 404 -
 2024-10-18 18:11:57,974 - INFO - 172.31.196.37 - - [18/Oct/2024 18:11:57] "[33mGET /null HTTP/1.1[0m" 404 -
+2024-10-18 18:14:22,689 - INFO -  * Detected change in '/home/runner/workspace/routes.py', reloading
+2024-10-18 18:14:24,829 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-18 18:14:24,829 - INFO - Added job "create_backup" to job store "default"
+2024-10-18 18:14:24,829 - INFO - Scheduler started
+2024-10-18 18:14:24,830 - INFO - Scheduler started
+2024-10-18 18:14:24,842 - WARNING -  * Debugger is active!
+2024-10-18 18:14:24,844 - INFO -  * Debugger PIN: 136-462-645
+2024-10-18 18:18:31,080 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-18 18:18:32,120 - INFO - 172.31.196.37 - - [18/Oct/2024 18:18:32] "GET / HTTP/1.1" 200 -
+2024-10-18 18:18:32,615 - INFO - 172.31.196.37 - - [18/Oct/2024 18:18:32] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-10-18 18:18:32,616 - INFO - 172.31.196.37 - - [18/Oct/2024 18:18:32] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2024-10-18 18:19:10,674 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-18 18:19:10,674 - INFO - Added job "create_backup" to job store "default"
+2024-10-18 18:19:10,674 - INFO - Scheduler started
+2024-10-18 18:19:10,675 - INFO - Scheduler started
+2024-10-18 18:19:13,013 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-18 18:19:13,013 - INFO - Added job "create_backup" to job store "default"
+2024-10-18 18:19:13,013 - INFO - Scheduler started
+2024-10-18 18:19:13,014 - INFO - Scheduler started
+2024-10-18 18:19:13,029 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.196.37:5000
+2024-10-18 18:19:13,029 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-18 18:19:13,030 - INFO -  * Restarting with stat
+2024-10-18 18:19:14,930 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-18 18:19:14,930 - INFO - Added job "create_backup" to job store "default"
+2024-10-18 18:19:14,930 - INFO - Scheduler started
+2024-10-18 18:19:14,931 - INFO - Scheduler started
+2024-10-18 18:19:14,962 - WARNING -  * Debugger is active!
+2024-10-18 18:19:14,964 - INFO -  * Debugger PIN: 849-074-621
+2024-10-18 18:19:15,014 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-18 18:19:16,059 - INFO - 172.31.196.37 - - [18/Oct/2024 18:19:16] "GET / HTTP/1.1" 200 -
+2024-10-18 18:19:16,675 - INFO - 172.31.196.37 - - [18/Oct/2024 18:19:16] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-10-18 18:19:16,763 - INFO - 172.31.196.37 - - [18/Oct/2024 18:19:16] "GET /static/js/script.js HTTP/1.1" 200 -
+2024-10-18 18:19:43,052 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-18 18:19:43,279 - INFO - 172.31.196.37 - - [18/Oct/2024 18:19:43] "GET / HTTP/1.1" 200 -
+2024-10-18 18:19:43,292 - INFO - 172.31.196.37 - - [18/Oct/2024 18:19:43] "GET /static/css/styles.css HTTP/1.1" 200 -
+2024-10-18 18:19:43,307 - INFO - 172.31.196.37 - - [18/Oct/2024 18:19:43] "GET /static/js/script.js HTTP/1.1" 200 -
