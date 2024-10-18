@@ -10061,3 +10061,44 @@ A detailed migration guide is available here: https://github.com/openai/openai-p
 2024-10-18 18:30:34,881 - INFO - 172.31.196.37 - - [18/Oct/2024 18:30:34] "GET /static/js/script.js HTTP/1.1" 200 -
 2024-10-18 18:30:35,331 - INFO - 172.31.196.37 - - [18/Oct/2024 18:30:35] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
 2024-10-18 18:30:35,401 - INFO - 172.31.196.37 - - [18/Oct/2024 18:30:35] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2024-10-18 18:30:48,828 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-18 18:30:49,056 - INFO - 172.31.196.37 - - [18/Oct/2024 18:30:49] "GET / HTTP/1.1" 200 -
+2024-10-18 18:30:49,495 - INFO - 172.31.196.37 - - [18/Oct/2024 18:30:49] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-10-18 18:30:49,594 - INFO - 172.31.196.37 - - [18/Oct/2024 18:30:49] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2024-10-18 19:01:37,858 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-18 19:01:38,384 - INFO - 172.31.196.37 - - [18/Oct/2024 19:01:38] "GET / HTTP/1.1" 200 -
+2024-10-18 19:01:38,798 - INFO - 172.31.196.37 - - [18/Oct/2024 19:01:38] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-10-18 19:01:38,811 - INFO - 172.31.196.37 - - [18/Oct/2024 19:01:38] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2024-10-18 19:02:04,948 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-18 19:02:05,464 - INFO - 172.31.196.37 - - [18/Oct/2024 19:02:05] "GET / HTTP/1.1" 200 -
+2024-10-18 19:02:05,622 - INFO - 172.31.196.37 - - [18/Oct/2024 19:02:05] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-10-18 19:02:05,664 - INFO - 172.31.196.37 - - [18/Oct/2024 19:02:05] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2024-10-18 19:02:17,210 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/chat
+2024-10-18 19:02:17,211 - INFO - Sending message to AI: whats glue
+2024-10-18 19:02:18,614 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-18 19:02:18,616 - INFO - Received response from AI: Glue is an adhesive substance used to stick things together. It comes in various forms like liquid glue, glue sticks, and glue dots. It is commonly used in arts and crafts, woodworking, and DIY projects. If you need glue for a project, you can find it in the adhesive section of our makerspace.
+2024-10-18 19:02:18,617 - INFO - 172.31.196.37 - - [18/Oct/2024 19:02:18] "POST /api/chat HTTP/1.1" 200 -
+2024-10-18 19:05:36,284 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-18 19:05:36,284 - INFO - Added job "create_backup" to job store "default"
+2024-10-18 19:05:36,285 - INFO - Scheduler started
+2024-10-18 19:05:36,286 - INFO - Scheduler started
+2024-10-18 19:05:36,311 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.196.37:5000
+2024-10-18 19:05:36,311 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-18 19:05:36,314 - INFO -  * Restarting with stat
+2024-10-18 19:05:38,242 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-18 19:05:38,242 - INFO - Added job "create_backup" to job store "default"
+2024-10-18 19:05:38,242 - INFO - Scheduler started
+2024-10-18 19:05:38,243 - INFO - Scheduler started
+2024-10-18 19:05:38,254 - WARNING -  * Debugger is active!
+2024-10-18 19:05:38,255 - INFO -  * Debugger PIN: 344-962-259
+2024-10-18 19:05:38,287 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-18 19:05:38,288 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-18 19:05:39,326 - INFO - 172.31.196.37 - - [18/Oct/2024 19:05:39] "GET / HTTP/1.1" 200 -
+2024-10-18 19:05:39,328 - INFO - 172.31.196.37 - - [18/Oct/2024 19:05:39] "GET / HTTP/1.1" 200 -
+2024-10-18 19:05:39,339 - INFO - 172.31.196.37 - - [18/Oct/2024 19:05:39] "GET /static/css/styles.css HTTP/1.1" 200 -
+2024-10-18 19:05:39,344 - INFO - 172.31.196.37 - - [18/Oct/2024 19:05:39] "GET /static/js/script.js HTTP/1.1" 200 -
+2024-10-18 19:05:39,683 - INFO - 172.31.196.37 - - [18/Oct/2024 19:05:39] "GET /static/css/styles.css HTTP/1.1" 200 -
+2024-10-18 19:05:39,690 - INFO - 172.31.196.37 - - [18/Oct/2024 19:05:39] "GET /static/js/script.js HTTP/1.1" 200 -

@@ -15,8 +15,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function addMessage(message, isUser = false) {
         const messageDiv = document.createElement('div');
-        messageDiv.className = `mb-2 ${isUser ? 'text-end' : ''}`;
-        messageDiv.innerHTML = `<span class="badge ${isUser ? 'bg-primary' : 'bg-secondary'}">${message}</span>`;
+        messageDiv.className = `message ${isUser ? 'user-message' : 'ai-message'}`;
+        messageDiv.innerHTML = `<div class="message-content">${message}</div>`;
         chatMessages.appendChild(messageDiv);
         chatMessages.scrollTop = chatMessages.scrollHeight;
     }
