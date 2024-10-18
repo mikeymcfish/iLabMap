@@ -11,7 +11,6 @@ import datetime
 main_blueprint = Blueprint('main', __name__)
 
 def generate_unique_filename(filename):
-    """Generate a unique filename using timestamp and UUID."""
     _, file_extension = os.path.splitext(filename)
     timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
     random_string = str(uuid.uuid4())[:8]
@@ -144,8 +143,11 @@ def get_map(map_id):
 @main_blueprint.route('/api/items', methods=['GET', 'POST'])
 def items():
     if request.method == 'POST':
-        data = request.form
-        image_file = request.files.get('image')
+        if request.is_json:
+            data = request.json
+        else:
+            data = request.form
+
         current_app.logger.info(f"Received POST data: {data}")
 
         required_fields = ['name', 'tags', 'x_coord', 'y_coord', 'map_id']
@@ -161,7 +163,8 @@ def items():
             }), 400
 
         image_path = None
-        if image_file:
+        if 'image' in request.files:
+            image_file = request.files['image']
             filename = generate_unique_filename(secure_filename(image_file.filename))
             image_path = os.path.join(current_app.config['UPLOAD_FOLDER'],
                                       filename)
@@ -173,13 +176,13 @@ def items():
             new_item = Item(
                 name=data['name'],
                 tags=data['tags'],
-                color=data['color'],
-                zone=data['zone'],
-                quantity=data['quantity'],
-                warning=data['warning'],
-                x_coord=data['x_coord'],
-                y_coord=data['y_coord'],
-                map_id=data['map_id'],
+                color=data.get('color', 'red'),
+                zone=data.get('zone', ''),
+                quantity=int(data.get('quantity', 1)),
+                warning=data.get('warning', ''),
+                x_coord=float(data['x_coord']),
+                y_coord=float(data['y_coord']),
+                map_id=int(data['map_id']),
                 image_path=image_path,
                 description=data.get('description', ''),
                 link=data.get('link', '')
