@@ -1,16 +1,31 @@
 from openai import OpenAI
 import os
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
+from models import Item, Map
+from app import db
 
 client = OpenAI()
 
-# system prompt
-system_prompt = ("""
+def get_lab_inventory():
+    items = Item.query.all()
+    inventory = "Current Lab Inventory:\n"
+    for item in items:
+        inventory += f"- {item.name} (Quantity: {item.quantity})\n"
+    return inventory
+
+def update_system_prompt():
+    global system_prompt
+    inventory = get_lab_inventory()
+    system_prompt = f"""
 Provide guidance on using specific tools within the Innovation Lab.
 
 - Identify the tools available and their purposes.
 - Offer step-by-step instructions for using each tool safely and effectively.
 - Highlight best practices for maximizing efficiency and output.
 - Include any safety precautions or necessary preparations.
+
+{inventory}
 
 # Steps
 
@@ -38,7 +53,9 @@ To use the laser cutter, start by wearing the appropriate safety glasses to prot
 - Limit your responses to a maximum of 200 words.
 - Limit your knowledge to the following tools and resources:
 laser cutter, formlabs 3d printer, vinyl cutter, arduino, soldering irons, hammers, drill bits, screwdrivers, wrenches, clamps, tape, screws
-""")
+"""
+
+update_system_prompt()
 
 assistant = client.beta.assistants.create(
     name='iLab Assistant',
@@ -48,6 +65,7 @@ assistant = client.beta.assistants.create(
 )
 
 def get_ai_response(user_message: str) -> str:
+    update_system_prompt()  # Update the system prompt before each chat session
     thread = client.beta.threads.create()
     client.beta.threads.messages.create(
         thread_id=thread.id,
@@ -58,14 +76,27 @@ def get_ai_response(user_message: str) -> str:
         thread_id=thread.id,
         assistant_id=assistant.id
     )
-    run = client.beta.threads.runs.retrieve(
-        thread_id=thread.id,
-        run_id=run.id
-    )
+    
+    # Wait for the run to complete
     while run.status != 'completed':
         run = client.beta.threads.runs.retrieve(
             thread_id=thread.id,
             run_id=run.id
         )
+    
+    # Retrieve the assistant's response
     messages = client.beta.threads.messages.list(thread_id=thread.id)
-    return messages.data[0].content[0].text.value
+    assistant_message = next((msg for msg in messages if msg.role == 'assistant'), None)
+    
+    if assistant_message and assistant_message.content:
+        return assistant_message.content[0].text.value
+    else:
+        return "I'm sorry, I couldn't generate a response. Please try again."
+
+# Function to handle the chat session
+def chat_session(user_message: str) -> dict:
+    try:
+        response = get_ai_response(user_message)
+        return {"status": "success", "message": response}
+    except Exception as e:
+        return {"status": "error", "message": str(e)}

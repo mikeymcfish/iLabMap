@@ -10,7 +10,7 @@ import datetime
 import openai
 import logging
 from typing import Optional
-from chat import system_prompt, get_ai_response
+from chat import chat_session
 
 main_blueprint = Blueprint('main', __name__)
 
@@ -330,9 +330,9 @@ def chat():
 
         current_app.logger.info(f"Sending message to AI: {user_message}")
 
-        ai_message = get_ai_response(user_message)
-        current_app.logger.info(f"Received response from AI: {ai_message}")
-        return jsonify({"message": ai_message})
+        chat_response = chat_session(user_message)
+        current_app.logger.info(f"Received response from AI: {chat_response}")
+        return jsonify(chat_response)
 
     except Exception as e:
         current_app.logger.error(f"Unexpected error in chat API: {str(e)}")
