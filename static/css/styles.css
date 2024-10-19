@@ -161,6 +161,25 @@ body {
     color: var(--bs-light);
 }
 
+#chatMessages p {
+    margin-bottom: 0px;
+}
+
 #userInput {
     font-size: 1.0rem;
+}
+
+/* Minimalist scrollbar styles */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent; /* Transparent background */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(140, 140, 140, 0.3); /* Semi-transparent dark color */
+    border-radius: 10px; /* Roundness */
 }

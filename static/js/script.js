@@ -36,12 +36,17 @@ document.addEventListener('DOMContentLoaded', function() {
         chatMessages.scrollTop = chatMessages.scrollHeight;
     }
 
+    const loadingSpinner = document.getElementById('loadingSpinner');
 
     function sendChatMessage() {
         const message = userInput.value.trim();
         if (message) {
+
             addMessage(message, true);
             userInput.value = '';
+            const parentDiv = loadingSpinner.parentElement;
+            parentDiv.appendChild(loadingSpinner);
+            loadingSpinner.style.display = 'block';
 
             fetch('/api/chat', {
                 method: 'POST',
@@ -52,6 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
             })
             .then(response => response.json())
             .then(data => {
+                loadingSpinner.style.display = 'none';
                 if (data.error) {
                     addMessage('Error: ' + data.error);
                 } else {
@@ -116,14 +122,24 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    function snapTo2x(pixel) {
+      return Math.round(pixel / 2) * 2;
+    }
+    function snapTo5x(pixel) {
+      return Math.round(pixel / 5) * 5;
+    }
+
     function drawMap() {
+        
         if (ctx && mapImage.complete && mapImage.naturalHeight !== 0) {
             ctx.clearRect(0, 0, mapCanvas.width, mapCanvas.height);
             ctx.drawImage(mapImage, 0, 0, mapCanvas.width, mapCanvas.height);
             items.forEach(item => {
-                ctx.fillStyle = 'red';
+                const snappedX = snapTo5x(item.x_coord);
+                const snappedY = snapTo5x(item.y_coord);
+                ctx.fillStyle = 'green';
                 ctx.beginPath();
-                ctx.arc(item.x_coord * scale, item.y_coord * scale, 5, 0, 2 * Math.PI);
+                ctx.arc(snappedX * scale, snappedY * scale, 5, 0, 2 * Math.PI);
                 ctx.fill();
             });
             if (selectedLocation) {
@@ -168,6 +184,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function loadItems() {
         if (!currentMapId) return;
+        
         fetch(`/api/items?map_id=${currentMapId}`)
             .then(response => {
                 if (!response.ok) {
@@ -201,7 +218,17 @@ document.addEventListener('DOMContentLoaded', function() {
             imageNameContainer.classList.add('d-flex', 'align-items-center');
 
             const imageElement = document.createElement('img');
-            imageElement.src = item.image_path;
+            fetch(item.image_path, { method: 'HEAD' })
+                .then(response => {
+                    if (response.ok) {
+                        imageElement.src = item.image_path;
+                    } else {
+                        imageElement.src = '/static/img/default.png'; // Path to default image
+                    }
+                })
+                .catch(() => {
+                    imageElement.src = '/static/img/default.png'; // Path to default image
+                });
             imageElement.width = 60;
             imageElement.height = 60;
             imageElement.alt = item.name;

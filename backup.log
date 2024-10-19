@@ -18520,3 +18520,1057 @@ These printers cater to different needs, with the Form4 and Form3+ focusing on r
 2024-10-19 17:43:44,671 - INFO - Scheduler started
 2024-10-19 17:43:45,052 - WARNING -  * Debugger is active!
 2024-10-19 17:43:45,053 - INFO -  * Debugger PIN: 117-141-303
+2024-10-19 17:46:25,178 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-19 17:46:26,230 - INFO - 172.31.196.60 - - [19/Oct/2024 17:46:26] "GET / HTTP/1.1" 200 -
+2024-10-19 17:46:26,346 - INFO - 172.31.196.60 - - [19/Oct/2024 17:46:26] "GET /static/css/styles.css HTTP/1.1" 200 -
+2024-10-19 17:46:26,438 - INFO - 172.31.196.60 - - [19/Oct/2024 17:46:26] "GET /static/js/script.js HTTP/1.1" 200 -
+2024-10-19 17:46:26,651 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps
+2024-10-19 17:46:26,651 - INFO - Fetching all maps
+2024-10-19 17:46:26,878 - INFO - 172.31.196.60 - - [19/Oct/2024 17:46:26] "GET /api/maps HTTP/1.1" 200 -
+2024-10-19 17:46:26,967 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps/1
+2024-10-19 17:46:26,967 - INFO - Fetching map with ID: 1
+2024-10-19 17:46:27,195 - INFO - 172.31.196.60 - - [19/Oct/2024 17:46:27] "GET /api/maps/1 HTTP/1.1" 200 -
+2024-10-19 17:46:27,281 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/static/maps/main.svg
+2024-10-19 17:46:27,281 - INFO - Attempting to serve static file: /home/runner/workspace/static/maps/main.svg
+2024-10-19 17:46:27,282 - INFO - 172.31.196.60 - - [19/Oct/2024 17:46:27] "GET /static/maps/main.svg HTTP/1.1" 200 -
+2024-10-19 17:46:27,499 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/items?map_id=1
+2024-10-19 17:46:27,499 - INFO - Fetching items for map ID: 1
+2024-10-19 17:46:27,729 - INFO - 172.31.196.60 - - [19/Oct/2024 17:46:27] "GET /api/items?map_id=1 HTTP/1.1" 200 -
+2024-10-19 17:46:27,835 - INFO - 172.31.196.60 - - [19/Oct/2024 17:46:27] "[33mGET /static/thumbnails/20241018_173844_47d7cf43.jpg HTTP/1.1[0m" 404 -
+2024-10-19 17:46:27,844 - INFO - 172.31.196.60 - - [19/Oct/2024 17:46:27] "[33mGET /static/thumbnails/20241018_173743_7e7d8d33.jpg HTTP/1.1[0m" 404 -
+2024-10-19 17:46:27,917 - INFO - 172.31.196.60 - - [19/Oct/2024 17:46:27] "GET /static/thumbnails/20241018_150242_c2a5134b.png HTTP/1.1" 200 -
+2024-10-19 17:46:27,925 - INFO - 172.31.196.60 - - [19/Oct/2024 17:46:27] "GET /static/thumbnails/20241018_150114_e2307150.png HTTP/1.1" 200 -
+2024-10-19 17:46:28,077 - INFO - 172.31.196.60 - - [19/Oct/2024 17:46:28] "GET /static/thumbnails/20241018_150628_7b9b8b60.png HTTP/1.1" 200 -
+2024-10-19 17:46:28,079 - INFO - 172.31.196.60 - - [19/Oct/2024 17:46:28] "GET /static/thumbnails/20241018_150915_9ee2ee5b.png HTTP/1.1" 200 -
+2024-10-19 17:46:28,080 - INFO - 172.31.196.60 - - [19/Oct/2024 17:46:28] "[33mGET /static/thumbnails/20241016_153624_1dbede16.jpg HTTP/1.1[0m" 404 -
+2024-10-19 17:46:28,084 - INFO - 172.31.196.60 - - [19/Oct/2024 17:46:28] "[33mGET /static/thumbnails/20241018_174024_7df52a7d.jpeg HTTP/1.1[0m" 404 -
+2024-10-19 17:46:28,137 - INFO - 172.31.196.60 - - [19/Oct/2024 17:46:28] "[33mGET /static/thumbnails/20241016_150011_83503f4f.jpg HTTP/1.1[0m" 404 -
+2024-10-19 17:46:28,161 - INFO - 172.31.196.60 - - [19/Oct/2024 17:46:28] "[33mGET /static/thumbnails/20241018_173727_dc77ec8d.jpg HTTP/1.1[0m" 404 -
+2024-10-19 17:46:28,165 - INFO - 172.31.196.60 - - [19/Oct/2024 17:46:28] "GET /static/thumbnails/20241018_150652_7df45f90.png HTTP/1.1" 200 -
+2024-10-19 17:46:28,219 - INFO - 172.31.196.60 - - [19/Oct/2024 17:46:28] "GET /static/thumbnails/20241019_150025_1180cdbe.jpg HTTP/1.1" 200 -
+2024-10-19 17:46:28,243 - INFO - 172.31.196.60 - - [19/Oct/2024 17:46:28] "[33mGET /static/thumbnails/20241018_173921_fb220825.jpg HTTP/1.1[0m" 404 -
+2024-10-19 17:46:28,253 - INFO - 172.31.196.60 - - [19/Oct/2024 17:46:28] "[33mGET /static/thumbnails/20241016_153208_247e423e.jpg HTTP/1.1[0m" 404 -
+2024-10-19 17:46:28,311 - INFO - 172.31.196.60 - - [19/Oct/2024 17:46:28] "[33mGET /static/thumbnails/20241016_154030_89cfc546.jpg HTTP/1.1[0m" 404 -
+2024-10-19 17:46:28,324 - INFO - 172.31.196.60 - - [19/Oct/2024 17:46:28] "[33mGET /static/thumbnails/20241016_153707_39faf826.jpg HTTP/1.1[0m" 404 -
+2024-10-19 17:46:28,334 - INFO - 172.31.196.60 - - [19/Oct/2024 17:46:28] "[33mGET /static/thumbnails/20241016_151142_bf6008cc.jpg HTTP/1.1[0m" 404 -
+2024-10-19 17:46:28,391 - INFO - 172.31.196.60 - - [19/Oct/2024 17:46:28] "[33mGET /static/thumbnails/20241016_152258_1f8a6141.jpg HTTP/1.1[0m" 404 -
+2024-10-19 17:46:28,404 - INFO - 172.31.196.60 - - [19/Oct/2024 17:46:28] "[33mGET /null HTTP/1.1[0m" 404 -
+2024-10-19 17:46:32,295 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/chat
+2024-10-19 17:46:32,295 - INFO - Sending message to AI: hi
+2024-10-19 17:46:32,719 - INFO - HTTP Request: POST https://api.openai.com/v1/assistants/asst_42fSiwjxCUq9i93OpVATPcSn "HTTP/1.1 200 OK"
+2024-10-19 17:46:32,866 - INFO - HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
+2024-10-19 17:46:34,860 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_v7QQvC0ZsClHtxqI6yhHoHZS/messages "HTTP/1.1 200 OK"
+2024-10-19 17:46:35,373 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_v7QQvC0ZsClHtxqI6yhHoHZS/runs "HTTP/1.1 200 OK"
+2024-10-19 17:46:35,548 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_v7QQvC0ZsClHtxqI6yhHoHZS/runs/run_4JCunc3QCB9Fdpb5OkljATYi "HTTP/1.1 200 OK"
+2024-10-19 17:46:35,693 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_v7QQvC0ZsClHtxqI6yhHoHZS/runs/run_4JCunc3QCB9Fdpb5OkljATYi "HTTP/1.1 200 OK"
+2024-10-19 17:46:36,069 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_v7QQvC0ZsClHtxqI6yhHoHZS/runs/run_4JCunc3QCB9Fdpb5OkljATYi "HTTP/1.1 200 OK"
+2024-10-19 17:46:36,229 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_v7QQvC0ZsClHtxqI6yhHoHZS/runs/run_4JCunc3QCB9Fdpb5OkljATYi "HTTP/1.1 200 OK"
+2024-10-19 17:46:36,429 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_v7QQvC0ZsClHtxqI6yhHoHZS/runs/run_4JCunc3QCB9Fdpb5OkljATYi "HTTP/1.1 200 OK"
+2024-10-19 17:46:36,580 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_v7QQvC0ZsClHtxqI6yhHoHZS/messages "HTTP/1.1 200 OK"
+2024-10-19 17:46:36,583 - INFO - Received response from AI: Hello! How can I assist you today? If you have questions or need guidance on the tools within the Innovation Lab, feel free to ask!
+2024-10-19 17:46:36,583 - INFO - 172.31.196.60 - - [19/Oct/2024 17:46:36] "POST /api/chat HTTP/1.1" 200 -
+2024-10-19 17:47:51,906 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-19 17:47:52,132 - INFO - 172.31.196.60 - - [19/Oct/2024 17:47:52] "GET / HTTP/1.1" 200 -
+2024-10-19 17:47:52,245 - INFO - 172.31.196.60 - - [19/Oct/2024 17:47:52] "GET /static/css/styles.css HTTP/1.1" 200 -
+2024-10-19 17:47:52,334 - INFO - 172.31.196.60 - - [19/Oct/2024 17:47:52] "GET /static/js/script.js HTTP/1.1" 200 -
+2024-10-19 17:47:52,587 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps
+2024-10-19 17:47:52,587 - INFO - Fetching all maps
+2024-10-19 17:47:52,813 - INFO - 172.31.196.60 - - [19/Oct/2024 17:47:52] "GET /api/maps HTTP/1.1" 200 -
+2024-10-19 17:47:52,899 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps/1
+2024-10-19 17:47:52,899 - INFO - Fetching map with ID: 1
+2024-10-19 17:47:53,127 - INFO - 172.31.196.60 - - [19/Oct/2024 17:47:53] "GET /api/maps/1 HTTP/1.1" 200 -
+2024-10-19 17:47:53,209 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/static/maps/main.svg
+2024-10-19 17:47:53,209 - INFO - Attempting to serve static file: /home/runner/workspace/static/maps/main.svg
+2024-10-19 17:47:53,209 - INFO - 172.31.196.60 - - [19/Oct/2024 17:47:53] "GET /static/maps/main.svg HTTP/1.1" 200 -
+2024-10-19 17:47:53,430 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/items?map_id=1
+2024-10-19 17:47:53,431 - INFO - Fetching items for map ID: 1
+2024-10-19 17:47:53,658 - INFO - 172.31.196.60 - - [19/Oct/2024 17:47:53] "GET /api/items?map_id=1 HTTP/1.1" 200 -
+2024-10-19 17:47:53,751 - INFO - 172.31.196.60 - - [19/Oct/2024 17:47:53] "[33mGET /static/thumbnails/20241018_173844_47d7cf43.jpg HTTP/1.1[0m" 404 -
+2024-10-19 17:47:53,810 - INFO - 172.31.196.60 - - [19/Oct/2024 17:47:53] "[33mGET /static/thumbnails/20241018_173743_7e7d8d33.jpg HTTP/1.1[0m" 404 -
+2024-10-19 17:47:53,831 - INFO - 172.31.196.60 - - [19/Oct/2024 17:47:53] "GET /static/thumbnails/20241018_150242_c2a5134b.png HTTP/1.1" 200 -
+2024-10-19 17:47:53,893 - INFO - 172.31.196.60 - - [19/Oct/2024 17:47:53] "GET /static/thumbnails/20241018_150114_e2307150.png HTTP/1.1" 200 -
+2024-10-19 17:47:53,993 - INFO - 172.31.196.60 - - [19/Oct/2024 17:47:53] "GET /static/thumbnails/20241018_150628_7b9b8b60.png HTTP/1.1" 200 -
+2024-10-19 17:47:53,994 - INFO - 172.31.196.60 - - [19/Oct/2024 17:47:53] "GET /static/thumbnails/20241018_150915_9ee2ee5b.png HTTP/1.1" 200 -
+2024-10-19 17:47:53,997 - INFO - 172.31.196.60 - - [19/Oct/2024 17:47:53] "[33mGET /static/thumbnails/20241016_153624_1dbede16.jpg HTTP/1.1[0m" 404 -
+2024-10-19 17:47:54,000 - INFO - 172.31.196.60 - - [19/Oct/2024 17:47:54] "[33mGET /static/thumbnails/20241018_174024_7df52a7d.jpeg HTTP/1.1[0m" 404 -
+2024-10-19 17:47:54,048 - INFO - 172.31.196.60 - - [19/Oct/2024 17:47:54] "[33mGET /static/thumbnails/20241016_150011_83503f4f.jpg HTTP/1.1[0m" 404 -
+2024-10-19 17:47:54,079 - INFO - 172.31.196.60 - - [19/Oct/2024 17:47:54] "[33mGET /static/thumbnails/20241018_173727_dc77ec8d.jpg HTTP/1.1[0m" 404 -
+2024-10-19 17:47:54,083 - INFO - 172.31.196.60 - - [19/Oct/2024 17:47:54] "GET /static/thumbnails/20241018_150652_7df45f90.png HTTP/1.1" 200 -
+2024-10-19 17:47:54,131 - INFO - 172.31.196.60 - - [19/Oct/2024 17:47:54] "GET /static/thumbnails/20241019_150025_1180cdbe.jpg HTTP/1.1" 200 -
+2024-10-19 17:47:54,158 - INFO - 172.31.196.60 - - [19/Oct/2024 17:47:54] "[33mGET /static/thumbnails/20241018_173921_fb220825.jpg HTTP/1.1[0m" 404 -
+2024-10-19 17:47:54,204 - INFO - 172.31.196.60 - - [19/Oct/2024 17:47:54] "[33mGET /static/thumbnails/20241016_153208_247e423e.jpg HTTP/1.1[0m" 404 -
+2024-10-19 17:47:54,228 - INFO - 172.31.196.60 - - [19/Oct/2024 17:47:54] "[33mGET /static/thumbnails/20241016_154030_89cfc546.jpg HTTP/1.1[0m" 404 -
+2024-10-19 17:47:54,238 - INFO - 172.31.196.60 - - [19/Oct/2024 17:47:54] "[33mGET /static/thumbnails/20241016_153707_39faf826.jpg HTTP/1.1[0m" 404 -
+2024-10-19 17:47:54,284 - INFO - 172.31.196.60 - - [19/Oct/2024 17:47:54] "[33mGET /static/thumbnails/20241016_151142_bf6008cc.jpg HTTP/1.1[0m" 404 -
+2024-10-19 17:47:54,311 - INFO - 172.31.196.60 - - [19/Oct/2024 17:47:54] "[33mGET /static/thumbnails/20241016_152258_1f8a6141.jpg HTTP/1.1[0m" 404 -
+2024-10-19 17:47:54,319 - INFO - 172.31.196.60 - - [19/Oct/2024 17:47:54] "[33mGET /null HTTP/1.1[0m" 404 -
+2024-10-19 17:47:55,903 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/chat
+2024-10-19 17:47:55,903 - INFO - Sending message to AI: f
+2024-10-19 17:47:56,069 - INFO - HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
+2024-10-19 17:47:56,244 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_6rsGe0JJZnguRwOuWWZIbwJv/messages "HTTP/1.1 200 OK"
+2024-10-19 17:47:56,703 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_6rsGe0JJZnguRwOuWWZIbwJv/runs "HTTP/1.1 200 OK"
+2024-10-19 17:47:57,020 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_6rsGe0JJZnguRwOuWWZIbwJv/runs/run_8R6DYavnUJMziWwW13fZVrp5 "HTTP/1.1 200 OK"
+2024-10-19 17:47:57,226 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_6rsGe0JJZnguRwOuWWZIbwJv/runs/run_8R6DYavnUJMziWwW13fZVrp5 "HTTP/1.1 200 OK"
+2024-10-19 17:47:57,420 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_6rsGe0JJZnguRwOuWWZIbwJv/runs/run_8R6DYavnUJMziWwW13fZVrp5 "HTTP/1.1 200 OK"
+2024-10-19 17:47:57,565 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_6rsGe0JJZnguRwOuWWZIbwJv/runs/run_8R6DYavnUJMziWwW13fZVrp5 "HTTP/1.1 200 OK"
+2024-10-19 17:47:57,696 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_6rsGe0JJZnguRwOuWWZIbwJv/runs/run_8R6DYavnUJMziWwW13fZVrp5 "HTTP/1.1 200 OK"
+2024-10-19 17:47:57,841 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_6rsGe0JJZnguRwOuWWZIbwJv/runs/run_8R6DYavnUJMziWwW13fZVrp5 "HTTP/1.1 200 OK"
+2024-10-19 17:47:59,316 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_6rsGe0JJZnguRwOuWWZIbwJv/runs/run_8R6DYavnUJMziWwW13fZVrp5 "HTTP/1.1 200 OK"
+2024-10-19 17:47:59,629 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_6rsGe0JJZnguRwOuWWZIbwJv/messages "HTTP/1.1 200 OK"
+2024-10-19 17:47:59,630 - INFO - Received response from AI: It seems like your message was incomplete. Could you please provide more details or specify the tool from the Innovation Lab that you need guidance on? This way, I can assist you effectively!
+2024-10-19 17:47:59,631 - INFO - 172.31.196.60 - - [19/Oct/2024 17:47:59] "POST /api/chat HTTP/1.1" 200 -
+2024-10-19 17:50:42,549 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-19 17:50:42,549 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-19 17:50:42,550 - INFO - Added job "create_backup" to job store "default"
+2024-10-19 17:50:42,550 - INFO - Scheduler started
+2024-10-19 17:50:42,550 - INFO - Added job "create_backup" to job store "default"
+2024-10-19 17:50:42,550 - INFO - Scheduler started
+2024-10-19 17:50:42,550 - INFO - Scheduler started
+2024-10-19 17:50:42,550 - INFO - Scheduler started
+2024-10-19 17:50:43,247 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.196.60:5000
+2024-10-19 17:50:43,247 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-19 17:50:43,257 - INFO -  * Restarting with stat
+2024-10-19 17:50:43,877 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-19 17:50:43,877 - INFO - Added job "create_backup" to job store "default"
+2024-10-19 17:50:43,877 - INFO - Scheduler started
+2024-10-19 17:50:43,878 - INFO - Scheduler started
+2024-10-19 17:50:44,330 - WARNING -  * Debugger is active!
+2024-10-19 17:50:44,331 - INFO -  * Debugger PIN: 833-240-300
+2024-10-19 17:50:47,569 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-19 17:50:48,618 - INFO - 172.31.196.60 - - [19/Oct/2024 17:50:48] "GET / HTTP/1.1" 200 -
+2024-10-19 17:50:48,744 - INFO - 172.31.196.60 - - [19/Oct/2024 17:50:48] "GET /static/css/styles.css HTTP/1.1" 200 -
+2024-10-19 17:50:48,829 - INFO - 172.31.196.60 - - [19/Oct/2024 17:50:48] "GET /static/js/script.js HTTP/1.1" 200 -
+2024-10-19 17:50:49,068 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps
+2024-10-19 17:50:49,068 - INFO - Fetching all maps
+2024-10-19 17:50:49,296 - INFO - 172.31.196.60 - - [19/Oct/2024 17:50:49] "GET /api/maps HTTP/1.1" 200 -
+2024-10-19 17:50:49,381 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps/1
+2024-10-19 17:50:49,381 - INFO - Fetching map with ID: 1
+2024-10-19 17:50:49,609 - INFO - 172.31.196.60 - - [19/Oct/2024 17:50:49] "GET /api/maps/1 HTTP/1.1" 200 -
+2024-10-19 17:50:49,696 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/static/maps/main.svg
+2024-10-19 17:50:49,696 - INFO - Attempting to serve static file: /home/runner/workspace/static/maps/main.svg
+2024-10-19 17:50:49,698 - INFO - 172.31.196.60 - - [19/Oct/2024 17:50:49] "GET /static/maps/main.svg HTTP/1.1" 200 -
+2024-10-19 17:50:49,916 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/items?map_id=1
+2024-10-19 17:50:49,917 - INFO - Fetching items for map ID: 1
+2024-10-19 17:50:50,146 - INFO - 172.31.196.60 - - [19/Oct/2024 17:50:50] "GET /api/items?map_id=1 HTTP/1.1" 200 -
+2024-10-19 17:50:50,245 - INFO - 172.31.196.60 - - [19/Oct/2024 17:50:50] "[33mGET /static/thumbnails/20241018_173844_47d7cf43.jpg HTTP/1.1[0m" 404 -
+2024-10-19 17:50:50,319 - INFO - 172.31.196.60 - - [19/Oct/2024 17:50:50] "[33mGET /static/thumbnails/20241018_173743_7e7d8d33.jpg HTTP/1.1[0m" 404 -
+2024-10-19 17:50:50,327 - INFO - 172.31.196.60 - - [19/Oct/2024 17:50:50] "GET /static/thumbnails/20241018_150242_c2a5134b.png HTTP/1.1" 200 -
+2024-10-19 17:50:50,401 - INFO - 172.31.196.60 - - [19/Oct/2024 17:50:50] "GET /static/thumbnails/20241018_150114_e2307150.png HTTP/1.1" 200 -
+2024-10-19 17:50:50,489 - INFO - 172.31.196.60 - - [19/Oct/2024 17:50:50] "[33mGET /static/thumbnails/20241016_153624_1dbede16.jpg HTTP/1.1[0m" 404 -
+2024-10-19 17:50:50,490 - INFO - 172.31.196.60 - - [19/Oct/2024 17:50:50] "GET /static/thumbnails/20241018_150915_9ee2ee5b.png HTTP/1.1" 200 -
+2024-10-19 17:50:50,539 - INFO - 172.31.196.60 - - [19/Oct/2024 17:50:50] "[33mGET /static/thumbnails/20241018_174024_7df52a7d.jpeg HTTP/1.1[0m" 404 -
+2024-10-19 17:50:50,542 - INFO - 172.31.196.60 - - [19/Oct/2024 17:50:50] "GET /static/thumbnails/20241018_150628_7b9b8b60.png HTTP/1.1" 200 -
+2024-10-19 17:50:50,548 - INFO - 172.31.196.60 - - [19/Oct/2024 17:50:50] "[33mGET /static/thumbnails/20241016_150011_83503f4f.jpg HTTP/1.1[0m" 404 -
+2024-10-19 17:50:50,570 - INFO - 172.31.196.60 - - [19/Oct/2024 17:50:50] "[33mGET /static/thumbnails/20241018_173727_dc77ec8d.jpg HTTP/1.1[0m" 404 -
+2024-10-19 17:50:50,619 - INFO - 172.31.196.60 - - [19/Oct/2024 17:50:50] "GET /static/thumbnails/20241018_150652_7df45f90.png HTTP/1.1" 200 -
+2024-10-19 17:50:50,636 - INFO - 172.31.196.60 - - [19/Oct/2024 17:50:50] "GET /static/thumbnails/20241019_150025_1180cdbe.jpg HTTP/1.1" 200 -
+2024-10-19 17:50:50,650 - INFO - 172.31.196.60 - - [19/Oct/2024 17:50:50] "[33mGET /static/thumbnails/20241018_173921_fb220825.jpg HTTP/1.1[0m" 404 -
+2024-10-19 17:50:50,706 - INFO - 172.31.196.60 - - [19/Oct/2024 17:50:50] "[33mGET /static/thumbnails/20241016_153208_247e423e.jpg HTTP/1.1[0m" 404 -
+2024-10-19 17:50:50,728 - INFO - 172.31.196.60 - - [19/Oct/2024 17:50:50] "[33mGET /static/thumbnails/20241016_154030_89cfc546.jpg HTTP/1.1[0m" 404 -
+2024-10-19 17:50:50,730 - INFO - 172.31.196.60 - - [19/Oct/2024 17:50:50] "[33mGET /static/thumbnails/20241016_153707_39faf826.jpg HTTP/1.1[0m" 404 -
+2024-10-19 17:50:50,787 - INFO - 172.31.196.60 - - [19/Oct/2024 17:50:50] "[33mGET /static/thumbnails/20241016_151142_bf6008cc.jpg HTTP/1.1[0m" 404 -
+2024-10-19 17:50:50,810 - INFO - 172.31.196.60 - - [19/Oct/2024 17:50:50] "[33mGET /null HTTP/1.1[0m" 404 -
+2024-10-19 17:50:50,811 - INFO - 172.31.196.60 - - [19/Oct/2024 17:50:50] "[33mGET /static/thumbnails/20241016_152258_1f8a6141.jpg HTTP/1.1[0m" 404 -
+2024-10-19 17:50:54,400 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/chat
+2024-10-19 17:50:54,400 - INFO - Sending message to AI: hi
+2024-10-19 17:50:54,795 - INFO - HTTP Request: POST https://api.openai.com/v1/assistants/asst_42fSiwjxCUq9i93OpVATPcSn "HTTP/1.1 200 OK"
+2024-10-19 17:50:54,935 - INFO - HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
+2024-10-19 17:50:55,118 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_sTMlGsD169wIC2HRjoUTU3JH/messages "HTTP/1.1 200 OK"
+2024-10-19 17:50:55,640 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_sTMlGsD169wIC2HRjoUTU3JH/runs "HTTP/1.1 200 OK"
+2024-10-19 17:50:55,835 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_sTMlGsD169wIC2HRjoUTU3JH/runs/run_1pIfdnA1IT52zZ6Z7fykiKnM "HTTP/1.1 200 OK"
+2024-10-19 17:50:55,986 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_sTMlGsD169wIC2HRjoUTU3JH/runs/run_1pIfdnA1IT52zZ6Z7fykiKnM "HTTP/1.1 200 OK"
+2024-10-19 17:50:56,373 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_sTMlGsD169wIC2HRjoUTU3JH/runs/run_1pIfdnA1IT52zZ6Z7fykiKnM "HTTP/1.1 200 OK"
+2024-10-19 17:50:56,532 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_sTMlGsD169wIC2HRjoUTU3JH/runs/run_1pIfdnA1IT52zZ6Z7fykiKnM "HTTP/1.1 200 OK"
+2024-10-19 17:50:56,746 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_sTMlGsD169wIC2HRjoUTU3JH/runs/run_1pIfdnA1IT52zZ6Z7fykiKnM "HTTP/1.1 200 OK"
+2024-10-19 17:50:56,887 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_sTMlGsD169wIC2HRjoUTU3JH/runs/run_1pIfdnA1IT52zZ6Z7fykiKnM "HTTP/1.1 200 OK"
+2024-10-19 17:50:57,019 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_sTMlGsD169wIC2HRjoUTU3JH/runs/run_1pIfdnA1IT52zZ6Z7fykiKnM "HTTP/1.1 200 OK"
+2024-10-19 17:50:57,158 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_sTMlGsD169wIC2HRjoUTU3JH/messages "HTTP/1.1 200 OK"
+2024-10-19 17:50:57,159 - INFO - Received response from AI: Hello! How can I assist you today? If you have any questions about the tools in the Innovation Lab or anything else, feel free to ask!
+2024-10-19 17:50:57,160 - INFO - 172.31.196.60 - - [19/Oct/2024 17:50:57] "POST /api/chat HTTP/1.1" 200 -
+2024-10-19 17:51:33,390 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-19 17:51:33,619 - INFO - 172.31.196.60 - - [19/Oct/2024 17:51:33] "GET / HTTP/1.1" 200 -
+2024-10-19 17:51:33,741 - INFO - 172.31.196.60 - - [19/Oct/2024 17:51:33] "GET /static/css/styles.css HTTP/1.1" 200 -
+2024-10-19 17:51:33,755 - INFO - 172.31.196.60 - - [19/Oct/2024 17:51:33] "GET /static/js/script.js HTTP/1.1" 200 -
+2024-10-19 17:51:34,168 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps
+2024-10-19 17:51:34,169 - INFO - Fetching all maps
+2024-10-19 17:51:34,395 - INFO - 172.31.196.60 - - [19/Oct/2024 17:51:34] "GET /api/maps HTTP/1.1" 200 -
+2024-10-19 17:51:34,481 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps/1
+2024-10-19 17:51:34,481 - INFO - Fetching map with ID: 1
+2024-10-19 17:51:34,710 - INFO - 172.31.196.60 - - [19/Oct/2024 17:51:34] "GET /api/maps/1 HTTP/1.1" 200 -
+2024-10-19 17:51:34,794 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/static/maps/main.svg
+2024-10-19 17:51:34,794 - INFO - Attempting to serve static file: /home/runner/workspace/static/maps/main.svg
+2024-10-19 17:51:34,796 - INFO - 172.31.196.60 - - [19/Oct/2024 17:51:34] "GET /static/maps/main.svg HTTP/1.1" 200 -
+2024-10-19 17:51:35,014 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/items?map_id=1
+2024-10-19 17:51:35,015 - INFO - Fetching items for map ID: 1
+2024-10-19 17:51:35,242 - INFO - 172.31.196.60 - - [19/Oct/2024 17:51:35] "GET /api/items?map_id=1 HTTP/1.1" 200 -
+2024-10-19 17:51:35,339 - INFO - 172.31.196.60 - - [19/Oct/2024 17:51:35] "[33mGET /static/thumbnails/20241018_173844_47d7cf43.jpg HTTP/1.1[0m" 404 -
+2024-10-19 17:51:35,340 - INFO - 172.31.196.60 - - [19/Oct/2024 17:51:35] "[33mGET /static/thumbnails/20241018_173743_7e7d8d33.jpg HTTP/1.1[0m" 404 -
+2024-10-19 17:51:35,352 - INFO - 172.31.196.60 - - [19/Oct/2024 17:51:35] "GET /static/thumbnails/20241018_150628_7b9b8b60.png HTTP/1.1" 200 -
+2024-10-19 17:51:35,352 - INFO - 172.31.196.60 - - [19/Oct/2024 17:51:35] "GET /static/thumbnails/20241018_150242_c2a5134b.png HTTP/1.1" 200 -
+2024-10-19 17:51:35,353 - INFO - 172.31.196.60 - - [19/Oct/2024 17:51:35] "GET /static/thumbnails/20241018_150114_e2307150.png HTTP/1.1" 200 -
+2024-10-19 17:51:35,355 - INFO - 172.31.196.60 - - [19/Oct/2024 17:51:35] "GET /static/thumbnails/20241018_150915_9ee2ee5b.png HTTP/1.1" 200 -
+2024-10-19 17:51:35,420 - INFO - 172.31.196.60 - - [19/Oct/2024 17:51:35] "[33mGET /static/thumbnails/20241016_153624_1dbede16.jpg HTTP/1.1[0m" 404 -
+2024-10-19 17:51:35,422 - INFO - 172.31.196.60 - - [19/Oct/2024 17:51:35] "[33mGET /static/thumbnails/20241018_174024_7df52a7d.jpeg HTTP/1.1[0m" 404 -
+2024-10-19 17:51:35,502 - INFO - 172.31.196.60 - - [19/Oct/2024 17:51:35] "[33mGET /static/thumbnails/20241016_150011_83503f4f.jpg HTTP/1.1[0m" 404 -
+2024-10-19 17:51:35,504 - INFO - 172.31.196.60 - - [19/Oct/2024 17:51:35] "[33mGET /static/thumbnails/20241018_173727_dc77ec8d.jpg HTTP/1.1[0m" 404 -
+2024-10-19 17:51:35,585 - INFO - 172.31.196.60 - - [19/Oct/2024 17:51:35] "GET /static/thumbnails/20241018_150652_7df45f90.png HTTP/1.1" 200 -
+2024-10-19 17:51:35,587 - INFO - 172.31.196.60 - - [19/Oct/2024 17:51:35] "GET /static/thumbnails/20241019_150025_1180cdbe.jpg HTTP/1.1" 200 -
+2024-10-19 17:51:35,626 - INFO - 172.31.196.60 - - [19/Oct/2024 17:51:35] "[33mGET /static/thumbnails/20241018_173921_fb220825.jpg HTTP/1.1[0m" 404 -
+2024-10-19 17:51:35,685 - INFO - 172.31.196.60 - - [19/Oct/2024 17:51:35] "[33mGET /static/thumbnails/20241016_153208_247e423e.jpg HTTP/1.1[0m" 404 -
+2024-10-19 17:51:35,702 - INFO - 172.31.196.60 - - [19/Oct/2024 17:51:35] "[33mGET /static/thumbnails/20241016_154030_89cfc546.jpg HTTP/1.1[0m" 404 -
+2024-10-19 17:51:35,706 - INFO - 172.31.196.60 - - [19/Oct/2024 17:51:35] "[33mGET /static/thumbnails/20241016_153707_39faf826.jpg HTTP/1.1[0m" 404 -
+2024-10-19 17:51:35,766 - INFO - 172.31.196.60 - - [19/Oct/2024 17:51:35] "[33mGET /static/thumbnails/20241016_151142_bf6008cc.jpg HTTP/1.1[0m" 404 -
+2024-10-19 17:51:35,776 - INFO - 172.31.196.60 - - [19/Oct/2024 17:51:35] "[33mGET /static/thumbnails/20241016_152258_1f8a6141.jpg HTTP/1.1[0m" 404 -
+2024-10-19 17:51:35,782 - INFO - 172.31.196.60 - - [19/Oct/2024 17:51:35] "[33mGET /null HTTP/1.1[0m" 404 -
+2024-10-19 17:51:37,614 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/chat
+2024-10-19 17:51:37,614 - INFO - Sending message to AI: s
+2024-10-19 17:51:37,748 - INFO - HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
+2024-10-19 17:51:37,892 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_y5edwyGdln3Z4fnS8sCfgyW5/messages "HTTP/1.1 200 OK"
+2024-10-19 17:51:38,414 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_y5edwyGdln3Z4fnS8sCfgyW5/runs "HTTP/1.1 200 OK"
+2024-10-19 17:51:38,555 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_y5edwyGdln3Z4fnS8sCfgyW5/runs/run_qVUkp1kSukz3dLJ0wpf2BDGh "HTTP/1.1 200 OK"
+2024-10-19 17:51:38,714 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_y5edwyGdln3Z4fnS8sCfgyW5/runs/run_qVUkp1kSukz3dLJ0wpf2BDGh "HTTP/1.1 200 OK"
+2024-10-19 17:51:38,885 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_y5edwyGdln3Z4fnS8sCfgyW5/runs/run_qVUkp1kSukz3dLJ0wpf2BDGh "HTTP/1.1 200 OK"
+2024-10-19 17:51:39,809 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_y5edwyGdln3Z4fnS8sCfgyW5/runs/run_qVUkp1kSukz3dLJ0wpf2BDGh "HTTP/1.1 200 OK"
+2024-10-19 17:51:40,005 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_y5edwyGdln3Z4fnS8sCfgyW5/runs/run_qVUkp1kSukz3dLJ0wpf2BDGh "HTTP/1.1 200 OK"
+2024-10-19 17:51:40,303 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_y5edwyGdln3Z4fnS8sCfgyW5/runs/run_qVUkp1kSukz3dLJ0wpf2BDGh "HTTP/1.1 200 OK"
+2024-10-19 17:51:40,471 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_y5edwyGdln3Z4fnS8sCfgyW5/runs/run_qVUkp1kSukz3dLJ0wpf2BDGh "HTTP/1.1 200 OK"
+2024-10-19 17:51:40,649 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_y5edwyGdln3Z4fnS8sCfgyW5/runs/run_qVUkp1kSukz3dLJ0wpf2BDGh "HTTP/1.1 200 OK"
+2024-10-19 17:51:40,862 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_y5edwyGdln3Z4fnS8sCfgyW5/runs/run_qVUkp1kSukz3dLJ0wpf2BDGh "HTTP/1.1 200 OK"
+2024-10-19 17:51:41,095 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_y5edwyGdln3Z4fnS8sCfgyW5/runs/run_qVUkp1kSukz3dLJ0wpf2BDGh "HTTP/1.1 200 OK"
+2024-10-19 17:51:41,312 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_y5edwyGdln3Z4fnS8sCfgyW5/runs/run_qVUkp1kSukz3dLJ0wpf2BDGh "HTTP/1.1 200 OK"
+2024-10-19 17:51:41,464 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_y5edwyGdln3Z4fnS8sCfgyW5/runs/run_qVUkp1kSukz3dLJ0wpf2BDGh "HTTP/1.1 200 OK"
+2024-10-19 17:51:41,602 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_y5edwyGdln3Z4fnS8sCfgyW5/runs/run_qVUkp1kSukz3dLJ0wpf2BDGh "HTTP/1.1 200 OK"
+2024-10-19 17:51:41,761 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_y5edwyGdln3Z4fnS8sCfgyW5/runs/run_qVUkp1kSukz3dLJ0wpf2BDGh "HTTP/1.1 200 OK"
+2024-10-19 17:51:41,990 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_y5edwyGdln3Z4fnS8sCfgyW5/runs/run_qVUkp1kSukz3dLJ0wpf2BDGh "HTTP/1.1 200 OK"
+2024-10-19 17:51:42,128 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_y5edwyGdln3Z4fnS8sCfgyW5/runs/run_qVUkp1kSukz3dLJ0wpf2BDGh "HTTP/1.1 200 OK"
+2024-10-19 17:51:42,337 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_y5edwyGdln3Z4fnS8sCfgyW5/runs/run_qVUkp1kSukz3dLJ0wpf2BDGh "HTTP/1.1 200 OK"
+2024-10-19 17:51:42,465 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_y5edwyGdln3Z4fnS8sCfgyW5/runs/run_qVUkp1kSukz3dLJ0wpf2BDGh "HTTP/1.1 200 OK"
+2024-10-19 17:51:42,612 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_y5edwyGdln3Z4fnS8sCfgyW5/runs/run_qVUkp1kSukz3dLJ0wpf2BDGh "HTTP/1.1 200 OK"
+2024-10-19 17:51:42,816 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_y5edwyGdln3Z4fnS8sCfgyW5/runs/run_qVUkp1kSukz3dLJ0wpf2BDGh "HTTP/1.1 200 OK"
+2024-10-19 17:51:42,965 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_y5edwyGdln3Z4fnS8sCfgyW5/runs/run_qVUkp1kSukz3dLJ0wpf2BDGh "HTTP/1.1 200 OK"
+2024-10-19 17:51:43,107 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_y5edwyGdln3Z4fnS8sCfgyW5/runs/run_qVUkp1kSukz3dLJ0wpf2BDGh "HTTP/1.1 200 OK"
+2024-10-19 17:51:43,266 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_y5edwyGdln3Z4fnS8sCfgyW5/runs/run_qVUkp1kSukz3dLJ0wpf2BDGh "HTTP/1.1 200 OK"
+2024-10-19 17:51:43,403 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_y5edwyGdln3Z4fnS8sCfgyW5/runs/run_qVUkp1kSukz3dLJ0wpf2BDGh "HTTP/1.1 200 OK"
+2024-10-19 17:51:43,614 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_y5edwyGdln3Z4fnS8sCfgyW5/runs/run_qVUkp1kSukz3dLJ0wpf2BDGh "HTTP/1.1 200 OK"
+2024-10-19 17:51:43,768 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_y5edwyGdln3Z4fnS8sCfgyW5/runs/run_qVUkp1kSukz3dLJ0wpf2BDGh "HTTP/1.1 200 OK"
+2024-10-19 17:51:43,989 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_y5edwyGdln3Z4fnS8sCfgyW5/runs/run_qVUkp1kSukz3dLJ0wpf2BDGh "HTTP/1.1 200 OK"
+2024-10-19 17:51:44,133 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_y5edwyGdln3Z4fnS8sCfgyW5/runs/run_qVUkp1kSukz3dLJ0wpf2BDGh "HTTP/1.1 200 OK"
+2024-10-19 17:51:44,333 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_y5edwyGdln3Z4fnS8sCfgyW5/runs/run_qVUkp1kSukz3dLJ0wpf2BDGh "HTTP/1.1 200 OK"
+2024-10-19 17:51:44,515 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_y5edwyGdln3Z4fnS8sCfgyW5/runs/run_qVUkp1kSukz3dLJ0wpf2BDGh "HTTP/1.1 200 OK"
+2024-10-19 17:51:44,815 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_y5edwyGdln3Z4fnS8sCfgyW5/runs/run_qVUkp1kSukz3dLJ0wpf2BDGh "HTTP/1.1 200 OK"
+2024-10-19 17:51:44,962 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_y5edwyGdln3Z4fnS8sCfgyW5/runs/run_qVUkp1kSukz3dLJ0wpf2BDGh "HTTP/1.1 200 OK"
+2024-10-19 17:51:45,557 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_y5edwyGdln3Z4fnS8sCfgyW5/runs/run_qVUkp1kSukz3dLJ0wpf2BDGh "HTTP/1.1 200 OK"
+2024-10-19 17:51:45,695 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_y5edwyGdln3Z4fnS8sCfgyW5/messages "HTTP/1.1 200 OK"
+2024-10-19 17:51:45,695 - INFO - Received response from AI: **Guidance on Using the Laser Cutter in the Innovation Lab**
+
+1. **Identify the Tool**: The laser cutter is a versatile tool used primarily for cutting and engraving various materials such as wood, acrylic, and cardboard.
+
+2. **Safety Precautions**: Before using the laser cutter, ensure you are wearing safety goggles to protect your eyes from the intense laser light. Additionally, verify that the area is clear of flammable materials and ensure good ventilation to avoid smoke buildup. It’s advisable to use a half-face respirator if working with materials that produce harmful fumes, like certain plastics.
+
+3. **Instructions**:
+   - Start by designing your project in Adobe Illustrator or any CAD software compatible with the laser cutter.
+   - Save your design in an appropriate format, such as SVG or DXF.
+   - Power on the laser cutter and open the software on the connected computer.
+   - Import your design into the laser cutting software.
+   - Adjust the settings depending on your material thickness and type (speed, power, and frequency).
+   - Place your material securely on the cutting bed and align it with the laser.
+   - Run a test cut on scrap material to ensure settings are correct.
+   - Once verified, proceed to cut your design.
+   - After completion, carefully remove your work and clean any residue from the cutting bed.
+
+4. **Best Practices**: To maximize efficiency, ensure your designs are optimized for minimal waste. Regularly check and maintain the laser cutter, including cleaning the lenses and mirrors, to ensure optimal performance. Utilize design layers for different settings (like cutting vs. engraving) for streamlined processes. Always keep the laser cutter operator manual handy for quick reference.
+
+5. **Troubleshooting**: If the laser cutter is not cutting through the material, verify that the power settings are appropriately configured, and check the focus of the laser. Ensure material is flat and secured to prevent any movement during cutting. If the machine produces excessive smoke, check the ventilation and clean the cutting bed of debris that could obstruct airflow.
+
+By following these steps, you can safely and effectively use the laser cutter within the Innovation Lab while achieving high-quality results. Always remember to consult with a trained supervisor if you encounter any issues or require assistance.
+2024-10-19 17:51:45,696 - INFO - 172.31.196.60 - - [19/Oct/2024 17:51:45] "POST /api/chat HTTP/1.1" 200 -
+2024-10-19 17:52:20,044 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-19 17:52:20,273 - INFO - 172.31.196.60 - - [19/Oct/2024 17:52:20] "GET / HTTP/1.1" 200 -
+2024-10-19 17:52:20,407 - INFO - 172.31.196.60 - - [19/Oct/2024 17:52:20] "GET /static/css/styles.css HTTP/1.1" 200 -
+2024-10-19 17:52:20,416 - INFO - 172.31.196.60 - - [19/Oct/2024 17:52:20] "GET /static/js/script.js HTTP/1.1" 200 -
+2024-10-19 17:52:20,718 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps
+2024-10-19 17:52:20,718 - INFO - Fetching all maps
+2024-10-19 17:52:20,944 - INFO - 172.31.196.60 - - [19/Oct/2024 17:52:20] "GET /api/maps HTTP/1.1" 200 -
+2024-10-19 17:52:21,026 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps/1
+2024-10-19 17:52:21,026 - INFO - Fetching map with ID: 1
+2024-10-19 17:52:21,252 - INFO - 172.31.196.60 - - [19/Oct/2024 17:52:21] "GET /api/maps/1 HTTP/1.1" 200 -
+2024-10-19 17:52:21,336 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/static/maps/main.svg
+2024-10-19 17:52:21,336 - INFO - Attempting to serve static file: /home/runner/workspace/static/maps/main.svg
+2024-10-19 17:52:21,337 - INFO - 172.31.196.60 - - [19/Oct/2024 17:52:21] "GET /static/maps/main.svg HTTP/1.1" 200 -
+2024-10-19 17:52:21,556 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/items?map_id=1
+2024-10-19 17:52:21,556 - INFO - Fetching items for map ID: 1
+2024-10-19 17:52:21,783 - INFO - 172.31.196.60 - - [19/Oct/2024 17:52:21] "GET /api/items?map_id=1 HTTP/1.1" 200 -
+2024-10-19 17:52:21,878 - INFO - 172.31.196.60 - - [19/Oct/2024 17:52:21] "[33mGET /static/thumbnails/20241018_173844_47d7cf43.jpg HTTP/1.1[0m" 404 -
+2024-10-19 17:52:21,882 - INFO - 172.31.196.60 - - [19/Oct/2024 17:52:21] "[33mGET /static/thumbnails/20241018_173743_7e7d8d33.jpg HTTP/1.1[0m" 404 -
+2024-10-19 17:52:21,893 - INFO - 172.31.196.60 - - [19/Oct/2024 17:52:21] "GET /static/thumbnails/20241018_150628_7b9b8b60.png HTTP/1.1" 200 -
+2024-10-19 17:52:21,894 - INFO - 172.31.196.60 - - [19/Oct/2024 17:52:21] "GET /static/thumbnails/20241018_150915_9ee2ee5b.png HTTP/1.1" 200 -
+2024-10-19 17:52:21,895 - INFO - 172.31.196.60 - - [19/Oct/2024 17:52:21] "GET /static/thumbnails/20241018_150114_e2307150.png HTTP/1.1" 200 -
+2024-10-19 17:52:21,895 - INFO - 172.31.196.60 - - [19/Oct/2024 17:52:21] "GET /static/thumbnails/20241018_150242_c2a5134b.png HTTP/1.1" 200 -
+2024-10-19 17:52:21,962 - INFO - 172.31.196.60 - - [19/Oct/2024 17:52:21] "[33mGET /static/thumbnails/20241018_174024_7df52a7d.jpeg HTTP/1.1[0m" 404 -
+2024-10-19 17:52:21,963 - INFO - 172.31.196.60 - - [19/Oct/2024 17:52:21] "[33mGET /static/thumbnails/20241016_153624_1dbede16.jpg HTTP/1.1[0m" 404 -
+2024-10-19 17:52:22,044 - INFO - 172.31.196.60 - - [19/Oct/2024 17:52:22] "[33mGET /static/thumbnails/20241016_150011_83503f4f.jpg HTTP/1.1[0m" 404 -
+2024-10-19 17:52:22,045 - INFO - 172.31.196.60 - - [19/Oct/2024 17:52:22] "[33mGET /static/thumbnails/20241018_173727_dc77ec8d.jpg HTTP/1.1[0m" 404 -
+2024-10-19 17:52:22,128 - INFO - 172.31.196.60 - - [19/Oct/2024 17:52:22] "GET /static/thumbnails/20241018_150652_7df45f90.png HTTP/1.1" 200 -
+2024-10-19 17:52:22,129 - INFO - 172.31.196.60 - - [19/Oct/2024 17:52:22] "GET /static/thumbnails/20241019_150025_1180cdbe.jpg HTTP/1.1" 200 -
+2024-10-19 17:52:22,168 - INFO - 172.31.196.60 - - [19/Oct/2024 17:52:22] "[33mGET /static/thumbnails/20241018_173921_fb220825.jpg HTTP/1.1[0m" 404 -
+2024-10-19 17:52:22,202 - INFO - 172.31.196.60 - - [19/Oct/2024 17:52:22] "[33mGET /static/thumbnails/20241016_153208_247e423e.jpg HTTP/1.1[0m" 404 -
+2024-10-19 17:52:22,244 - INFO - 172.31.196.60 - - [19/Oct/2024 17:52:22] "[33mGET /static/thumbnails/20241016_154030_89cfc546.jpg HTTP/1.1[0m" 404 -
+2024-10-19 17:52:22,248 - INFO - 172.31.196.60 - - [19/Oct/2024 17:52:22] "[33mGET /static/thumbnails/20241016_153707_39faf826.jpg HTTP/1.1[0m" 404 -
+2024-10-19 17:52:22,280 - INFO - 172.31.196.60 - - [19/Oct/2024 17:52:22] "[33mGET /static/thumbnails/20241016_151142_bf6008cc.jpg HTTP/1.1[0m" 404 -
+2024-10-19 17:52:22,328 - INFO - 172.31.196.60 - - [19/Oct/2024 17:52:22] "[33mGET /static/thumbnails/20241016_152258_1f8a6141.jpg HTTP/1.1[0m" 404 -
+2024-10-19 17:52:22,329 - INFO - 172.31.196.60 - - [19/Oct/2024 17:52:22] "[33mGET /null HTTP/1.1[0m" 404 -
+2024-10-19 17:52:26,034 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/chat
+2024-10-19 17:52:26,035 - INFO - Sending message to AI: hi
+2024-10-19 17:52:26,163 - INFO - HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
+2024-10-19 17:52:26,317 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_KSvw4snEZxQAZkyHvgglI3pf/messages "HTTP/1.1 200 OK"
+2024-10-19 17:52:26,852 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_KSvw4snEZxQAZkyHvgglI3pf/runs "HTTP/1.1 200 OK"
+2024-10-19 17:52:26,979 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_KSvw4snEZxQAZkyHvgglI3pf/runs/run_iyuq22bMmDPxeJ2gGz1LKY9F "HTTP/1.1 200 OK"
+2024-10-19 17:52:27,226 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_KSvw4snEZxQAZkyHvgglI3pf/runs/run_iyuq22bMmDPxeJ2gGz1LKY9F "HTTP/1.1 200 OK"
+2024-10-19 17:52:27,516 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_KSvw4snEZxQAZkyHvgglI3pf/runs/run_iyuq22bMmDPxeJ2gGz1LKY9F "HTTP/1.1 200 OK"
+2024-10-19 17:52:27,780 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_KSvw4snEZxQAZkyHvgglI3pf/runs/run_iyuq22bMmDPxeJ2gGz1LKY9F "HTTP/1.1 200 OK"
+2024-10-19 17:52:27,926 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_KSvw4snEZxQAZkyHvgglI3pf/messages "HTTP/1.1 200 OK"
+2024-10-19 17:52:27,927 - INFO - Received response from AI: Hello! How can I assist you today?
+2024-10-19 17:52:27,927 - INFO - 172.31.196.60 - - [19/Oct/2024 17:52:27] "POST /api/chat HTTP/1.1" 200 -
+2024-10-19 17:52:35,447 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/chat
+2024-10-19 17:52:35,448 - INFO - Sending message to AI: nevermind
+2024-10-19 17:52:35,595 - INFO - HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
+2024-10-19 17:52:35,767 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_Q3gNdOVLjhiALFgknnS32Hjw/messages "HTTP/1.1 200 OK"
+2024-10-19 17:52:39,530 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_Q3gNdOVLjhiALFgknnS32Hjw/runs "HTTP/1.1 200 OK"
+2024-10-19 17:52:39,672 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_Q3gNdOVLjhiALFgknnS32Hjw/runs/run_gkk4VM6Ciecrn6KcACwOmdMr "HTTP/1.1 200 OK"
+2024-10-19 17:52:39,846 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_Q3gNdOVLjhiALFgknnS32Hjw/runs/run_gkk4VM6Ciecrn6KcACwOmdMr "HTTP/1.1 200 OK"
+2024-10-19 17:52:40,021 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_Q3gNdOVLjhiALFgknnS32Hjw/runs/run_gkk4VM6Ciecrn6KcACwOmdMr "HTTP/1.1 200 OK"
+2024-10-19 17:52:40,178 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_Q3gNdOVLjhiALFgknnS32Hjw/runs/run_gkk4VM6Ciecrn6KcACwOmdMr "HTTP/1.1 200 OK"
+2024-10-19 17:52:40,367 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_Q3gNdOVLjhiALFgknnS32Hjw/runs/run_gkk4VM6Ciecrn6KcACwOmdMr "HTTP/1.1 200 OK"
+2024-10-19 17:52:40,513 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_Q3gNdOVLjhiALFgknnS32Hjw/runs/run_gkk4VM6Ciecrn6KcACwOmdMr "HTTP/1.1 200 OK"
+2024-10-19 17:52:40,718 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_Q3gNdOVLjhiALFgknnS32Hjw/runs/run_gkk4VM6Ciecrn6KcACwOmdMr "HTTP/1.1 200 OK"
+2024-10-19 17:52:40,873 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_Q3gNdOVLjhiALFgknnS32Hjw/messages "HTTP/1.1 200 OK"
+2024-10-19 17:52:40,874 - INFO - Received response from AI: If you have any other questions or need assistance with a different topic, feel free to ask!
+2024-10-19 17:52:40,875 - INFO - 172.31.196.60 - - [19/Oct/2024 17:52:40] "POST /api/chat HTTP/1.1" 200 -
+2024-10-19 17:54:53,102 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-19 17:54:53,331 - INFO - 172.31.196.60 - - [19/Oct/2024 17:54:53] "GET / HTTP/1.1" 200 -
+2024-10-19 17:54:53,454 - INFO - 172.31.196.60 - - [19/Oct/2024 17:54:53] "GET /static/css/styles.css HTTP/1.1" 200 -
+2024-10-19 17:54:53,538 - INFO - 172.31.196.60 - - [19/Oct/2024 17:54:53] "GET /static/js/script.js HTTP/1.1" 200 -
+2024-10-19 17:54:53,772 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps
+2024-10-19 17:54:53,772 - INFO - Fetching all maps
+2024-10-19 17:54:53,998 - INFO - 172.31.196.60 - - [19/Oct/2024 17:54:53] "GET /api/maps HTTP/1.1" 200 -
+2024-10-19 17:54:54,080 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps/1
+2024-10-19 17:54:54,080 - INFO - Fetching map with ID: 1
+2024-10-19 17:54:54,306 - INFO - 172.31.196.60 - - [19/Oct/2024 17:54:54] "GET /api/maps/1 HTTP/1.1" 200 -
+2024-10-19 17:54:54,388 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/static/maps/main.svg
+2024-10-19 17:54:54,388 - INFO - Attempting to serve static file: /home/runner/workspace/static/maps/main.svg
+2024-10-19 17:54:54,389 - INFO - 172.31.196.60 - - [19/Oct/2024 17:54:54] "GET /static/maps/main.svg HTTP/1.1" 200 -
+2024-10-19 17:54:54,604 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/items?map_id=1
+2024-10-19 17:54:54,604 - INFO - Fetching items for map ID: 1
+2024-10-19 17:54:54,831 - INFO - 172.31.196.60 - - [19/Oct/2024 17:54:54] "GET /api/items?map_id=1 HTTP/1.1" 200 -
+2024-10-19 17:54:54,921 - INFO - 172.31.196.60 - - [19/Oct/2024 17:54:54] "[33mGET /static/thumbnails/20241018_173844_47d7cf43.jpg HTTP/1.1[0m" 404 -
+2024-10-19 17:54:54,934 - INFO - 172.31.196.60 - - [19/Oct/2024 17:54:54] "[33mGET /static/thumbnails/20241018_173743_7e7d8d33.jpg HTTP/1.1[0m" 404 -
+2024-10-19 17:54:55,000 - INFO - 172.31.196.60 - - [19/Oct/2024 17:54:55] "GET /static/thumbnails/20241018_150242_c2a5134b.png HTTP/1.1" 200 -
+2024-10-19 17:54:55,014 - INFO - 172.31.196.60 - - [19/Oct/2024 17:54:55] "GET /static/thumbnails/20241018_150114_e2307150.png HTTP/1.1" 200 -
+2024-10-19 17:54:55,160 - INFO - 172.31.196.60 - - [19/Oct/2024 17:54:55] "GET /static/thumbnails/20241018_150628_7b9b8b60.png HTTP/1.1" 200 -
+2024-10-19 17:54:55,167 - INFO - 172.31.196.60 - - [19/Oct/2024 17:54:55] "[33mGET /static/thumbnails/20241018_174024_7df52a7d.jpeg HTTP/1.1[0m" 404 -
+2024-10-19 17:54:55,168 - INFO - 172.31.196.60 - - [19/Oct/2024 17:54:55] "[33mGET /static/thumbnails/20241016_153624_1dbede16.jpg HTTP/1.1[0m" 404 -
+2024-10-19 17:54:55,216 - INFO - 172.31.196.60 - - [19/Oct/2024 17:54:55] "[33mGET /static/thumbnails/20241016_150011_83503f4f.jpg HTTP/1.1[0m" 404 -
+2024-10-19 17:54:55,225 - INFO - 172.31.196.60 - - [19/Oct/2024 17:54:55] "GET /static/thumbnails/20241018_150915_9ee2ee5b.png HTTP/1.1" 200 -
+2024-10-19 17:54:55,254 - INFO - 172.31.196.60 - - [19/Oct/2024 17:54:55] "[33mGET /static/thumbnails/20241018_173727_dc77ec8d.jpg HTTP/1.1[0m" 404 -
+2024-10-19 17:54:55,260 - INFO - 172.31.196.60 - - [19/Oct/2024 17:54:55] "GET /static/thumbnails/20241018_150652_7df45f90.png HTTP/1.1" 200 -
+2024-10-19 17:54:55,298 - INFO - 172.31.196.60 - - [19/Oct/2024 17:54:55] "GET /static/thumbnails/20241019_150025_1180cdbe.jpg HTTP/1.1" 200 -
+2024-10-19 17:54:55,320 - INFO - 172.31.196.60 - - [19/Oct/2024 17:54:55] "[33mGET /static/thumbnails/20241018_173921_fb220825.jpg HTTP/1.1[0m" 404 -
+2024-10-19 17:54:55,335 - INFO - 172.31.196.60 - - [19/Oct/2024 17:54:55] "[33mGET /static/thumbnails/20241016_153208_247e423e.jpg HTTP/1.1[0m" 404 -
+2024-10-19 17:54:55,391 - INFO - 172.31.196.60 - - [19/Oct/2024 17:54:55] "[33mGET /static/thumbnails/20241016_154030_89cfc546.jpg HTTP/1.1[0m" 404 -
+2024-10-19 17:54:55,400 - INFO - 172.31.196.60 - - [19/Oct/2024 17:54:55] "[33mGET /static/thumbnails/20241016_153707_39faf826.jpg HTTP/1.1[0m" 404 -
+2024-10-19 17:54:55,418 - INFO - 172.31.196.60 - - [19/Oct/2024 17:54:55] "[33mGET /static/thumbnails/20241016_151142_bf6008cc.jpg HTTP/1.1[0m" 404 -
+2024-10-19 17:54:55,470 - INFO - 172.31.196.60 - - [19/Oct/2024 17:54:55] "[33mGET /static/thumbnails/20241016_152258_1f8a6141.jpg HTTP/1.1[0m" 404 -
+2024-10-19 17:54:55,480 - INFO - 172.31.196.60 - - [19/Oct/2024 17:54:55] "[33mGET /null HTTP/1.1[0m" 404 -
+2024-10-19 17:55:00,032 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/chat
+2024-10-19 17:55:00,032 - INFO - Sending message to AI: what is 3d
+2024-10-19 17:55:00,202 - INFO - HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
+2024-10-19 17:55:00,360 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_Sp2b9x5qOOTJznz972yqhZKf/messages "HTTP/1.1 200 OK"
+2024-10-19 17:55:00,880 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_Sp2b9x5qOOTJznz972yqhZKf/runs "HTTP/1.1 200 OK"
+2024-10-19 17:55:01,042 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_Sp2b9x5qOOTJznz972yqhZKf/runs/run_6Wo848K5Qp38skqfChxuiqN6 "HTTP/1.1 200 OK"
+2024-10-19 17:55:01,353 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_Sp2b9x5qOOTJznz972yqhZKf/runs/run_6Wo848K5Qp38skqfChxuiqN6 "HTTP/1.1 200 OK"
+2024-10-19 17:55:01,501 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_Sp2b9x5qOOTJznz972yqhZKf/runs/run_6Wo848K5Qp38skqfChxuiqN6 "HTTP/1.1 200 OK"
+2024-10-19 17:55:01,732 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_Sp2b9x5qOOTJznz972yqhZKf/runs/run_6Wo848K5Qp38skqfChxuiqN6 "HTTP/1.1 200 OK"
+2024-10-19 17:55:01,874 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_Sp2b9x5qOOTJznz972yqhZKf/runs/run_6Wo848K5Qp38skqfChxuiqN6 "HTTP/1.1 200 OK"
+2024-10-19 17:55:02,041 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_Sp2b9x5qOOTJznz972yqhZKf/runs/run_6Wo848K5Qp38skqfChxuiqN6 "HTTP/1.1 200 OK"
+2024-10-19 17:55:02,213 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_Sp2b9x5qOOTJznz972yqhZKf/runs/run_6Wo848K5Qp38skqfChxuiqN6 "HTTP/1.1 200 OK"
+2024-10-19 17:55:02,419 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_Sp2b9x5qOOTJznz972yqhZKf/runs/run_6Wo848K5Qp38skqfChxuiqN6 "HTTP/1.1 200 OK"
+2024-10-19 17:55:02,585 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_Sp2b9x5qOOTJznz972yqhZKf/runs/run_6Wo848K5Qp38skqfChxuiqN6 "HTTP/1.1 200 OK"
+2024-10-19 17:55:02,728 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_Sp2b9x5qOOTJznz972yqhZKf/runs/run_6Wo848K5Qp38skqfChxuiqN6 "HTTP/1.1 200 OK"
+2024-10-19 17:55:02,869 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_Sp2b9x5qOOTJznz972yqhZKf/runs/run_6Wo848K5Qp38skqfChxuiqN6 "HTTP/1.1 200 OK"
+2024-10-19 17:55:03,029 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_Sp2b9x5qOOTJznz972yqhZKf/runs/run_6Wo848K5Qp38skqfChxuiqN6 "HTTP/1.1 200 OK"
+2024-10-19 17:55:03,265 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_Sp2b9x5qOOTJznz972yqhZKf/runs/run_6Wo848K5Qp38skqfChxuiqN6 "HTTP/1.1 200 OK"
+2024-10-19 17:55:03,503 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_Sp2b9x5qOOTJznz972yqhZKf/runs/run_6Wo848K5Qp38skqfChxuiqN6 "HTTP/1.1 200 OK"
+2024-10-19 17:55:03,665 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_Sp2b9x5qOOTJznz972yqhZKf/runs/run_6Wo848K5Qp38skqfChxuiqN6 "HTTP/1.1 200 OK"
+2024-10-19 17:55:03,915 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_Sp2b9x5qOOTJznz972yqhZKf/runs/run_6Wo848K5Qp38skqfChxuiqN6 "HTTP/1.1 200 OK"
+2024-10-19 17:55:04,068 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_Sp2b9x5qOOTJznz972yqhZKf/runs/run_6Wo848K5Qp38skqfChxuiqN6 "HTTP/1.1 200 OK"
+2024-10-19 17:55:04,224 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_Sp2b9x5qOOTJznz972yqhZKf/messages "HTTP/1.1 200 OK"
+2024-10-19 17:55:04,225 - INFO - Received response from AI: 3D refers to three-dimensional space, which incorporates depth, width, and height, contrasting with two-dimensional space, which only includes width and height. In various contexts, "3D" can denote objects or images rendered in three dimensions, encompassing various technologies and applications:
+
+1. **3D Printing**: This involves creating physical objects from digital models through additive manufacturing. Materials are deposited layer by layer to form the completed item.
+
+2. **3D Modeling**: This is the process of creating a mathematical representation of a three-dimensional object within a computer graphics application. It can be used in animations, visual effects, and video games.
+
+3. **3D Animation**: Involves creating moving images in a three-dimensional environment, giving a realistic sense of depth and perspective.
+
+4. **3D Imaging**: Technologies like stereoscopy create the illusion of depth in images viewed with special glasses or devices.
+
+3D technology is widely used across many sectors, including engineering, gaming, film production, architecture, and medical imaging, allowing for more immersive and accurate representations of objects.
+2024-10-19 17:55:04,225 - INFO - 172.31.196.60 - - [19/Oct/2024 17:55:04] "POST /api/chat HTTP/1.1" 200 -
+2024-10-19 17:55:08,081 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/chat
+2024-10-19 17:55:08,081 - INFO - Sending message to AI: tell me more
+2024-10-19 17:55:08,197 - INFO - HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
+2024-10-19 17:55:08,400 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/messages "HTTP/1.1 200 OK"
+2024-10-19 17:55:09,042 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs "HTTP/1.1 200 OK"
+2024-10-19 17:55:09,216 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:09,383 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:09,547 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:09,747 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:09,899 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:10,084 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:10,270 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:10,425 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:10,568 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:10,832 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:10,958 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:11,097 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:11,245 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:11,475 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:11,641 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:11,828 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:12,540 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:12,715 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:12,843 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:13,025 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:13,232 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:13,388 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:13,603 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:13,801 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:13,942 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:14,118 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:14,460 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:15,248 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:15,417 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:16,692 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:16,840 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:16,969 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:17,162 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:17,344 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:17,511 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:17,699 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:17,849 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:18,057 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:18,193 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:18,342 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:18,478 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:18,629 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:18,769 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:18,896 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:19,061 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:19,202 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:19,375 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:19,524 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:20,164 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:20,310 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:20,776 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:20,956 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:21,165 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:21,304 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:21,468 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:21,612 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:21,763 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:21,943 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:22,140 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:22,288 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:22,438 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:22,572 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:22,766 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:22,995 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:23,141 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:23,329 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:23,483 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:23,634 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:23,842 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:24,029 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:24,181 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:24,323 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:24,480 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:24,642 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:24,795 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:24,931 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:25,076 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:25,260 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:25,408 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:25,545 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:25,720 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:25,887 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:26,050 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:27,183 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:27,319 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/runs/run_92lGl4QE12sabY0p8c2gr8zU "HTTP/1.1 200 OK"
+2024-10-19 17:55:27,435 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_xKWop3bLuchDH4Gu9J4bfH36/messages "HTTP/1.1 200 OK"
+2024-10-19 17:55:27,436 - INFO - Received response from AI: Certainly! Below, I will provide detailed guidance on using selected tools available in the Innovation Lab. Each section will include information on safety precautions, step-by-step instructions, best practices for maximizing efficiency, and troubleshooting tips.
+
+### Tool: **Laser Cutter**
+1. **Identify the Tool**: The Laser Cutter is used for cutting and engraving materials like wood, acrylic, and leather with high precision.
+2. **Safety Precautions**: Always wear safety goggles when operating the laser cutter. Ensure that the exhaust fan is working to remove harmful fumes, and keep flammable materials away from the working area.
+3. **Instructions**: 
+   - Prepare your design on a compatible software (e.g., Adobe Illustrator).
+   - Set up your material securely in the laser cutter bed.
+   - Import your design into the laser cutter's software, ensuring the cutting and engraving settings, such as speed and power, match your material.
+   - First, run a test cut on a scrap piece of material to verify settings.
+   - Once confirmed, start the cutting job from the software interface.
+4. **Best Practices**: Regularly clean the lens and mirrors of the laser cutter for optimal performance. Run tests frequently to adjust settings for different materials.
+5. **Troubleshooting**: If the laser is not cutting correctly, check the alignment of the laser beam and the focus of the lens. Ensure your design does not have unnecessary points or overlaps that complicate the cutting process.
+
+### Tool: **Resin 3D Print Curer**
+1. **Identify the Tool**: The Resin 3D Print Curer is used for curing resin prints after they have been created in a resin printer.
+2. **Safety Precautions**: Wear gloves and a mask when handling resin prints, as uncured resin can be harmful. Ensure good ventilation in the curing area.
+3. **Instructions**: 
+   - Place the finished resin print on the turntable of the device.
+   - Set the timer and wavelength as suggested for the specific resin used (refer to the resin manufacturer’s guidelines).
+   - Once set, turn on the curer and let it run for the designated time.
+4. **Best Practices**: Always pre-clean your prints with isopropyl alcohol to remove uncured resin before curing. Regularly check and maintain the components of the curer.
+5. **Troubleshooting**: If prints do not cure properly, ensure that the UV light source is functioning well and that the timer has been set correctly. Check the manufacturer's instructions for specific resin curing times.
+
+### Tool: **Hot Glue Guns**
+1. **Identify the Tool**: Hot Glue Guns are used for bonding various materials quickly and easily.
+2. **Safety Precautions**: Use caution when handling hot glue, as it can cause burns. Avoid touching the glue directly after it’s applied.
+3. **Instructions**: 
+   - Insert a glue stick into the back of the glue gun and plug it in to heat up.
+   - Once the glue has melted, apply it to one surface and press the materials together firmly.
+   - Allow the glue to cool and set for a few minutes.
+4. **Best Practices**: Keep your workspace clean and organized to avoid accidental glue spills. Use a multi-temp glue for a wider range of application.
+5. **Troubleshooting**: If the glue gun doesn’t dispense glue, check if the glue stick is properly loaded or if the nozzle is clogged with dried glue.
+
+### Tool: **Vinyl Cutter**
+1. **Identify the Tool**: The Vinyl Cutter is used to cut designs out of vinyl sheets for signs, decals, and other applications.
+2. **Safety Precautions**: Ensure the cutter is set on a stable surface. Be cautious with sharp blades when changing or cleaning.
+3. **Instructions**: 
+   - Design your graphic using compatible software (e.g., Adobe Illustrator).
+   - Load the vinyl sheet into the cutter and set the width in the machine settings.
+   - Select the appropriate blade depth and speed settings according to your material.
+   - Send the design to the cutter from the software and start the cutting process.
+4. **Best Practices**: Always use fresh blades for clean cuts. Store vinyl sheets rolled to prevent creasing and damage.
+5. **Troubleshooting**: If the cutter isn’t cutting through the vinyl, check the blade depth and ensure it’s not dull. Confirm that the speed settings are appropriate for the material being used. 
+
+### Tool: **Form4 Resin 3D Printer**
+1. **Identify the Tool**: The Form4 Resin 3D Printer is used for high-accuracy, low-volume resin printing.
+2. **Safety Precautions**: Wear gloves, goggles, and a mask when handling resin materials. Ensure that the workspace is well-ventilated.
+3. **Instructions**: 
+   - Prepare your 3D model in slicing software compatible with the printer.
+   - Fill the resin vat with the appropriate resin type.
+   - Upload your model to the printer interface and adjust the print settings accordingly.
+   - Start the printing process and monitor throughout.
+4. **Best Practices**: Regularly clean the printer's build platform and resin vat after each use. Always cure your prints after the printing is complete.
+5. **Troubleshooting**: If the prints are failing, check the printer’s bed leveling and ensure proper exposure settings are used. Verify that the resin isn’t expired or contaminated.
+
+Before using any of these tools, ensure all users are adequately trained and familiarize themselves with the specific tool manuals and operating procedures. Regular maintenance is crucial for optimal performance and safety.
+2024-10-19 17:55:27,436 - INFO - 172.31.196.60 - - [19/Oct/2024 17:55:27] "POST /api/chat HTTP/1.1" 200 -
+2024-10-19 17:59:45,544 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-19 17:59:46,076 - INFO - 172.31.196.60 - - [19/Oct/2024 17:59:46] "GET / HTTP/1.1" 200 -
+2024-10-19 17:59:46,196 - INFO - 172.31.196.60 - - [19/Oct/2024 17:59:46] "GET /static/css/styles.css HTTP/1.1" 200 -
+2024-10-19 17:59:46,278 - INFO - 172.31.196.60 - - [19/Oct/2024 17:59:46] "GET /static/js/script.js HTTP/1.1" 200 -
+2024-10-19 17:59:46,552 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps
+2024-10-19 17:59:46,552 - INFO - Fetching all maps
+2024-10-19 17:59:46,776 - INFO - 172.31.196.60 - - [19/Oct/2024 17:59:46] "GET /api/maps HTTP/1.1" 200 -
+2024-10-19 17:59:46,858 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps/1
+2024-10-19 17:59:46,858 - INFO - Fetching map with ID: 1
+2024-10-19 17:59:47,083 - INFO - 172.31.196.60 - - [19/Oct/2024 17:59:47] "GET /api/maps/1 HTTP/1.1" 200 -
+2024-10-19 17:59:47,164 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/static/maps/main.svg
+2024-10-19 17:59:47,164 - INFO - Attempting to serve static file: /home/runner/workspace/static/maps/main.svg
+2024-10-19 17:59:47,164 - INFO - 172.31.196.60 - - [19/Oct/2024 17:59:47] "GET /static/maps/main.svg HTTP/1.1" 200 -
+2024-10-19 17:59:47,382 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/items?map_id=1
+2024-10-19 17:59:47,383 - INFO - Fetching items for map ID: 1
+2024-10-19 17:59:47,609 - INFO - 172.31.196.60 - - [19/Oct/2024 17:59:47] "GET /api/items?map_id=1 HTTP/1.1" 200 -
+2024-10-19 17:59:47,695 - INFO - 172.31.196.60 - - [19/Oct/2024 17:59:47] "[33mHEAD /static/thumbnails/20241018_173844_47d7cf43.jpg HTTP/1.1[0m" 404 -
+2024-10-19 17:59:47,765 - INFO - 172.31.196.60 - - [19/Oct/2024 17:59:47] "[33mHEAD /static/thumbnails/20241018_173743_7e7d8d33.jpg HTTP/1.1[0m" 404 -
+2024-10-19 17:59:47,774 - INFO - 172.31.196.60 - - [19/Oct/2024 17:59:47] "HEAD /static/thumbnails/20241018_150242_c2a5134b.png HTTP/1.1" 200 -
+2024-10-19 17:59:47,846 - INFO - 172.31.196.60 - - [19/Oct/2024 17:59:47] "HEAD /static/thumbnails/20241018_150114_e2307150.png HTTP/1.1" 200 -
+2024-10-19 17:59:47,852 - INFO - 172.31.196.60 - - [19/Oct/2024 17:59:47] "HEAD /static/thumbnails/20241018_150628_7b9b8b60.png HTTP/1.1" 200 -
+2024-10-19 17:59:47,926 - INFO - 172.31.196.60 - - [19/Oct/2024 17:59:47] "HEAD /static/thumbnails/20241018_150915_9ee2ee5b.png HTTP/1.1" 200 -
+2024-10-19 17:59:47,930 - INFO - 172.31.196.60 - - [19/Oct/2024 17:59:47] "[33mHEAD /static/thumbnails/20241018_173727_dc77ec8d.jpg HTTP/1.1[0m" 404 -
+2024-10-19 17:59:47,941 - INFO - 172.31.196.60 - - [19/Oct/2024 17:59:47] "HEAD /static/thumbnails/20241018_150652_7df45f90.png HTTP/1.1" 200 -
+2024-10-19 17:59:47,947 - INFO - 172.31.196.60 - - [19/Oct/2024 17:59:47] "[33mHEAD /static/thumbnails/20241018_174024_7df52a7d.jpeg HTTP/1.1[0m" 404 -
+2024-10-19 17:59:47,986 - INFO - 172.31.196.60 - - [19/Oct/2024 17:59:47] "[33mHEAD /static/thumbnails/20241016_153624_1dbede16.jpg HTTP/1.1[0m" 404 -
+2024-10-19 17:59:47,990 - INFO - 172.31.196.60 - - [19/Oct/2024 17:59:47] "[33mHEAD /static/thumbnails/20241016_150011_83503f4f.jpg HTTP/1.1[0m" 404 -
+2024-10-19 17:59:48,006 - INFO - 172.31.196.60 - - [19/Oct/2024 17:59:48] "HEAD /static/thumbnails/20241019_150025_1180cdbe.jpg HTTP/1.1" 200 -
+2024-10-19 17:59:48,008 - INFO - 172.31.196.60 - - [19/Oct/2024 17:59:48] "[33mHEAD /static/thumbnails/20241018_173921_fb220825.jpg HTTP/1.1[0m" 404 -
+2024-10-19 17:59:48,020 - INFO - 172.31.196.60 - - [19/Oct/2024 17:59:48] "[33mHEAD /static/thumbnails/20241016_153208_247e423e.jpg HTTP/1.1[0m" 404 -
+2024-10-19 17:59:48,024 - INFO - 172.31.196.60 - - [19/Oct/2024 17:59:48] "[33mHEAD /static/thumbnails/20241016_154030_89cfc546.jpg HTTP/1.1[0m" 404 -
+2024-10-19 17:59:48,063 - INFO - 172.31.196.60 - - [19/Oct/2024 17:59:48] "[33mHEAD /static/thumbnails/20241016_153707_39faf826.jpg HTTP/1.1[0m" 404 -
+2024-10-19 17:59:48,068 - INFO - 172.31.196.60 - - [19/Oct/2024 17:59:48] "[33mHEAD /static/thumbnails/20241016_151142_bf6008cc.jpg HTTP/1.1[0m" 404 -
+2024-10-19 17:59:48,086 - INFO - 172.31.196.60 - - [19/Oct/2024 17:59:48] "[33mHEAD /static/thumbnails/20241016_152258_1f8a6141.jpg HTTP/1.1[0m" 404 -
+2024-10-19 17:59:48,087 - INFO - 172.31.196.60 - - [19/Oct/2024 17:59:48] "[33mHEAD /null HTTP/1.1[0m" 404 -
+2024-10-19 17:59:48,098 - INFO - 172.31.196.60 - - [19/Oct/2024 17:59:48] "[33mGET /img/default.png HTTP/1.1[0m" 404 -
+2024-10-19 17:59:48,108 - INFO - 172.31.196.60 - - [19/Oct/2024 17:59:48] "GET /static/thumbnails/20241018_150242_c2a5134b.png HTTP/1.1" 200 -
+2024-10-19 17:59:48,142 - INFO - 172.31.196.60 - - [19/Oct/2024 17:59:48] "GET /static/thumbnails/20241018_150114_e2307150.png HTTP/1.1" 200 -
+2024-10-19 17:59:48,146 - INFO - 172.31.196.60 - - [19/Oct/2024 17:59:48] "GET /static/thumbnails/20241018_150628_7b9b8b60.png HTTP/1.1" 200 -
+2024-10-19 17:59:48,166 - INFO - 172.31.196.60 - - [19/Oct/2024 17:59:48] "GET /static/thumbnails/20241018_150915_9ee2ee5b.png HTTP/1.1" 200 -
+2024-10-19 17:59:48,174 - INFO - 172.31.196.60 - - [19/Oct/2024 17:59:48] "GET /static/thumbnails/20241018_150652_7df45f90.png HTTP/1.1" 200 -
+2024-10-19 17:59:48,182 - INFO - 172.31.196.60 - - [19/Oct/2024 17:59:48] "GET /static/thumbnails/20241019_150025_1180cdbe.jpg HTTP/1.1" 200 -
+2024-10-19 18:00:43,033 - INFO - 172.31.196.60 - - [19/Oct/2024 18:00:43] "[33mGET /img/default.png HTTP/1.1[0m" 404 -
+2024-10-19 18:02:41,348 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-19 18:02:41,569 - INFO - 172.31.196.60 - - [19/Oct/2024 18:02:41] "GET / HTTP/1.1" 200 -
+2024-10-19 18:02:41,713 - INFO - 172.31.196.60 - - [19/Oct/2024 18:02:41] "GET /static/css/styles.css HTTP/1.1" 200 -
+2024-10-19 18:02:41,800 - INFO - 172.31.196.60 - - [19/Oct/2024 18:02:41] "GET /static/js/script.js HTTP/1.1" 200 -
+2024-10-19 18:02:42,062 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps
+2024-10-19 18:02:42,062 - INFO - Fetching all maps
+2024-10-19 18:02:42,283 - INFO - 172.31.196.60 - - [19/Oct/2024 18:02:42] "GET /api/maps HTTP/1.1" 200 -
+2024-10-19 18:02:42,368 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps/1
+2024-10-19 18:02:42,368 - INFO - Fetching map with ID: 1
+2024-10-19 18:02:42,590 - INFO - 172.31.196.60 - - [19/Oct/2024 18:02:42] "GET /api/maps/1 HTTP/1.1" 200 -
+2024-10-19 18:02:42,677 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/static/maps/main.svg
+2024-10-19 18:02:42,677 - INFO - Attempting to serve static file: /home/runner/workspace/static/maps/main.svg
+2024-10-19 18:02:42,677 - INFO - 172.31.196.60 - - [19/Oct/2024 18:02:42] "GET /static/maps/main.svg HTTP/1.1" 200 -
+2024-10-19 18:02:42,903 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/items?map_id=1
+2024-10-19 18:02:42,903 - INFO - Fetching items for map ID: 1
+2024-10-19 18:02:43,126 - INFO - 172.31.196.60 - - [19/Oct/2024 18:02:43] "GET /api/items?map_id=1 HTTP/1.1" 200 -
+2024-10-19 18:02:43,213 - INFO - 172.31.196.60 - - [19/Oct/2024 18:02:43] "[33mHEAD /static/thumbnails/20241018_173844_47d7cf43.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:02:43,224 - INFO - 172.31.196.60 - - [19/Oct/2024 18:02:43] "[33mHEAD /static/thumbnails/20241018_173743_7e7d8d33.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:02:43,296 - INFO - 172.31.196.60 - - [19/Oct/2024 18:02:43] "HEAD /static/thumbnails/20241018_150242_c2a5134b.png HTTP/1.1" 200 -
+2024-10-19 18:02:43,309 - INFO - 172.31.196.60 - - [19/Oct/2024 18:02:43] "HEAD /static/thumbnails/20241018_150114_e2307150.png HTTP/1.1" 200 -
+2024-10-19 18:02:43,380 - INFO - 172.31.196.60 - - [19/Oct/2024 18:02:43] "HEAD /static/thumbnails/20241018_150628_7b9b8b60.png HTTP/1.1" 200 -
+2024-10-19 18:02:43,390 - INFO - 172.31.196.60 - - [19/Oct/2024 18:02:43] "HEAD /static/thumbnails/20241018_150915_9ee2ee5b.png HTTP/1.1" 200 -
+2024-10-19 18:02:43,456 - INFO - 172.31.196.60 - - [19/Oct/2024 18:02:43] "[33mHEAD /static/thumbnails/20241016_153624_1dbede16.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:02:43,460 - INFO - 172.31.196.60 - - [19/Oct/2024 18:02:43] "HEAD /static/thumbnails/20241018_150652_7df45f90.png HTTP/1.1" 200 -
+2024-10-19 18:02:43,468 - INFO - 172.31.196.60 - - [19/Oct/2024 18:02:43] "HEAD /static/thumbnails/20241019_150025_1180cdbe.jpg HTTP/1.1" 200 -
+2024-10-19 18:02:43,512 - INFO - 172.31.196.60 - - [19/Oct/2024 18:02:43] "[33mHEAD /static/thumbnails/20241018_174024_7df52a7d.jpeg HTTP/1.1[0m" 404 -
+2024-10-19 18:02:43,522 - INFO - 172.31.196.60 - - [19/Oct/2024 18:02:43] "[33mHEAD /static/thumbnails/20241018_173727_dc77ec8d.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:02:43,523 - INFO - 172.31.196.60 - - [19/Oct/2024 18:02:43] "[33mHEAD /static/thumbnails/20241016_150011_83503f4f.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:02:43,536 - INFO - 172.31.196.60 - - [19/Oct/2024 18:02:43] "[33mHEAD /static/thumbnails/20241018_173921_fb220825.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:02:43,540 - INFO - 172.31.196.60 - - [19/Oct/2024 18:02:43] "[33mHEAD /static/thumbnails/20241016_153208_247e423e.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:02:43,548 - INFO - 172.31.196.60 - - [19/Oct/2024 18:02:43] "[33mHEAD /static/thumbnails/20241016_154030_89cfc546.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:02:43,592 - INFO - 172.31.196.60 - - [19/Oct/2024 18:02:43] "[33mHEAD /static/thumbnails/20241016_153707_39faf826.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:02:43,603 - INFO - 172.31.196.60 - - [19/Oct/2024 18:02:43] "[33mHEAD /static/thumbnails/20241016_151142_bf6008cc.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:02:43,604 - INFO - 172.31.196.60 - - [19/Oct/2024 18:02:43] "[33mHEAD /static/thumbnails/20241016_152258_1f8a6141.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:02:43,616 - INFO - 172.31.196.60 - - [19/Oct/2024 18:02:43] "[33mHEAD /null HTTP/1.1[0m" 404 -
+2024-10-19 18:02:43,620 - INFO - 172.31.196.60 - - [19/Oct/2024 18:02:43] "GET /static/thumbnails/20241018_150114_e2307150.png HTTP/1.1" 200 -
+2024-10-19 18:02:43,628 - INFO - 172.31.196.60 - - [19/Oct/2024 18:02:43] "GET /static/thumbnails/20241018_150628_7b9b8b60.png HTTP/1.1" 200 -
+2024-10-19 18:02:43,674 - INFO - 172.31.196.60 - - [19/Oct/2024 18:02:43] "GET /static/thumbnails/20241018_150915_9ee2ee5b.png HTTP/1.1" 200 -
+2024-10-19 18:02:43,682 - INFO - 172.31.196.60 - - [19/Oct/2024 18:02:43] "GET /static/img/default.png HTTP/1.1" 200 -
+2024-10-19 18:02:43,686 - INFO - 172.31.196.60 - - [19/Oct/2024 18:02:43] "GET /static/thumbnails/20241018_150242_c2a5134b.png HTTP/1.1" 200 -
+2024-10-19 18:02:43,701 - INFO - 172.31.196.60 - - [19/Oct/2024 18:02:43] "GET /static/thumbnails/20241018_150652_7df45f90.png HTTP/1.1" 200 -
+2024-10-19 18:02:43,766 - INFO - 172.31.196.60 - - [19/Oct/2024 18:02:43] "GET /static/thumbnails/20241019_150025_1180cdbe.jpg HTTP/1.1" 200 -
+2024-10-19 18:15:37,041 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-19 18:15:37,990 - INFO - 172.31.196.60 - - [19/Oct/2024 18:15:37] "GET / HTTP/1.1" 200 -
+2024-10-19 18:15:38,202 - INFO - 172.31.196.60 - - [19/Oct/2024 18:15:38] "GET /static/css/styles.css HTTP/1.1" 200 -
+2024-10-19 18:15:38,348 - INFO - 172.31.196.60 - - [19/Oct/2024 18:15:38] "GET /static/js/script.js HTTP/1.1" 200 -
+2024-10-19 18:15:38,585 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps
+2024-10-19 18:15:38,585 - INFO - Fetching all maps
+2024-10-19 18:15:38,813 - INFO - 172.31.196.60 - - [19/Oct/2024 18:15:38] "GET /api/maps HTTP/1.1" 200 -
+2024-10-19 18:15:38,897 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps/1
+2024-10-19 18:15:38,897 - INFO - Fetching map with ID: 1
+2024-10-19 18:15:39,128 - INFO - 172.31.196.60 - - [19/Oct/2024 18:15:39] "GET /api/maps/1 HTTP/1.1" 200 -
+2024-10-19 18:15:39,213 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/static/maps/main.svg
+2024-10-19 18:15:39,213 - INFO - Attempting to serve static file: /home/runner/workspace/static/maps/main.svg
+2024-10-19 18:15:39,217 - INFO - 172.31.196.60 - - [19/Oct/2024 18:15:39] "GET /static/maps/main.svg HTTP/1.1" 200 -
+2024-10-19 18:15:39,406 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/items?map_id=1
+2024-10-19 18:15:39,407 - INFO - Fetching items for map ID: 1
+2024-10-19 18:15:39,633 - INFO - 172.31.196.60 - - [19/Oct/2024 18:15:39] "GET /api/items?map_id=1 HTTP/1.1" 200 -
+2024-10-19 18:15:39,726 - INFO - 172.31.196.60 - - [19/Oct/2024 18:15:39] "[33mHEAD /static/thumbnails/20241018_173844_47d7cf43.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:15:39,784 - INFO - 172.31.196.60 - - [19/Oct/2024 18:15:39] "[33mHEAD /static/thumbnails/20241018_173743_7e7d8d33.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:15:39,805 - INFO - 172.31.196.60 - - [19/Oct/2024 18:15:39] "HEAD /static/thumbnails/20241018_150242_c2a5134b.png HTTP/1.1" 200 -
+2024-10-19 18:15:39,865 - INFO - 172.31.196.60 - - [19/Oct/2024 18:15:39] "HEAD /static/thumbnails/20241018_150114_e2307150.png HTTP/1.1" 200 -
+2024-10-19 18:15:39,886 - INFO - 172.31.196.60 - - [19/Oct/2024 18:15:39] "HEAD /static/thumbnails/20241018_150628_7b9b8b60.png HTTP/1.1" 200 -
+2024-10-19 18:15:39,945 - INFO - 172.31.196.60 - - [19/Oct/2024 18:15:39] "HEAD /static/thumbnails/20241018_150915_9ee2ee5b.png HTTP/1.1" 200 -
+2024-10-19 18:15:39,968 - INFO - 172.31.196.60 - - [19/Oct/2024 18:15:39] "[33mHEAD /static/thumbnails/20241016_153624_1dbede16.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:15:39,968 - INFO - 172.31.196.60 - - [19/Oct/2024 18:15:39] "[33mHEAD /static/thumbnails/20241018_173727_dc77ec8d.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:15:40,020 - INFO - 172.31.196.60 - - [19/Oct/2024 18:15:40] "[33mHEAD /static/thumbnails/20241016_150011_83503f4f.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:15:40,021 - INFO - 172.31.196.60 - - [19/Oct/2024 18:15:40] "[33mHEAD /static/thumbnails/20241018_174024_7df52a7d.jpeg HTTP/1.1[0m" 404 -
+2024-10-19 18:15:40,023 - INFO - 172.31.196.60 - - [19/Oct/2024 18:15:40] "HEAD /static/thumbnails/20241019_150025_1180cdbe.jpg HTTP/1.1" 200 -
+2024-10-19 18:15:40,026 - INFO - 172.31.196.60 - - [19/Oct/2024 18:15:40] "HEAD /static/thumbnails/20241018_150652_7df45f90.png HTTP/1.1" 200 -
+2024-10-19 18:15:40,048 - INFO - 172.31.196.60 - - [19/Oct/2024 18:15:40] "[33mHEAD /static/thumbnails/20241018_173921_fb220825.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:15:40,049 - INFO - 172.31.196.60 - - [19/Oct/2024 18:15:40] "[33mHEAD /static/thumbnails/20241016_153208_247e423e.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:15:40,100 - INFO - 172.31.196.60 - - [19/Oct/2024 18:15:40] "[33mHEAD /static/thumbnails/20241016_154030_89cfc546.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:15:40,101 - INFO - 172.31.196.60 - - [19/Oct/2024 18:15:40] "[33mHEAD /static/thumbnails/20241016_153707_39faf826.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:15:40,104 - INFO - 172.31.196.60 - - [19/Oct/2024 18:15:40] "[33mHEAD /static/thumbnails/20241016_151142_bf6008cc.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:15:40,107 - INFO - 172.31.196.60 - - [19/Oct/2024 18:15:40] "[33mHEAD /static/thumbnails/20241016_152258_1f8a6141.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:15:40,128 - INFO - 172.31.196.60 - - [19/Oct/2024 18:15:40] "[33mHEAD /null HTTP/1.1[0m" 404 -
+2024-10-19 18:15:40,129 - INFO - 172.31.196.60 - - [19/Oct/2024 18:15:40] "GET /static/img/default.png HTTP/1.1" 200 -
+2024-10-19 18:15:40,179 - INFO - 172.31.196.60 - - [19/Oct/2024 18:15:40] "GET /static/thumbnails/20241018_150242_c2a5134b.png HTTP/1.1" 200 -
+2024-10-19 18:15:40,182 - INFO - 172.31.196.60 - - [19/Oct/2024 18:15:40] "GET /static/thumbnails/20241018_150114_e2307150.png HTTP/1.1" 200 -
+2024-10-19 18:15:40,189 - INFO - 172.31.196.60 - - [19/Oct/2024 18:15:40] "GET /static/thumbnails/20241018_150628_7b9b8b60.png HTTP/1.1" 200 -
+2024-10-19 18:15:40,189 - INFO - 172.31.196.60 - - [19/Oct/2024 18:15:40] "GET /static/thumbnails/20241018_150915_9ee2ee5b.png HTTP/1.1" 200 -
+2024-10-19 18:15:40,210 - INFO - 172.31.196.60 - - [19/Oct/2024 18:15:40] "GET /static/thumbnails/20241019_150025_1180cdbe.jpg HTTP/1.1" 200 -
+2024-10-19 18:15:40,214 - INFO - 172.31.196.60 - - [19/Oct/2024 18:15:40] "GET /static/thumbnails/20241018_150652_7df45f90.png HTTP/1.1" 200 -
+2024-10-19 18:15:40,365 - INFO - 172.31.196.60 - - [19/Oct/2024 18:15:40] "GET /static/img/default.png HTTP/1.1" 200 -
+2024-10-19 18:19:16,709 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-19 18:19:16,936 - INFO - 172.31.196.60 - - [19/Oct/2024 18:19:16] "GET / HTTP/1.1" 200 -
+2024-10-19 18:19:17,049 - INFO - 172.31.196.60 - - [19/Oct/2024 18:19:17] "GET /static/css/styles.css HTTP/1.1" 200 -
+2024-10-19 18:19:17,141 - INFO - 172.31.196.60 - - [19/Oct/2024 18:19:17] "GET /static/js/script.js HTTP/1.1" 200 -
+2024-10-19 18:19:21,181 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps
+2024-10-19 18:19:21,181 - INFO - Fetching all maps
+2024-10-19 18:19:21,406 - INFO - 172.31.196.60 - - [19/Oct/2024 18:19:21] "GET /api/maps HTTP/1.1" 200 -
+2024-10-19 18:19:21,493 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps/1
+2024-10-19 18:19:21,493 - INFO - Fetching map with ID: 1
+2024-10-19 18:19:21,720 - INFO - 172.31.196.60 - - [19/Oct/2024 18:19:21] "GET /api/maps/1 HTTP/1.1" 200 -
+2024-10-19 18:19:21,805 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/static/maps/main.svg
+2024-10-19 18:19:21,806 - INFO - Attempting to serve static file: /home/runner/workspace/static/maps/main.svg
+2024-10-19 18:19:21,806 - INFO - 172.31.196.60 - - [19/Oct/2024 18:19:21] "GET /static/maps/main.svg HTTP/1.1" 200 -
+2024-10-19 18:19:22,025 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/items?map_id=1
+2024-10-19 18:19:22,025 - INFO - Fetching items for map ID: 1
+2024-10-19 18:19:22,251 - INFO - 172.31.196.60 - - [19/Oct/2024 18:19:22] "GET /api/items?map_id=1 HTTP/1.1" 200 -
+2024-10-19 18:19:22,335 - INFO - 172.31.196.60 - - [19/Oct/2024 18:19:22] "[33mHEAD /static/thumbnails/20241018_173844_47d7cf43.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:19:22,349 - INFO - 172.31.196.60 - - [19/Oct/2024 18:19:22] "[33mHEAD /static/thumbnails/20241018_173743_7e7d8d33.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:19:22,415 - INFO - 172.31.196.60 - - [19/Oct/2024 18:19:22] "HEAD /static/thumbnails/20241018_150242_c2a5134b.png HTTP/1.1" 200 -
+2024-10-19 18:19:22,429 - INFO - 172.31.196.60 - - [19/Oct/2024 18:19:22] "HEAD /static/thumbnails/20241018_150114_e2307150.png HTTP/1.1" 200 -
+2024-10-19 18:19:22,497 - INFO - 172.31.196.60 - - [19/Oct/2024 18:19:22] "HEAD /static/thumbnails/20241018_150628_7b9b8b60.png HTTP/1.1" 200 -
+2024-10-19 18:19:22,506 - INFO - 172.31.196.60 - - [19/Oct/2024 18:19:22] "HEAD /static/thumbnails/20241018_150915_9ee2ee5b.png HTTP/1.1" 200 -
+2024-10-19 18:19:22,578 - INFO - 172.31.196.60 - - [19/Oct/2024 18:19:22] "[33mHEAD /static/thumbnails/20241016_153624_1dbede16.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:19:22,578 - INFO - 172.31.196.60 - - [19/Oct/2024 18:19:22] "HEAD /static/thumbnails/20241018_150652_7df45f90.png HTTP/1.1" 200 -
+2024-10-19 18:19:22,581 - INFO - 172.31.196.60 - - [19/Oct/2024 18:19:22] "[33mHEAD /static/thumbnails/20241018_174024_7df52a7d.jpeg HTTP/1.1[0m" 404 -
+2024-10-19 18:19:22,582 - INFO - 172.31.196.60 - - [19/Oct/2024 18:19:22] "[33mHEAD /static/thumbnails/20241016_150011_83503f4f.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:19:22,584 - INFO - 172.31.196.60 - - [19/Oct/2024 18:19:22] "[33mHEAD /static/thumbnails/20241018_173727_dc77ec8d.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:19:22,585 - INFO - 172.31.196.60 - - [19/Oct/2024 18:19:22] "HEAD /static/thumbnails/20241019_150025_1180cdbe.jpg HTTP/1.1" 200 -
+2024-10-19 18:19:22,655 - INFO - 172.31.196.60 - - [19/Oct/2024 18:19:22] "[33mHEAD /static/thumbnails/20241018_173921_fb220825.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:19:22,659 - INFO - 172.31.196.60 - - [19/Oct/2024 18:19:22] "[33mHEAD /static/thumbnails/20241016_153208_247e423e.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:19:22,660 - INFO - 172.31.196.60 - - [19/Oct/2024 18:19:22] "[33mHEAD /static/thumbnails/20241016_153707_39faf826.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:19:22,661 - INFO - 172.31.196.60 - - [19/Oct/2024 18:19:22] "[33mHEAD /static/thumbnails/20241016_154030_89cfc546.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:19:22,665 - INFO - 172.31.196.60 - - [19/Oct/2024 18:19:22] "[33mHEAD /static/thumbnails/20241016_151142_bf6008cc.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:19:22,666 - INFO - 172.31.196.60 - - [19/Oct/2024 18:19:22] "[33mHEAD /static/thumbnails/20241016_152258_1f8a6141.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:19:22,735 - INFO - 172.31.196.60 - - [19/Oct/2024 18:19:22] "[33mHEAD /null HTTP/1.1[0m" 404 -
+2024-10-19 18:19:22,740 - INFO - 172.31.196.60 - - [19/Oct/2024 18:19:22] "GET /static/thumbnails/20241018_150114_e2307150.png HTTP/1.1" 200 -
+2024-10-19 18:19:22,740 - INFO - 172.31.196.60 - - [19/Oct/2024 18:19:22] "GET /static/thumbnails/20241018_150242_c2a5134b.png HTTP/1.1" 200 -
+2024-10-19 18:19:22,741 - INFO - 172.31.196.60 - - [19/Oct/2024 18:19:22] "GET /static/thumbnails/20241018_150628_7b9b8b60.png HTTP/1.1" 200 -
+2024-10-19 18:19:22,744 - INFO - 172.31.196.60 - - [19/Oct/2024 18:19:22] "GET /static/thumbnails/20241018_150915_9ee2ee5b.png HTTP/1.1" 200 -
+2024-10-19 18:19:22,752 - INFO - 172.31.196.60 - - [19/Oct/2024 18:19:22] "GET /static/img/default.png HTTP/1.1" 200 -
+2024-10-19 18:19:22,819 - INFO - 172.31.196.60 - - [19/Oct/2024 18:19:22] "GET /static/thumbnails/20241018_150652_7df45f90.png HTTP/1.1" 200 -
+2024-10-19 18:19:22,833 - INFO - 172.31.196.60 - - [19/Oct/2024 18:19:22] "GET /static/thumbnails/20241019_150025_1180cdbe.jpg HTTP/1.1" 200 -
+2024-10-19 18:20:26,678 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-19 18:20:26,904 - INFO - 172.31.196.60 - - [19/Oct/2024 18:20:26] "GET / HTTP/1.1" 200 -
+2024-10-19 18:20:27,021 - INFO - 172.31.196.60 - - [19/Oct/2024 18:20:27] "GET /static/css/styles.css HTTP/1.1" 200 -
+2024-10-19 18:20:27,105 - INFO - 172.31.196.60 - - [19/Oct/2024 18:20:27] "GET /static/js/script.js HTTP/1.1" 200 -
+2024-10-19 18:20:27,310 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps
+2024-10-19 18:20:27,310 - INFO - Fetching all maps
+2024-10-19 18:20:27,537 - INFO - 172.31.196.60 - - [19/Oct/2024 18:20:27] "GET /api/maps HTTP/1.1" 200 -
+2024-10-19 18:20:27,621 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps/1
+2024-10-19 18:20:27,621 - INFO - Fetching map with ID: 1
+2024-10-19 18:20:27,847 - INFO - 172.31.196.60 - - [19/Oct/2024 18:20:27] "GET /api/maps/1 HTTP/1.1" 200 -
+2024-10-19 18:20:27,935 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/static/maps/main.svg
+2024-10-19 18:20:27,936 - INFO - Attempting to serve static file: /home/runner/workspace/static/maps/main.svg
+2024-10-19 18:20:27,936 - INFO - 172.31.196.60 - - [19/Oct/2024 18:20:27] "GET /static/maps/main.svg HTTP/1.1" 200 -
+2024-10-19 18:20:28,150 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/items?map_id=1
+2024-10-19 18:20:28,151 - INFO - Fetching items for map ID: 1
+2024-10-19 18:20:28,378 - INFO - 172.31.196.60 - - [19/Oct/2024 18:20:28] "GET /api/items?map_id=1 HTTP/1.1" 200 -
+2024-10-19 18:20:28,463 - INFO - 172.31.196.60 - - [19/Oct/2024 18:20:28] "[33mHEAD /static/thumbnails/20241018_173844_47d7cf43.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:20:28,475 - INFO - 172.31.196.60 - - [19/Oct/2024 18:20:28] "[33mHEAD /static/thumbnails/20241018_173743_7e7d8d33.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:20:28,543 - INFO - 172.31.196.60 - - [19/Oct/2024 18:20:28] "HEAD /static/thumbnails/20241018_150242_c2a5134b.png HTTP/1.1" 200 -
+2024-10-19 18:20:28,555 - INFO - 172.31.196.60 - - [19/Oct/2024 18:20:28] "HEAD /static/thumbnails/20241018_150114_e2307150.png HTTP/1.1" 200 -
+2024-10-19 18:20:28,625 - INFO - 172.31.196.60 - - [19/Oct/2024 18:20:28] "HEAD /static/thumbnails/20241018_150628_7b9b8b60.png HTTP/1.1" 200 -
+2024-10-19 18:20:28,635 - INFO - 172.31.196.60 - - [19/Oct/2024 18:20:28] "HEAD /static/thumbnails/20241018_150915_9ee2ee5b.png HTTP/1.1" 200 -
+2024-10-19 18:20:28,703 - INFO - 172.31.196.60 - - [19/Oct/2024 18:20:28] "HEAD /static/thumbnails/20241018_150652_7df45f90.png HTTP/1.1" 200 -
+2024-10-19 18:20:28,709 - INFO - 172.31.196.60 - - [19/Oct/2024 18:20:28] "[33mHEAD /static/thumbnails/20241016_150011_83503f4f.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:20:28,710 - INFO - 172.31.196.60 - - [19/Oct/2024 18:20:28] "[33mHEAD /static/thumbnails/20241018_174024_7df52a7d.jpeg HTTP/1.1[0m" 404 -
+2024-10-19 18:20:28,711 - INFO - 172.31.196.60 - - [19/Oct/2024 18:20:28] "[33mHEAD /static/thumbnails/20241018_173727_dc77ec8d.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:20:28,715 - INFO - 172.31.196.60 - - [19/Oct/2024 18:20:28] "HEAD /static/thumbnails/20241019_150025_1180cdbe.jpg HTTP/1.1" 200 -
+2024-10-19 18:20:28,769 - INFO - 172.31.196.60 - - [19/Oct/2024 18:20:28] "[33mHEAD /static/thumbnails/20241016_153624_1dbede16.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:20:28,780 - INFO - 172.31.196.60 - - [19/Oct/2024 18:20:28] "[33mHEAD /static/thumbnails/20241018_173921_fb220825.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:20:28,787 - INFO - 172.31.196.60 - - [19/Oct/2024 18:20:28] "[33mHEAD /static/thumbnails/20241016_153208_247e423e.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:20:28,791 - INFO - 172.31.196.60 - - [19/Oct/2024 18:20:28] "[33mHEAD /static/thumbnails/20241016_154030_89cfc546.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:20:28,791 - INFO - 172.31.196.60 - - [19/Oct/2024 18:20:28] "[33mHEAD /static/thumbnails/20241016_153707_39faf826.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:20:28,795 - INFO - 172.31.196.60 - - [19/Oct/2024 18:20:28] "[33mHEAD /static/thumbnails/20241016_151142_bf6008cc.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:20:28,847 - INFO - 172.31.196.60 - - [19/Oct/2024 18:20:28] "[33mHEAD /static/thumbnails/20241016_152258_1f8a6141.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:20:28,858 - INFO - 172.31.196.60 - - [19/Oct/2024 18:20:28] "[33mHEAD /null HTTP/1.1[0m" 404 -
+2024-10-19 18:20:28,865 - INFO - 172.31.196.60 - - [19/Oct/2024 18:20:28] "GET /static/img/default.png HTTP/1.1" 200 -
+2024-10-19 18:20:28,868 - INFO - 172.31.196.60 - - [19/Oct/2024 18:20:28] "GET /static/thumbnails/20241018_150242_c2a5134b.png HTTP/1.1" 200 -
+2024-10-19 18:20:28,870 - INFO - 172.31.196.60 - - [19/Oct/2024 18:20:28] "GET /static/thumbnails/20241018_150114_e2307150.png HTTP/1.1" 200 -
+2024-10-19 18:20:28,874 - INFO - 172.31.196.60 - - [19/Oct/2024 18:20:28] "GET /static/thumbnails/20241018_150628_7b9b8b60.png HTTP/1.1" 200 -
+2024-10-19 18:20:28,927 - INFO - 172.31.196.60 - - [19/Oct/2024 18:20:28] "GET /static/thumbnails/20241018_150915_9ee2ee5b.png HTTP/1.1" 200 -
+2024-10-19 18:20:28,941 - INFO - 172.31.196.60 - - [19/Oct/2024 18:20:28] "GET /static/thumbnails/20241018_150652_7df45f90.png HTTP/1.1" 200 -
+2024-10-19 18:20:28,945 - INFO - 172.31.196.60 - - [19/Oct/2024 18:20:28] "GET /static/thumbnails/20241019_150025_1180cdbe.jpg HTTP/1.1" 200 -
+2024-10-19 18:21:16,504 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-19 18:21:17,047 - INFO - 172.31.196.60 - - [19/Oct/2024 18:21:17] "GET / HTTP/1.1" 200 -
+2024-10-19 18:21:17,153 - INFO - 172.31.196.60 - - [19/Oct/2024 18:21:17] "GET /static/css/styles.css HTTP/1.1" 200 -
+2024-10-19 18:21:17,221 - INFO - 172.31.196.60 - - [19/Oct/2024 18:21:17] "GET /static/js/script.js HTTP/1.1" 200 -
+2024-10-19 18:21:17,447 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps
+2024-10-19 18:21:17,447 - INFO - Fetching all maps
+2024-10-19 18:21:17,672 - INFO - 172.31.196.60 - - [19/Oct/2024 18:21:17] "GET /api/maps HTTP/1.1" 200 -
+2024-10-19 18:21:17,756 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps/1
+2024-10-19 18:21:17,756 - INFO - Fetching map with ID: 1
+2024-10-19 18:21:17,981 - INFO - 172.31.196.60 - - [19/Oct/2024 18:21:17] "GET /api/maps/1 HTTP/1.1" 200 -
+2024-10-19 18:21:18,067 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/static/maps/main.svg
+2024-10-19 18:21:18,067 - INFO - Attempting to serve static file: /home/runner/workspace/static/maps/main.svg
+2024-10-19 18:21:18,067 - INFO - 172.31.196.60 - - [19/Oct/2024 18:21:18] "GET /static/maps/main.svg HTTP/1.1" 200 -
+2024-10-19 18:21:18,289 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/items?map_id=1
+2024-10-19 18:21:18,289 - INFO - Fetching items for map ID: 1
+2024-10-19 18:21:18,514 - INFO - 172.31.196.60 - - [19/Oct/2024 18:21:18] "GET /api/items?map_id=1 HTTP/1.1" 200 -
+2024-10-19 18:21:18,601 - INFO - 172.31.196.60 - - [19/Oct/2024 18:21:18] "[33mHEAD /static/thumbnails/20241018_173844_47d7cf43.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:21:18,602 - INFO - 172.31.196.60 - - [19/Oct/2024 18:21:18] "[33mHEAD /static/thumbnails/20241018_173743_7e7d8d33.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:21:18,614 - INFO - 172.31.196.60 - - [19/Oct/2024 18:21:18] "HEAD /static/thumbnails/20241018_150242_c2a5134b.png HTTP/1.1" 200 -
+2024-10-19 18:21:18,615 - INFO - 172.31.196.60 - - [19/Oct/2024 18:21:18] "HEAD /static/thumbnails/20241018_150628_7b9b8b60.png HTTP/1.1" 200 -
+2024-10-19 18:21:18,617 - INFO - 172.31.196.60 - - [19/Oct/2024 18:21:18] "HEAD /static/thumbnails/20241018_150915_9ee2ee5b.png HTTP/1.1" 200 -
+2024-10-19 18:21:18,672 - INFO - 172.31.196.60 - - [19/Oct/2024 18:21:18] "HEAD /static/thumbnails/20241018_150114_e2307150.png HTTP/1.1" 200 -
+2024-10-19 18:21:18,681 - INFO - 172.31.196.60 - - [19/Oct/2024 18:21:18] "[33mHEAD /static/thumbnails/20241018_174024_7df52a7d.jpeg HTTP/1.1[0m" 404 -
+2024-10-19 18:21:18,682 - INFO - 172.31.196.60 - - [19/Oct/2024 18:21:18] "[33mHEAD /static/thumbnails/20241016_153624_1dbede16.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:21:18,695 - INFO - 172.31.196.60 - - [19/Oct/2024 18:21:18] "[33mHEAD /static/thumbnails/20241018_173727_dc77ec8d.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:21:18,696 - INFO - 172.31.196.60 - - [19/Oct/2024 18:21:18] "[33mHEAD /static/thumbnails/20241016_150011_83503f4f.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:21:18,699 - INFO - 172.31.196.60 - - [19/Oct/2024 18:21:18] "HEAD /static/thumbnails/20241018_150652_7df45f90.png HTTP/1.1" 200 -
+2024-10-19 18:21:18,753 - INFO - 172.31.196.60 - - [19/Oct/2024 18:21:18] "HEAD /static/thumbnails/20241019_150025_1180cdbe.jpg HTTP/1.1" 200 -
+2024-10-19 18:21:18,761 - INFO - 172.31.196.60 - - [19/Oct/2024 18:21:18] "[33mHEAD /static/thumbnails/20241018_173921_fb220825.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:21:18,765 - INFO - 172.31.196.60 - - [19/Oct/2024 18:21:18] "[33mHEAD /static/thumbnails/20241016_153208_247e423e.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:21:18,775 - INFO - 172.31.196.60 - - [19/Oct/2024 18:21:18] "[33mHEAD /static/thumbnails/20241016_154030_89cfc546.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:21:18,778 - INFO - 172.31.196.60 - - [19/Oct/2024 18:21:18] "[33mHEAD /static/thumbnails/20241016_153707_39faf826.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:21:18,787 - INFO - 172.31.196.60 - - [19/Oct/2024 18:21:18] "[33mHEAD /static/thumbnails/20241016_151142_bf6008cc.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:21:18,835 - INFO - 172.31.196.60 - - [19/Oct/2024 18:21:18] "[33mHEAD /static/thumbnails/20241016_152258_1f8a6141.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:21:18,839 - INFO - 172.31.196.60 - - [19/Oct/2024 18:21:18] "[33mHEAD /null HTTP/1.1[0m" 404 -
+2024-10-19 18:21:18,845 - INFO - 172.31.196.60 - - [19/Oct/2024 18:21:18] "GET /static/img/default.png HTTP/1.1" 200 -
+2024-10-19 18:21:18,853 - INFO - 172.31.196.60 - - [19/Oct/2024 18:21:18] "GET /static/thumbnails/20241018_150628_7b9b8b60.png HTTP/1.1" 200 -
+2024-10-19 18:21:18,856 - INFO - 172.31.196.60 - - [19/Oct/2024 18:21:18] "GET /static/thumbnails/20241018_150915_9ee2ee5b.png HTTP/1.1" 200 -
+2024-10-19 18:21:18,866 - INFO - 172.31.196.60 - - [19/Oct/2024 18:21:18] "GET /static/thumbnails/20241018_150114_e2307150.png HTTP/1.1" 200 -
+2024-10-19 18:21:18,917 - INFO - 172.31.196.60 - - [19/Oct/2024 18:21:18] "GET /static/thumbnails/20241018_150242_c2a5134b.png HTTP/1.1" 200 -
+2024-10-19 18:21:18,920 - INFO - 172.31.196.60 - - [19/Oct/2024 18:21:18] "GET /static/thumbnails/20241018_150652_7df45f90.png HTTP/1.1" 200 -
+2024-10-19 18:21:18,927 - INFO - 172.31.196.60 - - [19/Oct/2024 18:21:18] "GET /static/thumbnails/20241019_150025_1180cdbe.jpg HTTP/1.1" 200 -
+2024-10-19 18:21:54,057 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-19 18:21:54,284 - INFO - 172.31.196.60 - - [19/Oct/2024 18:21:54] "GET / HTTP/1.1" 200 -
+2024-10-19 18:21:54,391 - INFO - 172.31.196.60 - - [19/Oct/2024 18:21:54] "GET /static/css/styles.css HTTP/1.1" 200 -
+2024-10-19 18:21:54,405 - INFO - 172.31.196.60 - - [19/Oct/2024 18:21:54] "GET /static/js/script.js HTTP/1.1" 200 -
+2024-10-19 18:21:54,731 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps
+2024-10-19 18:21:54,731 - INFO - Fetching all maps
+2024-10-19 18:21:54,955 - INFO - 172.31.196.60 - - [19/Oct/2024 18:21:54] "GET /api/maps HTTP/1.1" 200 -
+2024-10-19 18:21:55,037 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps/1
+2024-10-19 18:21:55,037 - INFO - Fetching map with ID: 1
+2024-10-19 18:21:55,261 - INFO - 172.31.196.60 - - [19/Oct/2024 18:21:55] "GET /api/maps/1 HTTP/1.1" 200 -
+2024-10-19 18:21:55,349 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/static/maps/main.svg
+2024-10-19 18:21:55,349 - INFO - Attempting to serve static file: /home/runner/workspace/static/maps/main.svg
+2024-10-19 18:21:55,349 - INFO - 172.31.196.60 - - [19/Oct/2024 18:21:55] "GET /static/maps/main.svg HTTP/1.1" 200 -
+2024-10-19 18:21:55,568 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/items?map_id=1
+2024-10-19 18:21:55,569 - INFO - Fetching items for map ID: 1
+2024-10-19 18:21:55,793 - INFO - 172.31.196.60 - - [19/Oct/2024 18:21:55] "GET /api/items?map_id=1 HTTP/1.1" 200 -
+2024-10-19 18:21:55,881 - INFO - 172.31.196.60 - - [19/Oct/2024 18:21:55] "[33mHEAD /static/thumbnails/20241018_173844_47d7cf43.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:21:55,884 - INFO - 172.31.196.60 - - [19/Oct/2024 18:21:55] "[33mHEAD /static/thumbnails/20241018_173743_7e7d8d33.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:21:55,894 - INFO - 172.31.196.60 - - [19/Oct/2024 18:21:55] "HEAD /static/thumbnails/20241018_150114_e2307150.png HTTP/1.1" 200 -
+2024-10-19 18:21:55,894 - INFO - 172.31.196.60 - - [19/Oct/2024 18:21:55] "HEAD /static/thumbnails/20241018_150242_c2a5134b.png HTTP/1.1" 200 -
+2024-10-19 18:21:55,897 - INFO - 172.31.196.60 - - [19/Oct/2024 18:21:55] "HEAD /static/thumbnails/20241018_150915_9ee2ee5b.png HTTP/1.1" 200 -
+2024-10-19 18:21:55,898 - INFO - 172.31.196.60 - - [19/Oct/2024 18:21:55] "HEAD /static/thumbnails/20241018_150628_7b9b8b60.png HTTP/1.1" 200 -
+2024-10-19 18:21:55,961 - INFO - 172.31.196.60 - - [19/Oct/2024 18:21:55] "[33mHEAD /static/thumbnails/20241016_153624_1dbede16.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:21:55,964 - INFO - 172.31.196.60 - - [19/Oct/2024 18:21:55] "[33mHEAD /static/thumbnails/20241018_174024_7df52a7d.jpeg HTTP/1.1[0m" 404 -
+2024-10-19 18:21:55,973 - INFO - 172.31.196.60 - - [19/Oct/2024 18:21:55] "[33mHEAD /static/thumbnails/20241016_150011_83503f4f.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:21:55,977 - INFO - 172.31.196.60 - - [19/Oct/2024 18:21:55] "[33mHEAD /static/thumbnails/20241018_173727_dc77ec8d.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:21:55,978 - INFO - 172.31.196.60 - - [19/Oct/2024 18:21:55] "HEAD /static/thumbnails/20241019_150025_1180cdbe.jpg HTTP/1.1" 200 -
+2024-10-19 18:21:55,979 - INFO - 172.31.196.60 - - [19/Oct/2024 18:21:55] "HEAD /static/thumbnails/20241018_150652_7df45f90.png HTTP/1.1" 200 -
+2024-10-19 18:21:56,041 - INFO - 172.31.196.60 - - [19/Oct/2024 18:21:56] "[33mHEAD /static/thumbnails/20241018_173921_fb220825.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:21:56,044 - INFO - 172.31.196.60 - - [19/Oct/2024 18:21:56] "[33mHEAD /static/thumbnails/20241016_153208_247e423e.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:21:56,050 - INFO - 172.31.196.60 - - [19/Oct/2024 18:21:56] "[33mHEAD /static/thumbnails/20241016_154030_89cfc546.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:21:56,056 - INFO - 172.31.196.60 - - [19/Oct/2024 18:21:56] "[33mHEAD /static/thumbnails/20241016_153707_39faf826.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:21:56,060 - INFO - 172.31.196.60 - - [19/Oct/2024 18:21:56] "[33mHEAD /static/thumbnails/20241016_151142_bf6008cc.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:21:56,061 - INFO - 172.31.196.60 - - [19/Oct/2024 18:21:56] "[33mHEAD /static/thumbnails/20241016_152258_1f8a6141.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:21:56,121 - INFO - 172.31.196.60 - - [19/Oct/2024 18:21:56] "[33mHEAD /null HTTP/1.1[0m" 404 -
+2024-10-19 18:21:56,124 - INFO - 172.31.196.60 - - [19/Oct/2024 18:21:56] "GET /static/thumbnails/20241018_150114_e2307150.png HTTP/1.1" 200 -
+2024-10-19 18:21:56,128 - INFO - 172.31.196.60 - - [19/Oct/2024 18:21:56] "GET /static/thumbnails/20241018_150242_c2a5134b.png HTTP/1.1" 200 -
+2024-10-19 18:21:56,134 - INFO - 172.31.196.60 - - [19/Oct/2024 18:21:56] "GET /static/thumbnails/20241018_150628_7b9b8b60.png HTTP/1.1" 200 -
+2024-10-19 18:21:56,140 - INFO - 172.31.196.60 - - [19/Oct/2024 18:21:56] "GET /static/img/default.png HTTP/1.1" 200 -
+2024-10-19 18:21:56,142 - INFO - 172.31.196.60 - - [19/Oct/2024 18:21:56] "GET /static/thumbnails/20241018_150915_9ee2ee5b.png HTTP/1.1" 200 -
+2024-10-19 18:21:56,205 - INFO - 172.31.196.60 - - [19/Oct/2024 18:21:56] "GET /static/thumbnails/20241019_150025_1180cdbe.jpg HTTP/1.1" 200 -
+2024-10-19 18:21:56,222 - INFO - 172.31.196.60 - - [19/Oct/2024 18:21:56] "GET /static/thumbnails/20241018_150652_7df45f90.png HTTP/1.1" 200 -
+2024-10-19 18:22:11,863 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:11] "GET /static/thumbnails/20241018_150628_7b9b8b60.png HTTP/1.1" 200 -
+2024-10-19 18:22:16,734 - DEBUG - Request Method: PUT, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/items/93
+2024-10-19 18:22:16,743 - DEBUG - Request Method: PUT, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/items/93
+2024-10-19 18:22:17,049 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:17] "PUT /api/items/93 HTTP/1.1" 200 -
+2024-10-19 18:22:17,135 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/items?map_id=1
+2024-10-19 18:22:17,135 - INFO - Fetching items for map ID: 1
+2024-10-19 18:22:17,264 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:17] "PUT /api/items/93 HTTP/1.1" 200 -
+2024-10-19 18:22:17,354 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/items?map_id=1
+2024-10-19 18:22:17,354 - INFO - Fetching items for map ID: 1
+2024-10-19 18:22:17,360 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:17] "GET /api/items?map_id=1 HTTP/1.1" 200 -
+2024-10-19 18:22:17,465 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:17] "[33mHEAD /static/thumbnails/20241018_173844_47d7cf43.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:22:17,477 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:17] "[33mHEAD /static/thumbnails/20241018_173743_7e7d8d33.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:22:17,480 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:17] "HEAD /static/thumbnails/20241018_150114_e2307150.png HTTP/1.1" 200 -
+2024-10-19 18:22:17,482 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:17] "HEAD /static/thumbnails/20241018_150628_7b9b8b60.png HTTP/1.1" 200 -
+2024-10-19 18:22:17,482 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:17] "HEAD /static/thumbnails/20241018_150242_c2a5134b.png HTTP/1.1" 200 -
+2024-10-19 18:22:17,542 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:17] "HEAD /static/thumbnails/20241018_150915_9ee2ee5b.png HTTP/1.1" 200 -
+2024-10-19 18:22:17,556 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:17] "[33mHEAD /static/thumbnails/20241016_153624_1dbede16.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:22:17,558 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:17] "[33mHEAD /static/thumbnails/20241018_174024_7df52a7d.jpeg HTTP/1.1[0m" 404 -
+2024-10-19 18:22:17,560 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:17] "[33mHEAD /static/thumbnails/20241016_150011_83503f4f.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:22:17,561 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:17] "[33mHEAD /static/thumbnails/20241018_173727_dc77ec8d.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:22:17,578 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:17] "GET /api/items?map_id=1 HTTP/1.1" 200 -
+2024-10-19 18:22:17,621 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:17] "HEAD /static/thumbnails/20241018_150652_7df45f90.png HTTP/1.1" 200 -
+2024-10-19 18:22:17,636 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:17] "HEAD /static/thumbnails/20241019_150025_1180cdbe.jpg HTTP/1.1" 200 -
+2024-10-19 18:22:17,637 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:17] "[33mHEAD /static/thumbnails/20241018_173921_fb220825.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:22:17,638 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:17] "[33mHEAD /static/thumbnails/20241016_154030_89cfc546.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:22:17,639 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:17] "[33mHEAD /static/thumbnails/20241016_153208_247e423e.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:22:17,670 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:17] "[33mHEAD /static/thumbnails/20241016_153707_39faf826.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:22:17,700 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:17] "[33mHEAD /static/thumbnails/20241016_151142_bf6008cc.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:22:17,716 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:17] "[33mHEAD /static/thumbnails/20241016_152258_1f8a6141.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:22:17,720 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:17] "[33mHEAD /null HTTP/1.1[0m" 404 -
+2024-10-19 18:22:17,721 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:17] "GET /static/img/default.png HTTP/1.1" 200 -
+2024-10-19 18:22:17,732 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:17] "GET /static/thumbnails/20241018_150114_e2307150.png HTTP/1.1" 200 -
+2024-10-19 18:22:17,748 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:17] "GET /static/thumbnails/20241018_150915_9ee2ee5b.png HTTP/1.1" 200 -
+2024-10-19 18:22:17,780 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:17] "[33mHEAD /static/thumbnails/20241018_173844_47d7cf43.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:22:17,796 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:17] "[33mHEAD /static/thumbnails/20241018_173743_7e7d8d33.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:22:17,800 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:17] "HEAD /static/thumbnails/20241018_150242_c2a5134b.png HTTP/1.1" 200 -
+2024-10-19 18:22:17,802 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:17] "HEAD /static/thumbnails/20241018_150114_e2307150.png HTTP/1.1" 200 -
+2024-10-19 18:22:17,858 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:17] "HEAD /static/thumbnails/20241018_150628_7b9b8b60.png HTTP/1.1" 200 -
+2024-10-19 18:22:17,877 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:17] "HEAD /static/thumbnails/20241018_150915_9ee2ee5b.png HTTP/1.1" 200 -
+2024-10-19 18:22:17,880 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:17] "[33mHEAD /static/thumbnails/20241018_174024_7df52a7d.jpeg HTTP/1.1[0m" 404 -
+2024-10-19 18:22:17,881 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:17] "[33mHEAD /static/thumbnails/20241016_153624_1dbede16.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:22:17,937 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:17] "[33mHEAD /static/thumbnails/20241016_150011_83503f4f.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:22:17,956 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:17] "[33mHEAD /static/thumbnails/20241018_173727_dc77ec8d.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:22:17,958 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:17] "HEAD /static/thumbnails/20241018_150652_7df45f90.png HTTP/1.1" 200 -
+2024-10-19 18:22:17,960 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:17] "HEAD /static/thumbnails/20241019_150025_1180cdbe.jpg HTTP/1.1" 200 -
+2024-10-19 18:22:18,014 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:18] "[33mHEAD /static/thumbnails/20241018_173921_fb220825.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:22:18,037 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:18] "[33mHEAD /static/thumbnails/20241016_154030_89cfc546.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:22:18,038 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:18] "[33mHEAD /static/thumbnails/20241016_153707_39faf826.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:22:18,039 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:18] "[33mHEAD /static/thumbnails/20241016_153208_247e423e.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:22:18,061 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:18] "[33mHEAD /static/thumbnails/20241016_151142_bf6008cc.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:22:18,090 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:18] "[33mHEAD /static/thumbnails/20241016_152258_1f8a6141.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:22:18,094 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:18] "[33mHEAD /null HTTP/1.1[0m" 404 -
+2024-10-19 18:22:18,118 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:18] "GET /static/thumbnails/20241018_150114_e2307150.png HTTP/1.1" 200 -
+2024-10-19 18:22:18,118 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:18] "GET /static/img/default.png HTTP/1.1" 200 -
+2024-10-19 18:22:18,120 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:18] "GET /static/thumbnails/20241018_150242_c2a5134b.png HTTP/1.1" 200 -
+2024-10-19 18:22:18,140 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:18] "GET /static/thumbnails/20241018_150628_7b9b8b60.png HTTP/1.1" 200 -
+2024-10-19 18:22:18,173 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:18] "GET /static/thumbnails/20241018_150915_9ee2ee5b.png HTTP/1.1" 200 -
+2024-10-19 18:22:18,180 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:18] "GET /static/thumbnails/20241018_150242_c2a5134b.png HTTP/1.1" 200 -
+2024-10-19 18:22:18,198 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:18] "GET /static/thumbnails/20241018_150628_7b9b8b60.png HTTP/1.1" 200 -
+2024-10-19 18:22:18,294 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:18] "GET /static/thumbnails/20241018_150652_7df45f90.png HTTP/1.1" 200 -
+2024-10-19 18:22:18,354 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:18] "GET /static/thumbnails/20241019_150025_1180cdbe.jpg HTTP/1.1" 200 -
+2024-10-19 18:22:50,190 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-19 18:22:50,416 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:50] "GET / HTTP/1.1" 200 -
+2024-10-19 18:22:50,523 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:50] "GET /static/css/styles.css HTTP/1.1" 200 -
+2024-10-19 18:22:50,534 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:50] "GET /static/js/script.js HTTP/1.1" 200 -
+2024-10-19 18:22:50,810 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps
+2024-10-19 18:22:50,810 - INFO - Fetching all maps
+2024-10-19 18:22:51,032 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:51] "GET /api/maps HTTP/1.1" 200 -
+2024-10-19 18:22:51,118 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps/1
+2024-10-19 18:22:51,119 - INFO - Fetching map with ID: 1
+2024-10-19 18:22:51,343 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:51] "GET /api/maps/1 HTTP/1.1" 200 -
+2024-10-19 18:22:51,428 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/static/maps/main.svg
+2024-10-19 18:22:51,428 - INFO - Attempting to serve static file: /home/runner/workspace/static/maps/main.svg
+2024-10-19 18:22:51,429 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:51] "GET /static/maps/main.svg HTTP/1.1" 200 -
+2024-10-19 18:22:51,653 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/items?map_id=1
+2024-10-19 18:22:51,653 - INFO - Fetching items for map ID: 1
+2024-10-19 18:22:51,875 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:51] "GET /api/items?map_id=1 HTTP/1.1" 200 -
+2024-10-19 18:22:51,963 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:51] "[33mHEAD /static/thumbnails/20241018_173844_47d7cf43.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:22:51,966 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:51] "[33mHEAD /static/thumbnails/20241018_173743_7e7d8d33.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:22:51,977 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:51] "HEAD /static/thumbnails/20241018_150242_c2a5134b.png HTTP/1.1" 200 -
+2024-10-19 18:22:51,983 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:51] "HEAD /static/thumbnails/20241018_150114_e2307150.png HTTP/1.1" 200 -
+2024-10-19 18:22:51,984 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:51] "HEAD /static/thumbnails/20241018_150628_7b9b8b60.png HTTP/1.1" 200 -
+2024-10-19 18:22:51,984 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:51] "HEAD /static/thumbnails/20241018_150915_9ee2ee5b.png HTTP/1.1" 200 -
+2024-10-19 18:22:52,042 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:52] "[33mHEAD /static/thumbnails/20241016_153624_1dbede16.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:22:52,046 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:52] "[33mHEAD /static/thumbnails/20241018_174024_7df52a7d.jpeg HTTP/1.1[0m" 404 -
+2024-10-19 18:22:52,057 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:52] "[33mHEAD /static/thumbnails/20241016_150011_83503f4f.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:22:52,062 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:52] "[33mHEAD /static/thumbnails/20241018_173727_dc77ec8d.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:22:52,067 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:52] "HEAD /static/thumbnails/20241019_150025_1180cdbe.jpg HTTP/1.1" 200 -
+2024-10-19 18:22:52,067 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:52] "HEAD /static/thumbnails/20241018_150652_7df45f90.png HTTP/1.1" 200 -
+2024-10-19 18:22:52,123 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:52] "[33mHEAD /static/thumbnails/20241018_173921_fb220825.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:22:52,126 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:52] "[33mHEAD /static/thumbnails/20241016_153208_247e423e.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:22:52,134 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:52] "[33mHEAD /static/thumbnails/20241016_154030_89cfc546.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:22:52,140 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:52] "[33mHEAD /static/thumbnails/20241016_153707_39faf826.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:22:52,149 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:52] "[33mHEAD /static/thumbnails/20241016_151142_bf6008cc.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:22:52,152 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:52] "[33mHEAD /static/thumbnails/20241016_152258_1f8a6141.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:22:52,203 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:52] "[33mHEAD /null HTTP/1.1[0m" 404 -
+2024-10-19 18:22:52,206 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:52] "GET /static/img/default.png HTTP/1.1" 200 -
+2024-10-19 18:22:52,214 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:52] "GET /static/thumbnails/20241018_150242_c2a5134b.png HTTP/1.1" 200 -
+2024-10-19 18:22:52,218 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:52] "GET /static/thumbnails/20241018_150114_e2307150.png HTTP/1.1" 200 -
+2024-10-19 18:22:52,227 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:52] "GET /static/thumbnails/20241018_150915_9ee2ee5b.png HTTP/1.1" 200 -
+2024-10-19 18:22:52,231 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:52] "GET /static/thumbnails/20241018_150628_7b9b8b60.png HTTP/1.1" 200 -
+2024-10-19 18:22:52,287 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:52] "GET /static/thumbnails/20241019_150025_1180cdbe.jpg HTTP/1.1" 200 -
+2024-10-19 18:22:52,288 - INFO - 172.31.196.60 - - [19/Oct/2024 18:22:52] "GET /static/thumbnails/20241018_150652_7df45f90.png HTTP/1.1" 200 -
+2024-10-19 18:23:40,585 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/chat
+2024-10-19 18:23:40,585 - INFO - Sending message to AI: do we have robots
+2024-10-19 18:23:40,737 - INFO - HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
+2024-10-19 18:23:40,920 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_U3Lttcwjyq7d3IhGBIn35BgO/messages "HTTP/1.1 200 OK"
+2024-10-19 18:23:41,584 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_U3Lttcwjyq7d3IhGBIn35BgO/runs "HTTP/1.1 200 OK"
+2024-10-19 18:23:41,778 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_U3Lttcwjyq7d3IhGBIn35BgO/runs/run_5abHvEManNqNMzQm3lcXdf3b "HTTP/1.1 200 OK"
+2024-10-19 18:23:41,928 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_U3Lttcwjyq7d3IhGBIn35BgO/runs/run_5abHvEManNqNMzQm3lcXdf3b "HTTP/1.1 200 OK"
+2024-10-19 18:23:42,077 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_U3Lttcwjyq7d3IhGBIn35BgO/runs/run_5abHvEManNqNMzQm3lcXdf3b "HTTP/1.1 200 OK"
+2024-10-19 18:23:42,228 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_U3Lttcwjyq7d3IhGBIn35BgO/runs/run_5abHvEManNqNMzQm3lcXdf3b "HTTP/1.1 200 OK"
+2024-10-19 18:23:42,387 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_U3Lttcwjyq7d3IhGBIn35BgO/runs/run_5abHvEManNqNMzQm3lcXdf3b "HTTP/1.1 200 OK"
+2024-10-19 18:23:42,543 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_U3Lttcwjyq7d3IhGBIn35BgO/runs/run_5abHvEManNqNMzQm3lcXdf3b "HTTP/1.1 200 OK"
+2024-10-19 18:23:42,722 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_U3Lttcwjyq7d3IhGBIn35BgO/runs/run_5abHvEManNqNMzQm3lcXdf3b "HTTP/1.1 200 OK"
+2024-10-19 18:23:42,881 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_U3Lttcwjyq7d3IhGBIn35BgO/runs/run_5abHvEManNqNMzQm3lcXdf3b "HTTP/1.1 200 OK"
+2024-10-19 18:23:43,260 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_U3Lttcwjyq7d3IhGBIn35BgO/runs/run_5abHvEManNqNMzQm3lcXdf3b "HTTP/1.1 200 OK"
+2024-10-19 18:23:43,380 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_U3Lttcwjyq7d3IhGBIn35BgO/messages "HTTP/1.1 200 OK"
+2024-10-19 18:23:43,382 - INFO - Received response from AI: Yes, within the Innovation Lab, we have the **RoboMaster S1**. It's an educational robot designed to provide users with a comprehensive understanding of science, math, physics, and programming through engaging gameplay. The RoboMaster S1 is inspired by DJI's annual RoboMaster robotics competition and offers various intelligent features to enhance learning.
+2024-10-19 18:23:43,383 - INFO - 172.31.196.60 - - [19/Oct/2024 18:23:43] "POST /api/chat HTTP/1.1" 200 -
+2024-10-19 18:24:00,253 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/chat
+2024-10-19 18:24:00,253 - INFO - Sending message to AI: how do i write in python to make it shoot
+2024-10-19 18:24:00,394 - INFO - HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
+2024-10-19 18:24:00,577 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_PlK3pr0hh8lxnegpZrTPc76S/messages "HTTP/1.1 200 OK"
+2024-10-19 18:24:01,116 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_PlK3pr0hh8lxnegpZrTPc76S/runs "HTTP/1.1 200 OK"
+2024-10-19 18:24:01,278 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_PlK3pr0hh8lxnegpZrTPc76S/runs/run_Z3jyGK5atgHE6dFcie4dXfpw "HTTP/1.1 200 OK"
+2024-10-19 18:24:01,431 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_PlK3pr0hh8lxnegpZrTPc76S/runs/run_Z3jyGK5atgHE6dFcie4dXfpw "HTTP/1.1 200 OK"
+2024-10-19 18:24:01,577 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_PlK3pr0hh8lxnegpZrTPc76S/runs/run_Z3jyGK5atgHE6dFcie4dXfpw "HTTP/1.1 200 OK"
+2024-10-19 18:24:01,733 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_PlK3pr0hh8lxnegpZrTPc76S/runs/run_Z3jyGK5atgHE6dFcie4dXfpw "HTTP/1.1 200 OK"
+2024-10-19 18:24:01,928 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_PlK3pr0hh8lxnegpZrTPc76S/runs/run_Z3jyGK5atgHE6dFcie4dXfpw "HTTP/1.1 200 OK"
+2024-10-19 18:24:02,095 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_PlK3pr0hh8lxnegpZrTPc76S/runs/run_Z3jyGK5atgHE6dFcie4dXfpw "HTTP/1.1 200 OK"
+2024-10-19 18:24:02,388 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_PlK3pr0hh8lxnegpZrTPc76S/runs/run_Z3jyGK5atgHE6dFcie4dXfpw "HTTP/1.1 200 OK"
+2024-10-19 18:24:02,542 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_PlK3pr0hh8lxnegpZrTPc76S/runs/run_Z3jyGK5atgHE6dFcie4dXfpw "HTTP/1.1 200 OK"
+2024-10-19 18:24:02,695 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_PlK3pr0hh8lxnegpZrTPc76S/runs/run_Z3jyGK5atgHE6dFcie4dXfpw "HTTP/1.1 200 OK"
+2024-10-19 18:24:02,920 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_PlK3pr0hh8lxnegpZrTPc76S/runs/run_Z3jyGK5atgHE6dFcie4dXfpw "HTTP/1.1 200 OK"
+2024-10-19 18:24:03,088 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_PlK3pr0hh8lxnegpZrTPc76S/runs/run_Z3jyGK5atgHE6dFcie4dXfpw "HTTP/1.1 200 OK"
+2024-10-19 18:24:03,292 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_PlK3pr0hh8lxnegpZrTPc76S/runs/run_Z3jyGK5atgHE6dFcie4dXfpw "HTTP/1.1 200 OK"
+2024-10-19 18:24:03,441 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_PlK3pr0hh8lxnegpZrTPc76S/runs/run_Z3jyGK5atgHE6dFcie4dXfpw "HTTP/1.1 200 OK"
+2024-10-19 18:24:03,590 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_PlK3pr0hh8lxnegpZrTPc76S/runs/run_Z3jyGK5atgHE6dFcie4dXfpw "HTTP/1.1 200 OK"
+2024-10-19 18:24:03,788 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_PlK3pr0hh8lxnegpZrTPc76S/runs/run_Z3jyGK5atgHE6dFcie4dXfpw "HTTP/1.1 200 OK"
+2024-10-19 18:24:03,962 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_PlK3pr0hh8lxnegpZrTPc76S/runs/run_Z3jyGK5atgHE6dFcie4dXfpw "HTTP/1.1 200 OK"
+2024-10-19 18:24:04,125 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_PlK3pr0hh8lxnegpZrTPc76S/runs/run_Z3jyGK5atgHE6dFcie4dXfpw "HTTP/1.1 200 OK"
+2024-10-19 18:24:04,266 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_PlK3pr0hh8lxnegpZrTPc76S/runs/run_Z3jyGK5atgHE6dFcie4dXfpw "HTTP/1.1 200 OK"
+2024-10-19 18:24:04,403 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_PlK3pr0hh8lxnegpZrTPc76S/runs/run_Z3jyGK5atgHE6dFcie4dXfpw "HTTP/1.1 200 OK"
+2024-10-19 18:24:04,549 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_PlK3pr0hh8lxnegpZrTPc76S/runs/run_Z3jyGK5atgHE6dFcie4dXfpw "HTTP/1.1 200 OK"
+2024-10-19 18:24:04,776 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_PlK3pr0hh8lxnegpZrTPc76S/runs/run_Z3jyGK5atgHE6dFcie4dXfpw "HTTP/1.1 200 OK"
+2024-10-19 18:24:04,916 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_PlK3pr0hh8lxnegpZrTPc76S/runs/run_Z3jyGK5atgHE6dFcie4dXfpw "HTTP/1.1 200 OK"
+2024-10-19 18:24:05,092 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_PlK3pr0hh8lxnegpZrTPc76S/runs/run_Z3jyGK5atgHE6dFcie4dXfpw "HTTP/1.1 200 OK"
+2024-10-19 18:24:05,248 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_PlK3pr0hh8lxnegpZrTPc76S/runs/run_Z3jyGK5atgHE6dFcie4dXfpw "HTTP/1.1 200 OK"
+2024-10-19 18:24:05,401 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_PlK3pr0hh8lxnegpZrTPc76S/runs/run_Z3jyGK5atgHE6dFcie4dXfpw "HTTP/1.1 200 OK"
+2024-10-19 18:24:05,568 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_PlK3pr0hh8lxnegpZrTPc76S/runs/run_Z3jyGK5atgHE6dFcie4dXfpw "HTTP/1.1 200 OK"
+2024-10-19 18:24:05,790 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_PlK3pr0hh8lxnegpZrTPc76S/runs/run_Z3jyGK5atgHE6dFcie4dXfpw "HTTP/1.1 200 OK"
+2024-10-19 18:24:05,941 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_PlK3pr0hh8lxnegpZrTPc76S/runs/run_Z3jyGK5atgHE6dFcie4dXfpw "HTTP/1.1 200 OK"
+2024-10-19 18:24:06,183 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_PlK3pr0hh8lxnegpZrTPc76S/runs/run_Z3jyGK5atgHE6dFcie4dXfpw "HTTP/1.1 200 OK"
+2024-10-19 18:24:06,421 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_PlK3pr0hh8lxnegpZrTPc76S/runs/run_Z3jyGK5atgHE6dFcie4dXfpw "HTTP/1.1 200 OK"
+2024-10-19 18:24:06,583 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_PlK3pr0hh8lxnegpZrTPc76S/runs/run_Z3jyGK5atgHE6dFcie4dXfpw "HTTP/1.1 200 OK"
+2024-10-19 18:24:06,748 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_PlK3pr0hh8lxnegpZrTPc76S/messages "HTTP/1.1 200 OK"
+2024-10-19 18:24:06,749 - INFO - Received response from AI: To write a Python program that allows a robot, such as the RoboMaster S1, to shoot, you'll need to interact with the robot's SDK (Software Development Kit) or API (Application Programming Interface). Here's a general guide to achieve this:
+
+### 1. **Setting Up Your Environment**
+   - Install any necessary libraries from DJI (the manufacturer of RoboMaster).
+   - Ensure your IDE (Integrated Development Environment) or code editor is ready for Python development.
+   - Connect your RoboMaster S1 to the same Wi-Fi network as your computer.
+
+### 2. **Basic Code Structure**
+Use the following skeleton as a base for your code:
+
+```python
+from robomaster import robot
+
+# Initialize the robot
+my_robot = robot.Robot()
+# Create a connection to the robot
+my_robot.initialize(conn_type="none")  # Use "wifi" if connecting via Wi-Fi
+
+# Access the shooting mechanism
+shooting = my_robot.shoot
+
+# Function to shoot the robot's cannon
+def shoot_cannon():
+    # Set the shooting power - this value depends on your setup
+    shooting.set_shoot_power(100)  # Example power level
+    shooting.shot()  # Command to shoot
+
+# Main part of the program
+if __name__ == "__main__":
+    try:
+        shoot_cannon()  # Call the function to shoot
+    finally:
+        my_robot.close()  # Make sure to close the connection
+```
+
+### 3. **Safety Precautions**
+   - Always operate the robot in a safe environment to avoid injury or damage.
+   - Ensure that there are no people or pets within the shooting range.
+   - Familiarize yourself with the robot's safety guidelines.
+
+### 4. **Best Practices**
+   - Test the shooting mechanism without any ammunition initially to get familiar with the commands.
+   - Start with lower power settings to better understand how the robot responds.
+   - Clearly label your code and keep it organized for future improvements.
+
+### 5. **Troubleshooting**
+   - If the robot does not shoot, check the battery levels and connection.
+   - Ensure that you are using the correct power level settings.
+   - Refer to the RoboMaster S1 manual for specific commands and troubleshooting tips.
+
+By following this guide, you will be able to program the RoboMaster S1 to shoot responsibly and effectively.
+2024-10-19 18:24:06,749 - INFO - 172.31.196.60 - - [19/Oct/2024 18:24:06] "POST /api/chat HTTP/1.1" 200 -
+2024-10-19 18:31:49,418 - INFO - 172.31.196.60 - - [19/Oct/2024 18:31:49] "GET /static/thumbnails/20241018_150242_c2a5134b.png HTTP/1.1" 200 -
