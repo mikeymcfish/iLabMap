@@ -4,7 +4,7 @@ from flask import current_app
 def list_available_items():
     try:
         items = Item.query.all()
-        item_list = [{"id": item.id, "name": item.name, "tags": item.tags, "quantity": item.quantity} for item in items]
+        item_list = [{"id": item.id, "name": item.name, "tags": item.tags, "description": item.description} for item in items]
         return item_list
     except Exception as e:
         if current_app:

@@ -31,10 +31,11 @@ document.addEventListener('DOMContentLoaded', function() {
     function addMessage(message, isUser = false) {
         const messageDiv = document.createElement('div');
         messageDiv.className = `message ${isUser ? 'user-message' : 'ai-message'}`;
-        messageDiv.innerHTML = `<div class="message-content">${message}</div>`;
+        messageDiv.innerHTML = `<div class="message-content">${marked.parse(message)}</div>`;
         chatMessages.appendChild(messageDiv);
         chatMessages.scrollTop = chatMessages.scrollHeight;
     }
+
 
     function sendChatMessage() {
         const message = userInput.value.trim();

@@ -15,7 +15,7 @@ from utils import list_available_items
 
 main_blueprint = Blueprint('main', __name__)
 
-@main_blueprint.route('/api/items', methods=['GET'])
+@main_blueprint.route('/api/itemsList', methods=['GET'])
 def api_list_available_items():
     items = list_available_items()
     return jsonify(items), 200
