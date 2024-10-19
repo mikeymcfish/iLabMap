@@ -7,16 +7,11 @@ from models import Map, Item
 import os
 import uuid
 import datetime
-import openai
-import logging
-from typing import Optional
-from chat import system_prompt, get_ai_response
 
 main_blueprint = Blueprint('main', __name__)
 
-def generate_unique_filename(filename: Optional[str]) -> str:
-    if filename is None:
-        filename = "unnamed_file"
+def generate_unique_filename(filename):
+    """Generate a unique filename using timestamp and UUID."""
     _, file_extension = os.path.splitext(filename)
     timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
     random_string = str(uuid.uuid4())[:8]
@@ -25,7 +20,7 @@ def generate_unique_filename(filename: Optional[str]) -> str:
 @main_blueprint.before_request
 def log_request_info():
     current_app.logger.debug('Request Method: %s, URL: %s', request.method, request.url)
-    
+
 @main_blueprint.route('/')
 def index():
     try:
@@ -39,7 +34,7 @@ def index():
 @main_blueprint.route('/api/items/<int:item_id>', methods=['PUT'])
 def update_item(item_id):
     item = Item.query.get_or_404(item_id)
-    
+
     name = request.form.get('name')
     tags = request.form.get('tags')
     color = request.form.get('color')
@@ -77,8 +72,8 @@ def update_item(item_id):
 
     if 'image' in request.files:
         file = request.files['image']
-        if file and allowed_file(file.filename or ''):
-            filename = generate_unique_filename(secure_filename(file.filename or ''))
+        if file and allowed_file(file.filename):
+            filename = generate_unique_filename(secure_filename(file.filename))
             file_path = os.path.join(current_app.config['UPLOAD_FOLDER'], filename)
             file.save(file_path)
             item.image_path = f'/static/thumbnails/{filename}'
@@ -167,7 +162,7 @@ def items():
 
         image_path = None
         if image_file:
-            filename = generate_unique_filename(secure_filename(image_file.filename or ''))
+            filename = generate_unique_filename(secure_filename(image_file.filename))
             image_path = os.path.join(current_app.config['UPLOAD_FOLDER'],
                                       filename)
             current_app.logger.info(f"Saving image to: {image_path}")
@@ -175,20 +170,20 @@ def items():
             image_path = f'/static/thumbnails/{filename}'
 
         try:
-            new_item = Item()
-            new_item.name = data['name']
-            new_item.tags = data['tags']
-            new_item.color = data['color']
-            new_item.zone = data['zone']
-            new_item.quantity = int(data['quantity'])
-            new_item.warning = data['warning']
-            new_item.x_coord = float(data['x_coord'])
-            new_item.y_coord = float(data['y_coord'])
-            new_item.map_id = int(data['map_id'])
-            new_item.image_path = image_path
-            new_item.description = data.get('description', '')
-            new_item.link = data.get('link', '')
-
+            new_item = Item(
+                name=data['name'],
+                tags=data['tags'],
+                color=data['color'],
+                zone=data['zone'],
+                quantity=data['quantity'],
+                warning=data['warning'],
+                x_coord=data['x_coord'],
+                y_coord=data['y_coord'],
+                map_id=data['map_id'],
+                image_path=image_path,
+                description=data.get('description', ''),
+                link=data.get('link', '')
+            )
             db.session.add(new_item)
             db.session.commit()
             current_app.logger.info(f"New item added with ID: {new_item.id}")
@@ -302,7 +297,7 @@ def search():
 @main_blueprint.route('/static/<path:filename>')
 def static_files(filename):
     return send_from_directory('static', filename)
-    
+
 @main_blueprint.route('/static/maps/<path:filename>')
 def serve_static(filename):
     file_path = os.path.join(current_app.static_folder, 'maps', filename)
@@ -317,23 +312,3 @@ def serve_static(filename):
 def allowed_file(filename):
     ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif', 'webm'}
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
-
-@main_blueprint.route('/api/chat', methods=['POST'])
-def chat():
-    try:
-        data = request.json
-        user_message = data.get('message') if data else None
-        
-        if not user_message:
-            current_app.logger.error("No message provided in the request")
-            return jsonify({"error": "No message provided"}), 400
-
-        current_app.logger.info(f"Sending message to AI: {user_message}")
-
-        ai_message = get_ai_response(user_message)
-        current_app.logger.info(f"Received response from AI: {ai_message}")
-        return jsonify({"message": ai_message})
-
-    except Exception as e:
-        current_app.logger.error(f"Unexpected error in chat API: {str(e)}")
-        return jsonify({"error": "An unexpected error occurred while processing your request"}), 500
