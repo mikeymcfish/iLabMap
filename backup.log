@@ -20106,3 +20106,45 @@ Following these steps will help you keep things tidy and your prints top-notch. 
 2024-10-19 18:44:45,088 - INFO - 172.31.196.60 - - [19/Oct/2024 18:44:45] "GET /static/thumbnails/20241018_150114_e2307150.png HTTP/1.1" 200 -
 2024-10-19 18:44:45,091 - INFO - 172.31.196.60 - - [19/Oct/2024 18:44:45] "HEAD /static/thumbnails/20241018_150628_7b9b8b60.png HTTP/1.1" 200 -
 2024-10-19 18:44:45,097 - INFO - 172.31.196.60 - - [19/Oct/2024 18:44:45] "GET /static/thumbnails/20241018_150628_7b9b8b60.png HTTP/1.1" 200 -
+2024-10-19 18:46:04,034 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-19 18:46:04,267 - INFO - 172.31.196.60 - - [19/Oct/2024 18:46:04] "GET / HTTP/1.1" 200 -
+2024-10-19 18:46:04,277 - INFO - 172.31.196.60 - - [19/Oct/2024 18:46:04] "GET /static/css/styles.css HTTP/1.1" 200 -
+2024-10-19 18:46:04,291 - INFO - 172.31.196.60 - - [19/Oct/2024 18:46:04] "GET /static/js/script.js HTTP/1.1" 200 -
+2024-10-19 18:46:04,400 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps
+2024-10-19 18:46:04,400 - INFO - Fetching all maps
+2024-10-19 18:46:04,632 - INFO - 172.31.196.60 - - [19/Oct/2024 18:46:04] "GET /api/maps HTTP/1.1" 200 -
+2024-10-19 18:46:04,639 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps/1
+2024-10-19 18:46:04,639 - INFO - Fetching map with ID: 1
+2024-10-19 18:46:04,871 - INFO - 172.31.196.60 - - [19/Oct/2024 18:46:04] "GET /api/maps/1 HTTP/1.1" 200 -
+2024-10-19 18:46:04,877 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/static/maps/main.svg
+2024-10-19 18:46:04,878 - INFO - Attempting to serve static file: /home/runner/workspace/static/maps/main.svg
+2024-10-19 18:46:04,878 - INFO - 172.31.196.60 - - [19/Oct/2024 18:46:04] "GET /static/maps/main.svg HTTP/1.1" 200 -
+2024-10-19 18:46:04,900 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/items?map_id=1
+2024-10-19 18:46:04,900 - INFO - Fetching items for map ID: 1
+2024-10-19 18:46:05,132 - INFO - 172.31.196.60 - - [19/Oct/2024 18:46:05] "GET /api/items?map_id=1 HTTP/1.1" 200 -
+2024-10-19 18:46:05,145 - INFO - 172.31.196.60 - - [19/Oct/2024 18:46:05] "[33mHEAD /static/thumbnails/20241018_173844_47d7cf43.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:46:05,146 - INFO - 172.31.196.60 - - [19/Oct/2024 18:46:05] "[33mHEAD /static/thumbnails/20241018_173743_7e7d8d33.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:46:05,155 - INFO - 172.31.196.60 - - [19/Oct/2024 18:46:05] "HEAD /static/thumbnails/20241018_150628_7b9b8b60.png HTTP/1.1" 200 -
+2024-10-19 18:46:05,156 - INFO - 172.31.196.60 - - [19/Oct/2024 18:46:05] "HEAD /static/thumbnails/20241018_150114_e2307150.png HTTP/1.1" 200 -
+2024-10-19 18:46:05,160 - INFO - 172.31.196.60 - - [19/Oct/2024 18:46:05] "[33mHEAD /static/thumbnails/20241016_150011_83503f4f.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:46:05,161 - INFO - 172.31.196.60 - - [19/Oct/2024 18:46:05] "[33mHEAD /static/thumbnails/20241018_173727_dc77ec8d.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:46:05,163 - INFO - 172.31.196.60 - - [19/Oct/2024 18:46:05] "HEAD /static/thumbnails/20241018_150242_c2a5134b.png HTTP/1.1" 200 -
+2024-10-19 18:46:05,166 - INFO - 172.31.196.60 - - [19/Oct/2024 18:46:05] "HEAD /static/thumbnails/20241018_150915_9ee2ee5b.png HTTP/1.1" 200 -
+2024-10-19 18:46:05,167 - INFO - 172.31.196.60 - - [19/Oct/2024 18:46:05] "HEAD /static/thumbnails/20241019_150025_1180cdbe.jpg HTTP/1.1" 200 -
+2024-10-19 18:46:05,168 - INFO - 172.31.196.60 - - [19/Oct/2024 18:46:05] "HEAD /static/thumbnails/20241018_150652_7df45f90.png HTTP/1.1" 200 -
+2024-10-19 18:46:05,168 - INFO - 172.31.196.60 - - [19/Oct/2024 18:46:05] "[33mHEAD /static/thumbnails/20241016_153624_1dbede16.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:46:05,170 - INFO - 172.31.196.60 - - [19/Oct/2024 18:46:05] "[33mHEAD /static/thumbnails/20241018_173921_fb220825.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:46:05,171 - INFO - 172.31.196.60 - - [19/Oct/2024 18:46:05] "[33mHEAD /static/thumbnails/20241016_153208_247e423e.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:46:05,173 - INFO - 172.31.196.60 - - [19/Oct/2024 18:46:05] "[33mHEAD /static/thumbnails/20241016_153707_39faf826.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:46:05,174 - INFO - 172.31.196.60 - - [19/Oct/2024 18:46:05] "[33mHEAD /static/thumbnails/20241016_154030_89cfc546.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:46:05,175 - INFO - 172.31.196.60 - - [19/Oct/2024 18:46:05] "[33mHEAD /static/thumbnails/20241016_151142_bf6008cc.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:46:05,176 - INFO - 172.31.196.60 - - [19/Oct/2024 18:46:05] "[33mHEAD /null HTTP/1.1[0m" 404 -
+2024-10-19 18:46:05,178 - INFO - 172.31.196.60 - - [19/Oct/2024 18:46:05] "[33mHEAD /static/thumbnails/20241016_152258_1f8a6141.jpg HTTP/1.1[0m" 404 -
+2024-10-19 18:46:05,181 - INFO - 172.31.196.60 - - [19/Oct/2024 18:46:05] "GET /static/thumbnails/20241018_150628_7b9b8b60.png HTTP/1.1" 200 -
+2024-10-19 18:46:05,182 - INFO - 172.31.196.60 - - [19/Oct/2024 18:46:05] "GET /static/img/default.png HTTP/1.1" 200 -
+2024-10-19 18:46:05,183 - INFO - 172.31.196.60 - - [19/Oct/2024 18:46:05] "GET /static/thumbnails/20241018_150114_e2307150.png HTTP/1.1" 200 -
+2024-10-19 18:46:05,184 - INFO - 172.31.196.60 - - [19/Oct/2024 18:46:05] "GET /static/thumbnails/20241018_150242_c2a5134b.png HTTP/1.1" 200 -
+2024-10-19 18:46:05,185 - INFO - 172.31.196.60 - - [19/Oct/2024 18:46:05] "GET /static/thumbnails/20241018_150915_9ee2ee5b.png HTTP/1.1" 200 -
+2024-10-19 18:46:05,192 - INFO - 172.31.196.60 - - [19/Oct/2024 18:46:05] "GET /static/thumbnails/20241019_150025_1180cdbe.jpg HTTP/1.1" 200 -
+2024-10-19 18:46:05,199 - INFO - 172.31.196.60 - - [19/Oct/2024 18:46:05] "GET /static/thumbnails/20241018_150652_7df45f90.png HTTP/1.1" 200 -
+2024-10-19 18:46:05,224 - INFO - 172.31.196.60 - - [19/Oct/2024 18:46:05] "[33mHEAD /static/thumbnails/20241018_174024_7df52a7d.jpeg HTTP/1.1[0m" 404 -
