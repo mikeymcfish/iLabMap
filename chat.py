@@ -1,5 +1,8 @@
 from openai import OpenAI
 import os
+from models import Item
+from flask import current_app, jsonify
+from utils import list_available_items
 
 client = OpenAI()
 
@@ -28,19 +31,36 @@ Deliver the guidance in a structured paragraph format, covering each of the step
 
 - Ensure all users are trained before using any tool.
 - Proper maintenance of tools is essential for optimal function and longevity.
-- Limit your responses to a maximum of 200 words.
-- Limit your knowledge to the following tools and resources:
-laser cutter, formlabs 3d printer, vinyl cutter, arduino, soldering irons, hammers, drill bits, screwdrivers, wrenches, clamps, tape, screws
+- When possible, prefer these software tools: Adobe Illustrator, Adobe Photoshop, OnShape, Simplify3d, Preform, tinkercad
+- Below are the available resources within the iLab. Limit your responses to focus on these items:
 """)
 
-assistant = client.beta.assistants.retrieve("asst_2bIC4miLv39XSayFRDJnUKOU")
-#     name='iLab Assistant',
-#     instructions=system_prompt,
-#     tools=[{'type': 'code_interpreter'}],
-#     model='gpt-4-1106-preview'
-# )
+def get_available_items_text():
+    with current_app.app_context():
+        items = list_available_items()
+    return str(items)  # Convert the items list to string
+
+# Initialize with an empty string, we'll update it within the application context
+available_items_text = ""
+
+assistant = None
+
+def initialize_assistant():
+    global assistant, available_items_text
+    available_items_text = get_available_items_text()
+    assistant = client.beta.assistants.update("asst_42fSiwjxCUq9i93OpVATPcSn",
+        instructions=system_prompt + available_items_text
+    )
 
 def get_ai_response(user_message: str) -> str:
+    global available_items_text
+
+    if assistant is None:
+        initialize_assistant()
+
+    # Update available items before each response
+    # available_items_text = get_available_items_text()
+
     thread = client.beta.threads.create()
     client.beta.threads.messages.create(
         thread_id=thread.id,

@@ -11,8 +11,14 @@ import openai
 import logging
 from typing import Optional
 from chat import system_prompt, get_ai_response
+from utils import list_available_items
 
 main_blueprint = Blueprint('main', __name__)
+
+@main_blueprint.route('/api/items', methods=['GET'])
+def api_list_available_items():
+    items = list_available_items()
+    return jsonify(items), 200
 
 def generate_unique_filename(filename: Optional[str]) -> str:
     if filename is None:
