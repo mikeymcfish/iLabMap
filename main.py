@@ -4,9 +4,6 @@ from app import create_app
 from provision_maps import provision_maps
 from backup_db import start_scheduler
 
-# Provision maps
-provision_maps()
-
 # Start the backup scheduler
 start_scheduler()
 
