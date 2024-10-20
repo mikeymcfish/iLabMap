@@ -20022,3 +20022,79 @@ Following these steps will help you keep things tidy and your prints top-notch. 
 2024-10-19 18:40:51,850 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_aRL1TLMlKYytgPo1eCe9am4o/messages "HTTP/1.1 200 OK"
 2024-10-19 18:40:51,851 - INFO - Received response from AI: Hey there! While creating explosions might sound super exciting, safety is a huge deal in the Innovation Lab, so we can't actually do anything explosive here. But what about exploring other thrilling projects that are both safe and cool, like building robots or creating awesome 3D models? Let me know if you want some ideas on what you can create! 😄
 2024-10-19 18:40:51,851 - INFO - 172.31.196.60 - - [19/Oct/2024 18:40:51] "POST /api/chat HTTP/1.1" 200 -
+2024-10-20 12:33:02,823 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-20 12:33:02,823 - INFO - Added job "create_backup" to job store "default"
+2024-10-20 12:33:02,823 - INFO - Scheduler started
+2024-10-20 12:33:02,824 - INFO - Scheduler started
+2024-10-20 12:33:03,642 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.196.87:5000
+2024-10-20 12:33:03,642 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-20 12:33:03,644 - INFO -  * Restarting with stat
+2024-10-20 12:33:04,107 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-20 12:33:04,108 - INFO - Added job "create_backup" to job store "default"
+2024-10-20 12:33:04,108 - INFO - Scheduler started
+2024-10-20 12:33:04,108 - INFO - Scheduler started
+2024-10-20 12:33:04,261 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-20 12:33:04,261 - INFO - Added job "create_backup" to job store "default"
+2024-10-20 12:33:04,262 - INFO - Scheduler started
+2024-10-20 12:33:04,262 - INFO - Scheduler started
+2024-10-20 12:33:04,472 - WARNING -  * Debugger is active!
+2024-10-20 12:33:04,473 - INFO -  * Debugger PIN: 843-416-584
+2024-10-20 12:33:06,297 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-20 12:33:06,305 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-20 12:33:06,597 - INFO -  * Detected change in '/home/runner/workspace/app.py', reloading
+2024-10-20 12:33:06,771 - INFO -  * Restarting with stat
+2024-10-20 12:33:07,259 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-20 12:33:07,259 - INFO - Added job "create_backup" to job store "default"
+2024-10-20 12:33:07,259 - INFO - Scheduler started
+2024-10-20 12:33:07,260 - INFO - Scheduler started
+2024-10-20 12:33:07,639 - WARNING -  * Debugger is active!
+2024-10-20 12:33:07,640 - INFO -  * Debugger PIN: 528-249-198
+2024-10-20 12:33:07,677 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-20 12:33:07,678 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-20 12:33:08,774 - INFO - 172.31.196.87 - - [20/Oct/2024 12:33:08] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2024-10-20 12:33:08,776 - INFO - 172.31.196.87 - - [20/Oct/2024 12:33:08] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2024-10-20 12:33:09,163 - INFO - 172.31.196.87 - - [20/Oct/2024 12:33:09] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2024-10-20 12:33:09,271 - INFO - 172.31.196.87 - - [20/Oct/2024 12:33:09] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2024-10-20 12:33:09,615 - INFO - 172.31.196.87 - - [20/Oct/2024 12:33:09] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2024-10-20 12:33:12,863 - INFO -  * Detected change in '/home/runner/workspace/models.py', reloading
+2024-10-20 12:33:13,006 - INFO -  * Restarting with stat
+2024-10-20 12:33:13,588 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-20 12:33:13,589 - INFO - Added job "create_backup" to job store "default"
+2024-10-20 12:33:13,589 - INFO - Scheduler started
+2024-10-20 12:33:13,589 - INFO - Scheduler started
+2024-10-20 12:33:14,027 - WARNING -  * Debugger is active!
+2024-10-20 12:33:14,029 - INFO -  * Debugger PIN: 116-344-314
+2024-10-20 12:34:28,373 - INFO -  * Detected change in '/home/runner/workspace/routes.py', reloading
+2024-10-20 12:34:28,538 - INFO -  * Restarting with stat
+2024-10-20 12:34:29,216 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-20 12:34:29,216 - INFO - Added job "create_backup" to job store "default"
+2024-10-20 12:34:29,216 - INFO - Scheduler started
+2024-10-20 12:34:29,217 - INFO - Scheduler started
+2024-10-20 12:34:29,940 - WARNING -  * Debugger is active!
+2024-10-20 12:34:29,941 - INFO -  * Debugger PIN: 869-165-724
+2024-10-20 13:26:46,461 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-20 13:26:46,467 - INFO - Added job "create_backup" to job store "default"
+2024-10-20 13:26:46,467 - INFO - Scheduler started
+2024-10-20 13:26:46,467 - INFO - Scheduler started
+2024-10-20 13:26:48,011 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.196.29:5000
+2024-10-20 13:26:48,011 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-20 13:26:48,013 - INFO -  * Restarting with stat
+2024-10-20 13:26:48,494 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-20 13:26:48,495 - INFO - Added job "create_backup" to job store "default"
+2024-10-20 13:26:48,495 - INFO - Scheduler started
+2024-10-20 13:26:48,495 - INFO - Scheduler started
+2024-10-20 13:26:48,952 - WARNING -  * Debugger is active!
+2024-10-20 13:26:48,954 - INFO -  * Debugger PIN: 119-684-450
+2024-10-20 13:26:49,350 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-20 13:26:49,351 - INFO - Added job "create_backup" to job store "default"
+2024-10-20 13:26:49,351 - INFO - Scheduler started
+2024-10-20 13:26:49,351 - INFO - Scheduler started
+2024-10-20 13:27:01,881 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/login
+2024-10-20 13:27:01,884 - INFO - 172.31.196.29 - - [20/Oct/2024 13:27:01] "GET /login HTTP/1.1" 200 -
+2024-10-20 13:27:01,902 - INFO - 172.31.196.29 - - [20/Oct/2024 13:27:01] "GET /static/css/styles.css HTTP/1.1" 200 -
