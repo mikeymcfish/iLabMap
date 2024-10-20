@@ -20106,3 +20106,81 @@ Following these steps will help you keep things tidy and your prints top-notch. 
 2024-10-19 18:44:45,088 - INFO - 172.31.196.60 - - [19/Oct/2024 18:44:45] "GET /static/thumbnails/20241018_150114_e2307150.png HTTP/1.1" 200 -
 2024-10-19 18:44:45,091 - INFO - 172.31.196.60 - - [19/Oct/2024 18:44:45] "HEAD /static/thumbnails/20241018_150628_7b9b8b60.png HTTP/1.1" 200 -
 2024-10-19 18:44:45,097 - INFO - 172.31.196.60 - - [19/Oct/2024 18:44:45] "GET /static/thumbnails/20241018_150628_7b9b8b60.png HTTP/1.1" 200 -
+2024-10-20 13:48:58,636 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-20 13:48:58,637 - INFO - Added job "create_backup" to job store "default"
+2024-10-20 13:48:58,637 - INFO - Scheduler started
+2024-10-20 13:48:58,637 - INFO - Scheduler started
+2024-10-20 13:48:58,990 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.196.29:5000
+2024-10-20 13:48:58,991 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-20 13:48:58,991 - INFO -  * Restarting with stat
+2024-10-20 13:48:59,463 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-20 13:48:59,465 - INFO - Added job "create_backup" to job store "default"
+2024-10-20 13:48:59,465 - INFO - Scheduler started
+2024-10-20 13:48:59,465 - INFO - Scheduler started
+2024-10-20 13:48:59,816 - WARNING -  * Debugger is active!
+2024-10-20 13:48:59,818 - INFO -  * Debugger PIN: 453-695-707
+2024-10-20 13:49:49,479 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-20 13:49:49,481 - INFO - Added job "create_backup" to job store "default"
+2024-10-20 13:49:49,481 - INFO - Scheduler started
+2024-10-20 13:49:49,481 - INFO - Scheduler started
+2024-10-20 13:49:49,483 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-20 13:49:49,484 - INFO - Added job "create_backup" to job store "default"
+2024-10-20 13:49:49,484 - INFO - Scheduler started
+2024-10-20 13:49:49,484 - INFO - Scheduler started
+2024-10-20 13:49:49,836 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.196.29:5000
+2024-10-20 13:49:49,838 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-20 13:49:49,839 - INFO -  * Restarting with stat
+2024-10-20 13:49:50,336 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-20 13:49:50,336 - INFO - Added job "create_backup" to job store "default"
+2024-10-20 13:49:50,336 - INFO - Scheduler started
+2024-10-20 13:49:50,337 - INFO - Scheduler started
+2024-10-20 13:49:50,685 - WARNING -  * Debugger is active!
+2024-10-20 13:49:50,686 - INFO -  * Debugger PIN: 312-048-245
+2024-10-20 13:50:02,128 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-20 13:50:03,637 - INFO - 172.31.196.29 - - [20/Oct/2024 13:50:03] "GET / HTTP/1.1" 200 -
+2024-10-20 13:50:04,054 - INFO - 172.31.196.29 - - [20/Oct/2024 13:50:04] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-10-20 13:50:04,113 - INFO - 172.31.196.29 - - [20/Oct/2024 13:50:04] "GET /static/js/script.js HTTP/1.1" 200 -
+2024-10-20 13:50:04,296 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps
+2024-10-20 13:50:04,296 - INFO - Fetching all maps
+2024-10-20 13:50:04,526 - INFO - 172.31.196.29 - - [20/Oct/2024 13:50:04] "GET /api/maps HTTP/1.1" 200 -
+2024-10-20 13:50:04,608 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps/1
+2024-10-20 13:50:04,608 - INFO - Fetching map with ID: 1
+2024-10-20 13:50:04,838 - INFO - 172.31.196.29 - - [20/Oct/2024 13:50:04] "GET /api/maps/1 HTTP/1.1" 200 -
+2024-10-20 13:50:04,922 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/static/maps/main.svg
+2024-10-20 13:50:04,923 - INFO - Attempting to serve static file: /home/runner/workspace/static/maps/main.svg
+2024-10-20 13:50:04,923 - INFO - 172.31.196.29 - - [20/Oct/2024 13:50:04] "[36mGET /static/maps/main.svg HTTP/1.1[0m" 304 -
+2024-10-20 13:50:05,010 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/items?map_id=1
+2024-10-20 13:50:05,010 - INFO - Fetching items for map ID: 1
+2024-10-20 13:50:05,238 - INFO - 172.31.196.29 - - [20/Oct/2024 13:50:05] "GET /api/items?map_id=1 HTTP/1.1" 200 -
+2024-10-20 13:50:05,336 - INFO - 172.31.196.29 - - [20/Oct/2024 13:50:05] "[33mHEAD /static/thumbnails/20241018_173844_47d7cf43.jpg HTTP/1.1[0m" 404 -
+2024-10-20 13:50:05,339 - INFO - 172.31.196.29 - - [20/Oct/2024 13:50:05] "[33mHEAD /static/thumbnails/20241018_173743_7e7d8d33.jpg HTTP/1.1[0m" 404 -
+2024-10-20 13:50:05,344 - INFO - 172.31.196.29 - - [20/Oct/2024 13:50:05] "[36mHEAD /static/thumbnails/20241018_150242_c2a5134b.png HTTP/1.1[0m" 304 -
+2024-10-20 13:50:05,406 - INFO - 172.31.196.29 - - [20/Oct/2024 13:50:05] "[36mHEAD /static/thumbnails/20241018_150114_e2307150.png HTTP/1.1[0m" 304 -
+2024-10-20 13:50:05,416 - INFO - 172.31.196.29 - - [20/Oct/2024 13:50:05] "[36mHEAD /static/thumbnails/20241018_150628_7b9b8b60.png HTTP/1.1[0m" 304 -
+2024-10-20 13:50:05,419 - INFO - 172.31.196.29 - - [20/Oct/2024 13:50:05] "[36mHEAD /static/thumbnails/20241018_150915_9ee2ee5b.png HTTP/1.1[0m" 304 -
+2024-10-20 13:50:05,422 - INFO - 172.31.196.29 - - [20/Oct/2024 13:50:05] "[33mHEAD /static/thumbnails/20241016_153624_1dbede16.jpg HTTP/1.1[0m" 404 -
+2024-10-20 13:50:05,484 - INFO - 172.31.196.29 - - [20/Oct/2024 13:50:05] "[33mHEAD /static/thumbnails/20241018_174024_7df52a7d.jpeg HTTP/1.1[0m" 404 -
+2024-10-20 13:50:05,497 - INFO - 172.31.196.29 - - [20/Oct/2024 13:50:05] "[33mHEAD /static/thumbnails/20241016_150011_83503f4f.jpg HTTP/1.1[0m" 404 -
+2024-10-20 13:50:05,502 - INFO - 172.31.196.29 - - [20/Oct/2024 13:50:05] "[33mHEAD /static/thumbnails/20241018_173727_dc77ec8d.jpg HTTP/1.1[0m" 404 -
+2024-10-20 13:50:05,506 - INFO - 172.31.196.29 - - [20/Oct/2024 13:50:05] "[36mHEAD /static/thumbnails/20241018_150652_7df45f90.png HTTP/1.1[0m" 304 -
+2024-10-20 13:50:05,562 - INFO - 172.31.196.29 - - [20/Oct/2024 13:50:05] "[36mHEAD /static/thumbnails/20241019_150025_1180cdbe.jpg HTTP/1.1[0m" 304 -
+2024-10-20 13:50:05,577 - INFO - 172.31.196.29 - - [20/Oct/2024 13:50:05] "[33mHEAD /static/thumbnails/20241018_173921_fb220825.jpg HTTP/1.1[0m" 404 -
+2024-10-20 13:50:05,582 - INFO - 172.31.196.29 - - [20/Oct/2024 13:50:05] "[33mHEAD /static/thumbnails/20241016_153208_247e423e.jpg HTTP/1.1[0m" 404 -
+2024-10-20 13:50:05,584 - INFO - 172.31.196.29 - - [20/Oct/2024 13:50:05] "[33mHEAD /static/thumbnails/20241016_151142_bf6008cc.jpg HTTP/1.1[0m" 404 -
+2024-10-20 13:50:05,594 - INFO - 172.31.196.29 - - [20/Oct/2024 13:50:05] "[33mHEAD /static/thumbnails/20241016_154030_89cfc546.jpg HTTP/1.1[0m" 404 -
+2024-10-20 13:50:05,638 - INFO - 172.31.196.29 - - [20/Oct/2024 13:50:05] "[33mHEAD /static/thumbnails/20241016_152258_1f8a6141.jpg HTTP/1.1[0m" 404 -
+2024-10-20 13:50:05,642 - INFO - 172.31.196.29 - - [20/Oct/2024 13:50:05] "[33mHEAD /static/thumbnails/20241016_153707_39faf826.jpg HTTP/1.1[0m" 404 -
+2024-10-20 13:50:05,653 - INFO - 172.31.196.29 - - [20/Oct/2024 13:50:05] "[33mHEAD /null HTTP/1.1[0m" 404 -
+2024-10-20 13:50:05,663 - INFO - 172.31.196.29 - - [20/Oct/2024 13:50:05] "GET /static/img/default.png HTTP/1.1" 200 -
+2024-10-20 13:50:05,664 - INFO - 172.31.196.29 - - [20/Oct/2024 13:50:05] "[36mGET /static/thumbnails/20241018_150242_c2a5134b.png HTTP/1.1[0m" 304 -
+2024-10-20 13:50:05,671 - INFO - 172.31.196.29 - - [20/Oct/2024 13:50:05] "[36mGET /static/thumbnails/20241018_150114_e2307150.png HTTP/1.1[0m" 304 -
+2024-10-20 13:50:05,715 - INFO - 172.31.196.29 - - [20/Oct/2024 13:50:05] "[36mGET /static/thumbnails/20241018_150628_7b9b8b60.png HTTP/1.1[0m" 304 -
+2024-10-20 13:50:05,720 - INFO - 172.31.196.29 - - [20/Oct/2024 13:50:05] "[36mGET /static/thumbnails/20241018_150915_9ee2ee5b.png HTTP/1.1[0m" 304 -
+2024-10-20 13:50:05,737 - INFO - 172.31.196.29 - - [20/Oct/2024 13:50:05] "[36mGET /static/thumbnails/20241018_150652_7df45f90.png HTTP/1.1[0m" 304 -
+2024-10-20 13:50:05,745 - INFO - 172.31.196.29 - - [20/Oct/2024 13:50:05] "[36mGET /static/thumbnails/20241019_150025_1180cdbe.jpg HTTP/1.1[0m" 304 -
