@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="dark">
 <head>
@@ -5,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - iLab Map</title>
     <link rel="stylesheet" href="/static/css/styles.css">
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <meta name="google-signin-client_id" content="{{ config.GOOGLE_CLIENT_ID }}">
 </head>
 <body>
     <div class="container mt-5">
@@ -16,29 +15,14 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="text-center">
-                            <div class="g-signin2" data-onsuccess="onSignIn"></div>
+                            <a href="{{ url_for('main.auth_google') }}" class="btn btn-primary btn-lg">
+                                <i class="fab fa-google me-2"></i> Sign in with Google
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <script>
-        function onSignIn(googleUser) {
-            var id_token = googleUser.getAuthResponse().id_token;
-            var xhr = new XMLHttpRequest();
-            xhr.open('POST', '/google-login');
-            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-            xhr.onload = function() {
-                if (xhr.status === 200) {
-                    window.location.href = '/';
-                } else {
-                    console.error('Google Sign-In failed');
-                }
-            };
-            xhr.send('id_token=' + id_token);
-        }
-    </script>
 </body>
 </html>

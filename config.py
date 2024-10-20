@@ -1,3 +1,4 @@
+
 import os
 
 class Config:
@@ -6,3 +7,4 @@ class Config:
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     GOOGLE_CLIENT_ID = os.environ.get('GOOGLE_CLIENT_ID')
     GOOGLE_CLIENT_SECRET = os.environ.get('GOOGLE_CLIENT_SECRET')
+    APPLICATION_URL = 'https://ilab-map.shlokpatel.repl.co'

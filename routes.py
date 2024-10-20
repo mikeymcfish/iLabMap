@@ -16,6 +16,7 @@ from flask_login import login_user, login_required, logout_user, current_user
 from google.oauth2 import id_token
 from google.auth.transport import requests
 from config import Config
+from urllib.parse import urlencode
 
 main_blueprint = Blueprint('main', __name__)
 
@@ -390,3 +391,62 @@ def google_login():
         return jsonify({'success': True}), 200
     except ValueError:
         return jsonify({'success': False, 'error': 'Invalid token'}), 400
+
+@main_blueprint.route('/auth/google')
+def auth_google():
+    google_auth_url = 'https://accounts.google.com/o/oauth2/v2/auth'
+    params = {
+        'client_id': Config.GOOGLE_CLIENT_ID,
+        'redirect_uri': f"{Config.APPLICATION_URL}/google-callback",
+        'response_type': 'code',
+        'scope': 'openid email profile',
+        'prompt': 'select_account'
+    }
+    auth_url = f"{google_auth_url}?{urlencode(params)}"
+    return redirect(auth_url)
+
+@main_blueprint.route('/google-callback')
+def google_callback():
+    code = request.args.get('code')
+    if not code:
+        flash('Authentication failed.', 'error')
+        return redirect(url_for('main.login'))
+
+    # Exchange the code for a token
+    token_url = 'https://oauth2.googleapis.com/token'
+    data = {
+        'code': code,
+        'client_id': Config.GOOGLE_CLIENT_ID,
+        'client_secret': Config.GOOGLE_CLIENT_SECRET,
+        'redirect_uri': f"{Config.APPLICATION_URL}/google-callback",
+        'grant_type': 'authorization_code'
+    }
+    response = requests.post(token_url, data=data)
+    token_data = response.json()
+
+    if 'id_token' not in token_data:
+        flash('Failed to obtain user information.', 'error')
+        return redirect(url_for('main.login'))
+
+    try:
+        idinfo = id_token.verify_oauth2_token(token_data['id_token'], requests.Request(), Config.GOOGLE_CLIENT_ID)
+
+        if idinfo['iss'] not in ['accounts.google.com', 'https://accounts.google.com']:
+            raise ValueError('Wrong issuer.')
+
+        user = User.query.filter_by(email=idinfo['email']).first()
+        if not user:
+            user = User(
+                email=idinfo['email'],
+                name=idinfo['name'],
+                profile_pic=idinfo.get('picture')
+            )
+            db.session.add(user)
+            db.session.commit()
+
+        login_user(user)
+        flash('Successfully logged in!', 'success')
+        return redirect(url_for('main.index'))
+    except ValueError:
+        flash('Failed to verify user information.', 'error')
+        return redirect(url_for('main.login'))
