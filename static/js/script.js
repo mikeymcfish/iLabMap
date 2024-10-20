@@ -207,7 +207,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         items.forEach(item => {
             const li = document.createElement('div');
-            li.classList.add('list-group-item', 'd-flex', 'flex-column', 'align-items-start', 'p-3', 'mb-2');
+            li.classList.add('list-group-item', 'd-flex', 'flex-column', 'align-items-start','mb-2');
 
             const mainContent = document.createElement('div');
             mainContent.classList.add('d-flex', 'w-100', 'justify-content-between', 'align-items-center');
