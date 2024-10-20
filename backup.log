@@ -26890,3 +26890,25 @@ Following these steps will help you keep things tidy and your prints top-notch. 
 2024-10-20 23:20:26,232 - INFO - Scheduler started
 2024-10-20 23:20:26,595 - WARNING -  * Debugger is active!
 2024-10-20 23:20:26,596 - INFO -  * Debugger PIN: 272-928-169
+2024-10-20 23:27:31,370 - INFO - 172.31.196.50 - - [20/Oct/2024 23:27:31] "[33mGET /login HTTP/1.1[0m" 404 -
+2024-10-20 23:29:08,952 - INFO - 172.31.196.50 - - [20/Oct/2024 23:29:08] "[33mGET /login HTTP/1.1[0m" 404 -
+2024-10-20 23:29:13,010 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-20 23:29:14,458 - INFO - 172.31.196.50 - - [20/Oct/2024 23:29:14] "GET / HTTP/1.1" 200 -
+2024-10-20 23:29:14,829 - INFO - 172.31.196.50 - - [20/Oct/2024 23:29:14] "GET /static/css/styles.css HTTP/1.1" 200 -
+2024-10-20 23:29:14,913 - INFO - 172.31.196.50 - - [20/Oct/2024 23:29:14] "GET /static/js/script.js HTTP/1.1" 200 -
+2024-10-20 23:29:15,625 - INFO - 172.31.196.50 - - [20/Oct/2024 23:29:15] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 23:29:15,800 - INFO - 172.31.196.50 - - [20/Oct/2024 23:29:15] "GET /static/main.bin HTTP/1.1" 200 -
+2024-10-20 23:29:15,803 - INFO - 172.31.196.50 - - [20/Oct/2024 23:29:15] "GET /static/Untitled.png HTTP/1.1" 200 -
+2024-10-20 23:29:19,343 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-20 23:29:19,565 - INFO - 172.31.196.50 - - [20/Oct/2024 23:29:19] "GET / HTTP/1.1" 200 -
+2024-10-20 23:29:19,752 - INFO - 172.31.196.50 - - [20/Oct/2024 23:29:19] "GET /static/css/styles.css HTTP/1.1" 200 -
+2024-10-20 23:29:19,840 - INFO - 172.31.196.50 - - [20/Oct/2024 23:29:19] "GET /static/js/script.js HTTP/1.1" 200 -
+2024-10-20 23:29:20,152 - INFO - 172.31.196.50 - - [20/Oct/2024 23:29:20] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 23:29:20,324 - INFO - 172.31.196.50 - - [20/Oct/2024 23:29:20] "GET /static/main.bin HTTP/1.1" 200 -
+2024-10-20 23:29:20,390 - INFO - 172.31.196.50 - - [20/Oct/2024 23:29:20] "GET /static/Untitled.png HTTP/1.1" 200 -
+2024-10-20 23:30:12,129 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 23:30:12,131 - INFO - 172.31.196.50 - - [20/Oct/2024 23:30:12] "POST /save_marker HTTP/1.1" 200 -
+2024-10-20 23:30:12,718 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 23:30:12,719 - INFO - 172.31.196.50 - - [20/Oct/2024 23:30:12] "POST /save_marker HTTP/1.1" 200 -
+2024-10-20 23:30:13,951 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 23:30:13,952 - INFO - 172.31.196.50 - - [20/Oct/2024 23:30:13] "POST /save_marker HTTP/1.1" 200 -
