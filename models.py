@@ -1,5 +1,5 @@
-from app import db, login_manager
-from flask_login import UserMixin
+# models.py
+from app import db
 
 class Map(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -22,13 +22,3 @@ class Item(db.Model):
     warning = db.Column(db.String(255), nullable=True, default="")
     description = db.Column(db.Text, nullable=True)
     link = db.Column(db.String(500), nullable=True)
-
-class User(UserMixin, db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    email = db.Column(db.String(100), unique=True, nullable=False)
-    name = db.Column(db.String(100), nullable=False)
-    profile_pic = db.Column(db.String(200))
-
-@login_manager.user_loader
-def load_user(user_id):
-    return User.query.get(int(user_id))

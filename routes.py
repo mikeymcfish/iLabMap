@@ -1,9 +1,9 @@
-from flask import Blueprint, request, jsonify, send_from_directory, current_app, render_template, redirect, url_for, flash
+from flask import Blueprint, request, jsonify, send_from_directory, current_app, render_template
 from sqlalchemy.exc import SQLAlchemyError
 from sqlalchemy import or_
 from werkzeug.utils import secure_filename
 from app import db
-from models import Map, Item, User
+from models import Map, Item
 import os
 import uuid
 import datetime
@@ -12,11 +12,6 @@ import logging
 from typing import Optional
 from chat import system_prompt, get_ai_response
 from utils import list_available_items
-from flask_login import login_user, login_required, logout_user, current_user
-from google.oauth2 import id_token
-from google.auth.transport import requests
-from config import Config
-from urllib.parse import urlencode
 
 main_blueprint = Blueprint('main', __name__)
 
@@ -38,18 +33,16 @@ def log_request_info():
     current_app.logger.debug('Request Method: %s, URL: %s', request.method, request.url)
     
 @main_blueprint.route('/')
-@login_required
 def index():
     try:
         items = Item.query.all()
-        return render_template('index.html', items=items, user=current_user)
+        return render_template('index.html', items=items)
     except SQLAlchemyError as e:
         current_app.logger.error(
             f"Error fetching items for index page: {str(e)}")
         return f"An error occurred while fetching items. : {str(e)}", 500
 
 @main_blueprint.route('/api/items/<int:item_id>', methods=['PUT'])
-@login_required
 def update_item(item_id):
     item = Item.query.get_or_404(item_id)
     
@@ -105,7 +98,6 @@ def update_item(item_id):
         return jsonify({"error": "An error occurred while updating the item"}), 500
 
 @main_blueprint.route('/api/items/<int:item_id>', methods=['GET'])
-@login_required
 def get_item(item_id):
     try:
         current_app.logger.info(f"Fetching item with ID: {item_id}")
@@ -132,7 +124,6 @@ def get_item(item_id):
             {"error": "An error occurred while retrieving the item"}), 500
 
 @main_blueprint.route('/api/maps', methods=['GET'])
-@login_required
 def get_maps():
     try:
         current_app.logger.info("Fetching all maps")
@@ -146,7 +137,6 @@ def get_maps():
         return jsonify({"error": "An error occurred while fetching maps"}), 500
 
 @main_blueprint.route('/api/maps/<int:map_id>', methods=['GET'])
-@login_required
 def get_map(map_id):
     try:
         current_app.logger.info(f"Fetching map with ID: {map_id}")
@@ -163,7 +153,6 @@ def get_map(map_id):
                         "An error occurred while fetching the map"}), 500
 
 @main_blueprint.route('/api/items', methods=['GET', 'POST'])
-@login_required
 def items():
     if request.method == 'POST':
         data = request.form
@@ -248,7 +237,6 @@ def items():
                             "An error occurred while fetching items"}), 500
 
 @main_blueprint.route('/api/items/<int:item_id>', methods=['DELETE'])
-@login_required
 def delete_item(item_id):
     try:
         current_app.logger.info(
@@ -270,7 +258,6 @@ def delete_item(item_id):
                         "An error occurred while deleting the item"}), 500
 
 @main_blueprint.route('/api/search')
-@login_required
 def search():
     try:
         query = request.args.get('q', '')
@@ -338,7 +325,6 @@ def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 @main_blueprint.route('/api/chat', methods=['POST'])
-@login_required
 def chat():
     try:
         data = request.json
@@ -357,96 +343,3 @@ def chat():
     except Exception as e:
         current_app.logger.error(f"Unexpected error in chat API: {str(e)}")
         return jsonify({"error": "An unexpected error occurred while processing your request"}), 500
-
-@main_blueprint.route('/login')
-def login():
-    return render_template('login.html')
-
-@main_blueprint.route('/logout')
-@login_required
-def logout():
-    logout_user()
-    return redirect(url_for('main.index'))
-
-@main_blueprint.route('/google-login', methods=['POST'])
-def google_login():
-    token = request.form.get('id_token')
-    try:
-        idinfo = id_token.verify_oauth2_token(token, requests.Request(), Config.GOOGLE_CLIENT_ID)
-
-        if idinfo['iss'] not in ['accounts.google.com', 'https://accounts.google.com']:
-            raise ValueError('Wrong issuer.')
-
-        user = User.query.filter_by(email=idinfo['email']).first()
-        if not user:
-            user = User(
-                email=idinfo['email'],
-                name=idinfo['name'],
-                profile_pic=idinfo.get('picture')
-            )
-            db.session.add(user)
-            db.session.commit()
-
-        login_user(user)
-        return jsonify({'success': True}), 200
-    except ValueError:
-        return jsonify({'success': False, 'error': 'Invalid token'}), 400
-
-@main_blueprint.route('/auth/google')
-def auth_google():
-    google_auth_url = 'https://accounts.google.com/o/oauth2/v2/auth'
-    params = {
-        'client_id': Config.GOOGLE_CLIENT_ID,
-        'redirect_uri': f"{Config.APPLICATION_URL}/google-callback",
-        'response_type': 'code',
-        'scope': 'openid email profile',
-        'prompt': 'select_account'
-    }
-    auth_url = f"{google_auth_url}?{urlencode(params)}"
-    return redirect(auth_url)
-
-@main_blueprint.route('/google-callback')
-def google_callback():
-    code = request.args.get('code')
-    if not code:
-        flash('Authentication failed.', 'error')
-        return redirect(url_for('main.login'))
-
-    # Exchange the code for a token
-    token_url = 'https://oauth2.googleapis.com/token'
-    data = {
-        'code': code,
-        'client_id': Config.GOOGLE_CLIENT_ID,
-        'client_secret': Config.GOOGLE_CLIENT_SECRET,
-        'redirect_uri': f"{Config.APPLICATION_URL}/google-callback",
-        'grant_type': 'authorization_code'
-    }
-    response = requests.post(token_url, data=data)
-    token_data = response.json()
-
-    if 'id_token' not in token_data:
-        flash('Failed to obtain user information.', 'error')
-        return redirect(url_for('main.login'))
-
-    try:
-        idinfo = id_token.verify_oauth2_token(token_data['id_token'], requests.Request(), Config.GOOGLE_CLIENT_ID)
-
-        if idinfo['iss'] not in ['accounts.google.com', 'https://accounts.google.com']:
-            raise ValueError('Wrong issuer.')
-
-        user = User.query.filter_by(email=idinfo['email']).first()
-        if not user:
-            user = User(
-                email=idinfo['email'],
-                name=idinfo['name'],
-                profile_pic=idinfo.get('picture')
-            )
-            db.session.add(user)
-            db.session.commit()
-
-        login_user(user)
-        flash('Successfully logged in!', 'success')
-        return redirect(url_for('main.index'))
-    except ValueError:
-        flash('Failed to verify user information.', 'error')
-        return redirect(url_for('main.login'))

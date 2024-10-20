@@ -16,13 +16,162 @@
                     <option value="">Select a map</option>
                 </select>
             </div>
-            <div class="ms-3">
-                <span>Welcome, {{ current_user.name }}</span>
-                <a href="{{ url_for('main.logout') }}" class="btn btn-outline-danger ms-2">Logout</a>
+        </div>
+        <div class="row">
+            <div class="col-md-5 d-flex flex-column" style="height: calc(100vh - 75px);">
+                <div class="mb-3">
+                    <div class="input-group">
+                        <select id="searchType" class="form-select" style="max-width: 120px;">
+                            <option value="all">All</option>
+                            <option value="name">Name</option>
+                            <option value="tags">Tags</option>
+                        </select>
+                        <input type="text" id="searchInput" class="form-control" placeholder="Search items...">
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <button id="addItemBtn" class="btn btn-outline-primary me-2" disabled>
+                        <i class="fas fa-plus"></i> Add
+                    </button>
+                    <button id="clearBtn" class="btn btn-outline-secondary">
+                        <i class="fas fa-broom"></i> Clear
+                    </button>
+
+                    <button id="openChatBtn" class="btn btn-outline-info ms-2">
+                        <i class="fas fa-comments"></i> Chat
+                    </button>
+                </div>
+                <div id="itemList" class="list-group mt-3 flex-grow-1 overflow-auto">
+                    <!-- Items will be dynamically added here -->
+                </div>
+            </div>
+            <div class="col-md-7">
+                <canvas id="mapCanvas" class="img-fluid"></canvas>
             </div>
         </div>
-        <!-- Rest of the content remains the same -->
     </div>
-    <!-- Rest of the HTML remains the same -->
+
+    <div class="card position-absolute" style="display: none;" id="addItemForm">
+        <div class="card-body">
+            <h5 class="card-title">Add New Item</h5>
+            <form id="itemForm">
+                <div class="mb-3">
+                    <label for="itemName" class="form-label">Item Name</label>
+                    <input type="text" class="form-control" id="itemName" required>
+                </div>
+                <div class="mb-3">
+                    <label for="itemImage" class="form-label">Upload Image</label>
+                    <input type="file" class="form-control" id="itemImage" accept="image/*">
+                    <div id="dropArea" class="mt-2">
+                        Drag and drop image here
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="itemTags" class="form-label">Tags (comma-separated)</label>
+                    <input type="text" class="form-control" id="itemTags">
+                </div>
+                <input type="hidden" id="itemColor" value="red">
+                <input type="hidden" id="itemZone" value="">
+                <div class="mb-3">
+                    <label for="itemQuantity" class="form-label">Quantity</label>
+                    <input type="number" class="form-control" id="itemQuantity" value="1" min="1">
+                </div>
+                <div class="mb-3">
+                    <label for="itemDescription" class="form-label">Description</label>
+                    <textarea class="form-control" id="itemDescription" rows="3"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="itemLink" class="form-label">External Link</label>
+                    <input type="url" class="form-control" id="itemLink" placeholder="https://example.com">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Safety Hazards</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="glasses" id="glasses">
+                        <label class="form-check-label" for="glasses">
+                            Use safety glasses
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="hand" id="hand">
+                        <label class="form-check-label" for="hand">
+                            Use gloves
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="fire" id="fire">
+                        <label class="form-check-label" for="fire">
+                            Flammable
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="bolt" id="bolt">
+                        <label class="form-check-label" for="bolt">
+                            High voltage
+                        </label>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <button type="button" class="btn btn-primary" id="updateItemBtn">Save Item</button>
+                    <button type="button" class="btn btn-secondary" id="cancelAddBtn">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Item Details Modal -->
+    <div class="modal fade" id="itemDetailsModal" tabindex="-1" aria-labelledby="itemDetailsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="itemDetailsModalLabel">Item Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img id="itemDetailsImage" src="" alt="Item Image" class="img-fluid mb-3">
+                        </div>
+                        <div class="col-md-6">
+                            <h3 id="itemDetailsName"></h3>
+                            <p id="itemDetailsTags"></p>
+                            <p id="itemDetailsQuantity"></p>
+                            <p id="itemDetailsDescription"></p>
+                            <a id="itemDetailsLink" href="" target="_blank" rel="noopener noreferrer">External Link</a>
+                            <div id="itemDetailsWarnings" class="mt-3"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="chatModal" tabindex="-1" aria-labelledby="chatModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="chatModalLabel">Ask the iLab</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="chatMessages"> 
+                        <div id="loadingSpinner" style="display: none;">
+                            <i class="fas fa-spinner fa-spin"></i> iLab is thinking...
+                        </div>
+                    </div>
+                    
+                    <div class="input-group mt-3">
+                        <input type="text" id="userInput" class="form-control" placeholder="Type your message...">
+                        <button class="btn btn-primary" id="sendMessage">Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="/static/js/script.js"></script>
 </body>
 </html>
