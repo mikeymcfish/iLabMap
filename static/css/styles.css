@@ -9,7 +9,7 @@ body {
 #mapCanvas {
     border: none;
     width: auto;
-    height: calc(100vh - 75px);
+    /* height: calc(100vh - 75px); */
 }
 
 .list-group-item:hover {

@@ -122,9 +122,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    function snapTo2x(pixel) {
-      return Math.round(pixel / 2) * 2;
-    }
     function snapTo5x(pixel) {
       return Math.round(pixel / 5) * 5;
     }
@@ -167,6 +164,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     const option = document.createElement('option');
                     option.value = map.id;
                     option.textContent = map.name;
+                   
                     mapSelector.appendChild(option);
                 });
 
@@ -771,7 +769,9 @@ document.addEventListener('DOMContentLoaded', function() {
                         return response.json();
                     })
                     .then(data => {
-                        mapImage.src = data.svg_path;
+                        // Hard-code SVG to PNG
+                        let imagePath = data.svg_path.replace('.svg', '.png');
+                        mapImage.src = imagePath;
                         mapImage.onload = function() {
                             resizeCanvas();
                             loadItems();
