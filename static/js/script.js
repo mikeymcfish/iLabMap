@@ -261,9 +261,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 const warnings = item.warning.split(',').filter(warning => warning.trim() !== "");
                 warnings.forEach(warning => {
                     const warningBadge = document.createElement('div');
-                    warningBadge.classList.add('warning-badges', 'me-2');
-                    const warningIcon = document.createElement('i');
-                    warningIcon.classList.add('fas', 'fa-sm', `fa-${warning.trim()}`);
+                    warningBadge.classList.add('warning-badges-nobg', 'me-2');
+                    // const warningIcon = document.createElement('i');
+                    // warningIcon.classList.add('fas', 'fa-sm', `fa-${warning.trim()}`);
+                    const warningIcon = document.createElement('img');
+                    warningIcon.src = `/static/img/icons/${warning.trim()}.svg`;
                     warningBadge.appendChild(warningIcon);
                     buttonsContainer.appendChild(warningBadge);
                 });
@@ -467,9 +469,9 @@ document.addEventListener('DOMContentLoaded', function() {
             const warnings = item.warning.split(',').filter(warning => warning.trim() !== "");
             warnings.forEach(warning => {
                 const warningBadge = document.createElement('div');
-                warningBadge.classList.add('warning-badges', 'me-2');
-                const warningIcon = document.createElement('i');
-                warningIcon.classList.add('fas', 'fa-sm', `fa-${warning.trim()}`);
+                warningBadge.classList.add('warning-badges-nobg', 'me-2');
+                const warningIcon = document.createElement('img');
+                warningIcon.src = `/static/img/icons/${warning.trim()}.svg`;
                 warningBadge.appendChild(warningIcon);
                 warningsContainer.appendChild(warningBadge);
             });
