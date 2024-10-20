@@ -20433,3 +20433,1078 @@ Following these steps will help you keep things tidy and your prints top-notch. 
 2024-10-20 16:12:27,662 - INFO - 172.31.196.29 - - [20/Oct/2024 16:12:27] "[36mGET /static/thumbnails/20241018_150628_7b9b8b60.png HTTP/1.1[0m" 304 -
 2024-10-20 16:12:27,667 - INFO - 172.31.196.29 - - [20/Oct/2024 16:12:27] "[36mGET /static/thumbnails/20241018_150114_e2307150.png HTTP/1.1[0m" 304 -
 2024-10-20 16:12:27,680 - INFO - 172.31.196.29 - - [20/Oct/2024 16:12:27] "[36mGET /static/thumbnails/20241018_150915_9ee2ee5b.png HTTP/1.1[0m" 304 -
+2024-10-20 16:40:01,265 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-20 16:40:02,271 - INFO - 172.31.196.29 - - [20/Oct/2024 16:40:02] "GET / HTTP/1.1" 200 -
+2024-10-20 16:40:02,382 - INFO - 172.31.196.29 - - [20/Oct/2024 16:40:02] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-10-20 16:40:02,462 - INFO - 172.31.196.29 - - [20/Oct/2024 16:40:02] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2024-10-20 16:40:02,654 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps
+2024-10-20 16:40:02,654 - INFO - Fetching all maps
+2024-10-20 16:40:03,186 - INFO - 172.31.196.29 - - [20/Oct/2024 16:40:03] "GET /api/maps HTTP/1.1" 200 -
+2024-10-20 16:40:03,268 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps/1
+2024-10-20 16:40:03,268 - INFO - Fetching map with ID: 1
+2024-10-20 16:40:03,495 - INFO - 172.31.196.29 - - [20/Oct/2024 16:40:03] "GET /api/maps/1 HTTP/1.1" 200 -
+2024-10-20 16:40:03,580 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/static/maps/main.png
+2024-10-20 16:40:03,580 - INFO - Attempting to serve static file: /home/runner/workspace/static/maps/main.png
+2024-10-20 16:40:03,580 - INFO - 172.31.196.29 - - [20/Oct/2024 16:40:03] "GET /static/maps/main.png HTTP/1.1" 200 -
+2024-10-20 16:40:04,009 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/items?map_id=1
+2024-10-20 16:40:04,010 - INFO - Fetching items for map ID: 1
+2024-10-20 16:40:04,238 - INFO - 172.31.196.29 - - [20/Oct/2024 16:40:04] "GET /api/items?map_id=1 HTTP/1.1" 200 -
+2024-10-20 16:40:04,326 - INFO - 172.31.196.29 - - [20/Oct/2024 16:40:04] "[33mHEAD /static/thumbnails/20241018_173844_47d7cf43.jpg HTTP/1.1[0m" 404 -
+2024-10-20 16:40:04,405 - INFO - 172.31.196.29 - - [20/Oct/2024 16:40:04] "[36mHEAD /static/thumbnails/20241018_150242_c2a5134b.png HTTP/1.1[0m" 304 -
+2024-10-20 16:40:04,414 - INFO - 172.31.196.29 - - [20/Oct/2024 16:40:04] "[33mHEAD /static/thumbnails/20241018_173743_7e7d8d33.jpg HTTP/1.1[0m" 404 -
+2024-10-20 16:40:04,484 - INFO - 172.31.196.29 - - [20/Oct/2024 16:40:04] "[33mHEAD /static/thumbnails/20241016_153624_1dbede16.jpg HTTP/1.1[0m" 404 -
+2024-10-20 16:40:04,492 - INFO - 172.31.196.29 - - [20/Oct/2024 16:40:04] "[36mHEAD /static/thumbnails/20241018_150114_e2307150.png HTTP/1.1[0m" 304 -
+2024-10-20 16:40:04,562 - INFO - 172.31.196.29 - - [20/Oct/2024 16:40:04] "[33mHEAD /static/thumbnails/20241018_173727_dc77ec8d.jpg HTTP/1.1[0m" 404 -
+2024-10-20 16:40:04,568 - INFO - 172.31.196.29 - - [20/Oct/2024 16:40:04] "[33mHEAD /static/thumbnails/20241018_173921_fb220825.jpg HTTP/1.1[0m" 404 -
+2024-10-20 16:40:04,622 - INFO - 172.31.196.29 - - [20/Oct/2024 16:40:04] "[33mHEAD /static/thumbnails/20241016_150011_83503f4f.jpg HTTP/1.1[0m" 404 -
+2024-10-20 16:40:04,624 - INFO - 172.31.196.29 - - [20/Oct/2024 16:40:04] "[33mHEAD /static/thumbnails/20241018_174024_7df52a7d.jpeg HTTP/1.1[0m" 404 -
+2024-10-20 16:40:04,626 - INFO - 172.31.196.29 - - [20/Oct/2024 16:40:04] "[36mHEAD /static/thumbnails/20241018_150915_9ee2ee5b.png HTTP/1.1[0m" 304 -
+2024-10-20 16:40:04,627 - INFO - 172.31.196.29 - - [20/Oct/2024 16:40:04] "[36mHEAD /static/thumbnails/20241018_150628_7b9b8b60.png HTTP/1.1[0m" 304 -
+2024-10-20 16:40:04,640 - INFO - 172.31.196.29 - - [20/Oct/2024 16:40:04] "[33mHEAD /static/thumbnails/20241016_153208_247e423e.jpg HTTP/1.1[0m" 404 -
+2024-10-20 16:40:04,646 - INFO - 172.31.196.29 - - [20/Oct/2024 16:40:04] "[33mHEAD /static/thumbnails/20241016_154030_89cfc546.jpg HTTP/1.1[0m" 404 -
+2024-10-20 16:40:04,703 - INFO - 172.31.196.29 - - [20/Oct/2024 16:40:04] "[33mHEAD /static/thumbnails/20241016_153707_39faf826.jpg HTTP/1.1[0m" 404 -
+2024-10-20 16:40:04,707 - INFO - 172.31.196.29 - - [20/Oct/2024 16:40:04] "[33mHEAD /static/thumbnails/20241016_151142_bf6008cc.jpg HTTP/1.1[0m" 404 -
+2024-10-20 16:40:04,709 - INFO - 172.31.196.29 - - [20/Oct/2024 16:40:04] "[33mHEAD /static/thumbnails/20241016_152258_1f8a6141.jpg HTTP/1.1[0m" 404 -
+2024-10-20 16:40:04,712 - INFO - 172.31.196.29 - - [20/Oct/2024 16:40:04] "[33mHEAD /null HTTP/1.1[0m" 404 -
+2024-10-20 16:40:04,721 - INFO - 172.31.196.29 - - [20/Oct/2024 16:40:04] "[36mHEAD /static/thumbnails/20241018_150652_7df45f90.png HTTP/1.1[0m" 304 -
+2024-10-20 16:40:04,725 - INFO - 172.31.196.29 - - [20/Oct/2024 16:40:04] "[36mHEAD /static/thumbnails/20241019_150025_1180cdbe.jpg HTTP/1.1[0m" 304 -
+2024-10-20 16:40:04,782 - INFO - 172.31.196.29 - - [20/Oct/2024 16:40:04] "[36mGET /static/img/default.png HTTP/1.1[0m" 304 -
+2024-10-20 16:40:04,788 - INFO - 172.31.196.29 - - [20/Oct/2024 16:40:04] "[36mGET /static/thumbnails/20241018_150114_e2307150.png HTTP/1.1[0m" 304 -
+2024-10-20 16:40:04,791 - INFO - 172.31.196.29 - - [20/Oct/2024 16:40:04] "[36mGET /static/thumbnails/20241018_150242_c2a5134b.png HTTP/1.1[0m" 304 -
+2024-10-20 16:40:04,792 - INFO - 172.31.196.29 - - [20/Oct/2024 16:40:04] "[36mGET /static/thumbnails/20241018_150628_7b9b8b60.png HTTP/1.1[0m" 304 -
+2024-10-20 16:40:04,798 - INFO - 172.31.196.29 - - [20/Oct/2024 16:40:04] "[36mGET /static/thumbnails/20241018_150915_9ee2ee5b.png HTTP/1.1[0m" 304 -
+2024-10-20 16:40:04,804 - INFO - 172.31.196.29 - - [20/Oct/2024 16:40:04] "[36mGET /static/thumbnails/20241018_150652_7df45f90.png HTTP/1.1[0m" 304 -
+2024-10-20 16:40:04,862 - INFO - 172.31.196.29 - - [20/Oct/2024 16:40:04] "[36mGET /static/thumbnails/20241019_150025_1180cdbe.jpg HTTP/1.1[0m" 304 -
+2024-10-20 17:03:35,339 - INFO -  * Detected change in '/home/runner/workspace/routes.py', reloading
+2024-10-20 17:03:35,556 - INFO -  * Restarting with stat
+2024-10-20 17:03:36,704 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-20 17:03:36,705 - INFO - Added job "create_backup" to job store "default"
+2024-10-20 17:03:36,706 - INFO - Scheduler started
+2024-10-20 17:03:36,706 - INFO - Scheduler started
+2024-10-20 17:03:50,901 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-20 17:03:50,902 - INFO - Added job "create_backup" to job store "default"
+2024-10-20 17:03:50,902 - INFO - Scheduler started
+2024-10-20 17:03:50,903 - INFO - Scheduler started
+2024-10-20 17:03:50,902 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-20 17:03:50,903 - INFO - Added job "create_backup" to job store "default"
+2024-10-20 17:03:50,904 - INFO - Scheduler started
+2024-10-20 17:03:50,905 - INFO - Scheduler started
+2024-10-20 17:04:36,226 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-20 17:04:36,226 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-20 17:04:36,228 - INFO - Added job "create_backup" to job store "default"
+2024-10-20 17:04:36,228 - INFO - Added job "create_backup" to job store "default"
+2024-10-20 17:04:36,228 - INFO - Scheduler started
+2024-10-20 17:04:36,228 - INFO - Scheduler started
+2024-10-20 17:04:36,228 - INFO - Scheduler started
+2024-10-20 17:04:36,228 - INFO - Scheduler started
+2024-10-20 17:04:36,845 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.196.29:5000
+2024-10-20 17:04:36,845 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-20 17:04:36,847 - INFO -  * Restarting with stat
+2024-10-20 17:04:37,425 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-20 17:04:37,427 - INFO - Added job "create_backup" to job store "default"
+2024-10-20 17:04:37,427 - INFO - Scheduler started
+2024-10-20 17:04:37,427 - INFO - Scheduler started
+2024-10-20 17:04:37,806 - WARNING -  * Debugger is active!
+2024-10-20 17:04:37,808 - INFO -  * Debugger PIN: 147-784-642
+2024-10-20 17:04:45,557 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-20 17:04:47,084 - INFO - 172.31.196.29 - - [20/Oct/2024 17:04:47] "GET / HTTP/1.1" 200 -
+2024-10-20 17:04:47,342 - INFO - 172.31.196.29 - - [20/Oct/2024 17:04:47] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-10-20 17:04:47,424 - INFO - 172.31.196.29 - - [20/Oct/2024 17:04:47] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2024-10-20 17:04:47,555 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps
+2024-10-20 17:04:47,555 - INFO - Fetching all maps
+2024-10-20 17:04:47,784 - INFO - 172.31.196.29 - - [20/Oct/2024 17:04:47] "GET /api/maps HTTP/1.1" 200 -
+2024-10-20 17:04:47,867 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps/1
+2024-10-20 17:04:47,867 - INFO - Fetching map with ID: 1
+2024-10-20 17:04:48,097 - INFO - 172.31.196.29 - - [20/Oct/2024 17:04:48] "GET /api/maps/1 HTTP/1.1" 200 -
+2024-10-20 17:04:48,182 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/static/maps/main.png
+2024-10-20 17:04:48,182 - INFO - Attempting to serve static file: /home/runner/workspace/static/maps/main.png
+2024-10-20 17:04:48,182 - INFO - 172.31.196.29 - - [20/Oct/2024 17:04:48] "[36mGET /static/maps/main.png HTTP/1.1[0m" 304 -
+2024-10-20 17:04:48,266 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/items?map_id=1
+2024-10-20 17:04:48,266 - INFO - Fetching items for map ID: 1
+2024-10-20 17:04:48,495 - INFO - 172.31.196.29 - - [20/Oct/2024 17:04:48] "GET /api/items?map_id=1 HTTP/1.1" 200 -
+2024-10-20 17:04:48,601 - INFO - 172.31.196.29 - - [20/Oct/2024 17:04:48] "[33mHEAD /static/thumbnails/20241018_173844_47d7cf43.jpg HTTP/1.1[0m" 404 -
+2024-10-20 17:04:48,665 - INFO - 172.31.196.29 - - [20/Oct/2024 17:04:48] "[33mHEAD /static/thumbnails/20241018_173743_7e7d8d33.jpg HTTP/1.1[0m" 404 -
+2024-10-20 17:04:48,680 - INFO - 172.31.196.29 - - [20/Oct/2024 17:04:48] "[36mHEAD /static/thumbnails/20241018_150242_c2a5134b.png HTTP/1.1[0m" 304 -
+2024-10-20 17:04:48,744 - INFO - 172.31.196.29 - - [20/Oct/2024 17:04:48] "[36mHEAD /static/thumbnails/20241018_150114_e2307150.png HTTP/1.1[0m" 304 -
+2024-10-20 17:04:48,760 - INFO - 172.31.196.29 - - [20/Oct/2024 17:04:48] "[36mHEAD /static/thumbnails/20241018_150628_7b9b8b60.png HTTP/1.1[0m" 304 -
+2024-10-20 17:04:48,822 - INFO - 172.31.196.29 - - [20/Oct/2024 17:04:48] "[36mHEAD /static/thumbnails/20241018_150915_9ee2ee5b.png HTTP/1.1[0m" 304 -
+2024-10-20 17:04:48,840 - INFO - 172.31.196.29 - - [20/Oct/2024 17:04:48] "[33mHEAD /static/thumbnails/20241016_150011_83503f4f.jpg HTTP/1.1[0m" 404 -
+2024-10-20 17:04:48,850 - INFO - 172.31.196.29 - - [20/Oct/2024 17:04:48] "[33mHEAD /static/thumbnails/20241018_173921_fb220825.jpg HTTP/1.1[0m" 404 -
+2024-10-20 17:04:48,913 - INFO - 172.31.196.29 - - [20/Oct/2024 17:04:48] "[36mHEAD /static/thumbnails/20241018_150652_7df45f90.png HTTP/1.1[0m" 304 -
+2024-10-20 17:04:48,914 - INFO - 172.31.196.29 - - [20/Oct/2024 17:04:48] "[33mHEAD /static/thumbnails/20241018_173727_dc77ec8d.jpg HTTP/1.1[0m" 404 -
+2024-10-20 17:04:48,915 - INFO - 172.31.196.29 - - [20/Oct/2024 17:04:48] "[33mHEAD /static/thumbnails/20241018_174024_7df52a7d.jpeg HTTP/1.1[0m" 404 -
+2024-10-20 17:04:48,918 - INFO - 172.31.196.29 - - [20/Oct/2024 17:04:48] "[33mHEAD /static/thumbnails/20241016_153624_1dbede16.jpg HTTP/1.1[0m" 404 -
+2024-10-20 17:04:48,920 - INFO - 172.31.196.29 - - [20/Oct/2024 17:04:48] "[36mHEAD /static/thumbnails/20241019_150025_1180cdbe.jpg HTTP/1.1[0m" 304 -
+2024-10-20 17:04:48,929 - INFO - 172.31.196.29 - - [20/Oct/2024 17:04:48] "[33mHEAD /static/thumbnails/20241016_153208_247e423e.jpg HTTP/1.1[0m" 404 -
+2024-10-20 17:04:48,995 - INFO - 172.31.196.29 - - [20/Oct/2024 17:04:48] "[33mHEAD /static/thumbnails/20241016_154030_89cfc546.jpg HTTP/1.1[0m" 404 -
+2024-10-20 17:04:49,000 - INFO - 172.31.196.29 - - [20/Oct/2024 17:04:49] "[33mHEAD /static/thumbnails/20241016_151142_bf6008cc.jpg HTTP/1.1[0m" 404 -
+2024-10-20 17:04:49,001 - INFO - 172.31.196.29 - - [20/Oct/2024 17:04:49] "[33mHEAD /static/thumbnails/20241016_153707_39faf826.jpg HTTP/1.1[0m" 404 -
+2024-10-20 17:04:49,002 - INFO - 172.31.196.29 - - [20/Oct/2024 17:04:49] "[33mHEAD /static/thumbnails/20241016_152258_1f8a6141.jpg HTTP/1.1[0m" 404 -
+2024-10-20 17:04:49,007 - INFO - 172.31.196.29 - - [20/Oct/2024 17:04:49] "[36mGET /static/img/default.png HTTP/1.1[0m" 304 -
+2024-10-20 17:04:49,014 - INFO - 172.31.196.29 - - [20/Oct/2024 17:04:49] "[33mHEAD /null HTTP/1.1[0m" 404 -
+2024-10-20 17:04:49,074 - INFO - 172.31.196.29 - - [20/Oct/2024 17:04:49] "[36mGET /static/thumbnails/20241018_150114_e2307150.png HTTP/1.1[0m" 304 -
+2024-10-20 17:04:49,081 - INFO - 172.31.196.29 - - [20/Oct/2024 17:04:49] "[36mGET /static/thumbnails/20241018_150915_9ee2ee5b.png HTTP/1.1[0m" 304 -
+2024-10-20 17:04:49,083 - INFO - 172.31.196.29 - - [20/Oct/2024 17:04:49] "[36mGET /static/thumbnails/20241018_150628_7b9b8b60.png HTTP/1.1[0m" 304 -
+2024-10-20 17:04:49,084 - INFO - 172.31.196.29 - - [20/Oct/2024 17:04:49] "[36mGET /static/thumbnails/20241018_150242_c2a5134b.png HTTP/1.1[0m" 304 -
+2024-10-20 17:04:49,086 - INFO - 172.31.196.29 - - [20/Oct/2024 17:04:49] "[36mGET /static/thumbnails/20241018_150652_7df45f90.png HTTP/1.1[0m" 304 -
+2024-10-20 17:04:49,096 - INFO - 172.31.196.29 - - [20/Oct/2024 17:04:49] "[36mGET /static/thumbnails/20241019_150025_1180cdbe.jpg HTTP/1.1[0m" 304 -
+2024-10-20 17:05:02,997 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:05:02,999 - INFO - 172.31.196.29 - - [20/Oct/2024 17:05:02] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:06:32,989 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:06:32,991 - INFO - 172.31.196.29 - - [20/Oct/2024 17:06:32] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:06:33,310 - INFO - 172.31.196.29 - - [20/Oct/2024 17:06:33] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:06:45,176 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:06:45,176 - INFO - 172.31.196.29 - - [20/Oct/2024 17:06:45] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:06:45,366 - INFO - 172.31.196.29 - - [20/Oct/2024 17:06:45] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:07:57,348 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:07:57,349 - INFO - 172.31.196.29 - - [20/Oct/2024 17:07:57] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:07:57,660 - INFO - 172.31.196.29 - - [20/Oct/2024 17:07:57] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:09:32,848 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:09:32,850 - INFO - 172.31.196.29 - - [20/Oct/2024 17:09:32] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:09:33,138 - INFO - 172.31.196.29 - - [20/Oct/2024 17:09:33] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:10:52,138 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:10:52,140 - INFO - 172.31.196.29 - - [20/Oct/2024 17:10:52] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:10:52,455 - INFO - 172.31.196.29 - - [20/Oct/2024 17:10:52] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:12:50,561 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:12:50,563 - INFO - 172.31.196.29 - - [20/Oct/2024 17:12:50] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:12:50,878 - INFO - 172.31.196.29 - - [20/Oct/2024 17:12:50] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:13:03,771 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:13:03,773 - INFO - 172.31.196.29 - - [20/Oct/2024 17:13:03] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:13:03,996 - INFO - 172.31.196.29 - - [20/Oct/2024 17:13:03] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:14:23,399 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:14:23,400 - INFO - 172.31.196.29 - - [20/Oct/2024 17:14:23] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:14:23,759 - INFO - 172.31.196.29 - - [20/Oct/2024 17:14:23] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:14:57,522 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:14:57,524 - INFO - 172.31.196.29 - - [20/Oct/2024 17:14:57] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:15:06,915 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:15:06,917 - INFO - 172.31.196.29 - - [20/Oct/2024 17:15:06] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:15:07,130 - INFO - 172.31.196.29 - - [20/Oct/2024 17:15:07] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:16:08,086 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:16:08,088 - INFO - 172.31.196.29 - - [20/Oct/2024 17:16:08] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:16:08,399 - INFO - 172.31.196.29 - - [20/Oct/2024 17:16:08] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:17:24,682 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:17:24,683 - INFO - 172.31.196.29 - - [20/Oct/2024 17:17:24] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:17:24,915 - INFO - 172.31.196.29 - - [20/Oct/2024 17:17:24] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:17:41,503 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:17:41,505 - INFO - 172.31.196.29 - - [20/Oct/2024 17:17:41] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:17:41,833 - INFO - 172.31.196.29 - - [20/Oct/2024 17:17:41] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:17:50,943 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:17:50,945 - INFO - 172.31.196.29 - - [20/Oct/2024 17:17:50] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:17:51,171 - INFO - 172.31.196.29 - - [20/Oct/2024 17:17:51] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:18:00,452 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:18:00,454 - INFO - 172.31.196.29 - - [20/Oct/2024 17:18:00] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:18:00,659 - INFO - 172.31.196.29 - - [20/Oct/2024 17:18:00] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:18:16,724 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:18:16,725 - INFO - 172.31.196.29 - - [20/Oct/2024 17:18:16] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:18:16,935 - INFO - 172.31.196.29 - - [20/Oct/2024 17:18:16] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:18:24,572 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:18:24,573 - INFO - 172.31.196.29 - - [20/Oct/2024 17:18:24] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:18:24,787 - INFO - 172.31.196.29 - - [20/Oct/2024 17:18:24] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:18:35,722 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:18:35,723 - INFO - 172.31.196.29 - - [20/Oct/2024 17:18:35] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:18:35,923 - INFO - 172.31.196.29 - - [20/Oct/2024 17:18:35] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:18:42,139 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:18:42,141 - INFO - 172.31.196.29 - - [20/Oct/2024 17:18:42] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:18:42,354 - INFO - 172.31.196.29 - - [20/Oct/2024 17:18:42] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:18:50,336 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:18:50,336 - INFO - 172.31.196.29 - - [20/Oct/2024 17:18:50] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:18:50,536 - INFO - 172.31.196.29 - - [20/Oct/2024 17:18:50] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:18:58,664 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:18:58,665 - INFO - 172.31.196.29 - - [20/Oct/2024 17:18:58] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:18:58,874 - INFO - 172.31.196.29 - - [20/Oct/2024 17:18:58] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:19:07,349 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:19:07,351 - INFO - 172.31.196.29 - - [20/Oct/2024 17:19:07] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:19:07,551 - INFO - 172.31.196.29 - - [20/Oct/2024 17:19:07] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:20:20,767 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:20:20,769 - INFO - 172.31.196.29 - - [20/Oct/2024 17:20:20] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:20:21,129 - INFO - 172.31.196.29 - - [20/Oct/2024 17:20:21] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:20:31,670 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:20:31,672 - INFO - 172.31.196.29 - - [20/Oct/2024 17:20:31] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:20:31,885 - INFO - 172.31.196.29 - - [20/Oct/2024 17:20:31] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:20:40,017 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:20:40,018 - INFO - 172.31.196.29 - - [20/Oct/2024 17:20:40] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:20:40,229 - INFO - 172.31.196.29 - - [20/Oct/2024 17:20:40] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:21:39,903 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:21:39,905 - INFO - 172.31.196.29 - - [20/Oct/2024 17:21:39] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:21:40,200 - INFO - 172.31.196.29 - - [20/Oct/2024 17:21:40] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:22:02,336 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:22:02,338 - INFO - 172.31.196.29 - - [20/Oct/2024 17:22:02] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:22:02,541 - INFO - 172.31.196.29 - - [20/Oct/2024 17:22:02] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:24:06,104 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:24:06,106 - INFO - 172.31.196.29 - - [20/Oct/2024 17:24:06] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:24:06,417 - INFO - 172.31.196.29 - - [20/Oct/2024 17:24:06] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:25:02,731 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:25:02,733 - INFO - 172.31.196.29 - - [20/Oct/2024 17:25:02] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:25:03,001 - INFO - 172.31.196.29 - - [20/Oct/2024 17:25:03] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:25:10,527 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:25:10,527 - INFO - 172.31.196.29 - - [20/Oct/2024 17:25:10] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:25:10,722 - INFO - 172.31.196.29 - - [20/Oct/2024 17:25:10] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:25:21,958 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:25:21,960 - INFO - 172.31.196.29 - - [20/Oct/2024 17:25:21] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:25:22,181 - INFO - 172.31.196.29 - - [20/Oct/2024 17:25:22] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:25:30,135 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:25:30,137 - INFO - 172.31.196.29 - - [20/Oct/2024 17:25:30] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:25:30,339 - INFO - 172.31.196.29 - - [20/Oct/2024 17:25:30] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:25:42,108 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:25:42,109 - INFO - 172.31.196.29 - - [20/Oct/2024 17:25:42] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:25:42,313 - INFO - 172.31.196.29 - - [20/Oct/2024 17:25:42] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:25:59,954 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:25:59,955 - INFO - 172.31.196.29 - - [20/Oct/2024 17:25:59] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:26:00,173 - INFO - 172.31.196.29 - - [20/Oct/2024 17:26:00] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:27:02,568 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:27:02,569 - INFO - 172.31.196.29 - - [20/Oct/2024 17:27:02] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:27:02,911 - INFO - 172.31.196.29 - - [20/Oct/2024 17:27:02] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:27:09,745 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:27:09,746 - INFO - 172.31.196.29 - - [20/Oct/2024 17:27:09] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:27:09,950 - INFO - 172.31.196.29 - - [20/Oct/2024 17:27:09] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:27:22,356 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:27:22,358 - INFO - 172.31.196.29 - - [20/Oct/2024 17:27:22] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:27:22,573 - INFO - 172.31.196.29 - - [20/Oct/2024 17:27:22] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:27:52,151 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:27:52,153 - INFO - 172.31.196.29 - - [20/Oct/2024 17:27:52] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:27:52,415 - INFO - 172.31.196.29 - - [20/Oct/2024 17:27:52] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:28:01,515 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:28:01,516 - INFO - 172.31.196.29 - - [20/Oct/2024 17:28:01] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:28:01,719 - INFO - 172.31.196.29 - - [20/Oct/2024 17:28:01] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:28:11,881 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:28:11,883 - INFO - 172.31.196.29 - - [20/Oct/2024 17:28:11] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:28:12,109 - INFO - 172.31.196.29 - - [20/Oct/2024 17:28:12] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:28:26,917 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:28:26,920 - INFO - 172.31.196.29 - - [20/Oct/2024 17:28:26] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:28:27,156 - INFO - 172.31.196.29 - - [20/Oct/2024 17:28:27] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:28:40,341 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:28:40,342 - INFO - 172.31.196.29 - - [20/Oct/2024 17:28:40] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:28:40,555 - INFO - 172.31.196.29 - - [20/Oct/2024 17:28:40] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:28:52,153 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:28:52,155 - INFO - 172.31.196.29 - - [20/Oct/2024 17:28:52] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:28:52,399 - INFO - 172.31.196.29 - - [20/Oct/2024 17:28:52] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:28:59,912 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:28:59,915 - INFO - 172.31.196.29 - - [20/Oct/2024 17:28:59] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:29:00,140 - INFO - 172.31.196.29 - - [20/Oct/2024 17:29:00] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:30:19,653 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:30:19,654 - INFO - 172.31.196.29 - - [20/Oct/2024 17:30:19] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:30:19,995 - INFO - 172.31.196.29 - - [20/Oct/2024 17:30:19] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:30:36,456 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:30:36,458 - INFO - 172.31.196.29 - - [20/Oct/2024 17:30:36] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:30:36,685 - INFO - 172.31.196.29 - - [20/Oct/2024 17:30:36] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:30:52,446 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:30:52,447 - INFO - 172.31.196.29 - - [20/Oct/2024 17:30:52] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:30:52,654 - INFO - 172.31.196.29 - - [20/Oct/2024 17:30:52] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:31:21,378 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:31:21,380 - INFO - 172.31.196.29 - - [20/Oct/2024 17:31:21] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:31:21,599 - INFO - 172.31.196.29 - - [20/Oct/2024 17:31:21] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:31:34,151 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:31:34,152 - INFO - 172.31.196.29 - - [20/Oct/2024 17:31:34] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:31:34,387 - INFO - 172.31.196.29 - - [20/Oct/2024 17:31:34] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:31:46,133 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:31:46,135 - INFO - 172.31.196.29 - - [20/Oct/2024 17:31:46] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:31:46,354 - INFO - 172.31.196.29 - - [20/Oct/2024 17:31:46] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:32:10,569 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:32:10,570 - INFO - 172.31.196.29 - - [20/Oct/2024 17:32:10] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:32:10,834 - INFO - 172.31.196.29 - - [20/Oct/2024 17:32:10] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:32:19,578 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:32:19,579 - INFO - 172.31.196.29 - - [20/Oct/2024 17:32:19] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:32:19,804 - INFO - 172.31.196.29 - - [20/Oct/2024 17:32:19] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:32:31,004 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:32:31,006 - INFO - 172.31.196.29 - - [20/Oct/2024 17:32:31] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:32:31,219 - INFO - 172.31.196.29 - - [20/Oct/2024 17:32:31] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:32:41,273 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:32:41,274 - INFO - 172.31.196.29 - - [20/Oct/2024 17:32:41] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:32:41,513 - INFO - 172.31.196.29 - - [20/Oct/2024 17:32:41] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:32:52,103 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:32:52,105 - INFO - 172.31.196.29 - - [20/Oct/2024 17:32:52] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:32:52,315 - INFO - 172.31.196.29 - - [20/Oct/2024 17:32:52] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:33:21,753 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:33:21,754 - INFO - 172.31.196.29 - - [20/Oct/2024 17:33:21] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:33:22,079 - INFO - 172.31.196.29 - - [20/Oct/2024 17:33:22] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:33:48,997 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:33:48,998 - INFO - 172.31.196.29 - - [20/Oct/2024 17:33:48] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:33:49,220 - INFO - 172.31.196.29 - - [20/Oct/2024 17:33:49] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:33:58,913 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:33:58,914 - INFO - 172.31.196.29 - - [20/Oct/2024 17:33:58] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:33:59,137 - INFO - 172.31.196.29 - - [20/Oct/2024 17:33:59] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:34:08,455 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:34:08,456 - INFO - 172.31.196.29 - - [20/Oct/2024 17:34:08] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:34:08,668 - INFO - 172.31.196.29 - - [20/Oct/2024 17:34:08] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:34:15,698 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:34:15,700 - INFO - 172.31.196.29 - - [20/Oct/2024 17:34:15] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:34:15,906 - INFO - 172.31.196.29 - - [20/Oct/2024 17:34:15] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:34:43,543 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:34:43,544 - INFO - 172.31.196.29 - - [20/Oct/2024 17:34:43] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:34:43,755 - INFO - 172.31.196.29 - - [20/Oct/2024 17:34:43] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:36:41,857 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:36:41,858 - INFO - 172.31.196.29 - - [20/Oct/2024 17:36:41] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:36:42,138 - INFO - 172.31.196.29 - - [20/Oct/2024 17:36:42] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:37:14,536 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:37:14,538 - INFO - 172.31.196.29 - - [20/Oct/2024 17:37:14] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:37:54,101 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:37:54,104 - INFO - 172.31.196.29 - - [20/Oct/2024 17:37:54] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:37:54,374 - INFO - 172.31.196.29 - - [20/Oct/2024 17:37:54] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:38:07,701 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:38:07,702 - INFO - 172.31.196.29 - - [20/Oct/2024 17:38:07] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:38:07,906 - INFO - 172.31.196.29 - - [20/Oct/2024 17:38:07] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:38:15,476 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:38:15,478 - INFO - 172.31.196.29 - - [20/Oct/2024 17:38:15] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:38:15,685 - INFO - 172.31.196.29 - - [20/Oct/2024 17:38:15] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:38:29,497 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:38:29,499 - INFO - 172.31.196.29 - - [20/Oct/2024 17:38:29] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:38:29,806 - INFO - 172.31.196.29 - - [20/Oct/2024 17:38:29] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:38:38,423 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:38:38,425 - INFO - 172.31.196.29 - - [20/Oct/2024 17:38:38] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:38:38,624 - INFO - 172.31.196.29 - - [20/Oct/2024 17:38:38] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:38:46,105 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:38:46,107 - INFO - 172.31.196.29 - - [20/Oct/2024 17:38:46] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:38:46,316 - INFO - 172.31.196.29 - - [20/Oct/2024 17:38:46] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:39:05,954 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:39:05,956 - INFO - 172.31.196.29 - - [20/Oct/2024 17:39:05] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:39:06,182 - INFO - 172.31.196.29 - - [20/Oct/2024 17:39:06] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:39:25,859 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:39:25,861 - INFO - 172.31.196.29 - - [20/Oct/2024 17:39:25] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:39:26,078 - INFO - 172.31.196.29 - - [20/Oct/2024 17:39:26] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:39:38,503 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:39:38,504 - INFO - 172.31.196.29 - - [20/Oct/2024 17:39:38] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:39:38,714 - INFO - 172.31.196.29 - - [20/Oct/2024 17:39:38] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:39:52,808 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:39:52,810 - INFO - 172.31.196.29 - - [20/Oct/2024 17:39:52] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:39:53,119 - INFO - 172.31.196.29 - - [20/Oct/2024 17:39:53] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:40:15,321 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:40:15,322 - INFO - 172.31.196.29 - - [20/Oct/2024 17:40:15] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:40:15,642 - INFO - 172.31.196.29 - - [20/Oct/2024 17:40:15] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:40:28,689 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:40:28,689 - INFO - 172.31.196.29 - - [20/Oct/2024 17:40:28] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:40:28,890 - INFO - 172.31.196.29 - - [20/Oct/2024 17:40:28] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:40:41,349 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:40:41,350 - INFO - 172.31.196.29 - - [20/Oct/2024 17:40:41] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:40:41,564 - INFO - 172.31.196.29 - - [20/Oct/2024 17:40:41] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:40:52,946 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:40:52,949 - INFO - 172.31.196.29 - - [20/Oct/2024 17:40:52] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:40:53,184 - INFO - 172.31.196.29 - - [20/Oct/2024 17:40:53] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:41:02,194 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:41:02,195 - INFO - 172.31.196.29 - - [20/Oct/2024 17:41:02] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:41:02,435 - INFO - 172.31.196.29 - - [20/Oct/2024 17:41:02] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:41:13,607 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:41:13,609 - INFO - 172.31.196.29 - - [20/Oct/2024 17:41:13] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:41:13,816 - INFO - 172.31.196.29 - - [20/Oct/2024 17:41:13] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:41:27,794 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:41:27,796 - INFO - 172.31.196.29 - - [20/Oct/2024 17:41:27] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:41:27,998 - INFO - 172.31.196.29 - - [20/Oct/2024 17:41:27] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:41:37,387 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:41:37,389 - INFO - 172.31.196.29 - - [20/Oct/2024 17:41:37] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:41:37,594 - INFO - 172.31.196.29 - - [20/Oct/2024 17:41:37] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:41:44,665 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:41:44,666 - INFO - 172.31.196.29 - - [20/Oct/2024 17:41:44] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:41:44,885 - INFO - 172.31.196.29 - - [20/Oct/2024 17:41:44] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:42:08,560 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:42:08,563 - INFO - 172.31.196.29 - - [20/Oct/2024 17:42:08] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:42:08,782 - INFO - 172.31.196.29 - - [20/Oct/2024 17:42:08] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:42:10,662 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 17:42:10,678 - INFO - 172.31.196.29 - - [20/Oct/2024 17:42:10] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 17:42:14,586 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 17:42:14,589 - INFO - 172.31.196.29 - - [20/Oct/2024 17:42:14] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 17:42:15,378 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 17:42:15,381 - INFO - 172.31.196.29 - - [20/Oct/2024 17:42:15] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 17:42:16,074 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 17:42:16,077 - INFO - 172.31.196.29 - - [20/Oct/2024 17:42:16] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 17:42:16,538 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 17:42:16,541 - INFO - 172.31.196.29 - - [20/Oct/2024 17:42:16] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 17:42:17,546 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 17:42:17,549 - INFO - 172.31.196.29 - - [20/Oct/2024 17:42:17] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 17:42:18,146 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 17:42:18,149 - INFO - 172.31.196.29 - - [20/Oct/2024 17:42:18] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 17:42:33,011 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:42:33,011 - INFO - 172.31.196.29 - - [20/Oct/2024 17:42:33] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:42:33,280 - INFO - 172.31.196.29 - - [20/Oct/2024 17:42:33] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:42:34,580 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 17:42:34,584 - INFO - 172.31.196.29 - - [20/Oct/2024 17:42:34] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 17:42:36,500 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 17:42:36,503 - INFO - 172.31.196.29 - - [20/Oct/2024 17:42:36] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 17:42:36,986 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 17:42:36,989 - INFO - 172.31.196.29 - - [20/Oct/2024 17:42:36] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 17:42:44,584 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:42:44,586 - INFO - 172.31.196.29 - - [20/Oct/2024 17:42:44] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:42:44,802 - INFO - 172.31.196.29 - - [20/Oct/2024 17:42:44] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:42:46,404 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 17:42:46,407 - INFO - 172.31.196.29 - - [20/Oct/2024 17:42:46] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 17:42:49,362 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 17:42:49,366 - INFO - 172.31.196.29 - - [20/Oct/2024 17:42:49] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 17:42:50,602 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 17:42:50,605 - INFO - 172.31.196.29 - - [20/Oct/2024 17:42:50] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 17:42:53,010 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 17:42:53,012 - INFO - 172.31.196.29 - - [20/Oct/2024 17:42:53] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 17:42:53,658 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 17:42:53,662 - INFO - 172.31.196.29 - - [20/Oct/2024 17:42:53] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 17:42:54,242 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 17:42:54,244 - INFO - 172.31.196.29 - - [20/Oct/2024 17:42:54] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 17:43:01,831 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:43:01,832 - INFO - 172.31.196.29 - - [20/Oct/2024 17:43:01] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:43:02,038 - INFO - 172.31.196.29 - - [20/Oct/2024 17:43:02] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:43:03,293 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 17:43:03,296 - INFO - 172.31.196.29 - - [20/Oct/2024 17:43:03] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 17:43:05,316 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 17:43:05,319 - INFO - 172.31.196.29 - - [20/Oct/2024 17:43:05] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 17:43:05,868 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 17:43:05,870 - INFO - 172.31.196.29 - - [20/Oct/2024 17:43:05] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 17:43:06,956 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 17:43:06,958 - INFO - 172.31.196.29 - - [20/Oct/2024 17:43:06] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 17:43:14,358 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:43:14,359 - INFO - 172.31.196.29 - - [20/Oct/2024 17:43:14] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:43:14,597 - INFO - 172.31.196.29 - - [20/Oct/2024 17:43:14] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:43:15,606 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 17:43:15,608 - INFO - 172.31.196.29 - - [20/Oct/2024 17:43:15] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 17:43:17,658 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 17:43:17,661 - INFO - 172.31.196.29 - - [20/Oct/2024 17:43:17] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 17:43:18,796 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 17:43:18,798 - INFO - 172.31.196.29 - - [20/Oct/2024 17:43:18] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 17:43:19,426 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 17:43:19,429 - INFO - 172.31.196.29 - - [20/Oct/2024 17:43:19] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 17:43:23,130 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 17:43:23,133 - INFO - 172.31.196.29 - - [20/Oct/2024 17:43:23] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 17:44:39,764 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:44:39,766 - INFO - 172.31.196.29 - - [20/Oct/2024 17:44:39] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:44:40,114 - INFO - 172.31.196.29 - - [20/Oct/2024 17:44:40] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:44:44,246 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 17:44:44,248 - INFO - 172.31.196.29 - - [20/Oct/2024 17:44:44] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 17:44:44,555 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 17:44:44,557 - INFO - 172.31.196.29 - - [20/Oct/2024 17:44:44] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 17:44:45,330 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 17:44:45,333 - INFO - 172.31.196.29 - - [20/Oct/2024 17:44:45] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 17:46:43,346 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:46:43,348 - INFO - 172.31.196.29 - - [20/Oct/2024 17:46:43] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:46:43,675 - INFO - 172.31.196.29 - - [20/Oct/2024 17:46:43] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:46:48,169 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 17:46:48,171 - INFO - 172.31.196.29 - - [20/Oct/2024 17:46:48] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 17:46:50,098 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 17:46:50,101 - INFO - 172.31.196.29 - - [20/Oct/2024 17:46:50] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 17:47:27,582 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:47:27,583 - INFO - 172.31.196.29 - - [20/Oct/2024 17:47:27] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:47:27,844 - INFO - 172.31.196.29 - - [20/Oct/2024 17:47:27] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:47:41,647 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:47:41,648 - INFO - 172.31.196.29 - - [20/Oct/2024 17:47:41] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:47:41,854 - INFO - 172.31.196.29 - - [20/Oct/2024 17:47:41] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:48:53,152 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:48:53,153 - INFO - 172.31.196.29 - - [20/Oct/2024 17:48:53] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:48:53,396 - INFO - 172.31.196.29 - - [20/Oct/2024 17:48:53] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:48:56,228 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 17:48:56,231 - INFO - 172.31.196.29 - - [20/Oct/2024 17:48:56] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 17:49:14,758 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:49:14,761 - INFO - 172.31.196.29 - - [20/Oct/2024 17:49:14] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:49:15,077 - INFO - 172.31.196.29 - - [20/Oct/2024 17:49:15] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:49:21,173 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 17:49:21,176 - INFO - 172.31.196.29 - - [20/Oct/2024 17:49:21] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 17:49:25,253 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 17:49:25,256 - INFO - 172.31.196.29 - - [20/Oct/2024 17:49:25] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 17:49:26,210 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 17:49:26,213 - INFO - 172.31.196.29 - - [20/Oct/2024 17:49:26] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 17:50:33,142 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:50:33,144 - INFO - 172.31.196.29 - - [20/Oct/2024 17:50:33] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:50:33,491 - INFO - 172.31.196.29 - - [20/Oct/2024 17:50:33] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:50:37,694 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 17:50:37,697 - INFO - 172.31.196.29 - - [20/Oct/2024 17:50:37] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 17:50:39,916 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 17:50:39,918 - INFO - 172.31.196.29 - - [20/Oct/2024 17:50:39] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 17:50:42,444 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 17:50:42,447 - INFO - 172.31.196.29 - - [20/Oct/2024 17:50:42] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 17:50:56,008 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:50:56,010 - INFO - 172.31.196.29 - - [20/Oct/2024 17:50:56] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:50:56,226 - INFO - 172.31.196.29 - - [20/Oct/2024 17:50:56] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:50:59,570 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 17:50:59,572 - INFO - 172.31.196.29 - - [20/Oct/2024 17:50:59] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 17:51:34,400 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:51:34,403 - INFO - 172.31.196.29 - - [20/Oct/2024 17:51:34] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:51:34,660 - INFO - 172.31.196.29 - - [20/Oct/2024 17:51:34] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:51:39,174 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 17:51:39,177 - INFO - 172.31.196.29 - - [20/Oct/2024 17:51:39] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 17:51:50,934 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:51:50,935 - INFO - 172.31.196.29 - - [20/Oct/2024 17:51:50] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:51:51,144 - INFO - 172.31.196.29 - - [20/Oct/2024 17:51:51] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:52:00,947 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 17:52:00,949 - INFO - 172.31.196.29 - - [20/Oct/2024 17:52:00] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 17:52:14,519 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:52:14,521 - INFO - 172.31.196.29 - - [20/Oct/2024 17:52:14] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:52:14,844 - INFO - 172.31.196.29 - - [20/Oct/2024 17:52:14] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:52:22,174 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 17:52:22,176 - INFO - 172.31.196.29 - - [20/Oct/2024 17:52:22] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 17:52:44,955 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:52:44,957 - INFO - 172.31.196.29 - - [20/Oct/2024 17:52:44] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:52:45,305 - INFO - 172.31.196.29 - - [20/Oct/2024 17:52:45] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:52:50,758 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 17:52:50,761 - INFO - 172.31.196.29 - - [20/Oct/2024 17:52:50] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 17:53:36,115 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:53:36,116 - INFO - 172.31.196.29 - - [20/Oct/2024 17:53:36] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:53:36,360 - INFO - 172.31.196.29 - - [20/Oct/2024 17:53:36] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:53:42,452 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 17:53:42,455 - INFO - 172.31.196.29 - - [20/Oct/2024 17:53:42] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 17:53:50,682 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:53:50,683 - INFO - 172.31.196.29 - - [20/Oct/2024 17:53:50] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:53:50,894 - INFO - 172.31.196.29 - - [20/Oct/2024 17:53:50] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:54:08,915 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:54:08,917 - INFO - 172.31.196.29 - - [20/Oct/2024 17:54:08] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:54:09,134 - INFO - 172.31.196.29 - - [20/Oct/2024 17:54:09] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:54:13,180 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 17:54:13,183 - INFO - 172.31.196.29 - - [20/Oct/2024 17:54:13] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 17:54:17,627 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 17:54:17,630 - INFO - 172.31.196.29 - - [20/Oct/2024 17:54:17] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 17:54:29,202 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:54:29,204 - INFO - 172.31.196.29 - - [20/Oct/2024 17:54:29] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:54:29,406 - INFO - 172.31.196.29 - - [20/Oct/2024 17:54:29] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:55:22,625 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:55:22,627 - INFO - 172.31.196.29 - - [20/Oct/2024 17:55:22] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:55:22,928 - INFO - 172.31.196.29 - - [20/Oct/2024 17:55:22] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:55:33,603 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:55:33,604 - INFO - 172.31.196.29 - - [20/Oct/2024 17:55:33] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:55:33,846 - INFO - 172.31.196.29 - - [20/Oct/2024 17:55:33] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:55:36,522 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:55:36,524 - INFO - 172.31.196.29 - - [20/Oct/2024 17:55:36] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:55:36,725 - INFO - 172.31.196.29 - - [20/Oct/2024 17:55:36] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:55:41,198 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 17:55:41,201 - INFO - 172.31.196.29 - - [20/Oct/2024 17:55:41] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 17:55:43,092 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 17:55:43,095 - INFO - 172.31.196.29 - - [20/Oct/2024 17:55:43] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 17:56:45,028 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:56:45,030 - INFO - 172.31.196.29 - - [20/Oct/2024 17:56:45] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:57:03,607 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:57:03,608 - INFO - 172.31.196.29 - - [20/Oct/2024 17:57:03] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:57:03,814 - INFO - 172.31.196.29 - - [20/Oct/2024 17:57:03] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:57:15,301 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 17:57:15,304 - INFO - 172.31.196.29 - - [20/Oct/2024 17:57:15] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 17:57:24,470 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:57:24,473 - INFO - 172.31.196.29 - - [20/Oct/2024 17:57:24] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:57:24,710 - INFO - 172.31.196.29 - - [20/Oct/2024 17:57:24] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:57:31,583 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:57:31,583 - INFO - 172.31.196.29 - - [20/Oct/2024 17:57:31] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:57:31,779 - INFO - 172.31.196.29 - - [20/Oct/2024 17:57:31] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:57:33,892 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:57:33,894 - INFO - 172.31.196.29 - - [20/Oct/2024 17:57:33] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:57:34,100 - INFO - 172.31.196.29 - - [20/Oct/2024 17:57:34] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:57:37,574 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 17:57:37,576 - INFO - 172.31.196.29 - - [20/Oct/2024 17:57:37] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 17:57:45,398 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 17:57:45,401 - INFO - 172.31.196.29 - - [20/Oct/2024 17:57:45] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 17:58:01,712 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:58:01,714 - INFO - 172.31.196.29 - - [20/Oct/2024 17:58:01] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:58:01,918 - INFO - 172.31.196.29 - - [20/Oct/2024 17:58:01] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:58:24,542 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 17:58:24,544 - INFO - 172.31.196.29 - - [20/Oct/2024 17:58:24] "GET /3d HTTP/1.1" 200 -
+2024-10-20 17:58:24,746 - INFO - 172.31.196.29 - - [20/Oct/2024 17:58:24] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 17:58:30,078 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 17:58:30,081 - INFO - 172.31.196.29 - - [20/Oct/2024 17:58:30] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 17:58:31,612 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 17:58:31,616 - INFO - 172.31.196.29 - - [20/Oct/2024 17:58:31] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 17:58:35,749 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 17:58:35,751 - INFO - 172.31.196.29 - - [20/Oct/2024 17:58:35] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:00:15,661 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:00:15,663 - INFO - 172.31.196.29 - - [20/Oct/2024 18:00:15] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:00:15,936 - INFO - 172.31.196.29 - - [20/Oct/2024 18:00:15] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:00:22,502 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:00:22,505 - INFO - 172.31.196.29 - - [20/Oct/2024 18:00:22] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:00:36,601 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:00:36,604 - INFO - 172.31.196.29 - - [20/Oct/2024 18:00:36] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:00:36,882 - INFO - 172.31.196.29 - - [20/Oct/2024 18:00:36] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:00:42,772 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:00:42,775 - INFO - 172.31.196.29 - - [20/Oct/2024 18:00:42] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:01:40,648 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:01:40,652 - INFO - 172.31.196.29 - - [20/Oct/2024 18:01:40] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:01:40,944 - INFO - 172.31.196.29 - - [20/Oct/2024 18:01:40] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:01:44,150 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:01:44,152 - INFO - 172.31.196.29 - - [20/Oct/2024 18:01:44] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:01:53,200 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:01:53,201 - INFO - 172.31.196.29 - - [20/Oct/2024 18:01:53] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:01:53,426 - INFO - 172.31.196.29 - - [20/Oct/2024 18:01:53] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:01:57,814 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:01:57,816 - INFO - 172.31.196.29 - - [20/Oct/2024 18:01:57] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:02:20,875 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:02:20,877 - INFO - 172.31.196.29 - - [20/Oct/2024 18:02:20] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:02:21,123 - INFO - 172.31.196.29 - - [20/Oct/2024 18:02:21] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:02:29,454 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:02:29,457 - INFO - 172.31.196.29 - - [20/Oct/2024 18:02:29] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:02:38,220 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:02:38,222 - INFO - 172.31.196.29 - - [20/Oct/2024 18:02:38] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:02:38,466 - INFO - 172.31.196.29 - - [20/Oct/2024 18:02:38] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:02:49,525 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:02:49,527 - INFO - 172.31.196.29 - - [20/Oct/2024 18:02:49] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:04:00,293 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:04:00,295 - INFO - 172.31.196.29 - - [20/Oct/2024 18:04:00] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:04:00,636 - INFO - 172.31.196.29 - - [20/Oct/2024 18:04:00] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:04:06,980 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:04:06,982 - INFO - 172.31.196.29 - - [20/Oct/2024 18:04:06] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:04:24,717 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:04:24,719 - INFO - 172.31.196.29 - - [20/Oct/2024 18:04:24] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:04:24,934 - INFO - 172.31.196.29 - - [20/Oct/2024 18:04:24] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:04:30,277 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:04:30,280 - INFO - 172.31.196.29 - - [20/Oct/2024 18:04:30] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:04:42,587 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:04:42,589 - INFO - 172.31.196.29 - - [20/Oct/2024 18:04:42] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:04:42,842 - INFO - 172.31.196.29 - - [20/Oct/2024 18:04:42] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:04:55,242 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:04:55,242 - INFO - 172.31.196.29 - - [20/Oct/2024 18:04:55] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:04:55,448 - INFO - 172.31.196.29 - - [20/Oct/2024 18:04:55] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:04:58,933 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:04:58,936 - INFO - 172.31.196.29 - - [20/Oct/2024 18:04:58] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:05:16,743 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:05:16,744 - INFO - 172.31.196.29 - - [20/Oct/2024 18:05:16] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:05:42,982 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:05:42,984 - INFO - 172.31.196.29 - - [20/Oct/2024 18:05:42] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:05:43,266 - INFO - 172.31.196.29 - - [20/Oct/2024 18:05:43] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:06:00,048 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:06:00,054 - INFO - 172.31.196.29 - - [20/Oct/2024 18:06:00] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:06:09,920 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:06:09,922 - INFO - 172.31.196.29 - - [20/Oct/2024 18:06:09] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:06:10,144 - INFO - 172.31.196.29 - - [20/Oct/2024 18:06:10] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:06:14,798 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:06:14,800 - INFO - 172.31.196.29 - - [20/Oct/2024 18:06:14] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:06:17,595 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:06:17,598 - INFO - 172.31.196.29 - - [20/Oct/2024 18:06:17] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:06:23,272 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:06:23,274 - INFO - 172.31.196.29 - - [20/Oct/2024 18:06:23] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:06:23,494 - INFO - 172.31.196.29 - - [20/Oct/2024 18:06:23] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:06:25,679 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:06:25,681 - INFO - 172.31.196.29 - - [20/Oct/2024 18:06:25] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:06:33,729 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:06:33,731 - INFO - 172.31.196.29 - - [20/Oct/2024 18:06:33] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:06:33,944 - INFO - 172.31.196.29 - - [20/Oct/2024 18:06:33] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:06:38,372 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:06:38,374 - INFO - 172.31.196.29 - - [20/Oct/2024 18:06:38] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:06:40,988 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:06:40,991 - INFO - 172.31.196.29 - - [20/Oct/2024 18:06:40] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:06:51,991 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:06:51,993 - INFO - 172.31.196.29 - - [20/Oct/2024 18:06:51] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:06:52,224 - INFO - 172.31.196.29 - - [20/Oct/2024 18:06:52] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:06:55,406 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:06:55,408 - INFO - 172.31.196.29 - - [20/Oct/2024 18:06:55] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:07:03,323 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:07:03,325 - INFO - 172.31.196.29 - - [20/Oct/2024 18:07:03] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:07:03,580 - INFO - 172.31.196.29 - - [20/Oct/2024 18:07:03] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:07:10,886 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:07:10,889 - INFO - 172.31.196.29 - - [20/Oct/2024 18:07:10] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:07:21,705 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:07:21,708 - INFO - 172.31.196.29 - - [20/Oct/2024 18:07:21] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:07:21,998 - INFO - 172.31.196.29 - - [20/Oct/2024 18:07:21] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:07:24,238 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:07:24,240 - INFO - 172.31.196.29 - - [20/Oct/2024 18:07:24] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:07:30,886 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:07:30,887 - INFO - 172.31.196.29 - - [20/Oct/2024 18:07:30] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:07:31,124 - INFO - 172.31.196.29 - - [20/Oct/2024 18:07:31] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:07:33,334 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:07:33,336 - INFO - 172.31.196.29 - - [20/Oct/2024 18:07:33] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:07:38,671 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:07:38,674 - INFO - 172.31.196.29 - - [20/Oct/2024 18:07:38] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:07:38,888 - INFO - 172.31.196.29 - - [20/Oct/2024 18:07:38] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:07:42,567 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:07:42,570 - INFO - 172.31.196.29 - - [20/Oct/2024 18:07:42] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:07:51,808 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:07:51,810 - INFO - 172.31.196.29 - - [20/Oct/2024 18:07:51] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:07:52,030 - INFO - 172.31.196.29 - - [20/Oct/2024 18:07:52] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:07:56,870 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:07:56,873 - INFO - 172.31.196.29 - - [20/Oct/2024 18:07:56] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:08:07,155 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:08:07,157 - INFO - 172.31.196.29 - - [20/Oct/2024 18:08:07] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:08:07,386 - INFO - 172.31.196.29 - - [20/Oct/2024 18:08:07] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:08:10,197 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:08:10,201 - INFO - 172.31.196.29 - - [20/Oct/2024 18:08:10] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:08:14,260 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:08:14,262 - INFO - 172.31.196.29 - - [20/Oct/2024 18:08:14] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:08:14,496 - INFO - 172.31.196.29 - - [20/Oct/2024 18:08:14] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:08:20,095 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:08:20,097 - INFO - 172.31.196.29 - - [20/Oct/2024 18:08:20] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:08:20,292 - INFO - 172.31.196.29 - - [20/Oct/2024 18:08:20] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:08:32,240 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:08:32,242 - INFO - 172.31.196.29 - - [20/Oct/2024 18:08:32] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:08:32,446 - INFO - 172.31.196.29 - - [20/Oct/2024 18:08:32] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:08:34,686 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:08:34,689 - INFO - 172.31.196.29 - - [20/Oct/2024 18:08:34] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:08:40,258 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:08:40,259 - INFO - 172.31.196.29 - - [20/Oct/2024 18:08:40] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:08:40,492 - INFO - 172.31.196.29 - - [20/Oct/2024 18:08:40] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:08:41,982 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:08:41,985 - INFO - 172.31.196.29 - - [20/Oct/2024 18:08:41] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:08:49,466 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:08:49,468 - INFO - 172.31.196.29 - - [20/Oct/2024 18:08:49] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:08:49,679 - INFO - 172.31.196.29 - - [20/Oct/2024 18:08:49] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:08:58,762 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:08:58,764 - INFO - 172.31.196.29 - - [20/Oct/2024 18:08:58] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:08:58,966 - INFO - 172.31.196.29 - - [20/Oct/2024 18:08:58] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:09:05,379 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:09:05,381 - INFO - 172.31.196.29 - - [20/Oct/2024 18:09:05] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:09:08,020 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:09:08,023 - INFO - 172.31.196.29 - - [20/Oct/2024 18:09:08] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:09:30,730 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:09:30,731 - INFO - 172.31.196.29 - - [20/Oct/2024 18:09:30] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:09:31,137 - INFO - 172.31.196.29 - - [20/Oct/2024 18:09:31] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:09:35,419 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:09:35,423 - INFO - 172.31.196.29 - - [20/Oct/2024 18:09:35] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:09:47,675 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:09:47,676 - INFO - 172.31.196.29 - - [20/Oct/2024 18:09:47] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:09:47,987 - INFO - 172.31.196.29 - - [20/Oct/2024 18:09:47] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:10:15,769 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:10:15,771 - INFO - 172.31.196.29 - - [20/Oct/2024 18:10:15] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:10:15,982 - INFO - 172.31.196.29 - - [20/Oct/2024 18:10:15] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:10:30,072 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:10:30,072 - INFO - 172.31.196.29 - - [20/Oct/2024 18:10:30] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:10:30,380 - INFO - 172.31.196.29 - - [20/Oct/2024 18:10:30] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:10:38,474 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:10:38,476 - INFO - 172.31.196.29 - - [20/Oct/2024 18:10:38] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:10:38,691 - INFO - 172.31.196.29 - - [20/Oct/2024 18:10:38] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:11:01,133 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:11:01,134 - INFO - 172.31.196.29 - - [20/Oct/2024 18:11:01] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:11:01,335 - INFO - 172.31.196.29 - - [20/Oct/2024 18:11:01] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:11:06,862 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:11:06,865 - INFO - 172.31.196.29 - - [20/Oct/2024 18:11:06] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:12:04,629 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:12:04,633 - INFO - 172.31.196.29 - - [20/Oct/2024 18:12:04] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:12:04,940 - INFO - 172.31.196.29 - - [20/Oct/2024 18:12:04] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:12:07,125 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:12:07,128 - INFO - 172.31.196.29 - - [20/Oct/2024 18:12:07] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:12:13,834 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:12:13,836 - INFO - 172.31.196.29 - - [20/Oct/2024 18:12:13] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:12:14,059 - INFO - 172.31.196.29 - - [20/Oct/2024 18:12:14] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:12:16,791 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:12:16,794 - INFO - 172.31.196.29 - - [20/Oct/2024 18:12:16] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:12:25,521 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:12:25,523 - INFO - 172.31.196.29 - - [20/Oct/2024 18:12:25] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:12:25,732 - INFO - 172.31.196.29 - - [20/Oct/2024 18:12:25] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:12:27,401 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:12:27,403 - INFO - 172.31.196.29 - - [20/Oct/2024 18:12:27] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:12:38,165 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:12:38,166 - INFO - 172.31.196.29 - - [20/Oct/2024 18:12:38] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:12:38,382 - INFO - 172.31.196.29 - - [20/Oct/2024 18:12:38] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:12:46,278 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:12:46,280 - INFO - 172.31.196.29 - - [20/Oct/2024 18:12:46] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:12:46,600 - INFO - 172.31.196.29 - - [20/Oct/2024 18:12:46] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:13:00,002 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:13:00,004 - INFO - 172.31.196.29 - - [20/Oct/2024 18:13:00] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:13:00,216 - INFO - 172.31.196.29 - - [20/Oct/2024 18:13:00] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:13:01,854 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:13:01,857 - INFO - 172.31.196.29 - - [20/Oct/2024 18:13:01] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:13:11,893 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:13:11,895 - INFO - 172.31.196.29 - - [20/Oct/2024 18:13:11] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:13:12,130 - INFO - 172.31.196.29 - - [20/Oct/2024 18:13:12] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:13:38,712 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:13:38,714 - INFO - 172.31.196.29 - - [20/Oct/2024 18:13:38] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:13:49,009 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:13:49,010 - INFO - 172.31.196.29 - - [20/Oct/2024 18:13:49] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:13:57,508 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:13:57,510 - INFO - 172.31.196.29 - - [20/Oct/2024 18:13:57] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:13:57,724 - INFO - 172.31.196.29 - - [20/Oct/2024 18:13:57] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:14:20,600 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:14:20,601 - INFO - 172.31.196.29 - - [20/Oct/2024 18:14:20] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:14:20,806 - INFO - 172.31.196.29 - - [20/Oct/2024 18:14:20] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:14:26,342 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:14:26,344 - INFO - 172.31.196.29 - - [20/Oct/2024 18:14:26] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:14:26,566 - INFO - 172.31.196.29 - - [20/Oct/2024 18:14:26] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:14:33,509 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:14:33,511 - INFO - 172.31.196.29 - - [20/Oct/2024 18:14:33] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:15:26,232 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:15:26,234 - INFO - 172.31.196.29 - - [20/Oct/2024 18:15:26] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:15:26,538 - INFO - 172.31.196.29 - - [20/Oct/2024 18:15:26] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:15:29,333 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:15:29,336 - INFO - 172.31.196.29 - - [20/Oct/2024 18:15:29] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:16:09,611 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:16:09,612 - INFO - 172.31.196.29 - - [20/Oct/2024 18:16:09] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:16:33,277 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:16:33,278 - INFO - 172.31.196.29 - - [20/Oct/2024 18:16:33] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:16:45,733 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:16:45,734 - INFO - 172.31.196.29 - - [20/Oct/2024 18:16:45] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:16:45,942 - INFO - 172.31.196.29 - - [20/Oct/2024 18:16:45] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:16:50,926 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:16:50,928 - INFO - 172.31.196.29 - - [20/Oct/2024 18:16:50] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:16:54,396 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:16:54,398 - INFO - 172.31.196.29 - - [20/Oct/2024 18:16:54] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:17:06,754 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:17:06,756 - INFO - 172.31.196.29 - - [20/Oct/2024 18:17:06] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:17:06,976 - INFO - 172.31.196.29 - - [20/Oct/2024 18:17:06] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:17:11,542 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:17:11,545 - INFO - 172.31.196.29 - - [20/Oct/2024 18:17:11] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:17:27,114 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:17:27,116 - INFO - 172.31.196.29 - - [20/Oct/2024 18:17:27] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:17:27,472 - INFO - 172.31.196.29 - - [20/Oct/2024 18:17:27] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:17:30,622 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:17:30,625 - INFO - 172.31.196.29 - - [20/Oct/2024 18:17:30] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:17:34,212 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:17:34,215 - INFO - 172.31.196.29 - - [20/Oct/2024 18:17:34] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:17:40,213 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:17:40,216 - INFO - 172.31.196.29 - - [20/Oct/2024 18:17:40] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:17:50,153 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:17:50,156 - INFO - 172.31.196.29 - - [20/Oct/2024 18:17:50] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:17:50,494 - INFO - 172.31.196.29 - - [20/Oct/2024 18:17:50] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:18:02,729 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:18:02,730 - INFO - 172.31.196.29 - - [20/Oct/2024 18:18:02] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:18:02,938 - INFO - 172.31.196.29 - - [20/Oct/2024 18:18:02] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:18:12,478 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:18:12,480 - INFO - 172.31.196.29 - - [20/Oct/2024 18:18:12] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:18:17,404 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:18:17,407 - INFO - 172.31.196.29 - - [20/Oct/2024 18:18:17] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:18:17,654 - INFO - 172.31.196.29 - - [20/Oct/2024 18:18:17] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:18:26,630 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:18:26,633 - INFO - 172.31.196.29 - - [20/Oct/2024 18:18:26] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:18:31,649 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:18:31,650 - INFO - 172.31.196.29 - - [20/Oct/2024 18:18:31] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:18:32,258 - INFO - 172.31.196.29 - - [20/Oct/2024 18:18:32] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:18:39,474 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:18:39,476 - INFO - 172.31.196.29 - - [20/Oct/2024 18:18:39] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:18:39,700 - INFO - 172.31.196.29 - - [20/Oct/2024 18:18:39] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:18:47,854 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:18:47,857 - INFO - 172.31.196.29 - - [20/Oct/2024 18:18:47] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:18:56,114 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:18:56,114 - INFO - 172.31.196.29 - - [20/Oct/2024 18:18:56] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:18:56,326 - INFO - 172.31.196.29 - - [20/Oct/2024 18:18:56] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:19:00,241 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:19:00,244 - INFO - 172.31.196.29 - - [20/Oct/2024 18:19:00] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:19:07,956 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:19:07,957 - INFO - 172.31.196.29 - - [20/Oct/2024 18:19:07] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:19:08,170 - INFO - 172.31.196.29 - - [20/Oct/2024 18:19:08] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:19:11,922 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:19:11,925 - INFO - 172.31.196.29 - - [20/Oct/2024 18:19:11] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:19:16,732 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:19:16,736 - INFO - 172.31.196.29 - - [20/Oct/2024 18:19:16] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:19:18,318 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:19:18,321 - INFO - 172.31.196.29 - - [20/Oct/2024 18:19:18] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:19:25,669 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:19:25,671 - INFO - 172.31.196.29 - - [20/Oct/2024 18:19:25] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:19:25,916 - INFO - 172.31.196.29 - - [20/Oct/2024 18:19:25] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:19:33,118 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:19:33,122 - INFO - 172.31.196.29 - - [20/Oct/2024 18:19:33] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:19:42,710 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:19:42,713 - INFO - 172.31.196.29 - - [20/Oct/2024 18:19:42] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:19:42,982 - INFO - 172.31.196.29 - - [20/Oct/2024 18:19:42] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:19:47,925 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:19:47,928 - INFO - 172.31.196.29 - - [20/Oct/2024 18:19:47] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:19:49,244 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:19:49,247 - INFO - 172.31.196.29 - - [20/Oct/2024 18:19:49] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:19:50,819 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:19:50,822 - INFO - 172.31.196.29 - - [20/Oct/2024 18:19:50] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:19:58,827 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:19:58,830 - INFO - 172.31.196.29 - - [20/Oct/2024 18:19:58] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:19:59,128 - INFO - 172.31.196.29 - - [20/Oct/2024 18:19:59] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:20:11,504 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:20:11,506 - INFO - 172.31.196.29 - - [20/Oct/2024 18:20:11] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:20:11,712 - INFO - 172.31.196.29 - - [20/Oct/2024 18:20:11] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:20:13,662 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:20:13,665 - INFO - 172.31.196.29 - - [20/Oct/2024 18:20:13] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:20:20,850 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:20:20,852 - INFO - 172.31.196.29 - - [20/Oct/2024 18:20:20] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:20:21,066 - INFO - 172.31.196.29 - - [20/Oct/2024 18:20:21] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:20:27,927 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:20:27,930 - INFO - 172.31.196.29 - - [20/Oct/2024 18:20:27] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:20:41,325 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:20:41,327 - INFO - 172.31.196.29 - - [20/Oct/2024 18:20:41] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:20:41,552 - INFO - 172.31.196.29 - - [20/Oct/2024 18:20:41] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:20:52,469 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:20:52,472 - INFO - 172.31.196.29 - - [20/Oct/2024 18:20:52] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:22:54,280 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:22:54,282 - INFO - 172.31.196.29 - - [20/Oct/2024 18:22:54] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:24:44,573 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:24:44,575 - INFO - 172.31.196.29 - - [20/Oct/2024 18:24:44] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:24:45,092 - INFO - 172.31.196.29 - - [20/Oct/2024 18:24:45] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:24:48,374 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:24:48,376 - INFO - 172.31.196.29 - - [20/Oct/2024 18:24:48] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:25:34,996 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:25:34,999 - INFO - 172.31.196.29 - - [20/Oct/2024 18:25:34] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:25:35,292 - INFO - 172.31.196.29 - - [20/Oct/2024 18:25:35] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:29:08,198 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:29:08,200 - INFO - 172.31.196.29 - - [20/Oct/2024 18:29:08] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:29:08,584 - INFO - 172.31.196.29 - - [20/Oct/2024 18:29:08] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:29:11,456 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:29:11,458 - INFO - 172.31.196.29 - - [20/Oct/2024 18:29:11] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:29:11,835 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:29:11,838 - INFO - 172.31.196.29 - - [20/Oct/2024 18:29:11] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:29:12,620 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:29:12,623 - INFO - 172.31.196.29 - - [20/Oct/2024 18:29:12] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:29:13,242 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:29:13,245 - INFO - 172.31.196.29 - - [20/Oct/2024 18:29:13] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:29:16,084 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:29:16,087 - INFO - 172.31.196.29 - - [20/Oct/2024 18:29:16] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:30:27,764 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:30:27,767 - INFO - 172.31.196.29 - - [20/Oct/2024 18:30:27] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:30:28,166 - INFO - 172.31.196.29 - - [20/Oct/2024 18:30:28] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:31:07,158 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:31:07,160 - INFO - 172.31.196.29 - - [20/Oct/2024 18:31:07] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:31:07,430 - INFO - 172.31.196.29 - - [20/Oct/2024 18:31:07] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:31:54,449 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:31:54,451 - INFO - 172.31.196.29 - - [20/Oct/2024 18:31:54] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:31:54,730 - INFO - 172.31.196.29 - - [20/Oct/2024 18:31:54] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:33:33,688 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:33:33,690 - INFO - 172.31.196.29 - - [20/Oct/2024 18:33:33] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:33:34,076 - INFO - 172.31.196.29 - - [20/Oct/2024 18:33:34] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:33:42,141 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:33:42,143 - INFO - 172.31.196.29 - - [20/Oct/2024 18:33:42] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:33:42,470 - INFO - 172.31.196.29 - - [20/Oct/2024 18:33:42] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:36:14,186 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:36:14,189 - INFO - 172.31.196.29 - - [20/Oct/2024 18:36:14] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:36:14,468 - INFO - 172.31.196.29 - - [20/Oct/2024 18:36:14] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:39:16,608 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:39:16,609 - INFO - 172.31.196.29 - - [20/Oct/2024 18:39:16] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:40:11,691 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:40:11,692 - INFO - 172.31.196.29 - - [20/Oct/2024 18:40:11] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:40:11,948 - INFO - 172.31.196.29 - - [20/Oct/2024 18:40:11] "[33mGET /build/three.module.js HTTP/1.1[0m" 404 -
+2024-10-20 18:40:12,034 - INFO - 172.31.196.29 - - [20/Oct/2024 18:40:12] "[33mGET /jsm/libs/stats.module.js HTTP/1.1[0m" 404 -
+2024-10-20 18:40:12,122 - INFO - 172.31.196.29 - - [20/Oct/2024 18:40:12] "[33mGET /jsm/libs/lil-gui.module.min.js HTTP/1.1[0m" 404 -
+2024-10-20 18:40:12,186 - INFO - 172.31.196.29 - - [20/Oct/2024 18:40:12] "[33mGET /jsm/postprocessing/OutputPass.js HTTP/1.1[0m" 404 -
+2024-10-20 18:40:12,233 - INFO - 172.31.196.29 - - [20/Oct/2024 18:40:12] "[33mGET /jsm/postprocessing/EffectComposer.js HTTP/1.1[0m" 404 -
+2024-10-20 18:40:12,249 - INFO - 172.31.196.29 - - [20/Oct/2024 18:40:12] "[33mGET /jsm/postprocessing/RenderPass.js HTTP/1.1[0m" 404 -
+2024-10-20 18:40:12,250 - INFO - 172.31.196.29 - - [20/Oct/2024 18:40:12] "[33mGET /jsm/postprocessing/SSAOPass.js HTTP/1.1[0m" 404 -
+2024-10-20 18:41:57,470 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:41:57,472 - INFO - 172.31.196.29 - - [20/Oct/2024 18:41:57] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:42:22,132 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:42:22,134 - INFO - 172.31.196.29 - - [20/Oct/2024 18:42:22] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:44:00,987 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:44:00,989 - INFO - 172.31.196.29 - - [20/Oct/2024 18:44:00] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:44:18,557 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:44:18,560 - INFO - 172.31.196.29 - - [20/Oct/2024 18:44:18] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:46:25,514 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:46:25,516 - INFO - 172.31.196.29 - - [20/Oct/2024 18:46:25] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:46:38,012 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:46:38,014 - INFO - 172.31.196.29 - - [20/Oct/2024 18:46:38] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:47:06,440 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:47:06,442 - INFO - 172.31.196.29 - - [20/Oct/2024 18:47:06] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:47:49,000 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:47:49,002 - INFO - 172.31.196.29 - - [20/Oct/2024 18:47:49] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:49:33,469 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:49:33,472 - INFO - 172.31.196.29 - - [20/Oct/2024 18:49:33] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:49:43,434 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:49:43,437 - INFO - 172.31.196.29 - - [20/Oct/2024 18:49:43] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:50:47,972 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:50:47,975 - INFO - 172.31.196.29 - - [20/Oct/2024 18:50:47] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:50:48,538 - INFO - 172.31.196.29 - - [20/Oct/2024 18:50:48] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:51:05,713 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:51:05,714 - INFO - 172.31.196.29 - - [20/Oct/2024 18:51:05] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:51:06,215 - INFO - 172.31.196.29 - - [20/Oct/2024 18:51:06] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:51:26,997 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:51:26,999 - INFO - 172.31.196.29 - - [20/Oct/2024 18:51:26] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:51:27,376 - INFO - 172.31.196.29 - - [20/Oct/2024 18:51:27] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:51:47,796 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:51:47,798 - INFO - 172.31.196.29 - - [20/Oct/2024 18:51:47] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:51:48,159 - INFO - 172.31.196.29 - - [20/Oct/2024 18:51:48] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:51:57,890 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:51:57,892 - INFO - 172.31.196.29 - - [20/Oct/2024 18:51:57] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:51:58,273 - INFO - 172.31.196.29 - - [20/Oct/2024 18:51:58] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:52:39,348 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:52:39,350 - INFO - 172.31.196.29 - - [20/Oct/2024 18:52:39] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:52:39,748 - INFO - 172.31.196.29 - - [20/Oct/2024 18:52:39] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:53:34,444 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:53:34,447 - INFO - 172.31.196.29 - - [20/Oct/2024 18:53:34] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:53:34,883 - INFO - 172.31.196.29 - - [20/Oct/2024 18:53:34] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:53:58,756 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:53:58,758 - INFO - 172.31.196.29 - - [20/Oct/2024 18:53:58] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:53:59,160 - INFO - 172.31.196.29 - - [20/Oct/2024 18:53:59] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:54:07,013 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:54:07,015 - INFO - 172.31.196.29 - - [20/Oct/2024 18:54:07] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:54:08,139 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:54:08,142 - INFO - 172.31.196.29 - - [20/Oct/2024 18:54:08] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:54:32,500 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:54:32,503 - INFO - 172.31.196.29 - - [20/Oct/2024 18:54:32] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:54:32,926 - INFO - 172.31.196.29 - - [20/Oct/2024 18:54:32] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:54:45,226 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:54:45,227 - INFO - 172.31.196.29 - - [20/Oct/2024 18:54:45] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:54:45,585 - INFO - 172.31.196.29 - - [20/Oct/2024 18:54:45] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:55:14,100 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:55:14,102 - INFO - 172.31.196.29 - - [20/Oct/2024 18:55:14] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:55:14,471 - INFO - 172.31.196.29 - - [20/Oct/2024 18:55:14] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:55:18,272 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:55:18,275 - INFO - 172.31.196.29 - - [20/Oct/2024 18:55:18] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:55:25,981 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:55:25,983 - INFO - 172.31.196.29 - - [20/Oct/2024 18:55:25] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:55:26,311 - INFO - 172.31.196.29 - - [20/Oct/2024 18:55:26] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:55:28,821 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:55:28,824 - INFO - 172.31.196.29 - - [20/Oct/2024 18:55:28] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:56:45,650 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:56:45,652 - INFO - 172.31.196.29 - - [20/Oct/2024 18:56:45] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:56:46,067 - INFO - 172.31.196.29 - - [20/Oct/2024 18:56:46] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:56:47,977 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:56:47,979 - INFO - 172.31.196.29 - - [20/Oct/2024 18:56:47] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:57:08,429 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:57:08,431 - INFO - 172.31.196.29 - - [20/Oct/2024 18:57:08] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:57:08,986 - INFO - 172.31.196.29 - - [20/Oct/2024 18:57:08] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:57:11,608 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:57:11,611 - INFO - 172.31.196.29 - - [20/Oct/2024 18:57:11] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:57:25,260 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:57:25,262 - INFO - 172.31.196.29 - - [20/Oct/2024 18:57:25] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:57:25,643 - INFO - 172.31.196.29 - - [20/Oct/2024 18:57:25] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:57:28,127 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:57:28,131 - INFO - 172.31.196.29 - - [20/Oct/2024 18:57:28] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:57:48,168 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:57:48,170 - INFO - 172.31.196.29 - - [20/Oct/2024 18:57:48] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:57:48,594 - INFO - 172.31.196.29 - - [20/Oct/2024 18:57:48] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:57:57,560 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:57:57,563 - INFO - 172.31.196.29 - - [20/Oct/2024 18:57:57] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:57:57,933 - INFO - 172.31.196.29 - - [20/Oct/2024 18:57:57] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:58:27,042 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:58:27,044 - INFO - 172.31.196.29 - - [20/Oct/2024 18:58:27] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:58:27,445 - INFO - 172.31.196.29 - - [20/Oct/2024 18:58:27] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:58:30,785 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:58:30,787 - INFO - 172.31.196.29 - - [20/Oct/2024 18:58:30] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:58:35,533 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:58:35,536 - INFO - 172.31.196.29 - - [20/Oct/2024 18:58:35] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:58:35,869 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:58:35,871 - INFO - 172.31.196.29 - - [20/Oct/2024 18:58:35] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:58:37,349 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:58:37,351 - INFO - 172.31.196.29 - - [20/Oct/2024 18:58:37] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:58:44,556 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:58:44,558 - INFO - 172.31.196.29 - - [20/Oct/2024 18:58:44] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:58:48,449 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:58:48,451 - INFO - 172.31.196.29 - - [20/Oct/2024 18:58:48] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:58:52,675 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:58:52,677 - INFO - 172.31.196.29 - - [20/Oct/2024 18:58:52] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:58:55,893 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:58:55,896 - INFO - 172.31.196.29 - - [20/Oct/2024 18:58:55] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:59:09,398 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/3d
+2024-10-20 18:59:09,400 - INFO - 172.31.196.29 - - [20/Oct/2024 18:59:09] "GET /3d HTTP/1.1" 200 -
+2024-10-20 18:59:09,997 - INFO - 172.31.196.29 - - [20/Oct/2024 18:59:09] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-20 18:59:14,119 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:59:14,121 - INFO - 172.31.196.29 - - [20/Oct/2024 18:59:14] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:59:19,283 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:59:19,286 - INFO - 172.31.196.29 - - [20/Oct/2024 18:59:19] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:59:23,183 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:59:23,185 - INFO - 172.31.196.29 - - [20/Oct/2024 18:59:23] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:59:23,844 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:59:23,847 - INFO - 172.31.196.29 - - [20/Oct/2024 18:59:23] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:59:26,382 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:59:26,384 - INFO - 172.31.196.29 - - [20/Oct/2024 18:59:26] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:59:26,951 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:59:26,953 - INFO - 172.31.196.29 - - [20/Oct/2024 18:59:26] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:59:27,675 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 18:59:27,677 - INFO - 172.31.196.29 - - [20/Oct/2024 18:59:27] "[35m[1mPOST /save_marker HTTP/1.1[0m" 500 -
+2024-10-20 18:59:42,574 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-20 18:59:43,554 - INFO - 172.31.196.29 - - [20/Oct/2024 18:59:43] "GET / HTTP/1.1" 200 -
+2024-10-20 18:59:43,798 - INFO - 172.31.196.29 - - [20/Oct/2024 18:59:43] "GET /static/css/styles.css HTTP/1.1" 200 -
+2024-10-20 18:59:43,889 - INFO - 172.31.196.29 - - [20/Oct/2024 18:59:43] "GET /static/js/script.js HTTP/1.1" 200 -
+2024-10-20 18:59:44,099 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps
+2024-10-20 18:59:44,099 - INFO - Fetching all maps
+2024-10-20 18:59:44,322 - INFO - 172.31.196.29 - - [20/Oct/2024 18:59:44] "GET /api/maps HTTP/1.1" 200 -
+2024-10-20 18:59:44,409 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps/1
+2024-10-20 18:59:44,409 - INFO - Fetching map with ID: 1
+2024-10-20 18:59:44,638 - INFO - 172.31.196.29 - - [20/Oct/2024 18:59:44] "GET /api/maps/1 HTTP/1.1" 200 -
+2024-10-20 18:59:44,725 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/static/maps/main.png
+2024-10-20 18:59:44,725 - INFO - Attempting to serve static file: /home/runner/workspace/static/maps/main.png
+2024-10-20 18:59:44,728 - INFO - 172.31.196.29 - - [20/Oct/2024 18:59:44] "GET /static/maps/main.png HTTP/1.1" 200 -
+2024-10-20 18:59:45,169 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/items?map_id=1
+2024-10-20 18:59:45,170 - INFO - Fetching items for map ID: 1
+2024-10-20 18:59:45,391 - INFO - 172.31.196.29 - - [20/Oct/2024 18:59:45] "GET /api/items?map_id=1 HTTP/1.1" 200 -
+2024-10-20 18:59:45,483 - INFO - 172.31.196.29 - - [20/Oct/2024 18:59:45] "[33mHEAD /static/thumbnails/20241018_173844_47d7cf43.jpg HTTP/1.1[0m" 404 -
+2024-10-20 18:59:45,546 - INFO - 172.31.196.29 - - [20/Oct/2024 18:59:45] "[33mHEAD /static/thumbnails/20241018_173743_7e7d8d33.jpg HTTP/1.1[0m" 404 -
+2024-10-20 18:59:45,563 - INFO - 172.31.196.29 - - [20/Oct/2024 18:59:45] "HEAD /static/thumbnails/20241018_150242_c2a5134b.png HTTP/1.1" 200 -
+2024-10-20 18:59:45,625 - INFO - 172.31.196.29 - - [20/Oct/2024 18:59:45] "HEAD /static/thumbnails/20241018_150114_e2307150.png HTTP/1.1" 200 -
+2024-10-20 18:59:45,645 - INFO - 172.31.196.29 - - [20/Oct/2024 18:59:45] "HEAD /static/thumbnails/20241018_150628_7b9b8b60.png HTTP/1.1" 200 -
+2024-10-20 18:59:45,705 - INFO - 172.31.196.29 - - [20/Oct/2024 18:59:45] "HEAD /static/thumbnails/20241018_150915_9ee2ee5b.png HTTP/1.1" 200 -
+2024-10-20 18:59:45,721 - INFO - 172.31.196.29 - - [20/Oct/2024 18:59:45] "[33mHEAD /static/thumbnails/20241016_153624_1dbede16.jpg HTTP/1.1[0m" 404 -
+2024-10-20 18:59:45,725 - INFO - 172.31.196.29 - - [20/Oct/2024 18:59:45] "[33mHEAD /static/thumbnails/20241016_150011_83503f4f.jpg HTTP/1.1[0m" 404 -
+2024-10-20 18:59:45,727 - INFO - 172.31.196.29 - - [20/Oct/2024 18:59:45] "HEAD /static/thumbnails/20241018_150652_7df45f90.png HTTP/1.1" 200 -
+2024-10-20 18:59:45,779 - INFO - 172.31.196.29 - - [20/Oct/2024 18:59:45] "[33mHEAD /static/thumbnails/20241018_174024_7df52a7d.jpeg HTTP/1.1[0m" 404 -
+2024-10-20 18:59:45,784 - INFO - 172.31.196.29 - - [20/Oct/2024 18:59:45] "HEAD /static/thumbnails/20241019_150025_1180cdbe.jpg HTTP/1.1" 200 -
+2024-10-20 18:59:45,796 - INFO - 172.31.196.29 - - [20/Oct/2024 18:59:45] "[33mHEAD /static/thumbnails/20241018_173727_dc77ec8d.jpg HTTP/1.1[0m" 404 -
+2024-10-20 18:59:45,801 - INFO - 172.31.196.29 - - [20/Oct/2024 18:59:45] "[33mHEAD /static/thumbnails/20241018_173921_fb220825.jpg HTTP/1.1[0m" 404 -
+2024-10-20 18:59:45,805 - INFO - 172.31.196.29 - - [20/Oct/2024 18:59:45] "[33mHEAD /static/thumbnails/20241016_153208_247e423e.jpg HTTP/1.1[0m" 404 -
+2024-10-20 18:59:45,812 - INFO - 172.31.196.29 - - [20/Oct/2024 18:59:45] "[33mHEAD /static/thumbnails/20241016_154030_89cfc546.jpg HTTP/1.1[0m" 404 -
+2024-10-20 18:59:45,857 - INFO - 172.31.196.29 - - [20/Oct/2024 18:59:45] "[33mHEAD /static/thumbnails/20241016_153707_39faf826.jpg HTTP/1.1[0m" 404 -
+2024-10-20 18:59:45,863 - INFO - 172.31.196.29 - - [20/Oct/2024 18:59:45] "[33mHEAD /static/thumbnails/20241016_151142_bf6008cc.jpg HTTP/1.1[0m" 404 -
+2024-10-20 18:59:45,875 - INFO - 172.31.196.29 - - [20/Oct/2024 18:59:45] "[33mHEAD /static/thumbnails/20241016_152258_1f8a6141.jpg HTTP/1.1[0m" 404 -
+2024-10-20 18:59:45,878 - INFO - 172.31.196.29 - - [20/Oct/2024 18:59:45] "[33mHEAD /null HTTP/1.1[0m" 404 -
+2024-10-20 18:59:45,882 - INFO - 172.31.196.29 - - [20/Oct/2024 18:59:45] "GET /static/img/default.png HTTP/1.1" 200 -
+2024-10-20 18:59:45,896 - INFO - 172.31.196.29 - - [20/Oct/2024 18:59:45] "GET /static/thumbnails/20241018_150242_c2a5134b.png HTTP/1.1" 200 -
+2024-10-20 18:59:45,942 - INFO - 172.31.196.29 - - [20/Oct/2024 18:59:45] "GET /static/thumbnails/20241018_150114_e2307150.png HTTP/1.1" 200 -
+2024-10-20 18:59:45,947 - INFO - 172.31.196.29 - - [20/Oct/2024 18:59:45] "GET /static/thumbnails/20241018_150628_7b9b8b60.png HTTP/1.1" 200 -
+2024-10-20 18:59:45,960 - INFO - 172.31.196.29 - - [20/Oct/2024 18:59:45] "GET /static/thumbnails/20241018_150915_9ee2ee5b.png HTTP/1.1" 200 -
+2024-10-20 18:59:45,964 - INFO - 172.31.196.29 - - [20/Oct/2024 18:59:45] "GET /static/thumbnails/20241018_150652_7df45f90.png HTTP/1.1" 200 -
+2024-10-20 18:59:45,975 - INFO - 172.31.196.29 - - [20/Oct/2024 18:59:45] "GET /static/thumbnails/20241019_150025_1180cdbe.jpg HTTP/1.1" 200 -

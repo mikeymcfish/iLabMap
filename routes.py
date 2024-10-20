@@ -42,6 +42,20 @@ def index():
             f"Error fetching items for index page: {str(e)}")
         return f"An error occurred while fetching items. : {str(e)}", 500
 
+@main_blueprint.route('/3d')
+def threeDee():
+    return render_template('3d.html')
+
+@main_blueprint.route('/save_marker', methods=['POST'])
+def save_marker():
+    data = request.json
+    markers.append(data)  # Save marker coordinates
+    return jsonify(success=True)
+
+@main_blueprint.route('/get_markers')
+def get_markers():
+    return jsonify(markers=markers)
+
 @main_blueprint.route('/api/items/<int:item_id>', methods=['PUT'])
 def update_item(item_id):
     item = Item.query.get_or_404(item_id)
