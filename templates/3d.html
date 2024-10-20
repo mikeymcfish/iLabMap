@@ -5,6 +5,7 @@
     <title>3D Model Viewer</title>
     <style>
         canvas { width: 100%; height: 100% }
+        body {background-color:black;}
     </style>
 
 </head>
@@ -32,7 +33,7 @@
         import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
         import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
         import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-        let scene, camera, renderer, controls, composer, mesh;
+        let scene, camera, renderer, controls, composer, mesh, previousMarker;
 
         function init() {
             // Scene setup
@@ -73,7 +74,7 @@
             //Limit rotation around 
 
             // Prevent panning
-            controls.enablePan = true;
+            controls.enablePan = false;
 
             // Continuously update the controls
             controls.update();
@@ -81,23 +82,23 @@
 
             // Load 3D model (Example using GLTFLoader)
             let loader = new GLTFLoader();
-            let ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
+            let ambientLight = new THREE.AmbientLight(0xffffff, 0.7);
             scene.add(ambientLight);
-            const directionalLight = new THREE.DirectionalLight(0xffffff, .5);
+            const directionalLight = new THREE.DirectionalLight(0xffffff, .1);
             directionalLight.castShadow = true;  // Enable shadows for the light
             directionalLight.shadow.mapSize.width = 1024;  // Shadow map resolution (higher values give better quality)
             directionalLight.shadow.mapSize.height = 1024;
             directionalLight.shadow.camera.near = 0.1;
             directionalLight.shadow.camera.far = 50;
-            directionalLight.position.set(-5, 20, 0); // Initial position of the light
+            directionalLight.position.set(-1, 20, 0); // Initial position of the light
 
-            const pointLight = new THREE.PointLight(0xffffff, .9, 900);
+            const pointLight = new THREE.PointLight(0xffffff, 1, 2000);
                 pointLight.castShadow = true;  // Enable shadows for the light
                 pointLight.shadow.mapSize.width = 1024;  // Shadow map resolution (higher values give better quality)
                 pointLight.shadow.mapSize.height = 1024;
                 pointLight.shadow.camera.near = 0.1;
                 pointLight.shadow.camera.far = 90;
-                pointLight.position.set(0,0,0); // Initial position of the light
+                pointLight.position.set(0,1.5,0); // Initial position of the light
 
             
             // const lightTarget = new THREE.Object3D();
@@ -105,15 +106,15 @@
             // directionalLight.target = lightTarget;
             // directionalLight2.target = lightTarget;
             scene.add(directionalLight);
-            // scene.add(pointLight);
+            scene.add(pointLight);
             loader.load('/static/model.gltf', function(gltf) {
                 gltf.scene.scale.set(10,10,10);  // Scale the model by a factor of 2
-                gltf.scene.rotation.set(THREE.MathUtils.degToRad(-90), THREE.MathUtils.degToRad(0), THREE.MathUtils.degToRad(0));
+                gltf.scene.rotation.set(THREE.MathUtils.degToRad(-90), THREE.MathUtils.degToRad(0), THREE.MathUtils.degToRad(25));
                 gltf.scene.traverse(function(node) {
                     if (node.isMesh) {
                         mesh = node;  // Ensure we access the correct mesh
                         mesh.material = new THREE.MeshLambertMaterial({
-                            color: 0x999999
+                            color: 0xbbbbbb
                         });
                         node.castShadow = true;    // Make the model cast shadows
                         node.receiveShadow = true; // Make the model receive shadows
@@ -123,27 +124,28 @@
                         
                     }
                 });
-                const renderTarget = new THREE.WebGLRenderTarget(window.innerWidth, window.innerHeight, {
-                    minFilter: THREE.LinearFilter,
-                    magFilter: THREE.LinearFilter,
-                    format: THREE.RGBAFormat,
-                });
-                // Post-processing setup
-                composer = new EffectComposer(renderer, renderTarget);
-                const renderPass = new RenderPass(scene, camera);
-                composer.addPass(renderPass);
-
-                // SSAO Pass
-                const ssaoPass = new SSAOPass(scene, camera, window.innerWidth, window.innerHeight);
-                ssaoPass.kernelRadius = 56;   // Adjust this value to control the size of the AO effect
-                ssaoPass.minDistance = 0.005; // Minimum distance for occlusion
-                ssaoPass.maxDistance = 100;   // Maximum distance for occlusion
-                composer.addPass(ssaoPass);
+                
+               
                 scene.add(gltf.scene);
 
                
             });
+            const renderTarget = new THREE.WebGLRenderTarget(window.innerWidth, window.innerHeight, {
+                minFilter: THREE.LinearFilter,
+                magFilter: THREE.LinearFilter,
+                format: THREE.RGBAFormat,
+            });
+            // Post-processing setup
+            composer = new EffectComposer(renderer, renderTarget);
+            const renderPass = new RenderPass(scene, camera);
+            composer.addPass(renderPass);
 
+            // SSAO Pass
+            const ssaoPass = new SSAOPass(scene, camera, window.innerWidth, window.innerHeight);
+            ssaoPass.kernelRadius = 100;   // Adjust this value to control the size of the AO effect
+            ssaoPass.minDistance = 0.005; // Minimum distance for occlusion
+            ssaoPass.maxDistance = 1;   // Maximum distance for occlusion
+            composer.addPass(ssaoPass);
             // Compute the bounding box of the model
             let box = new THREE.Box3().setFromObject(scene);
 
@@ -152,11 +154,11 @@
             box.getCenter(center);
 
             // Reposition the camera to point at the center of the model
-            camera.position.set(center.x, center.y, center.z + 4.4);  // Set camera Z to be in front of the model
+            camera.position.set(center.x, center.y, center.z + 4.2);  // Set camera Z to be in front of the model
             camera.lookAt(center);  // Make the camera look at the center of the model
 
             console.log("Model loaded and camera centered!");
-
+            composer.render();
             // Click to add marker
             window.addEventListener('click', onModelClick);
 
@@ -164,6 +166,9 @@
         }
 
         function onModelClick(event) {
+            // Check if the shift key is not pressed, then exit the function
+            if (!event.shiftKey) return;
+            
             // Convert click to 3D space
             let mouse = new THREE.Vector2(
                 (event.clientX / window.innerWidth) * 2 - 1,
@@ -177,11 +182,16 @@
                 let intersect = intersects[0];
 
                 // Create and place marker (sphere) at click position
-                let sphereGeometry = new THREE.SphereGeometry(0.03, 32, 32);
+                let sphereGeometry = new THREE.SphereGeometry(0.015,8, 8);
                 let sphereMaterial = new THREE.MeshPhongMaterial({ color: 0xff0000 });
                 let marker = new THREE.Mesh(sphereGeometry, sphereMaterial);
                 marker.position.copy(intersect.point);
+                try{
+                    scene.remove(previousMarker);
+                } catch (e) {}
+                
                 scene.add(marker);
+                previousMarker = marker;
 
                 // Send marker position to Flask
                 fetch('/save_marker', {

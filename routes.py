@@ -50,7 +50,7 @@ def threeDee():
 def save_marker():
     data = request.json
     markers.append(data)  # Save marker coordinates
-    return jsonify(success=True)
+    return jsonify(data)
 
 @main_blueprint.route('/get_markers')
 def get_markers():
