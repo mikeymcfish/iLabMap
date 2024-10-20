@@ -26836,3 +26836,57 @@ Following these steps will help you keep things tidy and your prints top-notch. 
 2024-10-20 23:11:47,595 - INFO - 172.31.196.50 - - [20/Oct/2024 23:11:47] "GET /static/thumbnails/20241018_150652_7df45f90.png HTTP/1.1" 200 -
 2024-10-20 23:11:47,597 - INFO - 172.31.196.50 - - [20/Oct/2024 23:11:47] "GET /static/thumbnails/20241019_150025_1180cdbe.jpg HTTP/1.1" 200 -
 2024-10-20 23:11:47,739 - INFO - 172.31.196.50 - - [20/Oct/2024 23:11:47] "GET /static/img/icons/mask.svg HTTP/1.1" 200 -
+2024-10-20 23:13:20,308 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-20 23:13:20,308 - INFO - Added job "create_backup" to job store "default"
+2024-10-20 23:13:20,308 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-20 23:13:20,308 - INFO - Scheduler started
+2024-10-20 23:13:20,309 - INFO - Scheduler started
+2024-10-20 23:13:20,309 - INFO - Added job "create_backup" to job store "default"
+2024-10-20 23:13:20,309 - INFO - Scheduler started
+2024-10-20 23:13:20,310 - INFO - Scheduler started
+2024-10-20 23:13:20,672 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.196.50:5000
+2024-10-20 23:13:20,673 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-20 23:13:20,673 - INFO -  * Restarting with stat
+2024-10-20 23:13:21,130 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-20 23:13:21,131 - INFO - Added job "create_backup" to job store "default"
+2024-10-20 23:13:21,131 - INFO - Scheduler started
+2024-10-20 23:13:21,131 - INFO - Scheduler started
+2024-10-20 23:13:21,472 - WARNING -  * Debugger is active!
+2024-10-20 23:13:21,473 - INFO -  * Debugger PIN: 625-125-201
+2024-10-20 23:13:22,687 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-20 23:13:22,687 - INFO - 172.31.196.50 - - [20/Oct/2024 23:13:22] "POST /save_marker HTTP/1.1" 200 -
+2024-10-20 23:16:00,983 - INFO -  * Detected change in '/home/runner/workspace/models.py', reloading
+2024-10-20 23:16:01,127 - INFO -  * Restarting with stat
+2024-10-20 23:16:01,632 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-20 23:16:01,633 - INFO - Added job "create_backup" to job store "default"
+2024-10-20 23:16:01,633 - INFO - Scheduler started
+2024-10-20 23:16:01,634 - INFO - Scheduler started
+2024-10-20 23:16:01,978 - WARNING -  * Debugger is active!
+2024-10-20 23:16:01,979 - INFO -  * Debugger PIN: 722-997-368
+2024-10-20 23:16:36,279 - INFO -  * Detected change in '/home/runner/workspace/migrations/versions/8559733275ff_add_z_coord_to_item_model.py', reloading
+2024-10-20 23:16:36,423 - INFO -  * Restarting with stat
+2024-10-20 23:16:36,902 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-20 23:16:36,902 - INFO - Added job "create_backup" to job store "default"
+2024-10-20 23:16:36,902 - INFO - Scheduler started
+2024-10-20 23:16:36,903 - INFO - Scheduler started
+2024-10-20 23:16:37,240 - WARNING -  * Debugger is active!
+2024-10-20 23:16:37,241 - INFO -  * Debugger PIN: 105-333-212
+2024-10-20 23:18:02,230 - INFO -  * Detected change in '/home/runner/workspace/routes.py', reloading
+2024-10-20 23:18:02,354 - INFO -  * Restarting with stat
+2024-10-20 23:18:02,811 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-20 23:18:02,812 - INFO - Added job "create_backup" to job store "default"
+2024-10-20 23:18:02,812 - INFO - Scheduler started
+2024-10-20 23:18:02,812 - INFO - Scheduler started
+2024-10-20 23:18:03,159 - WARNING -  * Debugger is active!
+2024-10-20 23:18:03,160 - INFO -  * Debugger PIN: 241-530-777
+2024-10-20 23:20:25,179 - INFO -  * Detected change in '/home/runner/workspace/routes.py', reloading
+2024-10-20 23:20:25,392 - INFO -  * Restarting with stat
+2024-10-20 23:20:26,231 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-20 23:20:26,231 - INFO - Added job "create_backup" to job store "default"
+2024-10-20 23:20:26,231 - INFO - Scheduler started
+2024-10-20 23:20:26,232 - INFO - Scheduler started
+2024-10-20 23:20:26,595 - WARNING -  * Debugger is active!
+2024-10-20 23:20:26,596 - INFO -  * Debugger PIN: 272-928-169
