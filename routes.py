@@ -1,4 +1,4 @@
-from flask import Blueprint, request, jsonify, send_from_directory, current_app, render_template
+from flask import Blueprint, request, jsonify, send_from_directory, current_app, render_template, session, redirect, url_for
 from sqlalchemy.exc import SQLAlchemyError
 from sqlalchemy import or_
 from werkzeug.utils import secure_filename
@@ -12,8 +12,38 @@ import logging
 from typing import Optional
 from chat import system_prompt, get_ai_response
 from utils import list_available_items
+from functools import wraps
 
 main_blueprint = Blueprint('main', __name__)
+
+def admin_required(f):
+    @wraps(f)
+    def decorated_function(*args, **kwargs):
+        if not session.get('is_admin'):
+            return redirect(url_for('main.index'))
+        return f(*args, **kwargs)
+    return decorated_function
+
+@main_blueprint.route('/admin')
+@admin_required
+def admin():
+    return render_template('admin.html')
+
+@main_blueprint.route('/login', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        password = request.form.get('password')
+        if password == os.environ.get('ADMIN_PASSWORD'):
+            session['is_admin'] = True
+            return redirect(url_for('main.admin'))
+        else:
+            return render_template('login.html', error='Invalid password')
+    return render_template('login.html')
+
+@main_blueprint.route('/logout')
+def logout():
+    session.pop('is_admin', None)
+    return redirect(url_for('main.index'))
 
 @main_blueprint.route('/api/itemsList', methods=['GET'])
 def api_list_available_items():
@@ -36,7 +66,8 @@ def log_request_info():
 def index():
     try:
         items = Item.query.all()
-        return render_template('index.html', items=items)
+        is_admin = session.get('is_admin', False)
+        return render_template('index.html', items=items, is_admin=is_admin)
     except SQLAlchemyError as e:
         current_app.logger.error(
             f"Error fetching items for index page: {str(e)}")
