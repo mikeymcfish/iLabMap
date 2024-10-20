@@ -49,7 +49,9 @@ def threeDee():
 @main_blueprint.route('/save_marker', methods=['POST'])
 def save_marker():
     data = request.json
-    markers.append(data)  # Save marker coordinates
+    
+    print(data)
+    # markers.append(data)  # Save marker coordinates
     return jsonify(data)
 
 @main_blueprint.route('/get_markers')

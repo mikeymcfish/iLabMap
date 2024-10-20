@@ -108,14 +108,12 @@
             scene.add(directionalLight);
             scene.add(pointLight);
             loader.load('/static/model.gltf', function(gltf) {
-                gltf.scene.scale.set(10,10,10);  // Scale the model by a factor of 2
-                gltf.scene.rotation.set(THREE.MathUtils.degToRad(-90), THREE.MathUtils.degToRad(0), THREE.MathUtils.degToRad(25));
+                gltf.scene.scale.set(.01,.01,.01);  // Scale the model by a factor of 2
+                gltf.scene.rotation.set(THREE.MathUtils.degToRad(0), THREE.MathUtils.degToRad(50), THREE.MathUtils.degToRad(0));
                 gltf.scene.traverse(function(node) {
                     if (node.isMesh) {
                         mesh = node;  // Ensure we access the correct mesh
-                        mesh.material = new THREE.MeshLambertMaterial({
-                            color: 0xbbbbbb
-                        });
+
                         node.castShadow = true;    // Make the model cast shadows
                         node.receiveShadow = true; // Make the model receive shadows
                         // Force material update
@@ -154,7 +152,7 @@
             box.getCenter(center);
 
             // Reposition the camera to point at the center of the model
-            camera.position.set(center.x, center.y, center.z + 4.2);  // Set camera Z to be in front of the model
+            camera.position.set(center.x, center.y, center.z + 20);  // Set camera Z to be in front of the model
             camera.lookAt(center);  // Make the camera look at the center of the model
 
             console.log("Model loaded and camera centered!");
