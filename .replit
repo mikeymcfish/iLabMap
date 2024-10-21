@@ -19,6 +19,26 @@ args = "Start Flask Server"
 task = "workflow.run"
 args = "Flask Server"
 
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Import Items"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Flask Migration"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Flask Upgrade"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Flask Init Migration"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Flask New Migration"
+
 [[workflows.workflow]]
 name = "Start Flask Server"
 author = "agent"
@@ -42,6 +62,61 @@ agentRequireRestartOnSave = false
 task = "shell.exec"
 args = "python main.py"
 waitForPort = 5000
+
+[[workflows.workflow]]
+name = "Import Items"
+author = "agent"
+
+[workflows.workflow.metadata]
+agentRequireRestartOnSave = false
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python import_items.py"
+
+[[workflows.workflow]]
+name = "Flask Migration"
+author = "agent"
+
+[workflows.workflow.metadata]
+agentRequireRestartOnSave = false
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "flask db migrate -m 'Add z_coord to Item model'"
+
+[[workflows.workflow]]
+name = "Flask Upgrade"
+author = "agent"
+
+[workflows.workflow.metadata]
+agentRequireRestartOnSave = false
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "flask db upgrade"
+
+[[workflows.workflow]]
+name = "Flask Init Migration"
+author = "agent"
+
+[workflows.workflow.metadata]
+agentRequireRestartOnSave = false
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "flask db init"
+
+[[workflows.workflow]]
+name = "Flask New Migration"
+author = "agent"
+
+[workflows.workflow.metadata]
+agentRequireRestartOnSave = false
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "flask db migrate -m 'Add z_coord to Item model'"
 
 [deployment]
 deploymentTarget = "cloudrun"

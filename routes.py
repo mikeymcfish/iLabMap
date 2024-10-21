@@ -49,13 +49,13 @@ def threeDee():
 @main_blueprint.route('/save_marker', methods=['POST'])
 def save_marker():
     data = request.json
+    
     print(data)
+    # markers.append(data)  # Save marker coordinates
     return jsonify(data)
 
 @main_blueprint.route('/get_markers')
 def get_markers():
-    # This is a placeholder. You should implement the logic to retrieve markers.
-    markers = []  # Replace this with actual marker data
     return jsonify(markers=markers)
 
 @main_blueprint.route('/api/items/<int:item_id>', methods=['PUT'])
@@ -71,7 +71,6 @@ def update_item(item_id):
     map_id = request.form.get('map_id')
     x_coord = request.form.get('x_coord')
     y_coord = request.form.get('y_coord')
-    z_coord = request.form.get('z_coord')
     description = request.form.get('description')
     link = request.form.get('link')
 
@@ -93,8 +92,6 @@ def update_item(item_id):
         item.x_coord = float(x_coord)
     if y_coord:
         item.y_coord = float(y_coord)
-    if z_coord:
-        item.z_coord = float(z_coord)
     if description:
         item.description = description
     if link:
@@ -128,7 +125,6 @@ def get_item(item_id):
             "tags": item.tags,
             "x_coord": item.x_coord,
             "y_coord": item.y_coord,
-            "z_coord": item.z_coord,
             "map_id": item.map_id,
             "image_path": image_path,
             "color": item.color,
@@ -179,7 +175,7 @@ def items():
         image_file = request.files.get('image')
         current_app.logger.info(f"Received POST data: {data}")
 
-        required_fields = ['name', 'tags', 'x_coord', 'y_coord', 'z_coord', 'map_id']
+        required_fields = ['name', 'tags', 'x_coord', 'y_coord', 'map_id']
         missing_fields = [
             field for field in required_fields if field not in data
         ]
@@ -210,7 +206,6 @@ def items():
             new_item.warning = data['warning']
             new_item.x_coord = float(data['x_coord'])
             new_item.y_coord = float(data['y_coord'])
-            new_item.z_coord = float(data['z_coord'])
             new_item.map_id = int(data['map_id'])
             new_item.image_path = image_path
             new_item.description = data.get('description', '')
@@ -245,7 +240,6 @@ def items():
                     "warning": item.warning,
                     "x_coord": item.x_coord,
                     "y_coord": item.y_coord,
-                    "z_coord": item.z_coord,
                     "map_id": item.map_id,
                     "image_path": item.image_path,
                     "description": item.description,
@@ -314,7 +308,6 @@ def search():
                 "tags": item.tags,
                 "x_coord": item.x_coord,
                 "y_coord": item.y_coord,
-                "z_coord": item.z_coord,
                 "map_id": item.map_id,
                 "image_path": item.image_path,
                 "description": item.description,
@@ -334,10 +327,6 @@ def static_files(filename):
     
 @main_blueprint.route('/static/maps/<path:filename>')
 def serve_static(filename):
-    if current_app.static_folder is None:
-        current_app.logger.error("Static folder is not set")
-        return jsonify({"error": "Static folder is not configured"}), 500
-    
     file_path = os.path.join(current_app.static_folder, 'maps', filename)
     current_app.logger.info(f"Attempting to serve static file: {file_path}")
     if not os.path.exists(file_path):
