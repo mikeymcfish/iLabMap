@@ -26890,3 +26890,361 @@ Following these steps will help you keep things tidy and your prints top-notch. 
 2024-10-20 23:20:26,232 - INFO - Scheduler started
 2024-10-20 23:20:26,595 - WARNING -  * Debugger is active!
 2024-10-20 23:20:26,596 - INFO -  * Debugger PIN: 272-928-169
+2024-10-22 14:59:26,228 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-22 14:59:26,229 - INFO - Added job "create_backup" to job store "default"
+2024-10-22 14:59:26,229 - INFO - Scheduler started
+2024-10-22 14:59:26,230 - INFO - Scheduler started
+2024-10-22 14:59:26,766 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.196.53:5000
+2024-10-22 14:59:26,767 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-22 14:59:26,772 - INFO -  * Restarting with stat
+2024-10-22 14:59:27,422 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-22 14:59:27,422 - INFO - Added job "create_backup" to job store "default"
+2024-10-22 14:59:27,422 - INFO - Scheduler started
+2024-10-22 14:59:27,423 - INFO - Scheduler started
+2024-10-22 14:59:27,869 - WARNING -  * Debugger is active!
+2024-10-22 14:59:27,871 - INFO -  * Debugger PIN: 145-679-965
+2024-10-22 14:59:27,915 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-22 14:59:28,969 - INFO - 172.31.196.53 - - [22/Oct/2024 14:59:28] "GET / HTTP/1.1" 200 -
+2024-10-22 14:59:29,155 - INFO - 172.31.196.53 - - [22/Oct/2024 14:59:29] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-10-22 14:59:29,552 - INFO - 172.31.196.53 - - [22/Oct/2024 14:59:29] "GET /static/js/script.js HTTP/1.1" 200 -
+2024-10-22 14:59:29,967 - INFO - 172.31.196.53 - - [22/Oct/2024 14:59:29] "[36mGET /static/model.gltf HTTP/1.1[0m" 304 -
+2024-10-22 14:59:30,062 - INFO - 172.31.196.53 - - [22/Oct/2024 14:59:30] "[36mGET /static/main.bin HTTP/1.1[0m" 304 -
+2024-10-22 14:59:30,065 - INFO - 172.31.196.53 - - [22/Oct/2024 14:59:30] "[36mGET /static/Untitled.png HTTP/1.1[0m" 304 -
+2024-10-22 14:59:31,329 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-22 14:59:31,552 - INFO - 172.31.196.53 - - [22/Oct/2024 14:59:31] "GET / HTTP/1.1" 200 -
+2024-10-22 14:59:31,669 - INFO - 172.31.196.53 - - [22/Oct/2024 14:59:31] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-10-22 14:59:31,728 - INFO - 172.31.196.53 - - [22/Oct/2024 14:59:31] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2024-10-22 14:59:31,843 - INFO - 172.31.196.53 - - [22/Oct/2024 14:59:31] "[36mGET /static/model.gltf HTTP/1.1[0m" 304 -
+2024-10-22 14:59:32,038 - INFO - 172.31.196.53 - - [22/Oct/2024 14:59:32] "[36mGET /static/main.bin HTTP/1.1[0m" 304 -
+2024-10-22 14:59:32,041 - INFO - 172.31.196.53 - - [22/Oct/2024 14:59:32] "[36mGET /static/Untitled.png HTTP/1.1[0m" 304 -
+2024-10-22 15:00:35,235 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-22 15:00:35,238 - INFO - Added job "create_backup" to job store "default"
+2024-10-22 15:00:35,238 - INFO - Scheduler started
+2024-10-22 15:00:35,238 - INFO - Scheduler started
+2024-10-22 15:00:35,343 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-22 15:00:35,344 - INFO - Added job "create_backup" to job store "default"
+2024-10-22 15:00:35,344 - INFO - Scheduler started
+2024-10-22 15:00:35,345 - INFO - Scheduler started
+2024-10-22 15:00:35,730 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.196.53:5000
+2024-10-22 15:00:35,730 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-22 15:00:35,731 - INFO -  * Restarting with stat
+2024-10-22 15:00:36,292 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-22 15:00:36,293 - INFO - Added job "create_backup" to job store "default"
+2024-10-22 15:00:36,293 - INFO - Scheduler started
+2024-10-22 15:00:36,293 - INFO - Scheduler started
+2024-10-22 15:00:36,771 - WARNING -  * Debugger is active!
+2024-10-22 15:00:36,773 - INFO -  * Debugger PIN: 283-351-851
+2024-10-22 15:00:39,204 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-22 15:00:40,255 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:40] "GET / HTTP/1.1" 200 -
+2024-10-22 15:00:40,375 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:40] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-10-22 15:00:40,429 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:40] "GET /static/js/script.js HTTP/1.1" 200 -
+2024-10-22 15:00:40,581 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:40] "[36mGET /static/model.gltf HTTP/1.1[0m" 304 -
+2024-10-22 15:00:40,616 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps
+2024-10-22 15:00:40,617 - INFO - Fetching all maps
+2024-10-22 15:00:40,688 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:40] "[36mGET /static/main.bin HTTP/1.1[0m" 304 -
+2024-10-22 15:00:40,773 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:40] "[36mGET /static/Untitled.png HTTP/1.1[0m" 304 -
+2024-10-22 15:00:40,847 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:40] "GET /api/maps HTTP/1.1" 200 -
+2024-10-22 15:00:40,960 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps/1
+2024-10-22 15:00:40,960 - INFO - Fetching map with ID: 1
+2024-10-22 15:00:41,196 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:41] "GET /api/maps/1 HTTP/1.1" 200 -
+2024-10-22 15:00:41,287 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/static/maps/main.png
+2024-10-22 15:00:41,288 - INFO - Attempting to serve static file: /home/runner/workspace/static/maps/main.png
+2024-10-22 15:00:41,292 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:41] "GET /static/maps/main.png HTTP/1.1" 200 -
+2024-10-22 15:00:41,752 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/items?map_id=1
+2024-10-22 15:00:41,754 - INFO - Fetching items for map ID: 1
+2024-10-22 15:00:41,985 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:41] "GET /api/items?map_id=1 HTTP/1.1" 200 -
+2024-10-22 15:00:42,082 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:42] "[33mHEAD /static/thumbnails/20241018_173844_47d7cf43.jpg HTTP/1.1[0m" 404 -
+2024-10-22 15:00:42,086 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:42] "[33mHEAD /null HTTP/1.1[0m" 404 -
+2024-10-22 15:00:42,095 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:42] "[33mHEAD /static/thumbnails/20241018_173743_7e7d8d33.jpg HTTP/1.1[0m" 404 -
+2024-10-22 15:00:42,167 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:42] "HEAD /static/thumbnails/20241018_150242_c2a5134b.png HTTP/1.1" 200 -
+2024-10-22 15:00:42,174 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:42] "HEAD /static/thumbnails/20241018_150114_e2307150.png HTTP/1.1" 200 -
+2024-10-22 15:00:42,180 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:42] "HEAD /static/thumbnails/20241018_150628_7b9b8b60.png HTTP/1.1" 200 -
+2024-10-22 15:00:42,252 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:42] "HEAD /static/thumbnails/20241018_150915_9ee2ee5b.png HTTP/1.1" 200 -
+2024-10-22 15:00:42,260 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:42] "[33mHEAD /static/thumbnails/20241016_153624_1dbede16.jpg HTTP/1.1[0m" 404 -
+2024-10-22 15:00:42,264 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:42] "[33mHEAD /static/thumbnails/20241018_174024_7df52a7d.jpeg HTTP/1.1[0m" 404 -
+2024-10-22 15:00:42,341 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:42] "[33mHEAD /static/thumbnails/20241018_173727_dc77ec8d.jpg HTTP/1.1[0m" 404 -
+2024-10-22 15:00:42,346 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:42] "[33mHEAD /static/thumbnails/20241018_173921_fb220825.jpg HTTP/1.1[0m" 404 -
+2024-10-22 15:00:42,350 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:42] "[33mHEAD /null HTTP/1.1[0m" 404 -
+2024-10-22 15:00:42,352 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:42] "[33mHEAD /null HTTP/1.1[0m" 404 -
+2024-10-22 15:00:42,354 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:42] "[33mHEAD /static/thumbnails/20241016_150011_83503f4f.jpg HTTP/1.1[0m" 404 -
+2024-10-22 15:00:42,354 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:42] "HEAD /static/thumbnails/20241018_150652_7df45f90.png HTTP/1.1" 200 -
+2024-10-22 15:00:42,426 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:42] "[33mHEAD /static/thumbnails/20241016_153208_247e423e.jpg HTTP/1.1[0m" 404 -
+2024-10-22 15:00:42,434 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:42] "[33mHEAD /null HTTP/1.1[0m" 404 -
+2024-10-22 15:00:42,435 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:42] "[33mHEAD /static/thumbnails/20241016_154030_89cfc546.jpg HTTP/1.1[0m" 404 -
+2024-10-22 15:00:42,441 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:42] "[33mHEAD /static/thumbnails/20241016_151142_bf6008cc.jpg HTTP/1.1[0m" 404 -
+2024-10-22 15:00:42,443 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:42] "[33mHEAD /static/thumbnails/20241016_153707_39faf826.jpg HTTP/1.1[0m" 404 -
+2024-10-22 15:00:42,444 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:42] "[33mHEAD /null HTTP/1.1[0m" 404 -
+2024-10-22 15:00:42,514 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:42] "[33mHEAD /static/thumbnails/20241016_152258_1f8a6141.jpg HTTP/1.1[0m" 404 -
+2024-10-22 15:00:42,518 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:42] "[33mHEAD /null HTTP/1.1[0m" 404 -
+2024-10-22 15:00:42,522 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:42] "[36mHEAD /static/thumbnails/20241019_150025_1180cdbe.jpg HTTP/1.1[0m" 304 -
+2024-10-22 15:00:42,530 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:42] "GET /static/img/icons/bolt.svg HTTP/1.1" 200 -
+2024-10-22 15:00:42,611 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:42] "GET /static/img/default.png HTTP/1.1" 200 -
+2024-10-22 15:00:42,618 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:42] "GET /static/thumbnails/20241018_150242_c2a5134b.png HTTP/1.1" 200 -
+2024-10-22 15:00:42,672 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:42] "GET /static/img/icons/fire.svg HTTP/1.1" 200 -
+2024-10-22 15:00:42,672 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:42] "GET /static/img/icons/glasses.svg HTTP/1.1" 200 -
+2024-10-22 15:00:42,672 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:42] "GET /static/img/icons/hand.svg HTTP/1.1" 200 -
+2024-10-22 15:00:42,672 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:42] "GET /static/img/icons/mask.svg HTTP/1.1" 200 -
+2024-10-22 15:00:42,700 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:42] "GET /static/thumbnails/20241018_150114_e2307150.png HTTP/1.1" 200 -
+2024-10-22 15:00:42,780 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:42] "GET /static/thumbnails/20241018_150628_7b9b8b60.png HTTP/1.1" 200 -
+2024-10-22 15:00:42,780 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:42] "GET /static/thumbnails/20241018_150652_7df45f90.png HTTP/1.1" 200 -
+2024-10-22 15:00:42,782 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:42] "GET /static/thumbnails/20241018_150915_9ee2ee5b.png HTTP/1.1" 200 -
+2024-10-22 15:00:42,854 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:42] "[36mGET /static/thumbnails/20241019_150025_1180cdbe.jpg HTTP/1.1[0m" 304 -
+2024-10-22 15:00:44,567 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps/2
+2024-10-22 15:00:44,567 - INFO - Fetching map with ID: 2
+2024-10-22 15:00:44,797 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:44] "GET /api/maps/2 HTTP/1.1" 200 -
+2024-10-22 15:00:44,884 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/static/maps/closet.png
+2024-10-22 15:00:44,884 - INFO - Attempting to serve static file: /home/runner/workspace/static/maps/closet.png
+2024-10-22 15:00:44,884 - WARNING - Attempt to access non-existent file: /home/runner/workspace/static/maps/closet.png
+2024-10-22 15:00:44,885 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:44] "[33mGET /static/maps/closet.png HTTP/1.1[0m" 404 -
+2024-10-22 15:00:47,368 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps/1
+2024-10-22 15:00:47,368 - INFO - Fetching map with ID: 1
+2024-10-22 15:00:47,596 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:47] "GET /api/maps/1 HTTP/1.1" 200 -
+2024-10-22 15:00:47,704 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/items?map_id=1
+2024-10-22 15:00:47,704 - INFO - Fetching items for map ID: 1
+2024-10-22 15:00:47,933 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:47] "GET /api/items?map_id=1 HTTP/1.1" 200 -
+2024-10-22 15:00:48,054 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:48] "[33mHEAD /null HTTP/1.1[0m" 404 -
+2024-10-22 15:00:48,056 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:48] "[33mHEAD /static/thumbnails/20241018_173844_47d7cf43.jpg HTTP/1.1[0m" 404 -
+2024-10-22 15:00:48,057 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:48] "[33mHEAD /static/thumbnails/20241018_173743_7e7d8d33.jpg HTTP/1.1[0m" 404 -
+2024-10-22 15:00:48,145 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:48] "[33mHEAD /static/thumbnails/20241016_153624_1dbede16.jpg HTTP/1.1[0m" 404 -
+2024-10-22 15:00:48,145 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:48] "[33mHEAD /static/thumbnails/20241016_150011_83503f4f.jpg HTTP/1.1[0m" 404 -
+2024-10-22 15:00:48,150 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:48] "[33mHEAD /static/thumbnails/20241018_174024_7df52a7d.jpeg HTTP/1.1[0m" 404 -
+2024-10-22 15:00:48,235 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:48] "[33mHEAD /null HTTP/1.1[0m" 404 -
+2024-10-22 15:00:48,236 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:48] "[33mHEAD /static/thumbnails/20241018_173727_dc77ec8d.jpg HTTP/1.1[0m" 404 -
+2024-10-22 15:00:48,238 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:48] "[33mHEAD /static/thumbnails/20241018_173921_fb220825.jpg HTTP/1.1[0m" 404 -
+2024-10-22 15:00:48,318 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:48] "[33mHEAD /null HTTP/1.1[0m" 404 -
+2024-10-22 15:00:48,321 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:48] "[33mHEAD /static/thumbnails/20241016_153707_39faf826.jpg HTTP/1.1[0m" 404 -
+2024-10-22 15:00:48,325 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:48] "[33mHEAD /null HTTP/1.1[0m" 404 -
+2024-10-22 15:00:48,330 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:48] "[33mHEAD /static/thumbnails/20241016_153208_247e423e.jpg HTTP/1.1[0m" 404 -
+2024-10-22 15:00:48,332 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:48] "[33mHEAD /static/thumbnails/20241016_154030_89cfc546.jpg HTTP/1.1[0m" 404 -
+2024-10-22 15:00:48,403 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:48] "[36mHEAD /static/thumbnails/20241018_150242_c2a5134b.png HTTP/1.1[0m" 304 -
+2024-10-22 15:00:48,407 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:48] "[33mHEAD /static/thumbnails/20241016_151142_bf6008cc.jpg HTTP/1.1[0m" 404 -
+2024-10-22 15:00:48,428 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:48] "[33mHEAD /null HTTP/1.1[0m" 404 -
+2024-10-22 15:00:48,517 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:48] "[33mHEAD /static/thumbnails/20241016_152258_1f8a6141.jpg HTTP/1.1[0m" 404 -
+2024-10-22 15:00:48,520 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:48] "[36mHEAD /static/thumbnails/20241018_150915_9ee2ee5b.png HTTP/1.1[0m" 304 -
+2024-10-22 15:00:48,523 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:48] "[36mHEAD /static/thumbnails/20241018_150628_7b9b8b60.png HTTP/1.1[0m" 304 -
+2024-10-22 15:00:48,524 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:48] "[33mHEAD /null HTTP/1.1[0m" 404 -
+2024-10-22 15:00:48,525 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:48] "[36mHEAD /static/thumbnails/20241018_150114_e2307150.png HTTP/1.1[0m" 304 -
+2024-10-22 15:00:48,527 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:48] "[36mHEAD /static/thumbnails/20241018_150652_7df45f90.png HTTP/1.1[0m" 304 -
+2024-10-22 15:00:48,632 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:48] "[36mHEAD /static/thumbnails/20241019_150025_1180cdbe.jpg HTTP/1.1[0m" 304 -
+2024-10-22 15:00:48,637 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:48] "[36mGET /static/thumbnails/20241018_150242_c2a5134b.png HTTP/1.1[0m" 304 -
+2024-10-22 15:00:48,646 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:48] "[36mGET /static/thumbnails/20241018_150628_7b9b8b60.png HTTP/1.1[0m" 304 -
+2024-10-22 15:00:48,647 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:48] "[36mGET /static/thumbnails/20241018_150915_9ee2ee5b.png HTTP/1.1[0m" 304 -
+2024-10-22 15:00:48,647 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:48] "[36mGET /static/thumbnails/20241018_150652_7df45f90.png HTTP/1.1[0m" 304 -
+2024-10-22 15:00:48,650 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:48] "[36mGET /static/thumbnails/20241018_150114_e2307150.png HTTP/1.1[0m" 304 -
+2024-10-22 15:00:48,730 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:48] "[36mGET /static/thumbnails/20241019_150025_1180cdbe.jpg HTTP/1.1[0m" 304 -
+2024-10-22 15:00:53,504 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-22 15:00:53,504 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:53] "POST /save_marker HTTP/1.1" 200 -
+2024-10-22 15:00:53,762 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-22 15:00:53,763 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:53] "POST /save_marker HTTP/1.1" 200 -
+2024-10-22 15:00:54,278 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-22 15:00:54,279 - INFO - 172.31.196.53 - - [22/Oct/2024 15:00:54] "POST /save_marker HTTP/1.1" 200 -
+2024-10-22 15:02:02,294 - INFO -  * Detected change in '/home/runner/workspace/models.py', reloading
+2024-10-22 15:02:02,494 - INFO -  * Restarting with stat
+2024-10-22 15:05:20,516 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-22 15:05:20,521 - INFO - Added job "create_backup" to job store "default"
+2024-10-22 15:05:20,521 - INFO - Scheduler started
+2024-10-22 15:05:20,522 - INFO - Scheduler started
+2024-10-22 15:05:21,222 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.196.53:5000
+2024-10-22 15:05:21,223 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-22 15:05:21,226 - INFO -  * Restarting with stat
+2024-10-22 15:05:21,752 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-22 15:05:21,753 - INFO - Added job "create_backup" to job store "default"
+2024-10-22 15:05:21,753 - INFO - Scheduler started
+2024-10-22 15:05:21,753 - INFO - Scheduler started
+2024-10-22 15:05:22,164 - WARNING -  * Debugger is active!
+2024-10-22 15:05:22,185 - INFO -  * Debugger PIN: 969-511-421
+2024-10-22 15:05:22,238 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-22 15:05:23,268 - INFO - 172.31.196.53 - - [22/Oct/2024 15:05:23] "GET / HTTP/1.1" 200 -
+2024-10-22 15:05:23,725 - INFO - 172.31.196.53 - - [22/Oct/2024 15:05:23] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-10-22 15:05:23,813 - INFO - 172.31.196.53 - - [22/Oct/2024 15:05:23] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2024-10-22 15:05:24,019 - INFO - 172.31.196.53 - - [22/Oct/2024 15:05:24] "[36mGET /static/model.gltf HTTP/1.1[0m" 304 -
+2024-10-22 15:05:24,037 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps
+2024-10-22 15:05:24,037 - INFO - Fetching all maps
+2024-10-22 15:05:24,108 - INFO - 172.31.196.53 - - [22/Oct/2024 15:05:24] "[36mGET /static/main.bin HTTP/1.1[0m" 304 -
+2024-10-22 15:05:24,206 - INFO - 172.31.196.53 - - [22/Oct/2024 15:05:24] "[36mGET /static/Untitled.png HTTP/1.1[0m" 304 -
+2024-10-22 15:05:24,261 - INFO - 172.31.196.53 - - [22/Oct/2024 15:05:24] "GET /api/maps HTTP/1.1" 200 -
+2024-10-22 15:05:24,350 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps/1
+2024-10-22 15:05:24,350 - INFO - Fetching map with ID: 1
+2024-10-22 15:05:24,576 - INFO - 172.31.196.53 - - [22/Oct/2024 15:05:24] "GET /api/maps/1 HTTP/1.1" 200 -
+2024-10-22 15:05:24,788 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/static/maps/main.png
+2024-10-22 15:05:24,789 - INFO - Attempting to serve static file: /home/runner/workspace/static/maps/main.png
+2024-10-22 15:05:24,789 - INFO - 172.31.196.53 - - [22/Oct/2024 15:05:24] "[36mGET /static/maps/main.png HTTP/1.1[0m" 304 -
+2024-10-22 15:05:24,875 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/items?map_id=1
+2024-10-22 15:05:24,877 - INFO - Fetching items for map ID: 1
+2024-10-22 15:05:25,103 - INFO - 172.31.196.53 - - [22/Oct/2024 15:05:25] "GET /api/items?map_id=1 HTTP/1.1" 200 -
+2024-10-22 15:05:25,200 - INFO - 172.31.196.53 - - [22/Oct/2024 15:05:25] "[33mHEAD /null HTTP/1.1[0m" 404 -
+2024-10-22 15:05:25,206 - INFO - 172.31.196.53 - - [22/Oct/2024 15:05:25] "[33mHEAD /static/thumbnails/20241018_173844_47d7cf43.jpg HTTP/1.1[0m" 404 -
+2024-10-22 15:05:25,207 - INFO - 172.31.196.53 - - [22/Oct/2024 15:05:25] "[36mGET /static/img/icons/mask.svg HTTP/1.1[0m" 304 -
+2024-10-22 15:05:25,285 - INFO - 172.31.196.53 - - [22/Oct/2024 15:05:25] "[33mHEAD /static/thumbnails/20241018_173743_7e7d8d33.jpg HTTP/1.1[0m" 404 -
+2024-10-22 15:05:25,293 - INFO - 172.31.196.53 - - [22/Oct/2024 15:05:25] "[36mHEAD /static/thumbnails/20241018_150242_c2a5134b.png HTTP/1.1[0m" 304 -
+2024-10-22 15:05:25,293 - INFO - 172.31.196.53 - - [22/Oct/2024 15:05:25] "[36mGET /static/img/icons/hand.svg HTTP/1.1[0m" 304 -
+2024-10-22 15:05:25,374 - INFO - 172.31.196.53 - - [22/Oct/2024 15:05:25] "[36mHEAD /static/thumbnails/20241018_150114_e2307150.png HTTP/1.1[0m" 304 -
+2024-10-22 15:05:25,392 - INFO - 172.31.196.53 - - [22/Oct/2024 15:05:25] "[33mHEAD /static/thumbnails/20241016_153624_1dbede16.jpg HTTP/1.1[0m" 404 -
+2024-10-22 15:05:25,394 - INFO - 172.31.196.53 - - [22/Oct/2024 15:05:25] "[36mHEAD /static/thumbnails/20241018_150628_7b9b8b60.png HTTP/1.1[0m" 304 -
+2024-10-22 15:05:25,462 - INFO - 172.31.196.53 - - [22/Oct/2024 15:05:25] "[36mHEAD /static/thumbnails/20241018_150915_9ee2ee5b.png HTTP/1.1[0m" 304 -
+2024-10-22 15:05:25,478 - INFO - 172.31.196.53 - - [22/Oct/2024 15:05:25] "[33mHEAD /null HTTP/1.1[0m" 404 -
+2024-10-22 15:05:25,482 - INFO - 172.31.196.53 - - [22/Oct/2024 15:05:25] "[33mHEAD /static/thumbnails/20241018_173727_dc77ec8d.jpg HTTP/1.1[0m" 404 -
+2024-10-22 15:05:25,543 - INFO - 172.31.196.53 - - [22/Oct/2024 15:05:25] "[33mHEAD /static/thumbnails/20241016_150011_83503f4f.jpg HTTP/1.1[0m" 404 -
+2024-10-22 15:05:25,546 - INFO - 172.31.196.53 - - [22/Oct/2024 15:05:25] "[36mHEAD /static/thumbnails/20241018_150652_7df45f90.png HTTP/1.1[0m" 304 -
+2024-10-22 15:05:25,548 - INFO - 172.31.196.53 - - [22/Oct/2024 15:05:25] "[36mHEAD /static/thumbnails/20241019_150025_1180cdbe.jpg HTTP/1.1[0m" 304 -
+2024-10-22 15:05:25,550 - INFO - 172.31.196.53 - - [22/Oct/2024 15:05:25] "[33mHEAD /static/thumbnails/20241018_174024_7df52a7d.jpeg HTTP/1.1[0m" 404 -
+2024-10-22 15:05:25,563 - INFO - 172.31.196.53 - - [22/Oct/2024 15:05:25] "[33mHEAD /static/thumbnails/20241018_173921_fb220825.jpg HTTP/1.1[0m" 404 -
+2024-10-22 15:05:25,564 - INFO - 172.31.196.53 - - [22/Oct/2024 15:05:25] "[33mHEAD /null HTTP/1.1[0m" 404 -
+2024-10-22 15:05:25,628 - INFO - 172.31.196.53 - - [22/Oct/2024 15:05:25] "[33mHEAD /static/thumbnails/20241016_153208_247e423e.jpg HTTP/1.1[0m" 404 -
+2024-10-22 15:05:25,634 - INFO - 172.31.196.53 - - [22/Oct/2024 15:05:25] "[33mHEAD /static/thumbnails/20241016_154030_89cfc546.jpg HTTP/1.1[0m" 404 -
+2024-10-22 15:05:25,637 - INFO - 172.31.196.53 - - [22/Oct/2024 15:05:25] "[33mHEAD /null HTTP/1.1[0m" 404 -
+2024-10-22 15:05:25,638 - INFO - 172.31.196.53 - - [22/Oct/2024 15:05:25] "[33mHEAD /static/thumbnails/20241016_153707_39faf826.jpg HTTP/1.1[0m" 404 -
+2024-10-22 15:05:25,648 - INFO - 172.31.196.53 - - [22/Oct/2024 15:05:25] "[33mHEAD /null HTTP/1.1[0m" 404 -
+2024-10-22 15:05:25,649 - INFO - 172.31.196.53 - - [22/Oct/2024 15:05:25] "[33mHEAD /static/thumbnails/20241016_151142_bf6008cc.jpg HTTP/1.1[0m" 404 -
+2024-10-22 15:05:25,716 - INFO - 172.31.196.53 - - [22/Oct/2024 15:05:25] "[33mHEAD /static/thumbnails/20241016_152258_1f8a6141.jpg HTTP/1.1[0m" 404 -
+2024-10-22 15:05:25,719 - INFO - 172.31.196.53 - - [22/Oct/2024 15:05:25] "[33mHEAD /null HTTP/1.1[0m" 404 -
+2024-10-22 15:05:25,727 - INFO - 172.31.196.53 - - [22/Oct/2024 15:05:25] "[36mGET /static/img/default.png HTTP/1.1[0m" 304 -
+2024-10-22 15:05:25,727 - INFO - 172.31.196.53 - - [22/Oct/2024 15:05:25] "[36mGET /static/img/icons/bolt.svg HTTP/1.1[0m" 304 -
+2024-10-22 15:05:25,817 - INFO - 172.31.196.53 - - [22/Oct/2024 15:05:25] "[36mGET /static/img/icons/glasses.svg HTTP/1.1[0m" 304 -
+2024-10-22 15:05:25,819 - INFO - 172.31.196.53 - - [22/Oct/2024 15:05:25] "[36mGET /static/img/icons/fire.svg HTTP/1.1[0m" 304 -
+2024-10-22 15:05:25,906 - INFO - 172.31.196.53 - - [22/Oct/2024 15:05:25] "[36mGET /static/thumbnails/20241018_150242_c2a5134b.png HTTP/1.1[0m" 304 -
+2024-10-22 15:05:25,906 - INFO - 172.31.196.53 - - [22/Oct/2024 15:05:25] "[36mGET /static/thumbnails/20241018_150114_e2307150.png HTTP/1.1[0m" 304 -
+2024-10-22 15:05:26,007 - INFO - 172.31.196.53 - - [22/Oct/2024 15:05:26] "[36mGET /static/thumbnails/20241018_150628_7b9b8b60.png HTTP/1.1[0m" 304 -
+2024-10-22 15:05:26,008 - INFO - 172.31.196.53 - - [22/Oct/2024 15:05:26] "[36mGET /static/thumbnails/20241018_150915_9ee2ee5b.png HTTP/1.1[0m" 304 -
+2024-10-22 15:05:26,111 - INFO - 172.31.196.53 - - [22/Oct/2024 15:05:26] "[36mGET /static/thumbnails/20241018_150652_7df45f90.png HTTP/1.1[0m" 304 -
+2024-10-22 15:05:26,113 - INFO - 172.31.196.53 - - [22/Oct/2024 15:05:26] "[36mGET /static/thumbnails/20241019_150025_1180cdbe.jpg HTTP/1.1[0m" 304 -
+2024-10-22 15:07:37,594 - INFO -  * Detected change in '/home/runner/workspace/models.py', reloading
+2024-10-22 15:07:37,775 - INFO -  * Restarting with stat
+2024-10-22 15:07:38,322 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-22 15:07:38,324 - INFO - Added job "create_backup" to job store "default"
+2024-10-22 15:07:38,324 - INFO - Scheduler started
+2024-10-22 15:07:38,324 - INFO - Scheduler started
+2024-10-22 15:07:38,859 - WARNING -  * Debugger is active!
+2024-10-22 15:07:38,862 - INFO -  * Debugger PIN: 645-693-011
+2024-10-22 15:08:16,403 - INFO -  * Detected change in '/home/runner/workspace/models.py', reloading
+2024-10-22 15:08:16,605 - INFO -  * Restarting with stat
+2024-10-22 15:08:17,172 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-22 15:08:17,174 - INFO - Added job "create_backup" to job store "default"
+2024-10-22 15:08:17,174 - INFO - Scheduler started
+2024-10-22 15:08:17,175 - INFO - Scheduler started
+2024-10-22 15:08:17,621 - WARNING -  * Debugger is active!
+2024-10-22 15:08:17,623 - INFO -  * Debugger PIN: 918-385-556
+2024-10-22 15:34:13,734 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-22 15:34:14,984 - INFO - 172.31.196.53 - - [22/Oct/2024 15:34:14] "GET / HTTP/1.1" 200 -
+2024-10-22 15:34:15,230 - INFO - 172.31.196.53 - - [22/Oct/2024 15:34:15] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2024-10-22 15:34:15,232 - INFO - 172.31.196.53 - - [22/Oct/2024 15:34:15] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-10-22 15:34:15,765 - INFO - 172.31.196.53 - - [22/Oct/2024 15:34:15] "[36mGET /static/model.gltf HTTP/1.1[0m" 304 -
+2024-10-22 15:34:15,792 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps
+2024-10-22 15:34:15,792 - INFO - Fetching all maps
+2024-10-22 15:34:16,006 - INFO - 172.31.196.53 - - [22/Oct/2024 15:34:16] "[36mGET /static/main.bin HTTP/1.1[0m" 304 -
+2024-10-22 15:34:16,037 - INFO - 172.31.196.53 - - [22/Oct/2024 15:34:16] "GET /api/maps HTTP/1.1" 200 -
+2024-10-22 15:34:16,102 - INFO - 172.31.196.53 - - [22/Oct/2024 15:34:16] "[36mGET /static/Untitled.png HTTP/1.1[0m" 304 -
+2024-10-22 15:34:16,122 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps/1
+2024-10-22 15:34:16,122 - INFO - Fetching map with ID: 1
+2024-10-22 15:34:16,360 - INFO - 172.31.196.53 - - [22/Oct/2024 15:34:16] "GET /api/maps/1 HTTP/1.1" 200 -
+2024-10-22 15:34:16,446 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/static/maps/main.png
+2024-10-22 15:34:16,446 - INFO - Attempting to serve static file: /home/runner/workspace/static/maps/main.png
+2024-10-22 15:34:16,447 - INFO - 172.31.196.53 - - [22/Oct/2024 15:34:16] "[36mGET /static/maps/main.png HTTP/1.1[0m" 304 -
+2024-10-22 15:34:16,538 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/items?map_id=1
+2024-10-22 15:34:16,538 - INFO - Fetching items for map ID: 1
+2024-10-22 15:34:16,783 - INFO - 172.31.196.53 - - [22/Oct/2024 15:34:16] "GET /api/items?map_id=1 HTTP/1.1" 200 -
+2024-10-22 15:34:16,893 - INFO - 172.31.196.53 - - [22/Oct/2024 15:34:16] "[33mHEAD /null HTTP/1.1[0m" 404 -
+2024-10-22 15:34:16,895 - INFO - 172.31.196.53 - - [22/Oct/2024 15:34:16] "[33mHEAD /static/thumbnails/20241018_173844_47d7cf43.jpg HTTP/1.1[0m" 404 -
+2024-10-22 15:34:16,947 - INFO - 172.31.196.53 - - [22/Oct/2024 15:34:16] "[33mHEAD /static/thumbnails/20241018_173743_7e7d8d33.jpg HTTP/1.1[0m" 404 -
+2024-10-22 15:34:16,977 - INFO - 172.31.196.53 - - [22/Oct/2024 15:34:16] "[33mHEAD /static/thumbnails/20241016_153624_1dbede16.jpg HTTP/1.1[0m" 404 -
+2024-10-22 15:34:16,985 - INFO - 172.31.196.53 - - [22/Oct/2024 15:34:16] "[33mHEAD /static/thumbnails/20241018_174024_7df52a7d.jpeg HTTP/1.1[0m" 404 -
+2024-10-22 15:34:17,032 - INFO - 172.31.196.53 - - [22/Oct/2024 15:34:17] "[33mHEAD /static/thumbnails/20241016_150011_83503f4f.jpg HTTP/1.1[0m" 404 -
+2024-10-22 15:34:17,064 - INFO - 172.31.196.53 - - [22/Oct/2024 15:34:17] "[33mHEAD /null HTTP/1.1[0m" 404 -
+2024-10-22 15:34:17,077 - INFO - 172.31.196.53 - - [22/Oct/2024 15:34:17] "[33mHEAD /static/thumbnails/20241018_173727_dc77ec8d.jpg HTTP/1.1[0m" 404 -
+2024-10-22 15:34:17,118 - INFO - 172.31.196.53 - - [22/Oct/2024 15:34:17] "[36mHEAD /static/thumbnails/20241018_150242_c2a5134b.png HTTP/1.1[0m" 304 -
+2024-10-22 15:34:17,152 - INFO - 172.31.196.53 - - [22/Oct/2024 15:34:17] "[33mHEAD /static/thumbnails/20241016_154030_89cfc546.jpg HTTP/1.1[0m" 404 -
+2024-10-22 15:34:17,160 - INFO - 172.31.196.53 - - [22/Oct/2024 15:34:17] "[33mHEAD /null HTTP/1.1[0m" 404 -
+2024-10-22 15:34:17,161 - INFO - 172.31.196.53 - - [22/Oct/2024 15:34:17] "[33mHEAD /static/thumbnails/20241016_153208_247e423e.jpg HTTP/1.1[0m" 404 -
+2024-10-22 15:34:17,164 - INFO - 172.31.196.53 - - [22/Oct/2024 15:34:17] "[33mHEAD /null HTTP/1.1[0m" 404 -
+2024-10-22 15:34:17,205 - INFO - 172.31.196.53 - - [22/Oct/2024 15:34:17] "[33mHEAD /static/thumbnails/20241016_153707_39faf826.jpg HTTP/1.1[0m" 404 -
+2024-10-22 15:34:17,207 - INFO - 172.31.196.53 - - [22/Oct/2024 15:34:17] "[33mHEAD /static/thumbnails/20241018_173921_fb220825.jpg HTTP/1.1[0m" 404 -
+2024-10-22 15:34:17,237 - INFO - 172.31.196.53 - - [22/Oct/2024 15:34:17] "[36mHEAD /static/thumbnails/20241018_150114_e2307150.png HTTP/1.1[0m" 304 -
+2024-10-22 15:34:17,246 - INFO - 172.31.196.53 - - [22/Oct/2024 15:34:17] "[33mHEAD /null HTTP/1.1[0m" 404 -
+2024-10-22 15:34:17,247 - INFO - 172.31.196.53 - - [22/Oct/2024 15:34:17] "[33mHEAD /static/thumbnails/20241016_151142_bf6008cc.jpg HTTP/1.1[0m" 404 -
+2024-10-22 15:34:17,251 - INFO - 172.31.196.53 - - [22/Oct/2024 15:34:17] "[33mHEAD /static/thumbnails/20241016_152258_1f8a6141.jpg HTTP/1.1[0m" 404 -
+2024-10-22 15:34:17,299 - INFO - 172.31.196.53 - - [22/Oct/2024 15:34:17] "[36mHEAD /static/thumbnails/20241018_150628_7b9b8b60.png HTTP/1.1[0m" 304 -
+2024-10-22 15:34:17,302 - INFO - 172.31.196.53 - - [22/Oct/2024 15:34:17] "[33mHEAD /null HTTP/1.1[0m" 404 -
+2024-10-22 15:34:17,323 - INFO - 172.31.196.53 - - [22/Oct/2024 15:34:17] "[36mHEAD /static/thumbnails/20241018_150915_9ee2ee5b.png HTTP/1.1[0m" 304 -
+2024-10-22 15:34:17,334 - INFO - 172.31.196.53 - - [22/Oct/2024 15:34:17] "[36mHEAD /static/thumbnails/20241019_150025_1180cdbe.jpg HTTP/1.1[0m" 304 -
+2024-10-22 15:34:17,334 - INFO - 172.31.196.53 - - [22/Oct/2024 15:34:17] "[36mHEAD /static/thumbnails/20241018_150652_7df45f90.png HTTP/1.1[0m" 304 -
+2024-10-22 15:34:17,343 - INFO - 172.31.196.53 - - [22/Oct/2024 15:34:17] "[36mGET /static/img/icons/bolt.svg HTTP/1.1[0m" 304 -
+2024-10-22 15:34:17,387 - INFO - 172.31.196.53 - - [22/Oct/2024 15:34:17] "[36mGET /static/img/icons/fire.svg HTTP/1.1[0m" 304 -
+2024-10-22 15:34:17,388 - INFO - 172.31.196.53 - - [22/Oct/2024 15:34:17] "[36mGET /static/img/icons/glasses.svg HTTP/1.1[0m" 304 -
+2024-10-22 15:34:17,410 - INFO - 172.31.196.53 - - [22/Oct/2024 15:34:17] "[36mGET /static/img/default.png HTTP/1.1[0m" 304 -
+2024-10-22 15:34:17,420 - INFO - 172.31.196.53 - - [22/Oct/2024 15:34:17] "[36mGET /static/thumbnails/20241018_150114_e2307150.png HTTP/1.1[0m" 304 -
+2024-10-22 15:34:17,431 - INFO - 172.31.196.53 - - [22/Oct/2024 15:34:17] "[36mGET /static/thumbnails/20241018_150628_7b9b8b60.png HTTP/1.1[0m" 304 -
+2024-10-22 15:34:17,435 - INFO - 172.31.196.53 - - [22/Oct/2024 15:34:17] "[36mGET /static/thumbnails/20241018_150242_c2a5134b.png HTTP/1.1[0m" 304 -
+2024-10-22 15:34:17,472 - INFO - 172.31.196.53 - - [22/Oct/2024 15:34:17] "[36mGET /static/img/icons/mask.svg HTTP/1.1[0m" 304 -
+2024-10-22 15:34:17,472 - INFO - 172.31.196.53 - - [22/Oct/2024 15:34:17] "[36mGET /static/thumbnails/20241018_150915_9ee2ee5b.png HTTP/1.1[0m" 304 -
+2024-10-22 15:34:17,496 - INFO - 172.31.196.53 - - [22/Oct/2024 15:34:17] "[36mGET /static/img/icons/hand.svg HTTP/1.1[0m" 304 -
+2024-10-22 15:34:17,505 - INFO - 172.31.196.53 - - [22/Oct/2024 15:34:17] "[36mGET /static/thumbnails/20241019_150025_1180cdbe.jpg HTTP/1.1[0m" 304 -
+2024-10-22 15:34:17,520 - INFO - 172.31.196.53 - - [22/Oct/2024 15:34:17] "[36mGET /static/thumbnails/20241018_150652_7df45f90.png HTTP/1.1[0m" 304 -
+2024-10-22 15:34:19,696 - INFO - 172.31.196.53 - - [22/Oct/2024 15:34:19] "[33mGET /null HTTP/1.1[0m" 404 -
+2024-10-22 15:34:21,412 - INFO - 172.31.196.53 - - [22/Oct/2024 15:34:21] "[33mGET /null HTTP/1.1[0m" 404 -
+2024-10-22 15:34:35,149 - INFO -  * Detected change in '/home/runner/workspace/models.py', reloading
+2024-10-22 15:34:35,350 - INFO -  * Restarting with stat
+2024-10-22 15:34:36,793 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-22 15:34:36,794 - INFO - Added job "create_backup" to job store "default"
+2024-10-22 15:34:36,794 - INFO - Scheduler started
+2024-10-22 15:34:36,794 - INFO - Scheduler started
+2024-10-22 15:34:37,866 - WARNING -  * Debugger is active!
+2024-10-22 15:34:37,875 - INFO -  * Debugger PIN: 734-425-109
+2024-10-22 15:34:37,942 - INFO -  * Detected change in '/home/runner/workspace/models.py', reloading
+2024-10-22 15:34:38,090 - INFO -  * Restarting with stat
+2024-10-22 15:34:38,596 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-22 15:34:38,597 - INFO - Added job "create_backup" to job store "default"
+2024-10-22 15:34:38,597 - INFO - Scheduler started
+2024-10-22 15:34:38,597 - INFO - Scheduler started
+2024-10-22 15:34:38,979 - WARNING -  * Debugger is active!
+2024-10-22 15:34:38,981 - INFO -  * Debugger PIN: 258-199-688
+2024-10-22 15:36:01,099 - INFO -  * Detected change in '/home/runner/workspace/migrations/versions/9878b4a1387a_add_z_coord_to_item_model.py', reloading
+2024-10-22 15:36:01,240 - INFO -  * Restarting with stat
+2024-10-22 15:36:02,016 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-22 15:36:02,019 - INFO - Added job "create_backup" to job store "default"
+2024-10-22 15:36:02,019 - INFO - Scheduler started
+2024-10-22 15:36:02,019 - INFO - Scheduler started
+2024-10-22 15:36:02,396 - WARNING -  * Debugger is active!
+2024-10-22 15:36:02,397 - INFO -  * Debugger PIN: 104-225-610
+2024-10-22 15:37:56,771 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-22 15:37:56,772 - INFO - 172.31.196.53 - - [22/Oct/2024 15:37:56] "POST /save_marker HTTP/1.1" 200 -
+2024-10-22 15:38:00,629 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-22 15:38:00,630 - INFO - 172.31.196.53 - - [22/Oct/2024 15:38:00] "POST /save_marker HTTP/1.1" 200 -
+2024-10-22 15:38:01,612 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-22 15:38:01,612 - INFO - 172.31.196.53 - - [22/Oct/2024 15:38:01] "POST /save_marker HTTP/1.1" 200 -
+2024-10-22 15:38:02,196 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-22 15:38:02,197 - INFO - 172.31.196.53 - - [22/Oct/2024 15:38:02] "POST /save_marker HTTP/1.1" 200 -
+2024-10-22 15:38:03,110 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-22 15:38:03,111 - INFO - 172.31.196.53 - - [22/Oct/2024 15:38:03] "POST /save_marker HTTP/1.1" 200 -
+2024-10-22 15:38:03,670 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-22 15:38:03,672 - INFO - 172.31.196.53 - - [22/Oct/2024 15:38:03] "POST /save_marker HTTP/1.1" 200 -
+2024-10-22 15:38:04,787 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-22 15:38:04,787 - INFO - 172.31.196.53 - - [22/Oct/2024 15:38:04] "POST /save_marker HTTP/1.1" 200 -
+2024-10-22 15:38:05,394 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-22 15:38:05,395 - INFO - 172.31.196.53 - - [22/Oct/2024 15:38:05] "POST /save_marker HTTP/1.1" 200 -
+2024-10-22 15:38:06,364 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-22 15:38:06,364 - INFO - 172.31.196.53 - - [22/Oct/2024 15:38:06] "POST /save_marker HTTP/1.1" 200 -
+2024-10-22 15:38:26,839 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-22 15:38:26,839 - INFO - 172.31.196.53 - - [22/Oct/2024 15:38:26] "POST /save_marker HTTP/1.1" 200 -
+2024-10-22 15:38:27,381 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-22 15:38:27,381 - INFO - 172.31.196.53 - - [22/Oct/2024 15:38:27] "POST /save_marker HTTP/1.1" 200 -
+2024-10-22 15:38:31,461 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-22 15:38:31,462 - INFO - 172.31.196.53 - - [22/Oct/2024 15:38:31] "POST /save_marker HTTP/1.1" 200 -
+2024-10-22 15:38:32,114 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-22 15:38:32,115 - INFO - 172.31.196.53 - - [22/Oct/2024 15:38:32] "POST /save_marker HTTP/1.1" 200 -
+2024-10-22 15:38:43,672 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-22 15:38:43,673 - INFO - 172.31.196.53 - - [22/Oct/2024 15:38:43] "POST /save_marker HTTP/1.1" 200 -
+2024-10-22 15:38:44,013 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-22 15:38:44,013 - INFO - 172.31.196.53 - - [22/Oct/2024 15:38:44] "POST /save_marker HTTP/1.1" 200 -
+2024-10-22 15:38:45,716 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-22 15:38:45,716 - INFO - 172.31.196.53 - - [22/Oct/2024 15:38:45] "POST /save_marker HTTP/1.1" 200 -
+2024-10-22 15:39:03,104 - DEBUG - Request Method: POST, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/save_marker
+2024-10-22 15:39:03,106 - INFO - 172.31.196.53 - - [22/Oct/2024 15:39:03] "POST /save_marker HTTP/1.1" 200 -
