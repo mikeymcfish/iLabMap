@@ -1,5 +1,3 @@
-// ... (keep the existing code)
-
 function updateItem(item) {
     if (!currentMapId) {
         displayErrorMessage('Please ensure a map is selected.');
@@ -134,4 +132,44 @@ function saveItem() {
     });
 }
 
-// ... (keep the remaining code)
+function loadItems() {
+    if (!currentMapId) {
+        console.error('No map selected');
+        return;
+    }
+
+    fetch(`/api/items?map_id=${currentMapId}`)
+        .then(response => response.json())
+        .then(items => {
+            clearItems();
+            items.forEach(item => {
+                const itemElement = document.createElement('div');
+                itemElement.className = 'item';
+                itemElement.style.left = `${item.x_coord * scale}px`;
+                itemElement.style.top = `${item.y_coord * scale}px`;
+                itemElement.style.zIndex = Math.floor(item.z_coord * 100);
+                itemElement.style.backgroundColor = item.color || 'red';
+                itemElement.title = item.name;
+                itemElement.dataset.itemId = item.id;
+                itemElement.addEventListener('click', () => showItemDetails(item));
+                mapCanvas.appendChild(itemElement);
+
+                const listItem = document.createElement('li');
+                listItem.className = 'list-group-item d-flex justify-content-between align-items-center';
+                listItem.innerHTML = `
+                    <span class="item-name">${item.name}</span>
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-sm btn-outline-primary edit-btn">Edit</button>
+                        <button type="button" class="btn btn-sm btn-outline-danger delete-btn">Delete</button>
+                    </div>
+                `;
+                listItem.querySelector('.edit-btn').addEventListener('click', () => editItem(item));
+                listItem.querySelector('.delete-btn').addEventListener('click', () => deleteItem(item.id));
+                itemList.appendChild(listItem);
+            });
+        })
+        .catch(error => {
+            console.error('Error loading items:', error);
+            displayErrorMessage('Error loading items. Please try again later.');
+        });
+}
