@@ -1,127 +1,137 @@
-console.log('script.js loaded');
+// ... (keep the existing code)
 
-let currentMapId = null;
-let scale = 1;
-const mapCanvas = document.getElementById('mapCanvas');
-const itemList = document.getElementById('itemList');
-
-document.addEventListener('DOMContentLoaded', () => {
-    console.log('DOM content loaded');
-    initializeMapSelector();
-});
-
-function initializeMapSelector() {
-    console.log('Initializing map selector');
-    const mapSelector = document.getElementById('mapSelector');
-    fetch('/api/maps')
-        .then(response => response.json())
-        .then(maps => {
-            console.log('Received maps from server:', maps);
-            maps.forEach(map => {
-                const option = document.createElement('option');
-                option.value = map.id;
-                option.textContent = map.name;
-                mapSelector.appendChild(option);
-            });
-            console.log('Map options added to selector');
-            mapSelector.addEventListener('change', (event) => {
-                currentMapId = event.target.value;
-                console.log(`Map selected: ${currentMapId}`);
-                if (currentMapId) {
-                    loadItems();
-                }
-            });
-        })
-        .catch(error => {
-            console.error('Error loading maps:', error);
-            displayErrorMessage('Error loading maps. Please try again later.');
-        });
-}
-
-function loadItems() {
+function updateItem(item) {
     if (!currentMapId) {
-        console.error('No map selected');
+        displayErrorMessage('Please ensure a map is selected.');
         return;
     }
 
-    console.log(`Fetching items for map ID: ${currentMapId}`);
-    fetch(`/api/items?map_id=${currentMapId}`)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-            return response.json();
-        })
-        .then(items => {
-            console.log('Received items from server:', items);
-            if (!Array.isArray(items)) {
-                throw new Error('Server response is not an array');
-            }
-            clearItems();
-            items.forEach(item => {
-                console.log('Processing item:', item);
-                if (!item.id || !item.name || item.x_coord === undefined || item.y_coord === undefined || item.z_coord === undefined) {
-                    console.error('Invalid item data:', item);
-                    return;
-                }
-                addItemToMap(item);
-                addItemToList(item);
-            });
-        })
-        .catch(error => {
-            console.error('Error loading items:', error);
-            displayErrorMessage('Error loading items. Please try again later.');
-        });
+    const updateButton = document.getElementById('updateItemBtn');
+    updateButton.disabled = true;
+    updateButton.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Updating...';
+
+    const formData = new FormData();
+    formData.append('name', document.getElementById('itemName').value);
+    formData.append('tags', document.getElementById('itemTags').value);
+    formData.append('color', document.getElementById('itemColor').value || 'red');
+    formData.append('zone', document.getElementById('itemZone').value || '');
+    formData.append('quantity', parseInt(document.getElementById('itemQuantity').value, 10) || 1);
+    formData.append('map_id', currentMapId);
+    formData.append('description', document.getElementById('itemDescription').value);
+    formData.append('link', document.getElementById('itemLink').value);
+
+    formData.append('x_coord', (selectedLocation ? selectedLocation.x / scale : item.x_coord).toString());
+    formData.append('y_coord', (selectedLocation ? selectedLocation.y / scale : item.y_coord).toString());
+    formData.append('z_coord', (selectedLocation ? selectedLocation.z || 0 : item.z_coord || 0).toString());
+
+    const itemImageFile = document.getElementById('itemImage').files[0];
+    if (itemImageFile) {
+        formData.append('image', itemImageFile);
+    }
+
+    const warnings = Array.from(document.querySelectorAll('input[type="checkbox"]:checked'))
+        .map(input => input.value)
+        .join(',');
+    formData.append('warning', warnings);
+
+    console.log('Updating item:', item.id);
+    console.log('Form data:', Object.fromEntries(formData));
+
+    fetch(`/api/items/${item.id}`, {
+        method: 'PUT',
+        body: formData
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+    })
+    .then(data => {
+        console.log('Item updated successfully:', data);
+        addItemForm.style.display = 'none';
+        loadItems();
+        displaySuccessMessage('Item updated successfully');
+        resetForm();
+        selectedLocation = null;
+    })
+    .catch(error => {
+        console.error('Error updating item:', error);
+        displayErrorMessage('Error updating item. Please try again later.');
+    })
+    .finally(() => {
+        updateButton.disabled = false;
+        updateButton.textContent = 'Update Item';
+    });
 }
 
-function addItemToMap(item) {
-    const itemElement = document.createElement('div');
-    itemElement.className = 'item';
-    itemElement.style.left = `${item.x_coord * scale}px`;
-    itemElement.style.top = `${item.y_coord * scale}px`;
-    itemElement.style.zIndex = Math.floor(item.z_coord * 100);
-    itemElement.style.backgroundColor = item.color || 'red';
-    itemElement.title = item.name;
-    itemElement.dataset.itemId = item.id;
-    itemElement.addEventListener('click', () => showItemDetails(item));
-    mapCanvas.appendChild(itemElement);
-    console.log('Added item to map:', itemElement);
+function saveItem() {
+    if (!selectedLocation || !currentMapId) {
+        displayErrorMessage('Please select a location on the map and ensure a map is selected.');
+        return;
+    }
+
+    const saveButton = document.getElementById('updateItemBtn');
+    saveButton.disabled = true;
+    saveButton.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Saving...';
+
+    const formData = new FormData();
+    formData.append('name', itemNameInput.value);
+    formData.append('tags', itemTagsInput.value);
+    formData.append('x_coord', selectedLocation.x / scale);
+    formData.append('y_coord', selectedLocation.y / scale);
+    formData.append('z_coord', selectedLocation.z || 0);
+    formData.append('map_id', currentMapId);
+
+    const itemColorInput = document.getElementById('itemColor');
+    const itemZoneInput = document.getElementById('itemZone');
+    const itemQuantityInput = document.getElementById('itemQuantity');
+    const itemWarningInput = document.querySelectorAll('input[type="checkbox"]:checked');
+
+    formData.append('color', itemColorInput.value || 'red');
+    formData.append('zone', itemZoneInput.value || '');
+    formData.append('quantity', parseInt(itemQuantityInput.value, 10) || 1);
+
+    console.log('Checking for image file');
+    const itemImageFile = itemImageInput.files[0];
+    if (itemImageFile) {
+        console.log('Image file found:', itemImageFile.name);
+        formData.append('image', itemImageFile);
+    }
+
+    const warnings = Array.from(itemWarningInput)
+        .map(input => input.value)
+        .join(',');
+    formData.append('warning', warnings);
+
+    console.log('Sending form data to server');
+    fetch('/api/items', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+    })
+    .then(data => {
+        console.log('Item saved successfully');
+        if (addItemForm) {
+            addItemForm.style.display = 'none';
+        }
+        loadItems();
+        resetForm();
+        displaySuccessMessage('Item added successfully');
+    })
+    .catch(error => {
+        console.error('Error adding item:', error);
+        displayErrorMessage('Error adding item. Please try again later.');
+    })
+    .finally(() => {
+        saveButton.disabled = false;
+        saveButton.textContent = 'Save Item';
+    });
 }
 
-function addItemToList(item) {
-    const listItem = document.createElement('li');
-    listItem.className = 'list-group-item d-flex justify-content-between align-items-center';
-    listItem.innerHTML = `
-        <span class="item-name">${item.name}</span>
-        <div class="btn-group" role="group">
-            <button type="button" class="btn btn-sm btn-outline-primary edit-btn">Edit</button>
-            <button type="button" class="btn btn-sm btn-outline-danger delete-btn">Delete</button>
-        </div>
-    `;
-    listItem.querySelector('.edit-btn').addEventListener('click', () => editItem(item));
-    listItem.querySelector('.delete-btn').addEventListener('click', () => deleteItem(item.id));
-    itemList.appendChild(listItem);
-    console.log('Added item to list:', listItem);
-}
-
-function clearItems() {
-    console.log('Clearing items from map and list');
-    mapCanvas.innerHTML = '';
-    itemList.innerHTML = '';
-}
-
-function showItemDetails(item) {
-    console.log('Showing item details:', item);
-}
-
-function editItem(item) {
-    console.log('Editing item:', item);
-}
-
-function deleteItem(itemId) {
-    console.log('Deleting item:', itemId);
-}
-
-function displayErrorMessage(message) {
-    console.error(message);
-}
+// ... (keep the remaining code)
