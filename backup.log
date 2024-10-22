@@ -27030,3 +27030,193 @@ Following these steps will help you keep things tidy and your prints top-notch. 
 2024-10-22 14:12:10,381 - INFO - 172.31.196.48 - - [22/Oct/2024 14:12:10] "[36mGET /static/main.bin HTTP/1.1[0m" 304 -
 2024-10-22 14:12:11,350 - INFO - 172.31.196.48 - - [22/Oct/2024 14:12:11] "GET /static/main.bin HTTP/1.1" 200 -
 2024-10-22 14:12:11,382 - INFO - 172.31.196.48 - - [22/Oct/2024 14:12:11] "GET /static/Untitled.png HTTP/1.1" 200 -
+2024-10-22 14:12:24,624 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-22 14:12:24,848 - INFO - 172.31.196.48 - - [22/Oct/2024 14:12:24] "GET / HTTP/1.1" 200 -
+2024-10-22 14:12:25,031 - INFO - 172.31.196.48 - - [22/Oct/2024 14:12:25] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-10-22 14:12:25,115 - INFO - 172.31.196.48 - - [22/Oct/2024 14:12:25] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2024-10-22 14:13:10,581 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-22 14:13:10,813 - INFO - 172.31.196.48 - - [22/Oct/2024 14:13:10] "GET / HTTP/1.1" 200 -
+2024-10-22 14:13:10,991 - INFO - 172.31.196.48 - - [22/Oct/2024 14:13:10] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-10-22 14:13:11,173 - INFO - 172.31.196.48 - - [22/Oct/2024 14:13:11] "GET /static/js/script.js HTTP/1.1" 200 -
+2024-10-22 14:13:11,611 - INFO - 172.31.196.48 - - [22/Oct/2024 14:13:11] "[36mGET /static/model.gltf HTTP/1.1[0m" 304 -
+2024-10-22 14:13:11,730 - INFO - 172.31.196.48 - - [22/Oct/2024 14:13:11] "[36mGET /static/main.bin HTTP/1.1[0m" 304 -
+2024-10-22 14:13:11,734 - INFO - 172.31.196.48 - - [22/Oct/2024 14:13:11] "[36mGET /static/Untitled.png HTTP/1.1[0m" 304 -
+2024-10-22 14:13:16,905 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-22 14:13:17,132 - INFO - 172.31.196.48 - - [22/Oct/2024 14:13:17] "GET / HTTP/1.1" 200 -
+2024-10-22 14:13:17,254 - INFO - 172.31.196.48 - - [22/Oct/2024 14:13:17] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-10-22 14:13:17,401 - INFO - 172.31.196.48 - - [22/Oct/2024 14:13:17] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2024-10-22 14:13:17,712 - INFO - 172.31.196.48 - - [22/Oct/2024 14:13:17] "[36mGET /static/model.gltf HTTP/1.1[0m" 304 -
+2024-10-22 14:13:18,017 - INFO - 172.31.196.48 - - [22/Oct/2024 14:13:18] "[36mGET /static/Untitled.png HTTP/1.1[0m" 304 -
+2024-10-22 14:13:18,019 - INFO - 172.31.196.48 - - [22/Oct/2024 14:13:18] "[36mGET /static/main.bin HTTP/1.1[0m" 304 -
+2024-10-22 14:15:27,991 - INFO -  * Detected change in '/home/runner/workspace/routes.py', reloading
+2024-10-22 14:15:28,578 - INFO -  * Restarting with stat
+2024-10-22 14:15:29,755 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-22 14:15:29,756 - INFO - Added job "create_backup" to job store "default"
+2024-10-22 14:15:29,756 - INFO - Scheduler started
+2024-10-22 14:15:29,759 - INFO - Scheduler started
+2024-10-22 14:15:31,331 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-22 14:15:31,334 - INFO - Added job "create_backup" to job store "default"
+2024-10-22 14:15:31,334 - INFO - Scheduler started
+2024-10-22 14:15:31,336 - INFO - Scheduler started
+2024-10-22 14:15:33,612 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.196.48:5000
+2024-10-22 14:15:33,614 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-22 14:15:33,615 - INFO -  * Restarting with stat
+2024-10-22 14:15:34,403 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-22 14:15:34,404 - INFO - Added job "create_backup" to job store "default"
+2024-10-22 14:15:34,404 - INFO - Scheduler started
+2024-10-22 14:15:34,406 - INFO - Scheduler started
+2024-10-22 14:15:36,735 - WARNING -  * Debugger is active!
+2024-10-22 14:15:36,738 - INFO -  * Debugger PIN: 117-070-823
+2024-10-22 14:15:36,793 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-22 14:15:36,795 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-22 14:15:37,034 - INFO - 172.31.196.48 - - [22/Oct/2024 14:15:37] "GET / HTTP/1.1" 200 -
+2024-10-22 14:15:37,315 - INFO - 172.31.196.48 - - [22/Oct/2024 14:15:37] "GET / HTTP/1.1" 200 -
+2024-10-22 14:15:37,334 - INFO - 172.31.196.48 - - [22/Oct/2024 14:15:37] "GET /static/css/styles.css HTTP/1.1" 200 -
+2024-10-22 14:15:37,348 - INFO - 172.31.196.48 - - [22/Oct/2024 14:15:37] "GET /static/js/script.js HTTP/1.1" 200 -
+2024-10-22 14:15:37,643 - INFO - 172.31.196.48 - - [22/Oct/2024 14:15:37] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-22 14:15:37,706 - INFO - 172.31.196.48 - - [22/Oct/2024 14:15:37] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-10-22 14:15:37,801 - INFO - 172.31.196.48 - - [22/Oct/2024 14:15:37] "GET /static/js/script.js HTTP/1.1" 200 -
+2024-10-22 14:15:38,081 - INFO - 172.31.196.48 - - [22/Oct/2024 14:15:38] "[36mGET /static/model.gltf HTTP/1.1[0m" 304 -
+2024-10-22 14:15:38,193 - INFO - 172.31.196.48 - - [22/Oct/2024 14:15:38] "[36mGET /static/Untitled.png HTTP/1.1[0m" 304 -
+2024-10-22 14:15:38,196 - INFO - 172.31.196.48 - - [22/Oct/2024 14:15:38] "[36mGET /static/main.bin HTTP/1.1[0m" 304 -
+2024-10-22 14:15:38,539 - INFO - 172.31.196.48 - - [22/Oct/2024 14:15:38] "GET /static/main.bin HTTP/1.1" 200 -
+2024-10-22 14:15:38,541 - INFO - 172.31.196.48 - - [22/Oct/2024 14:15:38] "GET /static/Untitled.png HTTP/1.1" 200 -
+2024-10-22 14:15:49,431 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-22 14:15:49,672 - INFO - 172.31.196.48 - - [22/Oct/2024 14:15:49] "GET / HTTP/1.1" 200 -
+2024-10-22 14:15:50,203 - INFO - 172.31.196.48 - - [22/Oct/2024 14:15:50] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-10-22 14:15:50,250 - INFO - 172.31.196.48 - - [22/Oct/2024 14:15:50] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2024-10-22 14:15:50,381 - INFO - 172.31.196.48 - - [22/Oct/2024 14:15:50] "[36mGET /static/model.gltf HTTP/1.1[0m" 304 -
+2024-10-22 14:15:50,523 - INFO - 172.31.196.48 - - [22/Oct/2024 14:15:50] "[36mGET /static/main.bin HTTP/1.1[0m" 304 -
+2024-10-22 14:15:50,525 - INFO - 172.31.196.48 - - [22/Oct/2024 14:15:50] "[36mGET /static/Untitled.png HTTP/1.1[0m" 304 -
+2024-10-22 14:15:53,171 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-22 14:15:53,398 - INFO - 172.31.196.48 - - [22/Oct/2024 14:15:53] "GET / HTTP/1.1" 200 -
+2024-10-22 14:15:53,413 - INFO - 172.31.196.48 - - [22/Oct/2024 14:15:53] "GET /static/css/styles.css HTTP/1.1" 200 -
+2024-10-22 14:15:53,446 - INFO - 172.31.196.48 - - [22/Oct/2024 14:15:53] "GET /static/js/script.js HTTP/1.1" 200 -
+2024-10-22 14:15:53,750 - INFO - 172.31.196.48 - - [22/Oct/2024 14:15:53] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-22 14:15:54,787 - INFO - 172.31.196.48 - - [22/Oct/2024 14:15:54] "GET /static/Untitled.png HTTP/1.1" 200 -
+2024-10-22 14:15:54,789 - INFO - 172.31.196.48 - - [22/Oct/2024 14:15:54] "GET /static/main.bin HTTP/1.1" 200 -
+2024-10-22 14:17:33,866 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-22 14:17:33,868 - INFO - Added job "create_backup" to job store "default"
+2024-10-22 14:17:33,868 - INFO - Scheduler started
+2024-10-22 14:17:33,871 - INFO - Scheduler started
+2024-10-22 14:17:36,690 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.196.48:5000
+2024-10-22 14:17:36,691 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-22 14:17:36,694 - INFO -  * Restarting with stat
+2024-10-22 14:17:37,872 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-22 14:17:37,873 - INFO - Added job "create_backup" to job store "default"
+2024-10-22 14:17:37,874 - INFO - Scheduler started
+2024-10-22 14:17:37,875 - INFO - Scheduler started
+2024-10-22 14:17:40,323 - WARNING -  * Debugger is active!
+2024-10-22 14:17:40,327 - INFO -  * Debugger PIN: 911-408-065
+2024-10-22 14:17:40,391 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-22 14:17:40,634 - INFO - 172.31.196.48 - - [22/Oct/2024 14:17:40] "GET / HTTP/1.1" 200 -
+2024-10-22 14:17:40,663 - INFO - 172.31.196.48 - - [22/Oct/2024 14:17:40] "GET /static/css/styles.css HTTP/1.1" 200 -
+2024-10-22 14:17:40,741 - INFO - 172.31.196.48 - - [22/Oct/2024 14:17:40] "GET /static/js/script.js HTTP/1.1" 200 -
+2024-10-22 14:17:41,205 - INFO - 172.31.196.48 - - [22/Oct/2024 14:17:41] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-22 14:17:43,138 - INFO - 172.31.196.48 - - [22/Oct/2024 14:17:43] "GET /static/main.bin HTTP/1.1" 200 -
+2024-10-22 14:17:43,170 - INFO - 172.31.196.48 - - [22/Oct/2024 14:17:43] "GET /static/Untitled.png HTTP/1.1" 200 -
+2024-10-22 14:17:59,517 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-22 14:17:59,748 - INFO - 172.31.196.48 - - [22/Oct/2024 14:17:59] "GET / HTTP/1.1" 200 -
+2024-10-22 14:17:59,776 - INFO - 172.31.196.48 - - [22/Oct/2024 14:17:59] "GET /static/css/styles.css HTTP/1.1" 200 -
+2024-10-22 14:17:59,878 - INFO - 172.31.196.48 - - [22/Oct/2024 14:17:59] "GET /static/js/script.js HTTP/1.1" 200 -
+2024-10-22 14:18:00,334 - INFO - 172.31.196.48 - - [22/Oct/2024 14:18:00] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-22 14:18:02,257 - INFO - 172.31.196.48 - - [22/Oct/2024 14:18:02] "GET /static/main.bin HTTP/1.1" 200 -
+2024-10-22 14:18:02,267 - INFO - 172.31.196.48 - - [22/Oct/2024 14:18:02] "GET /static/Untitled.png HTTP/1.1" 200 -
+2024-10-22 14:19:16,557 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-22 14:19:16,561 - INFO - Added job "create_backup" to job store "default"
+2024-10-22 14:19:16,562 - INFO - Scheduler started
+2024-10-22 14:19:16,562 - INFO - Scheduler started
+2024-10-22 14:19:19,653 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.196.48:5000
+2024-10-22 14:19:19,653 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-22 14:19:19,657 - INFO -  * Restarting with stat
+2024-10-22 14:19:21,452 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-22 14:19:21,453 - INFO - Added job "create_backup" to job store "default"
+2024-10-22 14:19:21,453 - INFO - Scheduler started
+2024-10-22 14:19:21,454 - INFO - Scheduler started
+2024-10-22 14:19:23,799 - WARNING -  * Debugger is active!
+2024-10-22 14:19:23,802 - INFO -  * Debugger PIN: 169-324-178
+2024-10-22 14:19:31,221 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-22 14:19:31,454 - INFO - 172.31.196.48 - - [22/Oct/2024 14:19:31] "GET / HTTP/1.1" 200 -
+2024-10-22 14:19:31,475 - INFO - 172.31.196.48 - - [22/Oct/2024 14:19:31] "GET /static/css/styles.css HTTP/1.1" 200 -
+2024-10-22 14:19:31,515 - INFO - 172.31.196.48 - - [22/Oct/2024 14:19:31] "GET /static/js/script.js HTTP/1.1" 200 -
+2024-10-22 14:19:31,807 - INFO - 172.31.196.48 - - [22/Oct/2024 14:19:31] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-22 14:19:32,855 - INFO - 172.31.196.48 - - [22/Oct/2024 14:19:32] "GET /static/main.bin HTTP/1.1" 200 -
+2024-10-22 14:19:32,857 - INFO - 172.31.196.48 - - [22/Oct/2024 14:19:32] "GET /static/Untitled.png HTTP/1.1" 200 -
+2024-10-22 14:19:49,893 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-22 14:19:50,120 - INFO - 172.31.196.48 - - [22/Oct/2024 14:19:50] "GET / HTTP/1.1" 200 -
+2024-10-22 14:19:50,280 - INFO - 172.31.196.48 - - [22/Oct/2024 14:19:50] "GET /static/css/styles.css HTTP/1.1" 200 -
+2024-10-22 14:19:50,383 - INFO - 172.31.196.48 - - [22/Oct/2024 14:19:50] "GET /static/js/script.js HTTP/1.1" 200 -
+2024-10-22 14:19:50,862 - INFO - 172.31.196.48 - - [22/Oct/2024 14:19:50] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-22 14:19:52,408 - INFO - 172.31.196.48 - - [22/Oct/2024 14:19:52] "GET /static/main.bin HTTP/1.1" 200 -
+2024-10-22 14:19:52,408 - INFO - 172.31.196.48 - - [22/Oct/2024 14:19:52] "GET /static/Untitled.png HTTP/1.1" 200 -
+2024-10-22 14:20:39,567 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-22 14:20:39,568 - INFO - Added job "create_backup" to job store "default"
+2024-10-22 14:20:39,569 - INFO - Scheduler started
+2024-10-22 14:20:39,575 - INFO - Scheduler started
+2024-10-22 14:20:42,118 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.196.48:5000
+2024-10-22 14:20:42,118 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-22 14:20:42,123 - INFO -  * Restarting with stat
+2024-10-22 14:20:42,945 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-22 14:20:42,946 - INFO - Added job "create_backup" to job store "default"
+2024-10-22 14:20:42,946 - INFO - Scheduler started
+2024-10-22 14:20:42,951 - INFO - Scheduler started
+2024-10-22 14:20:45,300 - WARNING -  * Debugger is active!
+2024-10-22 14:20:45,303 - INFO -  * Debugger PIN: 561-255-731
+2024-10-22 14:20:45,354 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-22 14:20:45,629 - INFO - 172.31.196.48 - - [22/Oct/2024 14:20:45] "GET / HTTP/1.1" 200 -
+2024-10-22 14:20:45,648 - INFO - 172.31.196.48 - - [22/Oct/2024 14:20:45] "GET /static/css/styles.css HTTP/1.1" 200 -
+2024-10-22 14:20:45,680 - INFO - 172.31.196.48 - - [22/Oct/2024 14:20:45] "GET /static/js/script.js HTTP/1.1" 200 -
+2024-10-22 14:20:46,042 - INFO - 172.31.196.48 - - [22/Oct/2024 14:20:46] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-22 14:20:46,159 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps
+2024-10-22 14:20:46,159 - INFO - Fetching all maps
+2024-10-22 14:20:46,388 - INFO - 172.31.196.48 - - [22/Oct/2024 14:20:46] "GET /api/maps HTTP/1.1" 200 -
+2024-10-22 14:20:47,546 - INFO - 172.31.196.48 - - [22/Oct/2024 14:20:47] "GET /static/main.bin HTTP/1.1" 200 -
+2024-10-22 14:20:47,553 - INFO - 172.31.196.48 - - [22/Oct/2024 14:20:47] "GET /static/Untitled.png HTTP/1.1" 200 -
+2024-10-22 14:21:03,017 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-22 14:21:03,245 - INFO - 172.31.196.48 - - [22/Oct/2024 14:21:03] "GET / HTTP/1.1" 200 -
+2024-10-22 14:21:03,269 - INFO - 172.31.196.48 - - [22/Oct/2024 14:21:03] "GET /static/css/styles.css HTTP/1.1" 200 -
+2024-10-22 14:21:03,295 - INFO - 172.31.196.48 - - [22/Oct/2024 14:21:03] "GET /static/js/script.js HTTP/1.1" 200 -
+2024-10-22 14:21:03,665 - INFO - 172.31.196.48 - - [22/Oct/2024 14:21:03] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-22 14:21:03,832 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps
+2024-10-22 14:21:03,832 - INFO - Fetching all maps
+2024-10-22 14:21:04,064 - INFO - 172.31.196.48 - - [22/Oct/2024 14:21:04] "GET /api/maps HTTP/1.1" 200 -
+2024-10-22 14:21:04,540 - INFO - 172.31.196.48 - - [22/Oct/2024 14:21:04] "GET /static/main.bin HTTP/1.1" 200 -
+2024-10-22 14:21:04,543 - INFO - 172.31.196.48 - - [22/Oct/2024 14:21:04] "GET /static/Untitled.png HTTP/1.1" 200 -
+2024-10-22 14:21:46,492 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-22 14:21:46,495 - INFO - Added job "create_backup" to job store "default"
+2024-10-22 14:21:46,496 - INFO - Scheduler started
+2024-10-22 14:21:46,496 - INFO - Scheduler started
+2024-10-22 14:21:49,033 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.196.48:5000
+2024-10-22 14:21:49,033 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-22 14:21:49,035 - INFO -  * Restarting with stat
+2024-10-22 14:21:49,942 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-10-22 14:21:49,944 - INFO - Added job "create_backup" to job store "default"
+2024-10-22 14:21:49,945 - INFO - Scheduler started
+2024-10-22 14:21:49,945 - INFO - Scheduler started
+2024-10-22 14:21:52,186 - WARNING -  * Debugger is active!
+2024-10-22 14:21:52,189 - INFO -  * Debugger PIN: 618-088-411
+2024-10-22 14:22:03,429 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/
+2024-10-22 14:22:03,663 - INFO - 172.31.196.48 - - [22/Oct/2024 14:22:03] "GET / HTTP/1.1" 200 -
+2024-10-22 14:22:03,689 - INFO - 172.31.196.48 - - [22/Oct/2024 14:22:03] "GET /static/css/styles.css HTTP/1.1" 200 -
+2024-10-22 14:22:03,709 - INFO - 172.31.196.48 - - [22/Oct/2024 14:22:03] "GET /static/js/script.js HTTP/1.1" 200 -
+2024-10-22 14:22:04,195 - INFO - 172.31.196.48 - - [22/Oct/2024 14:22:04] "GET /static/model.gltf HTTP/1.1" 200 -
+2024-10-22 14:22:04,389 - DEBUG - Request Method: GET, URL: http://d6e1ddc3-62d0-4935-8d33-3bff43f33a83-00-1i3tdjdzfc8x7.spock.replit.dev/api/maps
+2024-10-22 14:22:04,390 - INFO - Fetching all maps
+2024-10-22 14:22:04,615 - INFO - 172.31.196.48 - - [22/Oct/2024 14:22:04] "GET /api/maps HTTP/1.1" 200 -
+2024-10-22 14:22:05,840 - INFO - 172.31.196.48 - - [22/Oct/2024 14:22:05] "GET /static/main.bin HTTP/1.1" 200 -
+2024-10-22 14:22:05,882 - INFO - 172.31.196.48 - - [22/Oct/2024 14:22:05] "GET /static/Untitled.png HTTP/1.1" 200 -
