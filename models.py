@@ -14,7 +14,7 @@ class Item(db.Model):
     tags = db.Column(db.String(200))
     x_coord = db.Column(db.Float, nullable=False)
     y_coord = db.Column(db.Float, nullable=False)
-    z_coord = db.Column(db.Float, nullable=False, default=0.0)  # Added z_coord column
+    z_coord = db.Column(db.Float, nullable=False, default=0.0)  # New field for 3D coordinates
     map_id = db.Column(db.Integer, db.ForeignKey('map.id'), nullable=False)
     image_path = db.Column(db.String(200), nullable=True)
     color = db.Column(db.String(20), nullable=True, default="red")

@@ -9,7 +9,6 @@ body {
 #mapCanvas {
     border: none;
     width: auto;
-    top: -200px;
     /* height: calc(100vh - 75px); */
 }
 
@@ -24,10 +23,6 @@ body {
     margin: 2px !important;
     padding-top: 0;
     padding-bottom: 0;
-}
-
-#model-container {
-    margin-left:-100px;
 }
 
 #addItemForm {

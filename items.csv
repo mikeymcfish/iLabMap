@@ -1,6 +1,0 @@
-name,tags,x_coord,y_coord,z_coord,map_id,color,zone,quantity,warning,description,link
-Screwdriver,tools,100,150,0,1,blue,A,5,hand,Phillips head screwdriver,https://example.com/screwdriver
-Soldering Iron,electronics,200,250,0,1,red,B,2,fire,Temperature-controlled soldering iron,https://example.com/soldering-iron
-3D Printer,manufacturing,300,350,0,1,green,C,1,mask,Prusa i3 MK3S+ 3D printer,https://example.com/3d-printer
-Oscilloscope,electronics,400,450,0,1,yellow,D,1,bolt,Digital storage oscilloscope,https://example.com/oscilloscope
-Safety Glasses,safety,500,550,0,1,orange,E,10,glasses,ANSI Z87.1 certified safety glasses,https://example.com/safety-glasses
