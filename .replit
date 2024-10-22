@@ -39,6 +39,30 @@ args = "Flask Init Migration"
 task = "workflow.run"
 args = "Flask New Migration"
 
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Create New Migration"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Apply Migration"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Remove Migrations"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Flask Init"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Create Migration"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Check Migration Status"
+
 [[workflows.workflow]]
 name = "Start Flask Server"
 author = "agent"
@@ -117,6 +141,72 @@ agentRequireRestartOnSave = false
 [[workflows.workflow.tasks]]
 task = "shell.exec"
 args = "flask db migrate -m 'Add z_coord to Item model'"
+
+[[workflows.workflow]]
+name = "Create New Migration"
+author = "agent"
+
+[workflows.workflow.metadata]
+agentRequireRestartOnSave = false
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "flask db migrate -m 'Add z_coord to Item model'"
+
+[[workflows.workflow]]
+name = "Apply Migration"
+author = "agent"
+
+[workflows.workflow.metadata]
+agentRequireRestartOnSave = false
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "flask db upgrade"
+
+[[workflows.workflow]]
+name = "Remove Migrations"
+author = "agent"
+
+[workflows.workflow.metadata]
+agentRequireRestartOnSave = false
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "rm -rf migrations"
+
+[[workflows.workflow]]
+name = "Flask Init"
+author = "agent"
+
+[workflows.workflow.metadata]
+agentRequireRestartOnSave = false
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "flask db init"
+
+[[workflows.workflow]]
+name = "Create Migration"
+author = "agent"
+
+[workflows.workflow.metadata]
+agentRequireRestartOnSave = false
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "flask db migrate -m 'Add z_coord to Item model'"
+
+[[workflows.workflow]]
+name = "Check Migration Status"
+author = "agent"
+
+[workflows.workflow.metadata]
+agentRequireRestartOnSave = false
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "flask db current"
 
 [deployment]
 deploymentTarget = "cloudrun"
