@@ -61,7 +61,8 @@ def get_markers():
 @main_blueprint.route('/api/items/<int:item_id>', methods=['PUT'])
 def update_item(item_id):
     item = Item.query.get_or_404(item_id)
-    
+
+    # Retrieve data from form
     name = request.form.get('name')
     tags = request.form.get('tags')
     color = request.form.get('color')
@@ -71,10 +72,13 @@ def update_item(item_id):
     map_id = request.form.get('map_id')
     x_coord = request.form.get('x_coord')
     y_coord = request.form.get('y_coord')
-    z_coord = request.form.get('z_coord')
+    x_coord_model = request.form.get('x_coord_model')
+    y_coord_model = request.form.get('y_coord_model')
+    z_coord_model = request.form.get('z_coord_model')
     description = request.form.get('description')
     link = request.form.get('link')
 
+    # Update item attributes if data is provided
     if name:
         item.name = name
     if tags:
@@ -93,13 +97,18 @@ def update_item(item_id):
         item.x_coord = float(x_coord)
     if y_coord:
         item.y_coord = float(y_coord)
-    if z_coord:
-        item.z_coord = float(z_coord)
+    if x_coord_model:
+        item.x_coord_model = float(x_coord_model)
+    if y_coord_model:
+        item.y_coord_model = float(y_coord_model)
+    if z_coord_model:
+        item.z_coord_model = float(z_coord_model)
     if description:
         item.description = description
     if link:
         item.link = link
 
+    # Handle image file update
     if 'image' in request.files:
         file = request.files['image']
         if file and allowed_file(file.filename or ''):
@@ -108,6 +117,7 @@ def update_item(item_id):
             file.save(file_path)
             item.image_path = f'/static/thumbnails/{filename}'
 
+    # Commit changes to the database
     try:
         db.session.commit()
         return jsonify({'message': 'Item updated successfully'}), 200
@@ -128,7 +138,9 @@ def get_item(item_id):
             "tags": item.tags,
             "x_coord": item.x_coord,
             "y_coord": item.y_coord,
-            "z_coord": item.z_coord,
+            "z_coord_model": item.z_coord_model,
+            "x_coord_model": item.x_coord_model,
+            "y_coord_model": item.y_coord_model,
             "map_id": item.map_id,
             "image_path": image_path,
             "color": item.color,
@@ -179,7 +191,7 @@ def items():
         image_file = request.files.get('image')
         current_app.logger.info(f"Received POST data: {data}")
 
-        required_fields = ['name', 'tags', 'x_coord', 'y_coord', 'z_coord', 'map_id']
+        required_fields = ['name', 'tags', 'x_coord', 'y_coord', 'z_coord_model', 'x_coord_model', 'y_coord_model','map_id']
         missing_fields = [
             field for field in required_fields if field not in data
         ]
@@ -210,7 +222,9 @@ def items():
             new_item.warning = data['warning']
             new_item.x_coord = float(data['x_coord'])
             new_item.y_coord = float(data['y_coord'])
-            new_item.z_coord = float(data['z_coord'])
+            new_item.z_coord_model = float(data['z_coord_model'])
+            new_item.y_coord_model = float(data['y_coord_model'])
+            new_item.x_coord_model = float(data['x_coord_model'])
             new_item.map_id = int(data['map_id'])
             new_item.image_path = image_path
             new_item.description = data.get('description', '')
@@ -245,7 +259,9 @@ def items():
                     "warning": item.warning,
                     "x_coord": item.x_coord,
                     "y_coord": item.y_coord,
-                    "z_coord": item.z_coord,
+                    "x_model": item.x_coord_model,
+                    "y_model": item.y_coord_model,
+                    "z_model": item.z_coord_model,
                     "map_id": item.map_id,
                     "image_path": item.image_path,
                     "description": item.description,
@@ -314,7 +330,9 @@ def search():
                 "tags": item.tags,
                 "x_coord": item.x_coord,
                 "y_coord": item.y_coord,
-                "z_coord": item.z_coord,
+                "x_model": item.x_coord_model,
+                "y_model": item.y_coord_model,
+                "z_model": item.z_coord_model,
                 "map_id": item.map_id,
                 "image_path": item.image_path,
                 "description": item.description,
