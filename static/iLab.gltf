@@ -15,24 +15,30 @@
 	"nodes":[
 		{
 			"mesh":0,
-			"name":"Part Studio 1 (1)"
+			"name":"Part 1.002",
+			"scale":[
+				1000.0015869140625,
+				1000,
+				1000
+			]
 		}
 	],
 	"materials":[
 		{
 			"doubleSided":true,
-			"name":"Material.001",
+			"name":"Material.003",
 			"pbrMetallicRoughness":{
 				"baseColorTexture":{
 					"index":0
 				},
-				"metallicFactor":0
+				"metallicFactor":0,
+				"roughnessFactor":0.5
 			}
 		}
 	],
 	"meshes":[
 		{
-			"name":"Part Studio 1 (1)",
+			"name":"mesh0_mesh",
 			"primitives":[
 				{
 					"attributes":{
@@ -55,69 +61,69 @@
 	"images":[
 		{
 			"mimeType":"image/png",
-			"name":"Untitled",
-			"uri":"Untitled.png"
+			"name":"occ2",
+			"uri":"occ2.png"
 		}
 	],
 	"accessors":[
 		{
 			"bufferView":0,
 			"componentType":5126,
-			"count":1459,
+			"count":6099,
 			"max":[
-				66.84564208984375,
-				73,
-				146.77085876464844
+				0.06684564054012299,
+				0.0729999989271164,
+				0.14677086472511292
 			],
 			"min":[
-				-61.758934020996094,
-				-6.200000286102295,
-				-130.38168334960938
+				-0.07651713490486145,
+				-0.006200000178068876,
+				-0.14094063639640808
 			],
 			"type":"VEC3"
 		},
 		{
 			"bufferView":1,
 			"componentType":5126,
-			"count":1459,
+			"count":6099,
 			"type":"VEC3"
 		},
 		{
 			"bufferView":2,
 			"componentType":5126,
-			"count":1459,
+			"count":6099,
 			"type":"VEC2"
 		},
 		{
 			"bufferView":3,
 			"componentType":5123,
-			"count":3666,
+			"count":15534,
 			"type":"SCALAR"
 		}
 	],
 	"bufferViews":[
 		{
 			"buffer":0,
-			"byteLength":17508,
+			"byteLength":73188,
 			"byteOffset":0,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":17508,
-			"byteOffset":17508,
+			"byteLength":73188,
+			"byteOffset":73188,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":11672,
-			"byteOffset":35016,
+			"byteLength":48792,
+			"byteOffset":146376,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":7332,
-			"byteOffset":46688,
+			"byteLength":31068,
+			"byteOffset":195168,
 			"target":34963
 		}
 	],
@@ -129,8 +135,8 @@
 	],
 	"buffers":[
 		{
-			"byteLength":54020,
-			"uri":"main.bin"
+			"byteLength":226236,
+			"uri":"iLab.bin"
 		}
 	]
 }

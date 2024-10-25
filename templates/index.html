@@ -101,22 +101,16 @@
                         renderer.shadowMap.enabled = true;  // Enable shadow mapping
                         renderer.shadowMap.type = THREE.PCFSoftShadowMap;  // Use soft shadows for smoother results
 
-                        //document.getElementById('model-container').appendChild(renderer.domElement);
-
-
-                        
-
-
                         // Load 3D model (Example using GLTFLoader)
                         let loader = new GLTFLoader();
-                        let ambientLight = new THREE.AmbientLight(0xffffff, .4);
+                        let ambientLight = new THREE.AmbientLight(0xffffff, .9);
                         const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
                         directionalLight.castShadow = true;  // Enable shadows for the light
                         directionalLight.shadow.mapSize.width = 4096;  // Shadow map resolution (higher values give better quality)
                         directionalLight.shadow.mapSize.height = 4096;
                         directionalLight.shadow.camera.near = 0.1;
                         directionalLight.shadow.camera.far = 50;
-                        directionalLight.position.set(-1, 1, 1); // Initial position of the light
+                        directionalLight.position.set(-2, 2, 1); // Initial position of the light
 
                         const pointLight = new THREE.PointLight(0xffffff, 1, 2000);
                             pointLight.castShadow = true;  // Enable shadows for the light
@@ -131,11 +125,11 @@
                         lightTarget.position.set(0, 0, 0); // Pointing at the center of the scene
                         // directionalLight.target = lightTarget;
                         directionalLight.target = lightTarget;
-                        scene.add(directionalLight);
+                        // scene.add(directionalLight);
                         scene.add(ambientLight);
 
                         //scene.add(pointLight);
-                        loader.load('/static/model.gltf', function(gltf) {
+                        loader.load('/static/iLab.gltf', function(gltf) {
                             gltf.scene.scale.set(.015,.015,.015);  // Scale the model by a factor of 2
                             gltf.scene.rotation.set(THREE.MathUtils.degToRad(0), THREE.MathUtils.degToRad(50), THREE.MathUtils.degToRad(0));
                             gltf.scene.traverse(function(node) {
@@ -195,13 +189,15 @@
                         // Reposition the camera to point at the center of the model
                         camera.position.set(center.x, center.y, center.z + 20);  // Set camera Z to be in front of the model
                         camera.lookAt(center);  // Make the camera look at the center of the model
-                        const directionalLightHelper = new THREE.DirectionalLightHelper(directionalLight, 5);
-                        scene.add(directionalLightHelper);
+                        // const directionalLightHelper = new THREE.DirectionalLightHelper(directionalLight, 5);
+                        // scene.add(directionalLightHelper);
 
-                        const pointLightHelper = new THREE.PointLightHelper(pointLight, 5);
-                        scene.add(pointLightHelper);
+                        // const pointLightHelper = new THREE.PointLightHelper(pointLight, 5);
+                        // scene.add(pointLightHelper);
                         console.log("Model loaded and camera centered!");
                         composer.render();
+                        // const helper = new THREE.CameraHelper( camera );
+                        // scene.add( helper );
                         // Click to add marker
                         window.addEventListener('click', onModelClick);
 
@@ -238,13 +234,22 @@
                                 y: intersect.point.y,
                                 z: intersect.point.z
                             };
+                            console.log("Marker added at coordinates:", selectedCoords);
                         }
                     }
 
                     let hoverMarker = null;
+
+                    function rotateToPoint(x, y, z) {
+                        const target = new THREE.Vector3(x, y, z);
+                        controls.target.copy(target);
+                        camera.position.set(target.x + 2, target.y + 2, target.z + 2); 
+                        camera.lookAt(target);
+                        controls.update();
+                    }
     
                     function addMarker(item) {
-                          console.log("creating a marker!");
+                          // console.log("creating a marker!");
                           console.log(item);
                           if (!item.x_model || !item.y_model || !item.z_model) {
                               console.log("item does not have coordinates");
@@ -252,17 +257,37 @@
                           }
 
                           // Create a green sphere marker
-                          const markerGeometry = new THREE.SphereGeometry(.05, 16,16);
-                          const markerMaterial = new THREE.MeshPhongMaterial({ color: 0x0000ff }); // Green color
+                          const markerGeometry = new THREE.SphereGeometry(.0, 16,16);
+                          const markerMaterial = new THREE.MeshPhongMaterial({ color: 0xffff00 }); // Green color
                           hoverMarker = new THREE.Mesh(markerGeometry, markerMaterial);
-                          hoverMarker.position.set(item.x_model, item.y_model, item.z_model);
-                          // vx = Number(item.x_model);
-                          // vy = Number(item.y_model);
-                          // vz = Number(item.z_model);
+                          
+                          // Define the target position for the top of the hoverMarker to point to
+                          const targetPosition = new THREE.Vector3(.1, .25, 6.25);
 
-                          // hoverMarker.position.set(
-                          //    vx, vy, vz
-                          // );
+                          // Orient the hoverMarker so that its "top" points toward the target position
+                          hoverMarker.lookAt(targetPosition);
+                        
+                        // Create a cone to represent an arrow pointing downwards
+                        const arrowGeometry = new THREE.ConeGeometry(0.05, 0.2, 16); // Adjust size for the arrowhead
+                        const arrowMaterial = new THREE.MeshPhongMaterial({ color: 0x00ff00 }); // Yellow color for the arrow
+                        const arrowMesh = new THREE.Mesh(arrowGeometry, arrowMaterial);
+                        hoverMarker.position.set(item.x_model, item.y_model, item.z_model);
+
+                        // Position the arrow above the sphere and rotate it to point downwards
+                        arrowMesh.position.set(0, 0.15, 0); // Adjust this if necessary to position above the sphere
+                        arrowMesh.rotation.x = Math.PI; // Rotate the arrow to point downwards
+
+                        // Optionally, add a cylinder or another line to simulate the arrow shaft (if needed)
+                        const shaftGeometry = new THREE.CylinderGeometry(0.02, 0.02, 1, 16); // Thin shaft for the arrow
+                        const shaftMaterial = new THREE.MeshPhongMaterial({ color: 0x00ff00 });
+                        const arrowShaft = new THREE.Mesh(shaftGeometry, shaftMaterial);
+
+                        // Position the shaft above the sphere and below the arrowhead
+                        arrowShaft.position.set(0, .7, 0); // Slightly above the sphere
+
+                        // Group the arrowhead and shaft together, then add them to the hoverMarker
+                        hoverMarker.add(arrowShaft);
+                        hoverMarker.add(arrowMesh);
 
                           // Add the marker to the scene
                           scene.add(hoverMarker);
@@ -283,10 +308,70 @@
                         requestAnimationFrame(animate);
                         controls.update();
                         renderer.render(scene, camera);
+                        // console.log(camera.position);
+                        // console.log(camera.rotation);
 
                     }
-                    
 
+                    function animateCameraToPosition(targetPosition, targetRotation, duration = 500) {
+                        const startPosition = new THREE.Vector3().copy(camera.position);
+                        const startRotation = new THREE.Euler().copy(camera.rotation);
+                        const endPosition = new THREE.Vector3(targetPosition.x, targetPosition.y, targetPosition.z);
+                        const endRotation = new THREE.Euler(targetRotation._x, targetRotation._y, targetRotation._z, targetRotation._order);
+
+                        const startTime = performance.now();
+
+                        controls.enabled = false; // Disable controls during animation
+
+                        function update() {
+                            const elapsed = performance.now() - startTime;
+                            const t = Math.min(elapsed / duration, 1);
+
+                            camera.position.lerpVectors(startPosition, endPosition, t);
+                            camera.rotation.set(
+                                THREE.MathUtils.lerp(startRotation.x, endRotation.x, t),
+                                THREE.MathUtils.lerp(startRotation.y, endRotation.y, t),
+                                THREE.MathUtils.lerp(startRotation.z, endRotation.z, t)
+                            );
+
+                            if (t < 1) {
+                                requestAnimationFrame(update);
+                            } else {
+                                controls.enabled = true; // Re-enable controls after animation
+                                controls.update();
+                            }
+                        }
+                        // camera.lookAt(new THREE.Vector3());
+                        controls.update();
+                        requestAnimationFrame(update);
+                    }
+
+                    window.addEventListener('resize', () => {
+                        const container = document.getElementById('model-container');
+                        if (container && renderer) {
+                            camera.aspect = container.clientWidth / container.clientHeight;
+                            camera.updateProjectionMatrix();
+                            renderer.setSize(container.clientWidth, container.clientHeight);
+                        }
+                    });
+
+                    // Example of how to animate the camera to a specific position and rotation
+                    document.getElementById('itemList').addEventListener('mouseover', () => {
+                        // animateCameraToPosition(
+                        //     {
+                        //         x: 0.29650257937239366,
+                        //         y: 4.049815029534092,
+                        //         z: 0.09489928840147308
+                        //     },
+                        //     {
+                        //         _x: -1.5673525574597795,
+                        //         _y: 0.02,
+                        //         _z: 0.8681561256357849,
+                        //         _order: "XYZ"
+                        //     }
+                        // );
+                    });
+                   
                     init();
                 </script>
             </div>
