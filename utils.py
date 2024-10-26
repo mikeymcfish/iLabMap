@@ -12,3 +12,19 @@ def list_available_items():
         else:
             print(f"Error fetching tools and items: {str(e)}")
         return []
+
+def get_item_location(item_id):
+    
+    try:
+        # Query the database for the item with the given item_id
+        item = Item.query.filter_by(id=item_id).first()
+        if item:
+            return item
+        else:
+            return None
+    except Exception as e:
+        if current_app:
+            current_app.logger.error(f"Error fetching item with item_id {item_id}: {str(e)}")
+        else:
+            print(f"Error fetching item with item_id {item_id}: {str(e)}")
+        return None

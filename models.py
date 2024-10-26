@@ -25,3 +25,19 @@ class Item(db.Model):
     x_coord_model = db.Column(db.Float, nullable=True, default=0.0)
     y_coord_model = db.Column(db.Float, nullable=True, default=0.0)
     z_coord_model = db.Column(db.Float, nullable=True, default=0.0)
+
+def to_dict(self):
+    return {
+        'id': self.id,
+        'name': self.name,
+        'tags': self.tags,
+        'x_coord_model': self.x_coord_model,
+        'y_coord_model': self.y_coord_model,
+        'z_coord_model': self.z_coord_model,
+        'image_path': self.image_path,
+        'color': self.color,
+        'zone': self.zone,
+        'quantity': self.quantity,
+        'warning': self.warning,
+        'map_id': self.map_id
+    }

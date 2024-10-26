@@ -247,6 +247,10 @@
                         camera.lookAt(target);
                         controls.update();
                     }
+
+                    function addMarkerFromCoords(x, y, z) {
+                        console.log(x, y, z);
+                    }
     
                     function addMarker(item) {
                           // console.log("creating a marker!");
@@ -302,7 +306,9 @@
                           }
                       }
 
-                    window.addMarker = addMarker;
+                    window.addMarker = function(item) {
+                       addMarker(item);
+                    };
                     window.removeMarker = removeMarker;
                     function animate() {
                         requestAnimationFrame(animate);
@@ -311,6 +317,39 @@
                         // console.log(camera.position);
                         // console.log(camera.rotation);
 
+                    }
+
+                    async function handleChatResponse(message) {
+                        try {
+                            print(message);
+                            const response = await fetch('/chat', {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json',
+                                },
+                                body: JSON.stringify({ message: message })
+                            });
+
+                            const data = await response.json();
+                            print(data.message);
+
+                            // Display the message
+                            addMessage(data.message, false);
+
+                            // Add any markers
+                            if (data.markers && Array.isArray(data.markers)) {
+                                print("Adding markers...");
+                                data.markers.forEach(marker => {
+                                    if (marker.x_coord_model !== undefined && marker.y_coord_model !== undefined && marker.z_coord_model !== undefined) {
+                                        addMarkerFromCoords(marker.x_coord_model, marker.y_coord_model, marker.z_coord_model);
+                                    } else {
+                                        console.warn(`Incomplete marker data for item_id ${marker.item_id}`);
+                                    }
+                                });
+                            }
+                        } catch (error) {
+                            console.error('Error:', error);
+                        }
                     }
 
                     function animateCameraToPosition(targetPosition, targetRotation, duration = 500) {

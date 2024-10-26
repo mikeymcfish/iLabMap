@@ -29,9 +29,19 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function addMessage(message, isUser = false) {
-        const messageDiv = document.createElement("div");
+        const messageDiv = document.createElement('div');
         messageDiv.className = `message ${isUser ? "user-message" : "ai-message"}`;
-        messageDiv.innerHTML = `<div class="message-content">${marked.parse(message)}</div>`;
+        
+
+        // Check if message is an object and handle accordingly
+        const messageText = typeof message === 'object' ? 
+            message.message || JSON.stringify(message) : 
+            message;
+
+        // Parse the message text with marked
+        messageDiv.innerHTML = `<div class="message-content">${messageText}</div>`;
+
+        const chatMessages = document.getElementById('chatMessages');
         chatMessages.appendChild(messageDiv);
         chatMessages.scrollTop = chatMessages.scrollHeight;
     }
@@ -52,21 +62,29 @@ document.addEventListener("DOMContentLoaded", function () {
                 headers: {
                     "Content-Type": "application/json",
                 },
-                body: JSON.stringify({ message: message }),
+                body: JSON.stringify({ 
+                    message: message 
+                }),
             })
-                .then((response) => response.json())
-                .then((data) => {
-                    loadingSpinner.style.display = "none";
-                    if (data.error) {
-                        addMessage("Error: " + data.error);
-                    } else {
-                        addMessage(data.message);
-                    }
-                })
-                .catch((error) => {
-                    console.error("Error:", error);
-                    addMessage("Error occurred while sending message");
-                });
+            .then(response => {
+                loadingSpinner.style.display = "none";
+                console.log(response);  // Check the response details
+
+                return response.json();  // Return the JSON data as a Promise
+            })
+            .then(data => {
+                if (data.error) {
+                    throw new Error(data.error);
+                }
+                // Extract the message from the response
+                const messageText = data.message?.message || data.message;
+                addMessage(messageText);
+            })
+            .catch(error => {
+                console.error("Chat error:", error);
+                addMessage("Error: " + error.message);
+            });
+
         }
     }
 

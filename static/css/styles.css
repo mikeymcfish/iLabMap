@@ -142,7 +142,7 @@ canvas {
 
 /* Chat modal styles */
 #chatModal .modal-dialog {
-    max-width: 600px;
+    max-width: 400px;
 }
 
 #chatMessages {

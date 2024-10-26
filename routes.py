@@ -2,6 +2,7 @@ from flask import Blueprint, request, jsonify, send_from_directory, current_app,
 from sqlalchemy.exc import SQLAlchemyError
 from sqlalchemy import or_
 from werkzeug.utils import secure_filename
+from werkzeug.wrappers import response
 from app import db
 from models import Map, Item
 import os
@@ -58,6 +59,7 @@ def get_markers():
     markers = []  # Replace this with actual marker data
     return jsonify(markers=markers)
 
+    
 @main_blueprint.route('/api/items/<int:item_id>', methods=['PUT'])
 def update_item(item_id):
     item = Item.query.get_or_404(item_id)
@@ -368,9 +370,15 @@ def serve_static(filename):
 def allowed_file(filename):
     ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif', 'webm'}
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
-
-@main_blueprint.route('/api/chat', methods=['POST'])
+@main_blueprint.route('/chat', methods=['POST'])
 def chat():
+    message = request.json.get('message')
+    response = get_ai_response(message)
+    
+    return jsonify(response)
+    
+@main_blueprint.route('/api/chat', methods=['POST'])
+def APIchat():
     try:
         data = request.json
         user_message = data.get('message') if data else None
@@ -381,9 +389,19 @@ def chat():
 
         current_app.logger.info(f"Sending message to AI: {user_message}")
 
-        ai_message = get_ai_response(user_message)
-        current_app.logger.info(f"Received response from AI: {ai_message}")
-        return jsonify({"message": ai_message})
+        response = get_ai_response(user_message)
+        print(response)
+        # Convert any Item objects to dictionaries
+        if 'items' in response and response['items']:
+            response['items'] = response['items'][0]
+            response['items'] = ''.join(filter(str.isdigit, response['items']))
+
+        # If response contains a single Item
+        if 'item' in response and response['item']:
+            response['item'] = ''.join(filter(str.isdigit, response['item'].to_dict()))
+        print(response)
+        current_app.logger.info(f"Received response from AI: {response}")
+        return jsonify(response)
 
     except Exception as e:
         current_app.logger.error(f"Unexpected error in chat API: {str(e)}")
