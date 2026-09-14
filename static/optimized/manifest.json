@@ -1,0 +1,152 @@
+[
+  {
+    "source": "/static/thumbnails/0_0.jpg",
+    "derivative": "/static/optimized/9c65bdc88e217c36.webp",
+    "original_bytes": 829134,
+    "bytes": 8470
+  },
+  {
+    "source": "/static/thumbnails/0_2.jpg",
+    "derivative": "/static/optimized/6a1bbcafcde3b1d8.webp",
+    "original_bytes": 397988,
+    "bytes": 31398
+  },
+  {
+    "source": "/static/thumbnails/150219_14_08_53__MG_0131.jpg",
+    "derivative": "/static/optimized/909d8c6351c1603a.webp",
+    "original_bytes": 256786,
+    "bytes": 23152
+  },
+  {
+    "source": "/static/thumbnails/20241016_105622_259f6b93.jpg",
+    "derivative": "/static/optimized/3d247fe1e9acf38b.webp",
+    "original_bytes": 5825641,
+    "bytes": 12530
+  },
+  {
+    "source": "/static/thumbnails/20241018_150113_8d944b21.png",
+    "derivative": "/static/optimized/d9f3ba785ed63058.webp",
+    "original_bytes": 200927,
+    "bytes": 7324
+  },
+  {
+    "source": "/static/thumbnails/20241018_150114_ac34d417.png",
+    "derivative": "/static/optimized/c1bd86d7fd3f0d96.webp",
+    "original_bytes": 200927,
+    "bytes": 7324
+  },
+  {
+    "source": "/static/thumbnails/20241018_150114_e2307150.png",
+    "derivative": "/static/optimized/346d58d0d0842450.webp",
+    "original_bytes": 200927,
+    "bytes": 7324
+  },
+  {
+    "source": "/static/thumbnails/20241018_150240_a6be3e47.png",
+    "derivative": "/static/optimized/f4e3ba61cf726d90.webp",
+    "original_bytes": 110644,
+    "bytes": 6180
+  },
+  {
+    "source": "/static/thumbnails/20241018_150242_2eb93cc7.png",
+    "derivative": "/static/optimized/e13e1ccddb7c3d05.webp",
+    "original_bytes": 110644,
+    "bytes": 6180
+  },
+  {
+    "source": "/static/thumbnails/20241018_150242_c2a5134b.png",
+    "derivative": "/static/optimized/ec48eb67cd9f82d6.webp",
+    "original_bytes": 110644,
+    "bytes": 6180
+  },
+  {
+    "source": "/static/thumbnails/20241018_150551_f04d6c2d.jpg",
+    "derivative": "/static/optimized/0a8e802b4bad8f4e.webp",
+    "original_bytes": 525071,
+    "bytes": 5750
+  },
+  {
+    "source": "/static/thumbnails/20241018_150626_6f3575c5.png",
+    "derivative": "/static/optimized/83f3abd11cd614f4.webp",
+    "original_bytes": 704432,
+    "bytes": 5738
+  },
+  {
+    "source": "/static/thumbnails/20241018_150628_7b9b8b60.png",
+    "derivative": "/static/optimized/38ceb3ca6097324e.webp",
+    "original_bytes": 704432,
+    "bytes": 5738
+  },
+  {
+    "source": "/static/thumbnails/20241018_150628_f448deb8.png",
+    "derivative": "/static/optimized/5c03c0189b6b5a57.webp",
+    "original_bytes": 704432,
+    "bytes": 5738
+  },
+  {
+    "source": "/static/thumbnails/20241018_150650_ffa5c0d8.png",
+    "derivative": "/static/optimized/7e1b815a9e9fa0fa.webp",
+    "original_bytes": 1049262,
+    "bytes": 4044
+  },
+  {
+    "source": "/static/thumbnails/20241018_150652_7df45f90.png",
+    "derivative": "/static/optimized/ee7abd4268faa08f.webp",
+    "original_bytes": 1049262,
+    "bytes": 4044
+  },
+  {
+    "source": "/static/thumbnails/20241018_150652_f4b9eb30.png",
+    "derivative": "/static/optimized/a20412c4be8fa148.webp",
+    "original_bytes": 1049262,
+    "bytes": 4044
+  },
+  {
+    "source": "/static/thumbnails/20241018_150913_f3b383dc.png",
+    "derivative": "/static/optimized/e0346a30f3786c56.webp",
+    "original_bytes": 284810,
+    "bytes": 6890
+  },
+  {
+    "source": "/static/thumbnails/20241018_150915_9ee2ee5b.png",
+    "derivative": "/static/optimized/ff557c0c4301b6a2.webp",
+    "original_bytes": 284810,
+    "bytes": 6890
+  },
+  {
+    "source": "/static/thumbnails/20241018_150915_b90a2e1b.png",
+    "derivative": "/static/optimized/48a5fa8e11ba5b20.webp",
+    "original_bytes": 284810,
+    "bytes": 6890
+  },
+  {
+    "source": "/static/thumbnails/20241019_150025_1180cdbe.jpg",
+    "derivative": "/static/optimized/553b2bd323b0686f.webp",
+    "original_bytes": 42449,
+    "bytes": 10420
+  },
+  {
+    "source": "/static/thumbnails/20241019_150026_ae0763ef.jpg",
+    "derivative": "/static/optimized/ba7ad2d98d3a2b4f.webp",
+    "original_bytes": 42449,
+    "bytes": 10420
+  },
+  {
+    "source": "/static/thumbnails/ac085e93-9a36-4743-888a-2ecd0d116126.jpg",
+    "derivative": "/static/optimized/086b08704737f99f.webp",
+    "original_bytes": 332880,
+    "bytes": 39596
+  },
+  {
+    "source": "/static/thumbnails/ChessBoard-1-300x300.png",
+    "derivative": "/static/optimized/3e4099ae610050bb.webp",
+    "original_bytes": 69603,
+    "bytes": 2296
+  },
+  {
+    "source": "/static/thumbnails/Screen_Shot_2024-08-29_at_12.36.25_PM.png",
+    "derivative": "/static/optimized/088e2458da4e6806.webp",
+    "original_bytes": 386046,
+    "bytes": 15476
+  }
+]

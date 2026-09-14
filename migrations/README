@@ -1,1 +1,8 @@
-Single-database configuration for Flask.
+Fresh-database migration baseline for the restored iLab application.
+
+The historical, non-reproducible 2024 revisions are archived in legacy_2024.
+The active versions directory contains the new baseline and subsequent changes.
+
+Use: python -m flask --app app:create_app init-db
+Do not stamp or upgrade an unidentified historical database into this baseline.
+Keep it unchanged, export it, and import records into a separate new database.

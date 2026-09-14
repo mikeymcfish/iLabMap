@@ -1,408 +1,266 @@
-from flask import Blueprint, request, jsonify, send_from_directory, current_app, render_template
+import json
+from pathlib import Path
+from flask import Blueprint, abort, current_app, jsonify, redirect, render_template, request, session
+from sqlalchemy import func, or_, select
 from sqlalchemy.exc import SQLAlchemyError
-from sqlalchemy import or_
-from werkzeug.utils import secure_filename
-from werkzeug.wrappers import response
+from sqlalchemy.orm.exc import StaleDataError
+from werkzeug.security import check_password_hash
 from app import db
-from models import Map, Item
-import os
-import uuid
-import datetime
-import openai
-import logging
-from typing import Optional
-from chat import system_prompt, get_ai_response
-from utils import list_available_items
+from models import Item, ItemHistory, Map
+from security import check_csrf, csrf_token, rate_limit, staff_only
+from validation import EDITABLE, numeric, save_image, validate
 
-main_blueprint = Blueprint('main', __name__)
+main_blueprint = Blueprint("main", __name__)
 
-@main_blueprint.route('/api/itemsList', methods=['GET'])
-def api_list_available_items():
-    items = list_available_items()
-    return jsonify(items), 200
-
-def generate_unique_filename(filename: Optional[str]) -> str:
-    if filename is None:
-        filename = "unnamed_file"
-    _, file_extension = os.path.splitext(filename)
-    timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-    random_string = str(uuid.uuid4())[:8]
-    return f"{timestamp}_{random_string}{file_extension}"
 
 @main_blueprint.before_request
-def log_request_info():
-    current_app.logger.debug('Request Method: %s, URL: %s', request.method, request.url)
-    
-@main_blueprint.route('/')
+def protect_writes():
+    if request.path.startswith("/api/") and request.method not in ("GET", "HEAD", "OPTIONS"):
+        check_csrf()
+
+
+@main_blueprint.route("/")
 def index():
+    return render_template("index.html")
+
+
+@main_blueprint.route("/3d")
+def three_d():
+    return redirect("/?view=3d")
+
+
+@main_blueprint.get("/api/health")
+def health():
     try:
-        items = Item.query.all()
-        return render_template('index.html', items=items)
-    except SQLAlchemyError as e:
-        current_app.logger.error(
-            f"Error fetching items for index page: {str(e)}")
-        return f"An error occurred while fetching items. : {str(e)}", 500
-
-@main_blueprint.route('/3d')
-def threeDee():
-    return render_template('3d.html')
-
-@main_blueprint.route('/save_marker', methods=['POST'])
-def save_marker():
-    data = request.json
-    print(data)
-    return jsonify(data)
-
-@main_blueprint.route('/get_markers')
-def get_markers():
-    # This is a placeholder. You should implement the logic to retrieve markers.
-    markers = []  # Replace this with actual marker data
-    return jsonify(markers=markers)
-
-    
-@main_blueprint.route('/api/items/<int:item_id>', methods=['PUT'])
-def update_item(item_id):
-    item = Item.query.get_or_404(item_id)
-
-    # Retrieve data from form
-    name = request.form.get('name')
-    tags = request.form.get('tags')
-    color = request.form.get('color')
-    zone = request.form.get('zone')
-    quantity = request.form.get('quantity')
-    warning = request.form.get('warning')
-    map_id = request.form.get('map_id')
-    x_coord = request.form.get('x_coord')
-    y_coord = request.form.get('y_coord')
-    x_coord_model = request.form.get('x_coord_model')
-    y_coord_model = request.form.get('y_coord_model')
-    z_coord_model = request.form.get('z_coord_model')
-    description = request.form.get('description')
-    link = request.form.get('link')
-
-    # Update item attributes if data is provided
-    if name:
-        item.name = name
-    if tags:
-        item.tags = tags
-    if color:
-        item.color = color
-    if zone:
-        item.zone = zone
-    if quantity:
-        item.quantity = int(quantity)
-    if warning is not None:
-        item.warning = warning
-    if map_id:
-        item.map_id = int(map_id)
-    if x_coord:
-        item.x_coord = float(x_coord)
-    if y_coord:
-        item.y_coord = float(y_coord)
-    if x_coord_model:
-        item.x_coord_model = float(x_coord_model)
-    if y_coord_model:
-        item.y_coord_model = float(y_coord_model)
-    if z_coord_model:
-        item.z_coord_model = float(z_coord_model)
-    if description:
-        item.description = description
-    if link:
-        item.link = link
-
-    # Handle image file update
-    if 'image' in request.files:
-        file = request.files['image']
-        if file and allowed_file(file.filename or ''):
-            filename = generate_unique_filename(secure_filename(file.filename or ''))
-            file_path = os.path.join(current_app.config['UPLOAD_FOLDER'], filename)
-            file.save(file_path)
-            item.image_path = f'/static/thumbnails/{filename}'
-
-    # Commit changes to the database
-    try:
-        db.session.commit()
-        return jsonify({'message': 'Item updated successfully'}), 200
-    except SQLAlchemyError as e:
+        db.session.execute(select(Item.id).limit(1))
+        return jsonify(status="ok", version="2.0.0")
+    except SQLAlchemyError:
         db.session.rollback()
-        current_app.logger.error(f"Error updating item (ID: {item_id}): {str(e)}")
-        return jsonify({"error": "An error occurred while updating the item"}), 500
+        return jsonify(status="uninitialized", error="Run init-db and import-recovery."), 503
 
-@main_blueprint.route('/api/items/<int:item_id>', methods=['GET'])
-def get_item(item_id):
-    try:
-        current_app.logger.info(f"Fetching item with ID: {item_id}")
-        item = Item.query.get_or_404(item_id)
-        image_path = item.image_path
-        return jsonify({
-            "id": item.id,
-            "name": item.name,
-            "tags": item.tags,
-            "x_coord": item.x_coord,
-            "y_coord": item.y_coord,
-            "z_coord_model": item.z_coord_model,
-            "x_coord_model": item.x_coord_model,
-            "y_coord_model": item.y_coord_model,
-            "map_id": item.map_id,
-            "image_path": image_path,
-            "color": item.color,
-            "quantity": item.quantity,
-            "warning": item.warning,
-            "description": item.description,
-            "link": item.link
-        }), 200
-    except SQLAlchemyError as e:
-        current_app.logger.error(
-            f"Error retrieving item (ID: {item_id}): {str(e)}")
-        return jsonify(
-            {"error": "An error occurred while retrieving the item"}), 500
 
-@main_blueprint.route('/api/maps', methods=['GET'])
-def get_maps():
-    try:
-        current_app.logger.info("Fetching all maps")
-        maps = Map.query.all()
-        return jsonify([{
-            "id": map.id,
-            "name": map.name
-        } for map in maps])
-    except SQLAlchemyError as e:
-        current_app.logger.error(f"Error fetching maps: {str(e)}")
-        return jsonify({"error": "An error occurred while fetching maps"}), 500
+@main_blueprint.get("/api/session")
+def session_info():
+    return jsonify(
+        staff=bool(session.get("staff")), csrf=csrf_token(), ai_enabled=bool(current_app.config["AI_ENABLED"])
+    )
 
-@main_blueprint.route('/api/maps/<int:map_id>', methods=['GET'])
+
+@main_blueprint.post("/api/login")
+def login():
+    rate_limit("login", 8)
+    data = request.get_json(silent=True)
+    password = data.get("password") if isinstance(data, dict) else None
+    if not isinstance(password, str) or len(password) > 500:
+        abort(400, "Enter your staff password.")
+    if not check_password_hash(current_app.config["ADMIN_PASSWORD_HASH"], password):
+        abort(401, "Incorrect password.")
+    session.clear()
+    session.permanent = True
+    session["staff"] = True
+    return jsonify(staff=True, csrf=csrf_token())
+
+
+@main_blueprint.post("/api/logout")
+def logout():
+    session.clear()
+    return jsonify(staff=False, csrf=csrf_token())
+
+
+@main_blueprint.get("/api/maps")
+def maps():
+    return jsonify([m.to_dict() for m in db.session.scalars(select(Map).order_by(Map.id))])
+
+
+@main_blueprint.get("/api/maps/<int:map_id>")
 def get_map(map_id):
-    try:
-        current_app.logger.info(f"Fetching map with ID: {map_id}")
-        map = Map.query.get_or_404(map_id)
-        return jsonify({
-            "id": map.id,
-            "name": map.name,
-            "svg_path": map.svg_path
-        })
-    except SQLAlchemyError as e:
-        current_app.logger.error(
-            f"Error fetching map (ID: {map_id}): {str(e)}")
-        return jsonify({"error":
-                        "An error occurred while fetching the map"}), 500
+    return jsonify(db.get_or_404(Map, map_id).to_dict())
 
-@main_blueprint.route('/api/items', methods=['GET', 'POST'])
-def items():
-    if request.method == 'POST':
-        data = request.form
-        image_file = request.files.get('image')
-        current_app.logger.info(f"Received POST data: {data}")
 
-        required_fields = ['name', 'tags', 'x_coord', 'y_coord', 'z_coord_model', 'x_coord_model', 'y_coord_model','map_id']
-        missing_fields = [
-            field for field in required_fields if field not in data
-        ]
-        if missing_fields:
-            current_app.logger.warning(
-                f"Missing required fields: {missing_fields}")
-            return jsonify({
-                "error":
-                f"Missing required fields: {', '.join(missing_fields)}"
-            }), 400
+def filtered_query():
+    query = select(Item)
+    map_id = request.args.get("map_id", type=int)
+    if map_id:
+        query = query.where(Item.map_id == map_id)
+    status = request.args.get("status", "active")
+    if status in ("archived", "all") and not session.get("staff"):
+        abort(401, "Staff sign-in is required to view archived recovery entries.")
+    if status == "active":
+        query = query.where(Item.status != "archived")
+    elif status != "all":
+        if status not in ("available", "needs_review", "archived"):
+            abort(400, "Invalid status filter.")
+        query = query.where(Item.status == status)
+    text = request.args.get("q", "").strip()[:200]
+    if text:
+        query = query.where(
+            or_(
+                *(
+                    getattr(Item, key).icontains(text, autoescape=True)
+                    for key in ("name", "tags", "zone", "description")
+                )
+            )
+        )
+    if request.args.get("stock") == "in":
+        query = query.where(Item.quantity > 0)
+    elif request.args.get("stock") == "out":
+        query = query.where(Item.quantity == 0)
+    return query
 
-        image_path = None
-        if image_file:
-            filename = generate_unique_filename(secure_filename(image_file.filename or ''))
-            image_path = os.path.join(current_app.config['UPLOAD_FOLDER'],
-                                      filename)
-            current_app.logger.info(f"Saving image to: {image_path}")
-            image_file.save(image_path)
-            image_path = f'/static/thumbnails/{filename}'
 
+@main_blueprint.get("/api/items")
+@main_blueprint.get("/api/search")
+def list_items():
+    query = filtered_query()
+    total = db.session.scalar(select(func.count()).select_from(query.subquery()))
+    page = max(1, request.args.get("page", 1, type=int))
+    limit = max(1, min(200, request.args.get("limit", 100, type=int)))
+    rows = db.session.scalars(
+        query.order_by(func.lower(Item.name), Item.id).offset((page - 1) * limit).limit(limit)
+    )
+    return jsonify(items=[i.to_dict() for i in rows], total=total, page=page, limit=limit)
+
+
+@main_blueprint.get("/api/items/<int:item_id>")
+def get_item(item_id):
+    item = db.get_or_404(Item, item_id)
+    if item.status == "archived" and not session.get("staff"):
+        abort(401, "Staff sign-in is required.")
+    return jsonify(item.to_dict())
+
+
+def payload():
+    if request.is_json:
+        data = request.get_json()
+    elif "payload" in request.form:
         try:
-            new_item = Item()
-            new_item.name = data['name']
-            new_item.tags = data['tags']
-            new_item.color = data['color']
-            new_item.zone = data['zone']
-            new_item.quantity = int(data['quantity'])
-            new_item.warning = data['warning']
-            new_item.x_coord = float(data['x_coord'])
-            new_item.y_coord = float(data['y_coord'])
-            new_item.z_coord_model = float(data['z_coord_model'])
-            new_item.y_coord_model = float(data['y_coord_model'])
-            new_item.x_coord_model = float(data['x_coord_model'])
-            new_item.map_id = int(data['map_id'])
-            new_item.image_path = image_path
-            new_item.description = data.get('description', '')
-            new_item.link = data.get('link', '')
+            data = json.loads(request.form["payload"])
+        except ValueError:
+            abort(400, "Invalid form data.")
+    else:
+        data = request.form.to_dict()
+    if not isinstance(data, dict):
+        abort(400, "Expected an object.")
+    return data
 
-            db.session.add(new_item)
-            db.session.commit()
-            current_app.logger.info(f"New item added with ID: {new_item.id}")
-            return jsonify({"id": new_item.id}), 201
-        except SQLAlchemyError as e:
-            db.session.rollback()
-            current_app.logger.error(f"Error adding item: {str(e)}")
-            return jsonify(
-                {"error": "An error occurred while adding the item"}), 500
-    elif request.method == 'GET':
-        try:
-            map_id = request.args.get('map_id', type=int)
-            current_app.logger.info(f"Fetching items for map ID: {map_id}")
-            if map_id is None:
-                current_app.logger.warning("Missing map_id in request")
-                return jsonify({"error": "map_id is required"}), 400
 
-            items = Item.query.filter_by(map_id=map_id).all()
-            return jsonify([
-                {
-                    "id": item.id,
-                    "name": item.name,
-                    "tags": item.tags,
-                    "zone": item.zone,
-                    "color": item.color,
-                    "quantity": item.quantity,
-                    "warning": item.warning,
-                    "x_coord": item.x_coord,
-                    "y_coord": item.y_coord,
-                    "x_model": item.x_coord_model,
-                    "y_model": item.y_coord_model,
-                    "z_model": item.z_coord_model,
-                    "map_id": item.map_id,
-                    "image_path": item.image_path,
-                    "description": item.description,
-                    "link": item.link
-                } for item in items
-            ])
-        except SQLAlchemyError as e:
-            current_app.logger.error(
-                f"Error fetching items for map ID {map_id}: {str(e)}")
-            return jsonify({"error":
-                            "An error occurred while fetching items"}), 500
+def check_revision(item, data):
+    if numeric(data.get("revision"), "revision", integer=True) != item.revision:
+        abort(409, "This item changed in another session. Reload it before saving.")
 
-@main_blueprint.route('/api/items/<int:item_id>', methods=['DELETE'])
-def delete_item(item_id):
+
+def commit_item(item, action, before=None, new_image=None):
     try:
-        current_app.logger.info(
-            f"Attempting to delete item with ID: {item_id}")
-        item = Item.query.get(item_id)
-        if item is None:
-            current_app.logger.warning(
-                f"Attempt to delete non-existent item with id: {item_id}")
-            return jsonify({"error": "Item not found"}), 404
-        db.session.delete(item)
+        db.session.flush()
+        db.session.add(ItemHistory(item_id=item.id, action=action, snapshot=before or item.to_dict()))
         db.session.commit()
-        current_app.logger.info(f"Item with id {item_id} deleted successfully")
-        return jsonify({"message": "Item deleted successfully"}), 200
-    except SQLAlchemyError as e:
+        return item.to_dict()
+    except (SQLAlchemyError, StaleDataError) as error:
         db.session.rollback()
-        current_app.logger.error(
-            f"Error deleting item (ID: {item_id}): {str(e)}")
-        return jsonify({"error":
-                        "An error occurred while deleting the item"}), 500
+        if new_image:
+            (Path(current_app.config["UPLOAD_FOLDER"]) / Path(new_image).name).unlink(missing_ok=True)
+        if isinstance(error, StaleDataError):
+            abort(409, "This item changed in another session. Reload it before saving.")
+        current_app.logger.exception("Inventory save failed")
+        abort(500, "Unable to save the item. Your changes were not committed.")
 
-@main_blueprint.route('/api/search')
-def search():
-    try:
-        query = request.args.get('q', '')
-        search_type = request.args.get('type', 'all')
-        map_id = request.args.get('map_id')
 
-        current_app.logger.info(
-            f"Search query: {query}, type: {search_type}, map_id: {map_id}")
+@main_blueprint.post("/api/items")
+@staff_only
+def create_item():
+    data = payload()
+    values = validate(data)
+    image = save_image(request.files.get("image"))
+    item = Item(**values, image_path=image)
+    db.session.add(item)
+    return jsonify(commit_item(item, "created", new_image=image)), 201
 
-        if not map_id:
-            current_app.logger.warning("Missing map_id in search request")
-            return jsonify({"error": "map_id is required"}), 400
 
-        items_query = Item.query.filter(Item.map_id == map_id)
+@main_blueprint.route("/api/items/<int:item_id>", methods=["PATCH", "PUT"])
+@staff_only
+def update_item(item_id):
+    item = db.get_or_404(Item, item_id)
+    data = payload()
+    check_revision(item, data)
+    values = validate(data, item)
+    before = item.to_dict()
+    image = save_image(request.files.get("image"))
+    for key, value in values.items():
+        setattr(item, key, value)
+    if image:
+        item.image_path = image
+    elif data.get("remove_image") is True:
+        item.image_path = None
+    return jsonify(commit_item(item, "updated", before, image))
 
-        if search_type == 'name':
-            items_query = items_query.filter(Item.name.ilike(f'%{query}%'))
-        elif search_type == 'tags':
-            items_query = items_query.filter(Item.tags.ilike(f'%{query}%'))
-        else:  # 'all'
-            items_query = items_query.filter(
-                or_(Item.name.ilike(f'%{query}%'),
-                    Item.tags.ilike(f'%{query}%')))
 
-        items = items_query.all()
-        current_app.logger.info(
-            f"Found {len(items)} items matching search criteria")
-        return jsonify([
-            {
-                "id": item.id,
-                "name": item.name,
-                "tags": item.tags,
-                "x_coord": item.x_coord,
-                "y_coord": item.y_coord,
-                "x_model": item.x_coord_model,
-                "y_model": item.y_coord_model,
-                "z_model": item.z_coord_model,
-                "map_id": item.map_id,
-                "image_path": item.image_path,
-                "description": item.description,
-                "link": item.link,
-                "quantity": item.quantity,
-                "warning": item.warning
-            } for item in items
-        ])
-    except SQLAlchemyError as e:
-        current_app.logger.error(f"Error searching items: {str(e)}")
-        return jsonify(
-            {"error": "An error occurred while searching for items"}), 500
+@main_blueprint.delete("/api/items/<int:item_id>")
+@staff_only
+def archive_item(item_id):
+    item = db.get_or_404(Item, item_id)
+    check_revision(item, payload())
+    before = item.to_dict()
+    item.status = "archived"
+    return jsonify(commit_item(item, "archived", before))
 
-@main_blueprint.route('/static/<path:filename>')
-def static_files(filename):
-    return send_from_directory('static', filename)
-    
-@main_blueprint.route('/static/maps/<path:filename>')
-def serve_static(filename):
-    if current_app.static_folder is None:
-        current_app.logger.error("Static folder is not set")
-        return jsonify({"error": "Static folder is not configured"}), 500
-    
-    file_path = os.path.join(current_app.static_folder, 'maps', filename)
-    current_app.logger.info(f"Attempting to serve static file: {file_path}")
-    if not os.path.exists(file_path):
-        current_app.logger.warning(
-            f"Attempt to access non-existent file: {file_path}")
-        return jsonify({"error": "File not found"}), 404
-    return send_from_directory(os.path.join(current_app.static_folder, 'maps'),
-                               filename)
 
-def allowed_file(filename):
-    ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif', 'webm'}
-    return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
-@main_blueprint.route('/chat', methods=['POST'])
+@main_blueprint.get("/api/items/<int:item_id>/history")
+@staff_only
+def history(item_id):
+    db.get_or_404(Item, item_id)
+    rows = db.session.scalars(
+        select(ItemHistory).where(ItemHistory.item_id == item_id).order_by(ItemHistory.id.desc()).limit(50)
+    )
+    return jsonify(
+        [
+            dict(id=h.id, action=h.action, created_at=h.created_at.isoformat(), snapshot=h.snapshot)
+            for h in rows
+        ]
+    )
+
+
+@main_blueprint.post("/api/items/<int:item_id>/restore")
+@staff_only
+def restore(item_id):
+    item = db.get_or_404(Item, item_id)
+    data = payload()
+    check_revision(item, data)
+    record = db.get_or_404(ItemHistory, numeric(data.get("history_id"), "history_id", integer=True))
+    if record.item_id != item.id:
+        abort(400, "History entry belongs to a different item.")
+    before = item.to_dict()
+    values = validate({k: v for k, v in record.snapshot.items() if k in EDITABLE}, item)
+    for key, value in values.items():
+        setattr(item, key, value)
+    item.image_path = record.snapshot.get("image_path")
+    return jsonify(commit_item(item, "restored", before))
+
+
+@main_blueprint.get("/api/export")
+@staff_only
+def export_items():
+    rows = db.session.scalars(select(Item).order_by(Item.id))
+    response = jsonify(
+        schema_version=2,
+        maps=[m.to_dict() for m in db.session.scalars(select(Map))],
+        items=[i.to_dict() for i in rows],
+    )
+    response.headers["Content-Disposition"] = 'attachment; filename="ilab-inventory.json"'
+    return response
+
+
+@main_blueprint.post("/api/chat")
 def chat():
-    message = request.json.get('message')
-    response = get_ai_response(message)
-    
-    return jsonify(response)
-    
-@main_blueprint.route('/api/chat', methods=['POST'])
-def APIchat():
-    try:
-        data = request.json
-        user_message = data.get('message') if data else None
-        
-        if not user_message:
-            current_app.logger.error("No message provided in the request")
-            return jsonify({"error": "No message provided"}), 400
+    from chat import get_response
 
-        current_app.logger.info(f"Sending message to AI: {user_message}")
-
-        response = get_ai_response(user_message)
-        print(response)
-        # Convert any Item objects to dictionaries
-        if 'items' in response and response['items']:
-            response['items'] = response['items'][0]
-            response['items'] = ''.join(filter(str.isdigit, response['items']))
-
-        # If response contains a single Item
-        if 'item' in response and response['item']:
-            response['item'] = ''.join(filter(str.isdigit, response['item'].to_dict()))
-        print(response)
-        current_app.logger.info(f"Received response from AI: {response}")
-        return jsonify(response)
-
-    except Exception as e:
-        current_app.logger.error(f"Unexpected error in chat API: {str(e)}")
-        return jsonify({"error": "An unexpected error occurred while processing your request"}), 500
+    rate_limit("chat", 15)
+    data = request.get_json(silent=True)
+    if not isinstance(data, dict) or not isinstance(data.get("message"), str):
+        abort(400, "Enter a question.")
+    message = data["message"].strip()
+    if not message or len(message) > 1500:
+        abort(400, "Questions must contain 1–1500 characters.")
+    cloud = data.get("cloud") is True
+    if cloud and not session.get("staff"):
+        abort(401, "Staff sign-in is required for the AI guide.")
+    return jsonify(get_response(message, data.get("map_id"), cloud, data.get("history", [])))

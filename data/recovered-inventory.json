@@ -1,0 +1,2194 @@
+[
+  {
+    "name": "3D Printer",
+    "tags": "manufacturing",
+    "map_id": 1,
+    "x_coord": 300.0,
+    "y_coord": 350.0,
+    "x_coord_model": 0.5382143381220266,
+    "y_coord_model": -0.8260489510489514,
+    "z_coord_model": -1.962888883415843,
+    "color": "green",
+    "zone": "C",
+    "quantity": 1,
+    "warning": "mask",
+    "description": "",
+    "link": "",
+    "status": "needs_review",
+    "provenance": {
+      "kind": "historical_submission",
+      "sources": [
+        {
+          "source": "backup.log",
+          "line": 37753,
+          "date": "2024-10-24 17:46:17,440",
+          "outcome": "failed_submission"
+        },
+        {
+          "source": "backup.log",
+          "line": 38083,
+          "date": "2024-10-24 17:59:44,078",
+          "outcome": "failed_submission"
+        }
+      ],
+      "legacy_ids": [],
+      "note": "Recovered from historical form submissions. Current stock, location, and later edits are unverified.",
+      "classification": "inventory_candidate"
+    },
+    "image_path": null,
+    "recovery_key": "d4fdffe3db3b73f473079d133da565d0ca212422468d166483d5c894bea10c60"
+  },
+  {
+    "name": "Batteries",
+    "tags": "AA, AAA, 9V, CR2032",
+    "map_id": 1,
+    "x_coord": 365.5259073502999,
+    "y_coord": 325.3591785556949,
+    "x_coord_model": 0.10718930217272993,
+    "y_coord_model": -0.14750001206993724,
+    "z_coord_model": 1.1307442399562952,
+    "color": "red",
+    "zone": "",
+    "quantity": 1,
+    "warning": "",
+    "description": "",
+    "link": "",
+    "status": "needs_review",
+    "provenance": {
+      "kind": "historical_submission",
+      "sources": [
+        {
+          "source": "backup.log",
+          "line": 37708,
+          "date": "2024-10-24 17:46:02,744",
+          "outcome": "failed_submission"
+        }
+      ],
+      "legacy_ids": [],
+      "note": "Recovered from historical form submissions. Current stock, location, and later edits are unverified.",
+      "classification": "inventory_candidate"
+    },
+    "image_path": null,
+    "recovery_key": "35a540ecdd9153201717d7b4754ae7be7f1b169705cc8dcffeab1613814b34ef"
+  },
+  {
+    "name": "Books",
+    "tags": "books, things, stuff, for",
+    "map_id": 1,
+    "x_coord": 158.34875444839858,
+    "y_coord": 428.08219492595566,
+    "x_coord_model": null,
+    "y_coord_model": null,
+    "z_coord_model": null,
+    "color": "",
+    "zone": "",
+    "quantity": 0,
+    "warning": "",
+    "description": "",
+    "link": "",
+    "status": "needs_review",
+    "provenance": {
+      "kind": "historical_submission",
+      "sources": [
+        {
+          "source": "backup.log",
+          "line": 2567,
+          "date": "2024-10-14 18:14:33,700",
+          "outcome": "logged_success"
+        },
+        {
+          "source": "recovery\\github-main\\backup.log",
+          "line": 2567,
+          "date": "2024-10-14 18:14:33,700",
+          "outcome": "logged_success"
+        }
+      ],
+      "legacy_ids": [
+        28
+      ],
+      "note": "Recovered from historical form submissions. Current stock, location, and later edits are unverified.",
+      "classification": "inventory_candidate"
+    },
+    "image_path": null,
+    "recovery_key": "50e992fa69c5e3617059353f603f4cb23e5afb34e32732436eaef1c63b5d85e8"
+  },
+  {
+    "name": "door",
+    "tags": "exits",
+    "map_id": 1,
+    "x_coord": 132.61568012940404,
+    "y_coord": 371.2860536824547,
+    "x_coord_model": null,
+    "y_coord_model": null,
+    "z_coord_model": null,
+    "color": "red",
+    "zone": "",
+    "quantity": 1,
+    "warning": "glasses",
+    "description": "",
+    "link": "",
+    "status": "needs_review",
+    "provenance": {
+      "kind": "historical_submission",
+      "sources": [
+        {
+          "source": "backup.log",
+          "line": 4309,
+          "date": "2024-10-15 18:05:52,669",
+          "outcome": "logged_success"
+        },
+        {
+          "source": "recovery\\github-main\\backup.log",
+          "line": 4309,
+          "date": "2024-10-15 18:05:52,669",
+          "outcome": "logged_success"
+        }
+      ],
+      "legacy_ids": [
+        53
+      ],
+      "note": "Recovered from historical form submissions. Current stock, location, and later edits are unverified.",
+      "classification": "inventory_candidate"
+    },
+    "image_path": "/static/thumbnails/Screen_Shot_2024-08-29_at_12.36.25_PM.png",
+    "recovery_key": "16e7249817440eb617df97d8d3261cbc48b917d4e092741e594f6f1ce14d6fba"
+  },
+  {
+    "name": "door",
+    "tags": "exits",
+    "map_id": 1,
+    "x_coord": 122.68026179813987,
+    "y_coord": 685.438015845677,
+    "x_coord_model": null,
+    "y_coord_model": null,
+    "z_coord_model": null,
+    "color": "red",
+    "zone": "",
+    "quantity": 1,
+    "warning": "",
+    "description": "",
+    "link": "",
+    "status": "needs_review",
+    "provenance": {
+      "kind": "historical_submission",
+      "sources": [
+        {
+          "source": "backup.log",
+          "line": 4108,
+          "date": "2024-10-14 21:37:36,942",
+          "outcome": "logged_success"
+        },
+        {
+          "source": "recovery\\github-main\\backup.log",
+          "line": 4108,
+          "date": "2024-10-14 21:37:36,942",
+          "outcome": "logged_success"
+        }
+      ],
+      "legacy_ids": [
+        50
+      ],
+      "note": "Recovered from historical form submissions. Current stock, location, and later edits are unverified.",
+      "classification": "inventory_candidate"
+    },
+    "image_path": null,
+    "recovery_key": "36b695211d864900a610d88673ad9bd5df47587b6d6167149707afb287ab22f8"
+  },
+  {
+    "name": "Duct Tape",
+    "tags": "tape",
+    "map_id": 1,
+    "x_coord": 707.875700957465,
+    "y_coord": 714.1946763964053,
+    "x_coord_model": -0.04496497667037058,
+    "y_coord_model": 0.23608537098411253,
+    "z_coord_model": -1.3074816085962917,
+    "color": "red",
+    "zone": "",
+    "quantity": 1,
+    "warning": "",
+    "description": "",
+    "link": "",
+    "status": "needs_review",
+    "provenance": {
+      "kind": "historical_submission",
+      "sources": [
+        {
+          "source": "backup.log",
+          "line": 37800,
+          "date": "2024-10-24 17:46:42,593",
+          "outcome": "failed_submission"
+        }
+      ],
+      "legacy_ids": [],
+      "note": "Recovered from historical form submissions. Current stock, location, and later edits are unverified.",
+      "classification": "inventory_candidate"
+    },
+    "image_path": null,
+    "recovery_key": "05e3a62484409e4907ee93ed11a817f70a39156ebd39a9f6ba17144b67d0a3d7"
+  },
+  {
+    "name": "Form4 Resin 3D Printer",
+    "tags": "Resin, 3d printing",
+    "map_id": 1,
+    "x_coord": 635.3595166163142,
+    "y_coord": 335.6616314199395,
+    "x_coord_model": -0.9066257121849632,
+    "y_coord_model": -0.12500000000000172,
+    "z_coord_model": 0.26587482836771414,
+    "color": "red",
+    "zone": "",
+    "quantity": 1,
+    "warning": "hand",
+    "description": "",
+    "link": "",
+    "status": "needs_review",
+    "provenance": {
+      "kind": "historical_submission",
+      "sources": [
+        {
+          "source": "backup.log",
+          "line": 35857,
+          "date": "2024-10-23 17:27:35,764",
+          "outcome": "failed_submission"
+        }
+      ],
+      "legacy_ids": [],
+      "note": "Recovered from historical form submissions. Current stock, location, and later edits are unverified.",
+      "classification": "inventory_candidate"
+    },
+    "image_path": null,
+    "recovery_key": "3b7c09e6dd7b0d761a142cc2d9d3f8251bd12337ebc1a4c09494360e503579d5"
+  },
+  {
+    "name": "Formlabs Wash",
+    "tags": "Resin, 3d printing",
+    "map_id": 1,
+    "x_coord": 666.2960725075528,
+    "y_coord": 334.11480362537765,
+    "x_coord_model": -1.086623634355627,
+    "y_coord_model": -0.12499999441206455,
+    "z_coord_model": 0.11295595997383912,
+    "color": "red",
+    "zone": "",
+    "quantity": 1,
+    "warning": "glasses,hand,fire",
+    "description": "",
+    "link": "",
+    "status": "needs_review",
+    "provenance": {
+      "kind": "historical_submission",
+      "sources": [
+        {
+          "source": "backup.log",
+          "line": 40286,
+          "date": "2024-10-24 18:35:42,611",
+          "outcome": "failed_submission"
+        }
+      ],
+      "legacy_ids": [],
+      "note": "Recovered from historical form submissions. Current stock, location, and later edits are unverified.",
+      "classification": "inventory_candidate"
+    },
+    "image_path": null,
+    "recovery_key": "cdac796d631ee69598f12e7f7584bed79a29af0129b68c25f6c1db0b1f058e33"
+  },
+  {
+    "name": "glue",
+    "tags": "",
+    "map_id": 2,
+    "x_coord": 152.8561763692732,
+    "y_coord": 198.53707187805406,
+    "x_coord_model": null,
+    "y_coord_model": null,
+    "z_coord_model": null,
+    "color": "red",
+    "zone": "",
+    "quantity": 1,
+    "warning": "glasses",
+    "description": "",
+    "link": "",
+    "status": "needs_review",
+    "provenance": {
+      "kind": "historical_submission",
+      "sources": [
+        {
+          "source": "backup.log",
+          "line": 3771,
+          "date": "2024-10-14 21:08:53,116",
+          "outcome": "logged_success"
+        },
+        {
+          "source": "recovery\\github-main\\backup.log",
+          "line": 3771,
+          "date": "2024-10-14 21:08:53,116",
+          "outcome": "logged_success"
+        }
+      ],
+      "legacy_ids": [
+        46
+      ],
+      "note": "Recovered from historical form submissions. Current stock, location, and later edits are unverified.",
+      "classification": "inventory_candidate"
+    },
+    "image_path": "/static/thumbnails/0_2.jpg",
+    "recovery_key": "f47d43c636fa04cbe9964f4ba07f2d5304fa59bde9d4b7c4872f079828291afc"
+  },
+  {
+    "name": "RoboMaster S1",
+    "tags": "robot, stem, python",
+    "map_id": 1,
+    "x_coord": 467.69968276348254,
+    "y_coord": 315.95648535564857,
+    "x_coord_model": null,
+    "y_coord_model": null,
+    "z_coord_model": null,
+    "color": "red",
+    "zone": "",
+    "quantity": 2,
+    "warning": "",
+    "description": "",
+    "link": "",
+    "status": "needs_review",
+    "provenance": {
+      "kind": "historical_submission",
+      "sources": [
+        {
+          "source": "backup.log",
+          "line": 10410,
+          "date": "2024-10-19 15:00:25,988",
+          "outcome": "submission_only"
+        },
+        {
+          "source": "recovery\\github-main\\backup.log",
+          "line": 10410,
+          "date": "2024-10-19 15:00:25,988",
+          "outcome": "submission_only"
+        },
+        {
+          "source": "backup.log",
+          "line": 10413,
+          "date": "2024-10-19 15:00:26,020",
+          "outcome": "logged_success"
+        },
+        {
+          "source": "recovery\\github-main\\backup.log",
+          "line": 10413,
+          "date": "2024-10-19 15:00:26,020",
+          "outcome": "logged_success"
+        }
+      ],
+      "legacy_ids": [
+        148,
+        149
+      ],
+      "note": "Recovered from historical form submissions. Current stock, location, and later edits are unverified.",
+      "classification": "inventory_candidate"
+    },
+    "image_path": "/static/thumbnails/20241019_150026_ae0763ef.jpg",
+    "recovery_key": "58fb0a0570f6a4bb93bbfddca960a740446b2ae3e12872f3e9219e16ffbb4d99"
+  },
+  {
+    "name": "shelf",
+    "tags": "tags",
+    "map_id": 1,
+    "x_coord": 400.9478845473387,
+    "y_coord": 147.21002881261688,
+    "x_coord_model": null,
+    "y_coord_model": null,
+    "z_coord_model": null,
+    "color": "red",
+    "zone": "",
+    "quantity": 1,
+    "warning": "bolt",
+    "description": "",
+    "link": "",
+    "status": "needs_review",
+    "provenance": {
+      "kind": "historical_submission",
+      "sources": [
+        {
+          "source": "backup.log",
+          "line": 5294,
+          "date": "2024-10-16 13:01:02,666",
+          "outcome": "logged_success"
+        },
+        {
+          "source": "recovery\\github-main\\backup.log",
+          "line": 5294,
+          "date": "2024-10-16 13:01:02,666",
+          "outcome": "logged_success"
+        }
+      ],
+      "legacy_ids": [
+        72
+      ],
+      "note": "Recovered from historical form submissions. Current stock, location, and later edits are unverified.",
+      "classification": "inventory_candidate"
+    },
+    "image_path": null,
+    "recovery_key": "6951cebd7f167f1b65421a9b2919853d1bf40584b734eeb0c9898ef74c4c213f"
+  },
+  {
+    "name": "shelf",
+    "tags": "tags",
+    "map_id": 1,
+    "x_coord": 270.50861851084267,
+    "y_coord": 239.44922408128193,
+    "x_coord_model": null,
+    "y_coord_model": null,
+    "z_coord_model": null,
+    "color": "red",
+    "zone": "",
+    "quantity": 1,
+    "warning": "bolt",
+    "description": "",
+    "link": "",
+    "status": "needs_review",
+    "provenance": {
+      "kind": "historical_submission",
+      "sources": [
+        {
+          "source": "backup.log",
+          "line": 5335,
+          "date": "2024-10-16 13:01:49,154",
+          "outcome": "logged_success"
+        },
+        {
+          "source": "recovery\\github-main\\backup.log",
+          "line": 5335,
+          "date": "2024-10-16 13:01:49,154",
+          "outcome": "logged_success"
+        }
+      ],
+      "legacy_ids": [
+        74
+      ],
+      "note": "Recovered from historical form submissions. Current stock, location, and later edits are unverified.",
+      "classification": "inventory_candidate"
+    },
+    "image_path": null,
+    "recovery_key": "7b56c2bed703d8a6619676e08c1a79be90dc644f0dbd7bab3c7c466e96b74bac"
+  },
+  {
+    "name": "shelf",
+    "tags": "tags, stuff",
+    "map_id": 1,
+    "x_coord": 428.03669724770646,
+    "y_coord": 221.9449541284404,
+    "x_coord_model": null,
+    "y_coord_model": null,
+    "z_coord_model": null,
+    "color": "red",
+    "zone": "",
+    "quantity": 2,
+    "warning": "bolt",
+    "description": "",
+    "link": "",
+    "status": "needs_review",
+    "provenance": {
+      "kind": "historical_submission",
+      "sources": [
+        {
+          "source": "backup.log",
+          "line": 5416,
+          "date": "2024-10-16 14:18:36,461",
+          "outcome": "logged_success"
+        },
+        {
+          "source": "recovery\\github-main\\backup.log",
+          "line": 5416,
+          "date": "2024-10-16 14:18:36,461",
+          "outcome": "logged_success"
+        }
+      ],
+      "legacy_ids": [
+        82
+      ],
+      "note": "Recovered from historical form submissions. Current stock, location, and later edits are unverified.",
+      "classification": "inventory_candidate"
+    },
+    "image_path": null,
+    "recovery_key": "994023bb11a6de44ccc1ee6f2cad35d58cdae6f02fadb90563cdf701f17f1fdd"
+  },
+  {
+    "name": "shelf",
+    "tags": "tags, stuff, things",
+    "map_id": 1,
+    "x_coord": 269.5045871559633,
+    "y_coord": 152.58715596330276,
+    "x_coord_model": null,
+    "y_coord_model": null,
+    "z_coord_model": null,
+    "color": "red",
+    "zone": "",
+    "quantity": 2,
+    "warning": "bolt",
+    "description": "",
+    "link": "",
+    "status": "needs_review",
+    "provenance": {
+      "kind": "historical_submission",
+      "sources": [
+        {
+          "source": "backup.log",
+          "line": 5457,
+          "date": "2024-10-16 14:19:25,654",
+          "outcome": "logged_success"
+        },
+        {
+          "source": "recovery\\github-main\\backup.log",
+          "line": 5457,
+          "date": "2024-10-16 14:19:25,654",
+          "outcome": "logged_success"
+        },
+        {
+          "source": "backup.log",
+          "line": 5465,
+          "date": "2024-10-16 14:19:52,098",
+          "outcome": "logged_success"
+        },
+        {
+          "source": "recovery\\github-main\\backup.log",
+          "line": 5465,
+          "date": "2024-10-16 14:19:52,098",
+          "outcome": "logged_success"
+        }
+      ],
+      "legacy_ids": [
+        83,
+        84
+      ],
+      "note": "Recovered from historical form submissions. Current stock, location, and later edits are unverified.",
+      "classification": "inventory_candidate"
+    },
+    "image_path": null,
+    "recovery_key": "cc8633b7105cadbd761f8df1dda29dc4e22c4cb591346a2376fe9fe9d1d463e7"
+  },
+  {
+    "name": "soldering irons",
+    "tags": "electronics",
+    "map_id": 1,
+    "x_coord": 345.29937369519837,
+    "y_coord": 364.503382045929,
+    "x_coord_model": null,
+    "y_coord_model": null,
+    "z_coord_model": null,
+    "color": "red",
+    "zone": "",
+    "quantity": 6,
+    "warning": "glasses,fire",
+    "description": "",
+    "link": "",
+    "status": "needs_review",
+    "provenance": {
+      "kind": "historical_submission",
+      "sources": [
+        {
+          "source": "backup.log",
+          "line": 3592,
+          "date": "2024-10-14 20:58:27,499",
+          "outcome": "logged_success"
+        },
+        {
+          "source": "recovery\\github-main\\backup.log",
+          "line": 3592,
+          "date": "2024-10-14 20:58:27,499",
+          "outcome": "logged_success"
+        }
+      ],
+      "legacy_ids": [
+        41
+      ],
+      "note": "Recovered from historical form submissions. Current stock, location, and later edits are unverified.",
+      "classification": "inventory_candidate"
+    },
+    "image_path": null,
+    "recovery_key": "d84a1ecc72af56a9728534031842d98d0c75e2debd9303398d4e8d6938327135"
+  },
+  {
+    "name": "3D Printer",
+    "tags": "manufacturing",
+    "map_id": 1,
+    "x_coord": 300.0,
+    "y_coord": 350.0,
+    "x_coord_model": null,
+    "y_coord_model": null,
+    "z_coord_model": null,
+    "color": "green",
+    "zone": "C",
+    "quantity": 1,
+    "warning": "mask",
+    "description": "Prusa i3 MK3S+ 3D printer",
+    "link": "https://example.com/3d-printer",
+    "status": "archived",
+    "image_path": null,
+    "recovery_key": "5bc4b2d010b6146f44af19a71171d965a7ba6c9cdd57c42388c13fb2695e15f0",
+    "provenance": {
+      "kind": "sample_csv",
+      "sources": [
+        {
+          "source": "recovery/history/items.csv",
+          "line": 4
+        }
+      ],
+      "note": "Example inventory from repository history; not confirmed lab stock."
+    }
+  },
+  {
+    "name": "asdasd",
+    "tags": "asd",
+    "map_id": 2,
+    "x_coord": 178.32919049259388,
+    "y_coord": 436.8393985022588,
+    "x_coord_model": null,
+    "y_coord_model": null,
+    "z_coord_model": null,
+    "color": "red",
+    "zone": "",
+    "quantity": 1,
+    "warning": "hand",
+    "description": "",
+    "link": "",
+    "status": "archived",
+    "provenance": {
+      "kind": "historical_submission",
+      "sources": [
+        {
+          "source": "backup.log",
+          "line": 3807,
+          "date": "2024-10-14 21:10:59,345",
+          "outcome": "logged_success"
+        },
+        {
+          "source": "recovery\\github-main\\backup.log",
+          "line": 3807,
+          "date": "2024-10-14 21:10:59,345",
+          "outcome": "logged_success"
+        }
+      ],
+      "legacy_ids": [
+        49
+      ],
+      "note": "Recovered from historical form submissions. Current stock, location, and later edits are unverified.",
+      "classification": "likely_test"
+    },
+    "image_path": null,
+    "recovery_key": "1fb35b6f86e5983c5c8d60ca4e610e714e26e1d1d1b3af83474ca9ce0087e42b"
+  },
+  {
+    "name": "asdasd",
+    "tags": "asd",
+    "map_id": 2,
+    "x_coord": 174.63083623986927,
+    "y_coord": 349.33512689075343,
+    "x_coord_model": null,
+    "y_coord_model": null,
+    "z_coord_model": null,
+    "color": "red",
+    "zone": "",
+    "quantity": 1,
+    "warning": "hand",
+    "description": "",
+    "link": "",
+    "status": "archived",
+    "provenance": {
+      "kind": "historical_submission",
+      "sources": [
+        {
+          "source": "backup.log",
+          "line": 5683,
+          "date": "2024-10-16 18:09:39,874",
+          "outcome": "logged_success"
+        },
+        {
+          "source": "recovery\\github-main\\backup.log",
+          "line": 5683,
+          "date": "2024-10-16 18:09:39,874",
+          "outcome": "logged_success"
+        }
+      ],
+      "legacy_ids": [
+        131
+      ],
+      "note": "Recovered from historical form submissions. Current stock, location, and later edits are unverified.",
+      "classification": "likely_test"
+    },
+    "image_path": null,
+    "recovery_key": "b9085fdd916910ce981c0e9867dff71f064c5a3ceb582b2d21102af6261b8435"
+  },
+  {
+    "name": "dssfsfsd",
+    "tags": "",
+    "map_id": 2,
+    "x_coord": 117.99500412812345,
+    "y_coord": 521.174187513505,
+    "x_coord_model": null,
+    "y_coord_model": null,
+    "z_coord_model": null,
+    "color": "red",
+    "zone": "",
+    "quantity": 1,
+    "warning": "",
+    "description": "",
+    "link": "",
+    "status": "archived",
+    "provenance": {
+      "kind": "historical_submission",
+      "sources": [
+        {
+          "source": "backup.log",
+          "line": 6384,
+          "date": "2024-10-16 18:59:49,880",
+          "outcome": "submission_only"
+        },
+        {
+          "source": "recovery\\github-main\\backup.log",
+          "line": 6384,
+          "date": "2024-10-16 18:59:49,880",
+          "outcome": "submission_only"
+        },
+        {
+          "source": "backup.log",
+          "line": 6386,
+          "date": "2024-10-16 18:59:49,887",
+          "outcome": "logged_success"
+        },
+        {
+          "source": "recovery\\github-main\\backup.log",
+          "line": 6386,
+          "date": "2024-10-16 18:59:49,887",
+          "outcome": "logged_success"
+        }
+      ],
+      "legacy_ids": [
+        136,
+        137
+      ],
+      "note": "Recovered from historical form submissions. Current stock, location, and later edits are unverified.",
+      "classification": "likely_test"
+    },
+    "image_path": null,
+    "recovery_key": "9cc87eb8c423f54268294bd657156dd8d4e55194454c2b4289c3815aef797e2d"
+  },
+  {
+    "name": "eyes",
+    "tags": "eyes",
+    "map_id": 1,
+    "x_coord": 156.74655532359083,
+    "y_coord": 265.2245511482255,
+    "x_coord_model": null,
+    "y_coord_model": null,
+    "z_coord_model": null,
+    "color": "red",
+    "zone": "",
+    "quantity": 1,
+    "warning": "glasses",
+    "description": "",
+    "link": "",
+    "status": "archived",
+    "provenance": {
+      "kind": "historical_submission",
+      "sources": [
+        {
+          "source": "backup.log",
+          "line": 3109,
+          "date": "2024-10-14 19:54:42,739",
+          "outcome": "logged_success"
+        },
+        {
+          "source": "recovery\\github-main\\backup.log",
+          "line": 3109,
+          "date": "2024-10-14 19:54:42,739",
+          "outcome": "logged_success"
+        }
+      ],
+      "legacy_ids": [
+        36
+      ],
+      "note": "Recovered from historical form submissions. Current stock, location, and later edits are unverified.",
+      "classification": "likely_test"
+    },
+    "image_path": null,
+    "recovery_key": "03a90b37f6fdfada4b2a71a5e7e2f89ed2d5b4b76cc975af1eee796bf26ce03c"
+  },
+  {
+    "name": "ff",
+    "tags": "f",
+    "map_id": 2,
+    "x_coord": 160.4718782119328,
+    "y_coord": 552.2890643799828,
+    "x_coord_model": null,
+    "y_coord_model": null,
+    "z_coord_model": null,
+    "color": "red",
+    "zone": "",
+    "quantity": 1,
+    "warning": "",
+    "description": "",
+    "link": "",
+    "status": "archived",
+    "provenance": {
+      "kind": "historical_submission",
+      "sources": [
+        {
+          "source": "backup.log",
+          "line": 6550,
+          "date": "2024-10-16 19:11:40,182",
+          "outcome": "submission_only"
+        },
+        {
+          "source": "recovery\\github-main\\backup.log",
+          "line": 6550,
+          "date": "2024-10-16 19:11:40,182",
+          "outcome": "submission_only"
+        },
+        {
+          "source": "backup.log",
+          "line": 6552,
+          "date": "2024-10-16 19:11:40,228",
+          "outcome": "logged_success"
+        },
+        {
+          "source": "recovery\\github-main\\backup.log",
+          "line": 6552,
+          "date": "2024-10-16 19:11:40,228",
+          "outcome": "logged_success"
+        }
+      ],
+      "legacy_ids": [
+        140,
+        141
+      ],
+      "note": "Recovered from historical form submissions. Current stock, location, and later edits are unverified.",
+      "classification": "likely_test"
+    },
+    "image_path": null,
+    "recovery_key": "9786b6ba4fdef29a997f467b7ef6f2124d7680a06ec850eb3e3ffec9d2c34255"
+  },
+  {
+    "name": "fghdfghfgdh",
+    "tags": "",
+    "map_id": 1,
+    "x_coord": 81.32542797494781,
+    "y_coord": 189.03382045929018,
+    "x_coord_model": null,
+    "y_coord_model": null,
+    "z_coord_model": null,
+    "color": "red",
+    "zone": "",
+    "quantity": 1,
+    "warning": "bolt-lightning",
+    "description": "",
+    "link": "",
+    "status": "archived",
+    "provenance": {
+      "kind": "historical_submission",
+      "sources": [
+        {
+          "source": "backup.log",
+          "line": 3721,
+          "date": "2024-10-14 21:05:44,657",
+          "outcome": "logged_success"
+        },
+        {
+          "source": "recovery\\github-main\\backup.log",
+          "line": 3721,
+          "date": "2024-10-14 21:05:44,657",
+          "outcome": "logged_success"
+        }
+      ],
+      "legacy_ids": [
+        44
+      ],
+      "note": "Recovered from historical form submissions. Current stock, location, and later edits are unverified.",
+      "classification": "likely_test"
+    },
+    "image_path": null,
+    "recovery_key": "dc78d113646d3acdd4805baa21824ab92ed0877c6a3921e5d0cb92b374e27c58"
+  },
+  {
+    "name": "fghfdgh",
+    "tags": "",
+    "map_id": 1,
+    "x_coord": 202.92275574112733,
+    "y_coord": 108.22546972860125,
+    "x_coord_model": null,
+    "y_coord_model": null,
+    "z_coord_model": null,
+    "color": "red",
+    "zone": "",
+    "quantity": 1,
+    "warning": "glasses,hand",
+    "description": "",
+    "link": "",
+    "status": "archived",
+    "provenance": {
+      "kind": "historical_submission",
+      "sources": [
+        {
+          "source": "backup.log",
+          "line": 3170,
+          "date": "2024-10-14 20:05:00,137",
+          "outcome": "logged_success"
+        },
+        {
+          "source": "recovery\\github-main\\backup.log",
+          "line": 3170,
+          "date": "2024-10-14 20:05:00,137",
+          "outcome": "logged_success"
+        }
+      ],
+      "legacy_ids": [
+        38
+      ],
+      "note": "Recovered from historical form submissions. Current stock, location, and later edits are unverified.",
+      "classification": "likely_test"
+    },
+    "image_path": null,
+    "recovery_key": "f2ce629928e7d4061af086119543d9e0e00e40d37cdeb63715851639844fe011"
+  },
+  {
+    "name": "ghjhgjgh",
+    "tags": "",
+    "map_id": 1,
+    "x_coord": 185.221878914405,
+    "y_coord": 88.98538622129438,
+    "x_coord_model": null,
+    "y_coord_model": null,
+    "z_coord_model": null,
+    "color": "red",
+    "zone": "",
+    "quantity": 1,
+    "warning": "",
+    "description": "",
+    "link": "",
+    "status": "archived",
+    "provenance": {
+      "kind": "historical_submission",
+      "sources": [
+        {
+          "source": "backup.log",
+          "line": 3152,
+          "date": "2024-10-14 20:03:36,252",
+          "outcome": "logged_success"
+        },
+        {
+          "source": "recovery\\github-main\\backup.log",
+          "line": 3152,
+          "date": "2024-10-14 20:03:36,252",
+          "outcome": "logged_success"
+        }
+      ],
+      "legacy_ids": [
+        37
+      ],
+      "note": "Recovered from historical form submissions. Current stock, location, and later edits are unverified.",
+      "classification": "likely_test"
+    },
+    "image_path": null,
+    "recovery_key": "f5db93e9e71a814966b478a4606fcc2455700304f17ff65b4de122cde7295374"
+  },
+  {
+    "name": "new",
+    "tags": "",
+    "map_id": 2,
+    "x_coord": 467.7212674181537,
+    "y_coord": 508.44537424994576,
+    "x_coord_model": null,
+    "y_coord_model": null,
+    "z_coord_model": null,
+    "color": "red",
+    "zone": "",
+    "quantity": 1,
+    "warning": "",
+    "description": "",
+    "link": "",
+    "status": "archived",
+    "provenance": {
+      "kind": "historical_submission",
+      "sources": [
+        {
+          "source": "backup.log",
+          "line": 5940,
+          "date": "2024-10-16 18:26:19,594",
+          "outcome": "submission_only"
+        },
+        {
+          "source": "recovery\\github-main\\backup.log",
+          "line": 5940,
+          "date": "2024-10-16 18:26:19,594",
+          "outcome": "submission_only"
+        },
+        {
+          "source": "backup.log",
+          "line": 5942,
+          "date": "2024-10-16 18:26:19,598",
+          "outcome": "logged_success"
+        },
+        {
+          "source": "recovery\\github-main\\backup.log",
+          "line": 5942,
+          "date": "2024-10-16 18:26:19,598",
+          "outcome": "logged_success"
+        }
+      ],
+      "legacy_ids": [
+        132,
+        133
+      ],
+      "note": "Recovered from historical form submissions. Current stock, location, and later edits are unverified.",
+      "classification": "likely_test"
+    },
+    "image_path": null,
+    "recovery_key": "0788a032c3245f21920ab16f6f81cee9f21a7f18dfcaa1bbdec22f8e96d38a50"
+  },
+  {
+    "name": "new4",
+    "tags": "",
+    "map_id": 2,
+    "x_coord": 106.6678377057743,
+    "y_coord": 338.02070777673725,
+    "x_coord_model": null,
+    "y_coord_model": null,
+    "z_coord_model": null,
+    "color": "red",
+    "zone": "",
+    "quantity": 2,
+    "warning": "",
+    "description": "",
+    "link": "",
+    "status": "archived",
+    "provenance": {
+      "kind": "historical_submission",
+      "sources": [
+        {
+          "source": "backup.log",
+          "line": 5974,
+          "date": "2024-10-16 18:26:51,746",
+          "outcome": "submission_only"
+        },
+        {
+          "source": "recovery\\github-main\\backup.log",
+          "line": 5974,
+          "date": "2024-10-16 18:26:51,746",
+          "outcome": "submission_only"
+        },
+        {
+          "source": "backup.log",
+          "line": 5976,
+          "date": "2024-10-16 18:26:51,816",
+          "outcome": "logged_success"
+        },
+        {
+          "source": "recovery\\github-main\\backup.log",
+          "line": 5976,
+          "date": "2024-10-16 18:26:51,816",
+          "outcome": "logged_success"
+        }
+      ],
+      "legacy_ids": [
+        134,
+        135
+      ],
+      "note": "Recovered from historical form submissions. Current stock, location, and later edits are unverified.",
+      "classification": "likely_test"
+    },
+    "image_path": null,
+    "recovery_key": "d78cd02767d24ac835cbdeb94df79e64a989b4279f5aabf38f96c4f18830f048"
+  },
+  {
+    "name": "Nothing",
+    "tags": "",
+    "map_id": 1,
+    "x_coord": 152.00091837906095,
+    "y_coord": 97.99471932039948,
+    "x_coord_model": null,
+    "y_coord_model": null,
+    "z_coord_model": null,
+    "color": "red",
+    "zone": "",
+    "quantity": 1,
+    "warning": "",
+    "description": "",
+    "link": "",
+    "status": "archived",
+    "provenance": {
+      "kind": "historical_submission",
+      "sources": [
+        {
+          "source": "backup.log",
+          "line": 2901,
+          "date": "2024-10-14 19:37:19,011",
+          "outcome": "logged_success"
+        },
+        {
+          "source": "recovery\\github-main\\backup.log",
+          "line": 2901,
+          "date": "2024-10-14 19:37:19,011",
+          "outcome": "logged_success"
+        }
+      ],
+      "legacy_ids": [
+        33
+      ],
+      "note": "Recovered from historical form submissions. Current stock, location, and later edits are unverified.",
+      "classification": "likely_test"
+    },
+    "image_path": null,
+    "recovery_key": "0427385e2a05c5934e000db914212ad7aa7a43a9292344d8d5f26da9a8a68ead"
+  },
+  {
+    "name": "Nothing 2",
+    "tags": "nothing",
+    "map_id": 1,
+    "x_coord": 149.2173913043478,
+    "y_coord": 212.4782608695652,
+    "x_coord_model": null,
+    "y_coord_model": null,
+    "z_coord_model": null,
+    "color": "blue",
+    "zone": "",
+    "quantity": 4,
+    "warning": "eyes",
+    "description": "",
+    "link": "",
+    "status": "archived",
+    "provenance": {
+      "kind": "historical_submission",
+      "sources": [
+        {
+          "source": "backup.log",
+          "line": 2906,
+          "date": "2024-10-14 19:37:47,305",
+          "outcome": "logged_success"
+        },
+        {
+          "source": "recovery\\github-main\\backup.log",
+          "line": 2906,
+          "date": "2024-10-14 19:37:47,305",
+          "outcome": "logged_success"
+        }
+      ],
+      "legacy_ids": [
+        34
+      ],
+      "note": "Recovered from historical form submissions. Current stock, location, and later edits are unverified.",
+      "classification": "likely_test"
+    },
+    "image_path": null,
+    "recovery_key": "989377e58d6a49ca3a045f83b28b478f8a1843392752c4707172cfef25942a44"
+  },
+  {
+    "name": "Oscilloscope",
+    "tags": "electronics",
+    "map_id": 1,
+    "x_coord": 400.0,
+    "y_coord": 450.0,
+    "x_coord_model": null,
+    "y_coord_model": null,
+    "z_coord_model": null,
+    "color": "yellow",
+    "zone": "D",
+    "quantity": 1,
+    "warning": "bolt",
+    "description": "Digital storage oscilloscope",
+    "link": "https://example.com/oscilloscope",
+    "status": "archived",
+    "image_path": null,
+    "recovery_key": "2ac4dcb5c4a788be555758e988afb48a6b0367a29033b501979486c188d4f4be",
+    "provenance": {
+      "kind": "sample_csv",
+      "sources": [
+        {
+          "source": "recovery/history/items.csv",
+          "line": 5
+        }
+      ],
+      "note": "Example inventory from repository history; not confirmed lab stock."
+    }
+  },
+  {
+    "name": "Reee",
+    "tags": "",
+    "map_id": 1,
+    "x_coord": 178.4788732394366,
+    "y_coord": 572.9577464788732,
+    "x_coord_model": null,
+    "y_coord_model": null,
+    "z_coord_model": null,
+    "color": "red",
+    "zone": "",
+    "quantity": 1,
+    "warning": "",
+    "description": "",
+    "link": "",
+    "status": "archived",
+    "provenance": {
+      "kind": "historical_submission",
+      "sources": [
+        {
+          "source": "backup.log",
+          "line": 4925,
+          "date": "2024-10-16 10:56:22,822",
+          "outcome": "submission_only"
+        },
+        {
+          "source": "recovery\\github-main\\backup.log",
+          "line": 4925,
+          "date": "2024-10-16 10:56:22,822",
+          "outcome": "submission_only"
+        },
+        {
+          "source": "backup.log",
+          "line": 4927,
+          "date": "2024-10-16 10:56:22,995",
+          "outcome": "logged_success"
+        },
+        {
+          "source": "recovery\\github-main\\backup.log",
+          "line": 4927,
+          "date": "2024-10-16 10:56:22,995",
+          "outcome": "logged_success"
+        },
+        {
+          "source": "backup.log",
+          "line": 4933,
+          "date": "2024-10-16 10:56:25,141",
+          "outcome": "submission_only"
+        },
+        {
+          "source": "recovery\\github-main\\backup.log",
+          "line": 4933,
+          "date": "2024-10-16 10:56:25,141",
+          "outcome": "submission_only"
+        },
+        {
+          "source": "backup.log",
+          "line": 4944,
+          "date": "2024-10-16 10:56:26,342",
+          "outcome": "logged_success"
+        },
+        {
+          "source": "recovery\\github-main\\backup.log",
+          "line": 4944,
+          "date": "2024-10-16 10:56:26,342",
+          "outcome": "logged_success"
+        }
+      ],
+      "legacy_ids": [
+        60,
+        61,
+        65
+      ],
+      "note": "Recovered from historical form submissions. Current stock, location, and later edits are unverified.",
+      "classification": "likely_test"
+    },
+    "image_path": "/static/thumbnails/20241016_105622_259f6b93.jpg",
+    "recovery_key": "a743533c8063427676a02f75b73854d63548dd71e68a619f6ea196d98e1def33"
+  },
+  {
+    "name": "Reee",
+    "tags": "",
+    "map_id": 1,
+    "x_coord": 367.0985915492958,
+    "y_coord": 511.09859154929575,
+    "x_coord_model": null,
+    "y_coord_model": null,
+    "z_coord_model": null,
+    "color": "red",
+    "zone": "",
+    "quantity": 1,
+    "warning": "",
+    "description": "",
+    "link": "",
+    "status": "archived",
+    "provenance": {
+      "kind": "historical_submission",
+      "sources": [
+        {
+          "source": "backup.log",
+          "line": 4935,
+          "date": "2024-10-16 10:56:25,255",
+          "outcome": "submission_only"
+        },
+        {
+          "source": "recovery\\github-main\\backup.log",
+          "line": 4935,
+          "date": "2024-10-16 10:56:25,255",
+          "outcome": "submission_only"
+        },
+        {
+          "source": "backup.log",
+          "line": 4937,
+          "date": "2024-10-16 10:56:25,476",
+          "outcome": "logged_success"
+        },
+        {
+          "source": "recovery\\github-main\\backup.log",
+          "line": 4937,
+          "date": "2024-10-16 10:56:25,476",
+          "outcome": "logged_success"
+        },
+        {
+          "source": "backup.log",
+          "line": 4963,
+          "date": "2024-10-16 10:56:30,411",
+          "outcome": "submission_only"
+        },
+        {
+          "source": "recovery\\github-main\\backup.log",
+          "line": 4963,
+          "date": "2024-10-16 10:56:30,411",
+          "outcome": "submission_only"
+        },
+        {
+          "source": "backup.log",
+          "line": 4965,
+          "date": "2024-10-16 10:56:30,461",
+          "outcome": "submission_only"
+        },
+        {
+          "source": "recovery\\github-main\\backup.log",
+          "line": 4965,
+          "date": "2024-10-16 10:56:30,461",
+          "outcome": "submission_only"
+        },
+        {
+          "source": "backup.log",
+          "line": 4967,
+          "date": "2024-10-16 10:56:30,548",
+          "outcome": "submission_only"
+        },
+        {
+          "source": "recovery\\github-main\\backup.log",
+          "line": 4967,
+          "date": "2024-10-16 10:56:30,548",
+          "outcome": "submission_only"
+        },
+        {
+          "source": "backup.log",
+          "line": 4969,
+          "date": "2024-10-16 10:56:30,747",
+          "outcome": "logged_success"
+        },
+        {
+          "source": "recovery\\github-main\\backup.log",
+          "line": 4969,
+          "date": "2024-10-16 10:56:30,747",
+          "outcome": "logged_success"
+        }
+      ],
+      "legacy_ids": [
+        62,
+        63,
+        64,
+        66,
+        67,
+        68,
+        69
+      ],
+      "note": "Recovered from historical form submissions. Current stock, location, and later edits are unverified.",
+      "classification": "likely_test"
+    },
+    "image_path": null,
+    "recovery_key": "b2448ffb4420b6077f06b3609117d506bc1bfa8715f7a771ba065d69834c1cb8"
+  },
+  {
+    "name": "rthrfth",
+    "tags": "thtr",
+    "map_id": 1,
+    "x_coord": 142.89369519832985,
+    "y_coord": 139.00960334029227,
+    "x_coord_model": null,
+    "y_coord_model": null,
+    "z_coord_model": null,
+    "color": "blue",
+    "zone": "",
+    "quantity": 6,
+    "warning": "eyes",
+    "description": "",
+    "link": "",
+    "status": "archived",
+    "provenance": {
+      "kind": "historical_submission",
+      "sources": [
+        {
+          "source": "backup.log",
+          "line": 3007,
+          "date": "2024-10-14 19:45:29,817",
+          "outcome": "logged_success"
+        },
+        {
+          "source": "recovery\\github-main\\backup.log",
+          "line": 3007,
+          "date": "2024-10-14 19:45:29,817",
+          "outcome": "logged_success"
+        }
+      ],
+      "legacy_ids": [
+        35
+      ],
+      "note": "Recovered from historical form submissions. Current stock, location, and later edits are unverified.",
+      "classification": "likely_test"
+    },
+    "image_path": null,
+    "recovery_key": "7e37fce053e93061187dc90169cd830287503ad9295b5fd9d54a212ff18c6044"
+  },
+  {
+    "name": "Safety Glasses",
+    "tags": "safety",
+    "map_id": 1,
+    "x_coord": 500.0,
+    "y_coord": 550.0,
+    "x_coord_model": null,
+    "y_coord_model": null,
+    "z_coord_model": null,
+    "color": "orange",
+    "zone": "E",
+    "quantity": 10,
+    "warning": "glasses",
+    "description": "ANSI Z87.1 certified safety glasses",
+    "link": "https://example.com/safety-glasses",
+    "status": "archived",
+    "image_path": null,
+    "recovery_key": "8f31c382e0a970bf701e3e629e331f64d8afb1c5739cca4a2655a40eeebc167a",
+    "provenance": {
+      "kind": "sample_csv",
+      "sources": [
+        {
+          "source": "recovery/history/items.csv",
+          "line": 6
+        }
+      ],
+      "note": "Example inventory from repository history; not confirmed lab stock."
+    }
+  },
+  {
+    "name": "Screwdriver",
+    "tags": "tools",
+    "map_id": 1,
+    "x_coord": 100.0,
+    "y_coord": 150.0,
+    "x_coord_model": null,
+    "y_coord_model": null,
+    "z_coord_model": null,
+    "color": "blue",
+    "zone": "A",
+    "quantity": 5,
+    "warning": "hand",
+    "description": "Phillips head screwdriver",
+    "link": "https://example.com/screwdriver",
+    "status": "archived",
+    "image_path": null,
+    "recovery_key": "6e5f4986a9d6870674eea27b8a997223c13dc19940f9921b3585a9e63e4e5d31",
+    "provenance": {
+      "kind": "sample_csv",
+      "sources": [
+        {
+          "source": "recovery/history/items.csv",
+          "line": 2
+        }
+      ],
+      "note": "Example inventory from repository history; not confirmed lab stock."
+    }
+  },
+  {
+    "name": "sdf",
+    "tags": "",
+    "map_id": 1,
+    "x_coord": 82.09503131524008,
+    "y_coord": 165.17611691022967,
+    "x_coord_model": null,
+    "y_coord_model": null,
+    "z_coord_model": null,
+    "color": "red",
+    "zone": "",
+    "quantity": 1,
+    "warning": "glasses",
+    "description": "",
+    "link": "",
+    "status": "archived",
+    "provenance": {
+      "kind": "historical_submission",
+      "sources": [
+        {
+          "source": "backup.log",
+          "line": 3790,
+          "date": "2024-10-14 21:10:36,745",
+          "outcome": "logged_success"
+        },
+        {
+          "source": "recovery\\github-main\\backup.log",
+          "line": 3790,
+          "date": "2024-10-14 21:10:36,745",
+          "outcome": "logged_success"
+        }
+      ],
+      "legacy_ids": [
+        47
+      ],
+      "note": "Recovered from historical form submissions. Current stock, location, and later edits are unverified.",
+      "classification": "likely_test"
+    },
+    "image_path": null,
+    "recovery_key": "d8fbd675c3015339beb3aa0e37f341ffe15f4ffb6164f0df691acbed3f341bfe"
+  },
+  {
+    "name": "sdfsdf",
+    "tags": "",
+    "map_id": 2,
+    "x_coord": 370.5346606958319,
+    "y_coord": 341.9811908168957,
+    "x_coord_model": null,
+    "y_coord_model": null,
+    "z_coord_model": null,
+    "color": "red",
+    "zone": "",
+    "quantity": 1,
+    "warning": "",
+    "description": "",
+    "link": "",
+    "status": "archived",
+    "provenance": {
+      "kind": "historical_submission",
+      "sources": [
+        {
+          "source": "backup.log",
+          "line": 3802,
+          "date": "2024-10-14 21:10:50,843",
+          "outcome": "logged_success"
+        },
+        {
+          "source": "recovery\\github-main\\backup.log",
+          "line": 3802,
+          "date": "2024-10-14 21:10:50,843",
+          "outcome": "logged_success"
+        }
+      ],
+      "legacy_ids": [
+        48
+      ],
+      "note": "Recovered from historical form submissions. Current stock, location, and later edits are unverified.",
+      "classification": "likely_test"
+    },
+    "image_path": null,
+    "recovery_key": "91ce4f2b8a2914cea74662a6a465302813451893da886ea05a27d77904552a08"
+  },
+  {
+    "name": "sdfsdfsd",
+    "tags": "",
+    "map_id": 1,
+    "x_coord": 160.5945720250522,
+    "y_coord": 128.23515657620044,
+    "x_coord_model": null,
+    "y_coord_model": null,
+    "z_coord_model": null,
+    "color": "red",
+    "zone": "",
+    "quantity": 1,
+    "warning": "eye",
+    "description": "",
+    "link": "",
+    "status": "archived",
+    "provenance": {
+      "kind": "historical_submission",
+      "sources": [
+        {
+          "source": "backup.log",
+          "line": 3254,
+          "date": "2024-10-14 20:22:44,009",
+          "outcome": "logged_success"
+        },
+        {
+          "source": "recovery\\github-main\\backup.log",
+          "line": 3254,
+          "date": "2024-10-14 20:22:44,009",
+          "outcome": "logged_success"
+        }
+      ],
+      "legacy_ids": [
+        40
+      ],
+      "note": "Recovered from historical form submissions. Current stock, location, and later edits are unverified.",
+      "classification": "likely_test"
+    },
+    "image_path": null,
+    "recovery_key": "0b38103e98a9fb83a489031f1c96077944b9e57f86c7fbaffcadcb38614b4c23"
+  },
+  {
+    "name": "sdfsdfsd",
+    "tags": "sdf",
+    "map_id": 1,
+    "x_coord": 191.14590747330962,
+    "y_coord": 145.60348984043165,
+    "x_coord_model": null,
+    "y_coord_model": null,
+    "z_coord_model": null,
+    "color": "",
+    "zone": "",
+    "quantity": 0,
+    "warning": "",
+    "description": "",
+    "link": "",
+    "status": "archived",
+    "provenance": {
+      "kind": "historical_submission",
+      "sources": [
+        {
+          "source": "backup.log",
+          "line": 2142,
+          "date": "2024-10-14 17:39:52,437",
+          "outcome": "logged_success"
+        },
+        {
+          "source": "recovery\\github-main\\backup.log",
+          "line": 2142,
+          "date": "2024-10-14 17:39:52,437",
+          "outcome": "logged_success"
+        }
+      ],
+      "legacy_ids": [
+        27
+      ],
+      "note": "Recovered from historical form submissions. Current stock, location, and later edits are unverified.",
+      "classification": "likely_test"
+    },
+    "image_path": "/static/thumbnails/0_0.jpg",
+    "recovery_key": "2ed27a0ffbe37521648d5cb692b703b2cf140f4ff02fb12742f7505507a25597"
+  },
+  {
+    "name": "sdfsdfsdf",
+    "tags": "",
+    "map_id": 1,
+    "x_coord": 69.0117745302714,
+    "y_coord": 253.68050104384133,
+    "x_coord_model": null,
+    "y_coord_model": null,
+    "z_coord_model": null,
+    "color": "red",
+    "zone": "",
+    "quantity": 1,
+    "warning": "bolt",
+    "description": "",
+    "link": "",
+    "status": "archived",
+    "provenance": {
+      "kind": "historical_submission",
+      "sources": [
+        {
+          "source": "backup.log",
+          "line": 3740,
+          "date": "2024-10-14 21:06:18,993",
+          "outcome": "logged_success"
+        },
+        {
+          "source": "recovery\\github-main\\backup.log",
+          "line": 3740,
+          "date": "2024-10-14 21:06:18,993",
+          "outcome": "logged_success"
+        }
+      ],
+      "legacy_ids": [
+        45
+      ],
+      "note": "Recovered from historical form submissions. Current stock, location, and later edits are unverified.",
+      "classification": "likely_test"
+    },
+    "image_path": null,
+    "recovery_key": "3b410705c7b61af5f5ae30ea0112540493a3754faa8fa0d3986701f7d3cf9eba"
+  },
+  {
+    "name": "Soldering Iron",
+    "tags": "electronics",
+    "map_id": 1,
+    "x_coord": 200.0,
+    "y_coord": 250.0,
+    "x_coord_model": null,
+    "y_coord_model": null,
+    "z_coord_model": null,
+    "color": "red",
+    "zone": "B",
+    "quantity": 2,
+    "warning": "fire",
+    "description": "Temperature-controlled soldering iron",
+    "link": "https://example.com/soldering-iron",
+    "status": "archived",
+    "image_path": null,
+    "recovery_key": "2979ad02dfcf93e7adecac2962b0c2abcd97fa4c942ca28899981f9462934d91",
+    "provenance": {
+      "kind": "sample_csv",
+      "sources": [
+        {
+          "source": "recovery/history/items.csv",
+          "line": 3
+        }
+      ],
+      "note": "Example inventory from repository history; not confirmed lab stock."
+    }
+  },
+  {
+    "name": "ss",
+    "tags": "",
+    "map_id": 1,
+    "x_coord": 109.32295405145832,
+    "y_coord": 712.7574179851388,
+    "x_coord_model": null,
+    "y_coord_model": null,
+    "z_coord_model": null,
+    "color": "red",
+    "zone": "",
+    "quantity": 1,
+    "warning": "",
+    "description": "",
+    "link": "",
+    "status": "archived",
+    "provenance": {
+      "kind": "historical_submission",
+      "sources": [
+        {
+          "source": "backup.log",
+          "line": 6466,
+          "date": "2024-10-16 19:06:08,709",
+          "outcome": "submission_only"
+        },
+        {
+          "source": "recovery\\github-main\\backup.log",
+          "line": 6466,
+          "date": "2024-10-16 19:06:08,709",
+          "outcome": "submission_only"
+        },
+        {
+          "source": "backup.log",
+          "line": 6468,
+          "date": "2024-10-16 19:06:08,750",
+          "outcome": "logged_success"
+        },
+        {
+          "source": "recovery\\github-main\\backup.log",
+          "line": 6468,
+          "date": "2024-10-16 19:06:08,750",
+          "outcome": "logged_success"
+        }
+      ],
+      "legacy_ids": [
+        138,
+        139
+      ],
+      "note": "Recovered from historical form submissions. Current stock, location, and later edits are unverified.",
+      "classification": "likely_test"
+    },
+    "image_path": null,
+    "recovery_key": "8aff512b46700011e16d60b63e31262492b26697b530b66c975bb4700505538d"
+  },
+  {
+    "name": "Test",
+    "tags": "sdf",
+    "map_id": 1,
+    "x_coord": 454.9565217391304,
+    "y_coord": 385.695652173913,
+    "x_coord_model": null,
+    "y_coord_model": null,
+    "z_coord_model": null,
+    "color": "",
+    "zone": "",
+    "quantity": 0,
+    "warning": "",
+    "description": "",
+    "link": "",
+    "status": "archived",
+    "provenance": {
+      "kind": "historical_submission",
+      "sources": [
+        {
+          "source": "backup.log",
+          "line": 2803,
+          "date": "2024-10-14 18:33:41,855",
+          "outcome": "logged_success"
+        },
+        {
+          "source": "recovery\\github-main\\backup.log",
+          "line": 2803,
+          "date": "2024-10-14 18:33:41,855",
+          "outcome": "logged_success"
+        }
+      ],
+      "legacy_ids": [
+        29
+      ],
+      "note": "Recovered from historical form submissions. Current stock, location, and later edits are unverified.",
+      "classification": "likely_test"
+    },
+    "image_path": null,
+    "recovery_key": "458d03a37e30ce6cbd3a923080172c8ddf2e83ea8696ebb021b80a29d0dc5ab0"
+  },
+  {
+    "name": "test",
+    "tags": "",
+    "map_id": 1,
+    "x_coord": 162.90338204592902,
+    "y_coord": 192.8818371607516,
+    "x_coord_model": null,
+    "y_coord_model": null,
+    "z_coord_model": null,
+    "color": "red",
+    "zone": "",
+    "quantity": 1,
+    "warning": "glasses,hand,fire,bolt-lightning",
+    "description": "",
+    "link": "",
+    "status": "archived",
+    "provenance": {
+      "kind": "historical_submission",
+      "sources": [
+        {
+          "source": "backup.log",
+          "line": 3224,
+          "date": "2024-10-14 20:18:52,165",
+          "outcome": "logged_success"
+        },
+        {
+          "source": "recovery\\github-main\\backup.log",
+          "line": 3224,
+          "date": "2024-10-14 20:18:52,165",
+          "outcome": "logged_success"
+        }
+      ],
+      "legacy_ids": [
+        39
+      ],
+      "note": "Recovered from historical form submissions. Current stock, location, and later edits are unverified.",
+      "classification": "likely_test"
+    },
+    "image_path": null,
+    "recovery_key": "7d18d8cdfebeecad7d42c5276bf97ddb8c2e19bc18cce6cbb4cd9f984406680f"
+  },
+  {
+    "name": "test 2",
+    "tags": "sdf",
+    "map_id": 1,
+    "x_coord": 458.08695652173907,
+    "y_coord": 362.73913043478257,
+    "x_coord_model": null,
+    "y_coord_model": null,
+    "z_coord_model": null,
+    "color": "",
+    "zone": "",
+    "quantity": 0,
+    "warning": "",
+    "description": "",
+    "link": "",
+    "status": "archived",
+    "provenance": {
+      "kind": "historical_submission",
+      "sources": [
+        {
+          "source": "backup.log",
+          "line": 2808,
+          "date": "2024-10-14 18:34:01,300",
+          "outcome": "logged_success"
+        },
+        {
+          "source": "recovery\\github-main\\backup.log",
+          "line": 2808,
+          "date": "2024-10-14 18:34:01,300",
+          "outcome": "logged_success"
+        }
+      ],
+      "legacy_ids": [
+        30
+      ],
+      "note": "Recovered from historical form submissions. Current stock, location, and later edits are unverified.",
+      "classification": "likely_test"
+    },
+    "image_path": "/static/thumbnails/ChessBoard-1-300x300.png",
+    "recovery_key": "e69f0293afac133d6841a3b2f7a21615d44671d40d81ffca722a042f2dbaba64"
+  },
+  {
+    "name": "Test2",
+    "tags": "",
+    "map_id": 1,
+    "x_coord": 165.22549663852803,
+    "y_coord": 272.0590405904059,
+    "x_coord_model": null,
+    "y_coord_model": null,
+    "z_coord_model": null,
+    "color": "red",
+    "zone": "",
+    "quantity": 1,
+    "warning": "",
+    "description": "",
+    "link": "",
+    "status": "archived",
+    "provenance": {
+      "kind": "historical_submission",
+      "sources": [
+        {
+          "source": "backup.log",
+          "line": 5239,
+          "date": "2024-10-16 12:52:17,944",
+          "outcome": "logged_success"
+        },
+        {
+          "source": "recovery\\github-main\\backup.log",
+          "line": 5239,
+          "date": "2024-10-16 12:52:17,944",
+          "outcome": "logged_success"
+        }
+      ],
+      "legacy_ids": [
+        70
+      ],
+      "note": "Recovered from historical form submissions. Current stock, location, and later edits are unverified.",
+      "classification": "likely_test"
+    },
+    "image_path": null,
+    "recovery_key": "30d064383e60f54a6af817607d2a8211e1808e061b7c16da5e9b1434910a08d8"
+  },
+  {
+    "name": "Test2",
+    "tags": "",
+    "map_id": 1,
+    "x_coord": 482.00657129858973,
+    "y_coord": 264.6053682454633,
+    "x_coord_model": null,
+    "y_coord_model": null,
+    "z_coord_model": null,
+    "color": "red",
+    "zone": "",
+    "quantity": 1,
+    "warning": "",
+    "description": "",
+    "link": "",
+    "status": "archived",
+    "provenance": {
+      "kind": "historical_submission",
+      "sources": [
+        {
+          "source": "backup.log",
+          "line": 5247,
+          "date": "2024-10-16 12:52:25,812",
+          "outcome": "logged_success"
+        },
+        {
+          "source": "recovery\\github-main\\backup.log",
+          "line": 5247,
+          "date": "2024-10-16 12:52:25,812",
+          "outcome": "logged_success"
+        }
+      ],
+      "legacy_ids": [
+        71
+      ],
+      "note": "Recovered from historical form submissions. Current stock, location, and later edits are unverified.",
+      "classification": "likely_test"
+    },
+    "image_path": null,
+    "recovery_key": "a95861ccaaff1f97470cdc503ec60824bbaad8626242bdcae01c1cb5a58a0e6e"
+  },
+  {
+    "name": "Test2",
+    "tags": "",
+    "map_id": 1,
+    "x_coord": 165.22549663852803,
+    "y_coord": 314.917656573826,
+    "x_coord_model": null,
+    "y_coord_model": null,
+    "z_coord_model": null,
+    "color": "red",
+    "zone": "",
+    "quantity": 2,
+    "warning": "",
+    "description": "",
+    "link": "",
+    "status": "archived",
+    "provenance": {
+      "kind": "historical_submission",
+      "sources": [
+        {
+          "source": "backup.log",
+          "line": 5302,
+          "date": "2024-10-16 13:01:12,740",
+          "outcome": "logged_success"
+        },
+        {
+          "source": "recovery\\github-main\\backup.log",
+          "line": 5302,
+          "date": "2024-10-16 13:01:12,740",
+          "outcome": "logged_success"
+        }
+      ],
+      "legacy_ids": [
+        73
+      ],
+      "note": "Recovered from historical form submissions. Current stock, location, and later edits are unverified.",
+      "classification": "likely_test"
+    },
+    "image_path": null,
+    "recovery_key": "ef3b6596bf3c435ee3d87f2b7ba0add8f8097c239336e261882fc9774cdf3071"
+  },
+  {
+    "name": "thing",
+    "tags": "",
+    "map_id": 1,
+    "x_coord": 55.158914405010435,
+    "y_coord": 140.54881002087683,
+    "x_coord_model": null,
+    "y_coord_model": null,
+    "z_coord_model": null,
+    "color": "red",
+    "zone": "",
+    "quantity": 2,
+    "warning": "bolt-lightning",
+    "description": "",
+    "link": "",
+    "status": "archived",
+    "provenance": {
+      "kind": "historical_submission",
+      "sources": [
+        {
+          "source": "backup.log",
+          "line": 3695,
+          "date": "2024-10-14 21:04:19,459",
+          "outcome": "logged_success"
+        },
+        {
+          "source": "recovery\\github-main\\backup.log",
+          "line": 3695,
+          "date": "2024-10-14 21:04:19,459",
+          "outcome": "logged_success"
+        }
+      ],
+      "legacy_ids": [
+        42
+      ],
+      "note": "Recovered from historical form submissions. Current stock, location, and later edits are unverified.",
+      "classification": "likely_test"
+    },
+    "image_path": null,
+    "recovery_key": "599e5c2a52de6dbf18bd04d558bda338fa0921642e0dbb01e03bcdcd37f63586"
+  },
+  {
+    "name": "thing",
+    "tags": "thing",
+    "map_id": 2,
+    "x_coord": 733.8523466610035,
+    "y_coord": 197.06378343124817,
+    "x_coord_model": null,
+    "y_coord_model": null,
+    "z_coord_model": null,
+    "color": "red",
+    "zone": "",
+    "quantity": 1,
+    "warning": "",
+    "description": "",
+    "link": "",
+    "status": "archived",
+    "provenance": {
+      "kind": "historical_submission",
+      "sources": [
+        {
+          "source": "backup.log",
+          "line": 5592,
+          "date": "2024-10-16 16:58:28,611",
+          "outcome": "logged_success"
+        },
+        {
+          "source": "recovery\\github-main\\backup.log",
+          "line": 5592,
+          "date": "2024-10-16 16:58:28,611",
+          "outcome": "logged_success"
+        }
+      ],
+      "legacy_ids": [
+        130
+      ],
+      "note": "Recovered from historical form submissions. Current stock, location, and later edits are unverified.",
+      "classification": "likely_test"
+    },
+    "image_path": null,
+    "recovery_key": "aed272e8d541830e6087fbd4457108a09b3122b0f92db200a41af48be45ccb89"
+  },
+  {
+    "name": "thing",
+    "tags": "",
+    "map_id": 1,
+    "x_coord": 36.68843423799583,
+    "y_coord": 108.99507306889353,
+    "x_coord_model": null,
+    "y_coord_model": null,
+    "z_coord_model": null,
+    "color": "red",
+    "zone": "",
+    "quantity": 3,
+    "warning": "bolt-lightning",
+    "description": "",
+    "link": "",
+    "status": "archived",
+    "provenance": {
+      "kind": "historical_submission",
+      "sources": [
+        {
+          "source": "backup.log",
+          "line": 3700,
+          "date": "2024-10-14 21:04:41,990",
+          "outcome": "logged_success"
+        },
+        {
+          "source": "recovery\\github-main\\backup.log",
+          "line": 3700,
+          "date": "2024-10-14 21:04:41,990",
+          "outcome": "logged_success"
+        }
+      ],
+      "legacy_ids": [
+        43
+      ],
+      "note": "Recovered from historical form submissions. Current stock, location, and later edits are unverified.",
+      "classification": "likely_test"
+    },
+    "image_path": "/static/thumbnails/ac085e93-9a36-4743-888a-2ecd0d116126.jpg",
+    "recovery_key": "cf6eb89fd317a08fd91d5a0da1ec5920d30d8a058b1fb26b616120dcff26c80c"
+  },
+  {
+    "name": "werwerwe",
+    "tags": "werwerwe",
+    "map_id": 1,
+    "x_coord": 177.8508915484339,
+    "y_coord": 293.21728735893896,
+    "x_coord_model": null,
+    "y_coord_model": null,
+    "z_coord_model": null,
+    "color": "",
+    "zone": "",
+    "quantity": 0,
+    "warning": "",
+    "description": "",
+    "link": "",
+    "status": "archived",
+    "provenance": {
+      "kind": "historical_submission",
+      "sources": [
+        {
+          "source": "backup.log",
+          "line": 1876,
+          "date": "2024-10-14 17:21:15,755",
+          "outcome": "logged_success"
+        },
+        {
+          "source": "recovery\\github-main\\backup.log",
+          "line": 1876,
+          "date": "2024-10-14 17:21:15,755",
+          "outcome": "logged_success"
+        }
+      ],
+      "legacy_ids": [
+        26
+      ],
+      "note": "Recovered from historical form submissions. Current stock, location, and later edits are unverified.",
+      "classification": "likely_test"
+    },
+    "image_path": null,
+    "recovery_key": "8ca0b6cd28fbc80b21b294506162cde81adce5a1d1e36c415eb2af6bcf1f5444"
+  }
+]

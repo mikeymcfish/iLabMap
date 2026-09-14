@@ -1,552 +1,356 @@
-<!DOCTYPE html>
-<html lang="en" data-bs-theme="dark">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iLab Map</title>
-    <link rel="stylesheet" href="/static/css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <script>
-        let selectedCoords = { x: 0, y: 0, z: 0 }; 
-    </script>
-</head>
-<body>
-    <div class="container-fluid py-4">
-        <div class="d-flex justify-content-between align-items-center mb-4">
-            <h1 class="text-center mb-0 flex-grow-1">iLab Map (v.4)</h1>
-            <div class="flex-shrink-0" style="min-width: 200px;">
-                <select id="mapSelector" class="form-select">
-                    <option value="">Select a map</option>
-                </select>
-            </div>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#163f35" />
+    <title>iLab · Tools & spaces</title>
+    <link rel="icon" href="/static/img/icons/bolt.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/static/css/styles.css" />
+    <script type="module" src="/static/js/app.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#inventory">Skip to inventory</a>
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="iLab home"
+        ><span class="brand-icon" aria-hidden="true">▦</span
+        ><b>iLab<span> / </span></b
+        ><span class="brand-sub">TOOLS & SPACES</span></a
+      >
+      <nav aria-label="Main navigation">
+        <button id="finder-open" class="quiet">Tool finder</button
+        ><a id="export" href="/api/export" hidden>Export inventory</a
+        ><button id="staff-button" class="outline">Staff sign in</button>
+      </nav>
+    </header>
+    <main>
+      <section class="intro">
+        <div>
+          <p class="eyebrow">THE INNOVATION LAB</p>
+          <h1>Good ideas start here.</h1>
+          <p>Find the right tool. See where it lives. Make something.</p>
         </div>
-        <div class="row">
-            <div class="col-md-4 d-flex flex-column">
-                <div class="mb-3">
-                    <div class="input-group">
-                        <select id="searchType" class="form-select" style="max-width: 120px;">
-                            <option value="all">All</option>
-                            <option value="name">Name</option>
-                            <option value="tags">Tags</option>
-                        </select>
-                        <input type="text" id="searchInput" class="form-control" placeholder="Search items...">
-                    </div>
-                </div>
-                <div class="mb-3">
-                    <button id="addItemBtn" class="btn btn-outline-primary me-2" disabled>
-                        <i class="fas fa-plus"></i> Add
-                    </button>
-                    <button id="clearBtn" class="btn btn-outline-secondary">
-                        <i class="fas fa-broom"></i> Clear
-                    </button>
-
-                    <button id="openChatBtn" class="btn btn-outline-info ms-2">
-                        <i class="fas fa-comments"></i> Chat
-                    </button>
-                </div>
-                <div id="itemList" class="list-group mt-3 flex-grow-1 overflow-auto">
-                    <!-- Items will be dynamically added here -->
-                </div>
+        <button id="add-button" class="primary" hidden>＋ Add item</button>
+      </section>
+      <div
+        id="notice"
+        class="notice"
+        role="status"
+        aria-live="polite"
+        hidden
+      ></div>
+      <div class="workspace">
+        <aside class="inventory-panel" id="inventory" aria-label="Inventory">
+          <label class="search-box"
+            ><span aria-hidden="true">⌕</span
+            ><input
+              id="search"
+              type="search"
+              placeholder="Search tools, materials, tags…"
+              aria-label="Search inventory"
+              autocomplete="off"
+            /><kbd>/</kbd></label
+          >
+          <div class="filters">
+            <label
+              >Status<select id="status-filter">
+                <option value="active">All items</option>
+                <option value="needs_review">Needs review</option>
+                <option value="available">Verified items</option>
+                <option value="archived" hidden>Archived & samples</option>
+              </select></label
+            ><label
+              >Stock<select id="stock-filter">
+                <option value="">Any quantity</option>
+                <option value="in">In stock</option>
+                <option value="out">Out of stock</option>
+              </select></label
+            >
+          </div>
+          <div class="list-heading">
+            <h2>Explore inventory</h2>
+            <span id="item-count" aria-live="polite">Loading…</span>
+          </div>
+          <div id="item-list" class="item-list" aria-busy="true"></div>
+          <button id="load-more" class="outline wide" hidden>
+            Load more items
+          </button>
+          <p class="recovery-note">
+            Recovered inventory is marked for review. Confirm quantities and
+            locations before use.
+          </p>
+        </aside>
+        <section class="map-panel" aria-label="Lab map">
+          <div class="map-toolbar">
+            <label class="map-select"
+              >SPACE<select id="map-select" aria-label="Choose a space"></select
+            ></label>
+            <div class="segmented" aria-label="Map view">
+              <button id="view-2d" aria-pressed="true">Floor plan</button
+              ><button id="view-3d" aria-pressed="false">3D lab</button>
             </div>
-            <div class="col-md-8">
-                <canvas id="mapCanvas" style="display:none;" class="img-fluid"></canvas>
-                <!-- 3D Model Container Section -->
-                <div id="model-container"></div>
-                <!-- Three.js core -->
-                <script type="importmap">
-                  {
-                    "imports": {
-                      "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js",
-                      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"
-                    }
-                  }
-                </script>
-                <script type="module">
-                    
-                    import * as THREE from 'three';
-                    window.THREE = THREE; // Expose THREE globally so it can be used in other scripts
-                    import Stats from 'three/addons/libs/stats.module.js';
-                    import { GUI } from 'three/addons/libs/lil-gui.module.min.js';
-
-                    import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
-                    import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
-                    import { SSAOPass } from 'three/addons/postprocessing/SSAOPass.js';
-                    import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
-                    import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
-                    import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-                    let scene, camera, renderer, controls, composer, mesh, previousMarker;
-
-                    function init() {
-                        // Scene setup
-                        scene = new THREE.Scene();
-                        window.scene = scene;
-
-                        // camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
-                        const aspect = window.innerWidth / window.innerHeight;
-
-                        const frustumSize = 3;  // Control the zoom level of the orthographic view
-                        camera = new THREE.OrthographicCamera(
-                            -frustumSize * aspect / 2,  // left
-                            frustumSize * aspect / 2,   // right
-                            frustumSize / 2,            // top
-                            -frustumSize / 2,           // bottom
-                            0.1,                        // near
-                            30                        // far
-                        );
-                        renderer = new THREE.WebGLRenderer({ alpha: true });  // Enable transparency
-                        renderer.setSize(window.innerWidth, window.innerHeight);
-
-                        // Set the clear color to transparent
-                        renderer.setClearColor(0x000000, 0);  // The second argument (0) represents the alpha value (transparent)
-                        renderer.shadowMap.enabled = true;  // Enable shadow mapping
-                        renderer.shadowMap.type = THREE.PCFSoftShadowMap;  // Use soft shadows for smoother results
-
-                        // Load 3D model (Example using GLTFLoader)
-                        let loader = new GLTFLoader();
-                        let ambientLight = new THREE.AmbientLight(0xffffff, .9);
-                        const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
-                        directionalLight.castShadow = true;  // Enable shadows for the light
-                        directionalLight.shadow.mapSize.width = 4096;  // Shadow map resolution (higher values give better quality)
-                        directionalLight.shadow.mapSize.height = 4096;
-                        directionalLight.shadow.camera.near = 0.1;
-                        directionalLight.shadow.camera.far = 50;
-                        directionalLight.position.set(-2, 2, 1); // Initial position of the light
-
-                        const pointLight = new THREE.PointLight(0xffffff, 1, 2000);
-                            pointLight.castShadow = true;  // Enable shadows for the light
-                            pointLight.shadow.mapSize.width = 1024;  // Shadow map resolution (higher values give better quality)
-                            pointLight.shadow.mapSize.height = 1024;
-                            pointLight.shadow.camera.near = 0.1;
-                            pointLight.shadow.camera.far = 90;
-                            pointLight.position.set(0,1.5,0); // Initial position of the light
-
-
-                        const lightTarget = new THREE.Object3D();
-                        lightTarget.position.set(0, 0, 0); // Pointing at the center of the scene
-                        // directionalLight.target = lightTarget;
-                        directionalLight.target = lightTarget;
-                        // scene.add(directionalLight);
-                        scene.add(ambientLight);
-
-                        //scene.add(pointLight);
-                        loader.load('/static/iLab.gltf', function(gltf) {
-                            gltf.scene.scale.set(.015,.015,.015);  // Scale the model by a factor of 2
-                            gltf.scene.rotation.set(THREE.MathUtils.degToRad(0), THREE.MathUtils.degToRad(50), THREE.MathUtils.degToRad(0));
-                            gltf.scene.traverse(function(node) {
-                                if (node.isMesh) {
-                                    mesh = node;  // Ensure we access the correct mesh
-                                    node.castShadow = true;    // Make the model cast shadows
-                                    node.receiveShadow = true; // Make the model receive shadows
-                                    // Force material update
-                                    mesh.material.needsUpdate = true;
-                                }
-                            });
-                            gltf.scene.position.y -= 0.5; // Adjust 'offsetValue' to move the model down
-
-                            scene.add(gltf.scene);
-
-                        });
-                        // Enable anti-aliasing and transparency
-                        renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
-                        renderer.setSize(window.innerWidth, window.innerHeight);
-                        renderer.setPixelRatio(window.devicePixelRatio);  // Ensure proper scaling on high DPI screens
-
-                        // Set the clear color to transparent
-                        renderer.setClearColor(0x000000, 0);  // The second argument (0) represents the alpha value (transparent)
-                        renderer.shadowMap.enabled = true;  // Enable shadow mapping
-                        renderer.shadowMap.type = THREE.PCFSoftShadowMap;  // Use soft shadows for smoother results
-
-                        document.getElementById('model-container').appendChild(renderer.domElement);
-                        controls = new OrbitControls(camera, renderer.domElement);
-                        // Limit rotation to the Y-axis only (no restrictions for Y-axis rotation)
-                        controls.minAzimuthAngle = -Infinity;  // No restriction on Y rotation
-                        controls.maxAzimuthAngle = Infinity;
-
-                        // Limit the up/down rotation (polar angle) within 20 degrees
-                        // THREE.Math.degToRad converts degrees to radians
-                        controls.minPolarAngle = THREE.MathUtils.degToRad(-60);  // Minimum limit (90 degrees - 10 degrees)
-                        controls.maxPolarAngle = THREE.MathUtils.degToRad(60);  // Maximum limit (90 degrees + 10 degrees)
-
-                        //Limit rotation around 
-
-                        // Prevent panning
-                        controls.enablePan = true;
-
-                        // Continuously update the controls
-                        controls.update();
-                        // Post-processing setup
-                        composer = new EffectComposer(renderer);  // No custom WebGLRenderTarget is needed
-                        const renderPass = new RenderPass(scene, camera);
-                        composer.addPass(renderPass);
-
-
-                        let box = new THREE.Box3().setFromObject(scene);
-
-                        // Get the center of the bounding box
-                        let center = new THREE.Vector3();
-                        box.getCenter(center);
-
-                        // Reposition the camera to point at the center of the model
-                        camera.position.set(center.x, center.y, center.z + 20);  // Set camera Z to be in front of the model
-                        camera.lookAt(center);  // Make the camera look at the center of the model
-                        // const directionalLightHelper = new THREE.DirectionalLightHelper(directionalLight, 5);
-                        // scene.add(directionalLightHelper);
-
-                        // const pointLightHelper = new THREE.PointLightHelper(pointLight, 5);
-                        // scene.add(pointLightHelper);
-                        console.log("Model loaded and camera centered!");
-                        composer.render();
-                        // const helper = new THREE.CameraHelper( camera );
-                        // scene.add( helper );
-                        // Click to add marker
-                        window.addEventListener('click', onModelClick);
-
-                        animate();
-                    }
-
-                    function onModelClick(event) {
-                        if (!event.shiftKey) return;
-
-                        let rect = renderer.domElement.getBoundingClientRect();
-                        let mouse = new THREE.Vector2(
-                            ((event.clientX - rect.left) / rect.width) * 2 - 1,
-                            -((event.clientY - rect.top) / rect.height) * 2 + 1
-                        );
-                        let raycaster = new THREE.Raycaster();
-                        raycaster.setFromCamera(mouse, camera);
-
-                        let intersects = raycaster.intersectObjects(scene.children);
-                        if (intersects.length > 0) {
-                            let intersect = intersects[0];
-                            let marker = new THREE.Mesh(
-                                new THREE.SphereGeometry(0.05, 8, 8),
-                                new THREE.MeshPhongMaterial({ color: 0xff0000 })
-                            );
-                            marker.position.copy(intersect.point);
-
-                            if (previousMarker) scene.remove(previousMarker);
-                            scene.add(marker);
-                            previousMarker = marker;
-
-                            // Save coordinates
-                            selectedCoords = {
-                                x: intersect.point.x,
-                                y: intersect.point.y,
-                                z: intersect.point.z
-                            };
-                            console.log("Marker added at coordinates:", selectedCoords);
-                        }
-                    }
-
-                    let hoverMarker = null;
-
-                    function rotateToPoint(x, y, z) {
-                        const target = new THREE.Vector3(x, y, z);
-                        controls.target.copy(target);
-                        camera.position.set(target.x + 2, target.y + 2, target.z + 2); 
-                        camera.lookAt(target);
-                        controls.update();
-                    }
-
-                    function addMarkerFromCoords(x, y, z) {
-                        console.log(x, y, z);
-                    }
-    
-                    function addMarker(item) {
-                          // console.log("creating a marker!");
-                          console.log(item);
-                          if (!item.x_model || !item.y_model || !item.z_model) {
-                              console.log("item does not have coordinates");
-                              return; // Ensure coordinates are available
-                          }
-
-                          // Create a green sphere marker
-                          const markerGeometry = new THREE.SphereGeometry(.0, 16,16);
-                          const markerMaterial = new THREE.MeshPhongMaterial({ color: 0xffff00 }); // Green color
-                          hoverMarker = new THREE.Mesh(markerGeometry, markerMaterial);
-                          
-                          // Define the target position for the top of the hoverMarker to point to
-                          const targetPosition = new THREE.Vector3(.1, .25, 6.25);
-
-                          // Orient the hoverMarker so that its "top" points toward the target position
-                          hoverMarker.lookAt(targetPosition);
-                        
-                        // Create a cone to represent an arrow pointing downwards
-                        const arrowGeometry = new THREE.ConeGeometry(0.05, 0.2, 16); // Adjust size for the arrowhead
-                        const arrowMaterial = new THREE.MeshPhongMaterial({ color: 0x00ff00 }); // Yellow color for the arrow
-                        const arrowMesh = new THREE.Mesh(arrowGeometry, arrowMaterial);
-                        hoverMarker.position.set(item.x_model, item.y_model, item.z_model);
-
-                        // Position the arrow above the sphere and rotate it to point downwards
-                        arrowMesh.position.set(0, 0.15, 0); // Adjust this if necessary to position above the sphere
-                        arrowMesh.rotation.x = Math.PI; // Rotate the arrow to point downwards
-
-                        // Optionally, add a cylinder or another line to simulate the arrow shaft (if needed)
-                        const shaftGeometry = new THREE.CylinderGeometry(0.02, 0.02, 1, 16); // Thin shaft for the arrow
-                        const shaftMaterial = new THREE.MeshPhongMaterial({ color: 0x00ff00 });
-                        const arrowShaft = new THREE.Mesh(shaftGeometry, shaftMaterial);
-
-                        // Position the shaft above the sphere and below the arrowhead
-                        arrowShaft.position.set(0, .7, 0); // Slightly above the sphere
-
-                        // Group the arrowhead and shaft together, then add them to the hoverMarker
-                        hoverMarker.add(arrowShaft);
-                        hoverMarker.add(arrowMesh);
-
-                          // Add the marker to the scene
-                          scene.add(hoverMarker);
-                          // console.log(scene.children["mesh"]);
-                          console.log("marker added to scene");
-                      }
-
-                    function removeMarker() {
-                          if (hoverMarker) {
-                              scene.remove(hoverMarker);
-                              hoverMarker = null;
-                          }
-                      }
-
-                    window.addMarker = function(item) {
-                       addMarker(item);
-                    };
-                    window.removeMarker = removeMarker;
-                    function animate() {
-                        requestAnimationFrame(animate);
-                        controls.update();
-                        renderer.render(scene, camera);
-                        // console.log(camera.position);
-                        // console.log(camera.rotation);
-
-                    }
-
-                    async function handleChatResponse(message) {
-                        try {
-                            print(message);
-                            const response = await fetch('/chat', {
-                                method: 'POST',
-                                headers: {
-                                    'Content-Type': 'application/json',
-                                },
-                                body: JSON.stringify({ message: message })
-                            });
-
-                            const data = await response.json();
-                            print(data.message);
-
-                            // Display the message
-                            addMessage(data.message, false);
-
-                            // Add any markers
-                            if (data.markers && Array.isArray(data.markers)) {
-                                print("Adding markers...");
-                                data.markers.forEach(marker => {
-                                    if (marker.x_coord_model !== undefined && marker.y_coord_model !== undefined && marker.z_coord_model !== undefined) {
-                                        addMarkerFromCoords(marker.x_coord_model, marker.y_coord_model, marker.z_coord_model);
-                                    } else {
-                                        console.warn(`Incomplete marker data for item_id ${marker.item_id}`);
-                                    }
-                                });
-                            }
-                        } catch (error) {
-                            console.error('Error:', error);
-                        }
-                    }
-
-                    function animateCameraToPosition(targetPosition, targetRotation, duration = 500) {
-                        const startPosition = new THREE.Vector3().copy(camera.position);
-                        const startRotation = new THREE.Euler().copy(camera.rotation);
-                        const endPosition = new THREE.Vector3(targetPosition.x, targetPosition.y, targetPosition.z);
-                        const endRotation = new THREE.Euler(targetRotation._x, targetRotation._y, targetRotation._z, targetRotation._order);
-
-                        const startTime = performance.now();
-
-                        controls.enabled = false; // Disable controls during animation
-
-                        function update() {
-                            const elapsed = performance.now() - startTime;
-                            const t = Math.min(elapsed / duration, 1);
-
-                            camera.position.lerpVectors(startPosition, endPosition, t);
-                            camera.rotation.set(
-                                THREE.MathUtils.lerp(startRotation.x, endRotation.x, t),
-                                THREE.MathUtils.lerp(startRotation.y, endRotation.y, t),
-                                THREE.MathUtils.lerp(startRotation.z, endRotation.z, t)
-                            );
-
-                            if (t < 1) {
-                                requestAnimationFrame(update);
-                            } else {
-                                controls.enabled = true; // Re-enable controls after animation
-                                controls.update();
-                            }
-                        }
-                        // camera.lookAt(new THREE.Vector3());
-                        controls.update();
-                        requestAnimationFrame(update);
-                    }
-
-                    window.addEventListener('resize', () => {
-                        const container = document.getElementById('model-container');
-                        if (container && renderer) {
-                            camera.aspect = container.clientWidth / container.clientHeight;
-                            camera.updateProjectionMatrix();
-                            renderer.setSize(container.clientWidth, container.clientHeight);
-                        }
-                    });
-
-                    // Example of how to animate the camera to a specific position and rotation
-                    document.getElementById('itemList').addEventListener('mouseover', () => {
-                        // animateCameraToPosition(
-                        //     {
-                        //         x: 0.29650257937239366,
-                        //         y: 4.049815029534092,
-                        //         z: 0.09489928840147308
-                        //     },
-                        //     {
-                        //         _x: -1.5673525574597795,
-                        //         _y: 0.02,
-                        //         _z: 0.8681561256357849,
-                        //         _order: "XYZ"
-                        //     }
-                        // );
-                    });
-                   
-                    init();
-                </script>
+          </div>
+          <div id="placement-bar" class="placement-bar" hidden>
+            <span id="placement-text">Choose a location on the map.</span
+            ><button id="cancel-placement" class="quiet">
+              Cancel placement
+            </button>
+          </div>
+          <div id="map-stage" class="map-stage">
+            <div id="floor-plan" class="floor-plan">
+              <div id="floor-surface" class="floor-surface">
+                <img id="floor-image" alt="Floor plan of the selected space" />
+                <div id="floor-markers" class="floor-markers"></div>
+              </div>
             </div>
-        </div>
-    </div>
-
-    <div class="card position-absolute" style="display: none;" id="addItemForm">
-        <div class="card-body">
-            <h5 class="card-title">Add New Item</h5>
-            <form id="itemForm">
-                <div class="mb-3">
-                    <label for="itemName" class="form-label">Item Name</label>
-                    <input type="text" class="form-control" id="itemName" required>
-                </div>
-                <div class="mb-3">
-                    <label for="itemImage" class="form-label">Upload Image</label>
-                    <input type="file" class="form-control" id="itemImage" accept="image/*">
-                    <div id="dropArea" class="mt-2">
-                        Drag and drop image here
-                    </div>
-                </div>
-                <div class="mb-3">
-                    <label for="itemTags" class="form-label">Tags (comma-separated)</label>
-                    <input type="text" class="form-control" id="itemTags">
-                </div>
-                <input type="hidden" id="itemColor" value="red">
-                <input type="hidden" id="itemZone" value="">
-                <div class="mb-3">
-                    <label for="itemQuantity" class="form-label">Quantity</label>
-                    <input type="number" class="form-control" id="itemQuantity" value="1" min="1">
-                </div>
-                <div class="mb-3">
-                    <label for="itemDescription" class="form-label">Description</label>
-                    <textarea class="form-control" id="itemDescription" rows="3"></textarea>
-                </div>
-                <div class="mb-3">
-                    <label for="itemLink" class="form-label">External Link</label>
-                    <input type="url" class="form-control" id="itemLink" placeholder="https://example.com">
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">Safety Hazards</label>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="glasses" id="glasses">
-                        <label class="form-check-label" for="glasses">
-                            Use safety glasses
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="hand" id="hand">
-                        <label class="form-check-label" for="hand">
-                            Use gloves
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="fire" id="fire">
-                        <label class="form-check-label" for="fire">
-                            Flammable
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="bolt" id="bolt">
-                        <label class="form-check-label" for="bolt">
-                            High voltage
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="mask" id="mask">
-                        <label class="form-check-label" for="mask">
-                            Use mask
-                        </label>
-                    </div>
-                </div>
-                <div class="d-flex justify-content-between">
-                    <button type="button" class="btn btn-primary" id="updateItemBtn">Save Item</button>
-                    <button type="button" class="btn btn-secondary" id="cancelAddBtn">Cancel</button>
-                </div>
-            </form>
-        </div>
-    </div>
-
-    <!-- Item Details Modal -->
-    <div class="modal fade" id="itemDetailsModal" tabindex="-1" aria-labelledby="itemDetailsModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="itemDetailsModalLabel">Item Details</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <img id="itemDetailsImage" src="" alt="Item Image" class="img-fluid mb-3">
-                        </div>
-                        <div class="col-md-6">
-                            <h3 id="itemDetailsName"></h3>
-                            <p id="itemDetailsTags"></p>
-                            <p id="itemDetailsQuantity"></p>
-                            <p id="itemDetailsDescription"></p>
-                            <a id="itemDetailsLink" href="" target="_blank" rel="noopener noreferrer">External Link</a>
-                            <div id="itemDetailsWarnings" class="mt-3"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
+            <div id="model-view" class="model-view" hidden></div>
+            <div id="map-error" class="map-error" role="status" hidden></div>
+            <div class="map-legend">
+              <span class="dot"></span> Item location
+              <span class="dot selected"></span> Selected item
             </div>
-        </div>
-    </div>
-    <div class="modal fade" id="chatModal" tabindex="-1" aria-labelledby="chatModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="chatModalLabel">Ask the iLab</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div id="chatMessages"> 
-                        <div id="loadingSpinner" style="display: none;">
-                            <i class="fas fa-spinner fa-spin"></i> iLab is thinking...
-                        </div>
-                    </div>
-                    
-                    <div class="input-group mt-3">
-                        <input type="text" id="userInput" class="form-control" placeholder="Type your message...">
-                        <button class="btn btn-primary" id="sendMessage">Send</button>
-                    </div>
-                </div>
+          </div>
+          <div class="map-footer">
+            <span id="map-hint">Select a tool to find it on the map.</span
+            ><button id="reset-view" class="quiet">Reset view ↗</button>
+          </div>
+          <section
+            id="item-detail"
+            class="item-detail"
+            aria-label="Selected item"
+            hidden
+          >
+            <img id="detail-image" alt="" />
+            <div class="detail-main">
+              <div class="detail-heading">
+                <h2 id="detail-name"></h2>
+                <span id="detail-status" class="badge"></span>
+              </div>
+              <p id="detail-meta"></p>
+              <p id="detail-description"></p>
+              <div id="detail-warnings" class="warnings"></div>
+              <div class="detail-actions">
+                <a
+                  id="detail-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  hidden
+                  >Equipment instructions ↗</a
+                ><button id="copy-link" class="quiet">Copy item link</button
+                ><button id="edit-button" class="outline" hidden>
+                  Edit item</button
+                ><button id="history-button" class="quiet" hidden>
+                  History</button
+                ><button id="archive-button" class="quiet danger" hidden>
+                  Archive
+                </button>
+              </div>
             </div>
+          </section>
+        </section>
+      </div>
+      <footer class="page-footer">
+        <span>iLab · A place to find, learn, and make.</span
+        ><span id="connection-status">Local inventory</span>
+      </footer>
+    </main>
+    <dialog id="login-dialog">
+      <form id="login-form">
+        <div class="dialog-heading">
+          <h2>Staff sign in</h2>
+          <button
+            type="button"
+            data-close="login-dialog"
+            class="icon-button"
+            aria-label="Close sign in"
+          >
+            ×
+          </button>
         </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <script src="/static/js/script.js"></script>
-    <script>
-        
-    </script>
-</body>
+        <p>Sign in to update inventory and review recovered records.</p>
+        <label
+          >Password<input
+            id="password"
+            type="password"
+            required
+            autocomplete="current-password"
+        /></label>
+        <p id="login-error" class="form-error" role="alert"></p>
+        <button type="submit" class="primary wide">Sign in</button>
+      </form>
+    </dialog>
+    <dialog id="edit-dialog" class="edit-dialog">
+      <form id="edit-form">
+        <div class="dialog-heading">
+          <h2 id="edit-title">Add an item</h2>
+          <button
+            type="button"
+            data-close="edit-dialog"
+            class="icon-button"
+            aria-label="Cancel editing"
+          >
+            ×
+          </button>
+        </div>
+        <div class="form-grid">
+          <label class="full"
+            >Item name<input name="name" maxlength="100" required
+          /></label>
+          <label class="full"
+            >Tags<input
+              name="tags"
+              maxlength="500"
+              placeholder="e.g. electronics, soldering"
+          /></label>
+          <label
+            >Quantity<input
+              name="quantity"
+              type="number"
+              min="0"
+              max="1000000000"
+              step="1"
+              required
+              value="1"
+          /></label>
+          <label
+            >Location / shelf<input
+              name="zone"
+              maxlength="100"
+              placeholder="e.g. Cabinet A"
+          /></label>
+          <label
+            >Status<select name="status">
+              <option value="available">Verified / available</option>
+              <option value="needs_review">Needs review</option>
+              <option value="archived">Archived</option>
+            </select></label
+          >
+          <label>Space<select name="map_id" id="edit-map"></select></label>
+          <label class="full"
+            >Description<textarea
+              name="description"
+              maxlength="10000"
+              rows="3"
+            ></textarea>
+          </label>
+          <label class="full"
+            >Instructions link<input
+              name="link"
+              type="url"
+              maxlength="500"
+              placeholder="https://…"
+          /></label>
+          <fieldset class="full">
+            <legend>Safety reminders</legend>
+            <div id="warning-options" class="warning-options"></div>
+          </fieldset>
+          <label class="full"
+            >Photo<input
+              id="edit-image"
+              type="file"
+              accept="image/png,image/jpeg,image/webp,image/gif"
+            /><span class="field-note"
+              >Saved only when you choose Save. Maximum 8 MB.</span
+            ></label
+          >
+          <div class="full preview-row">
+            <img id="image-preview" alt="Photo preview" hidden /><label
+              class="checkbox"
+              ><input id="remove-image" type="checkbox" /> Remove current
+              photo</label
+            >
+          </div>
+          <fieldset class="full">
+            <legend>Map location</legend>
+            <p id="edit-location-summary"></p>
+            <div class="location-actions">
+              <button type="button" id="place-2d" class="outline">
+                Choose on floor plan</button
+              ><button type="button" id="place-3d" class="outline">
+                Choose in 3D</button
+              ><button type="button" id="clear-location" class="quiet">
+                Clear locations
+              </button>
+            </div>
+          </fieldset>
+        </div>
+        <p id="edit-error" class="form-error" role="alert"></p>
+        <div class="dialog-actions">
+          <button type="button" data-close="edit-dialog" class="quiet">
+            Cancel</button
+          ><button id="save-button" type="submit" class="primary">
+            Save item
+          </button>
+        </div>
+      </form>
+    </dialog>
+    <dialog id="archive-dialog">
+      <div class="dialog-heading">
+        <h2>Archive item?</h2>
+        <button
+          data-close="archive-dialog"
+          class="icon-button"
+          aria-label="Cancel archive"
+        >
+          ×
+        </button>
+      </div>
+      <p id="archive-description"></p>
+      <p>
+        The item, its photos, and its history will remain available in Archived
+        & samples.
+      </p>
+      <div class="dialog-actions">
+        <button data-close="archive-dialog" class="quiet">Cancel</button
+        ><button id="confirm-archive" class="primary">Archive item</button>
+      </div>
+    </dialog>
+    <dialog id="history-dialog">
+      <div class="dialog-heading">
+        <h2>Item history</h2>
+        <button
+          data-close="history-dialog"
+          class="icon-button"
+          aria-label="Close history"
+        >
+          ×
+        </button>
+      </div>
+      <p>
+        Restore the saved snapshot to undo a change. Later history remains
+        available.
+      </p>
+      <ol id="history-list" class="history-list"></ol>
+    </dialog>
+    <dialog id="finder-dialog">
+      <div class="dialog-heading">
+        <h2>Find the right tool</h2>
+        <button
+          data-close="finder-dialog"
+          class="icon-button"
+          aria-label="Close tool finder"
+        >
+          ×
+        </button>
+      </div>
+      <p id="finder-mode">
+        Search the local inventory by tool, material, or task.
+      </p>
+      <form id="finder-form">
+        <label
+          >Your question<input
+            id="finder-input"
+            maxlength="1500"
+            placeholder="Where are the soldering irons?"
+            required /></label
+        ><label id="cloud-choice" class="checkbox" hidden
+          ><input id="cloud-enabled" type="checkbox" /> Use AI guide (sends this
+          question and relevant inventory to OpenAI)</label
+        ><button id="finder-submit" class="primary" type="submit">
+          Find tools
+        </button>
+      </form>
+      <div id="finder-result" aria-live="polite"></div>
+    </dialog>
+  </body>
 </html>

@@ -1,0 +1,30 @@
+{
+  "github_main_sha": "ea0282b891e6ccf37bd860dbc8321d0e09011b46",
+  "github_main_database_found": false,
+  "historical_csv_commit": "7946caef785ba044dc9a455d60face471a7a8cbf",
+  "log_events_including_overlap": 118,
+  "candidate_records": 51,
+  "visible_inventory_candidates": 15,
+  "archived_samples_or_tests": 36,
+  "with_3d_coordinates": 5,
+  "with_recovered_images": 7,
+  "unparsed_submission_lines": {
+    "backup.log": [],
+    "recovery\\github-main\\backup.log": []
+  },
+  "restored_assets": [],
+  "limitations": [
+    "No complete database or database dump was found on GitHub main or in local Git history.",
+    "Logs do not preserve every original item, subsequent edit, or deletion.",
+    "Duplicate submissions with the same name, map and 2D location are consolidated; sources are retained.",
+    "Failed submissions are recovered as unverified candidates, never described as successfully saved originals.",
+    "All sample CSV rows and likely test records are retained in the archived view.",
+    "The project changed floor plans over time; recovered coordinates require physical verification."
+  ],
+  "asset_optimization": {
+    "thumbnail_original_bytes": 15758272,
+    "thumbnail_delivery_bytes": 250036,
+    "texture_original_bytes": 8514287,
+    "texture_delivery_bytes": 1332751
+  }
+}

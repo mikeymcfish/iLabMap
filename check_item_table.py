@@ -1,14 +1,7 @@
-from app import create_app, db
 from sqlalchemy import inspect
-
-def check_item_table():
-    app = create_app()
-    with app.app_context():
-        inspector = inspect(db.engine)
-        columns = inspector.get_columns('item')
-        print("Columns in the 'item' table:")
-        for column in columns:
-            print(f"- {column['name']}: {column['type']}")
+from app import create_app, db
 
 if __name__ == "__main__":
-    check_item_table()
+    with create_app().app_context():
+        for column in inspect(db.engine).get_columns("item"):
+            print(column["name"], column["type"])

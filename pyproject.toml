@@ -1,16 +1,21 @@
 [project]
-name = "repl-nix-workspace"
-version = "0.1.0"
-description = "Add your description here"
-requires-python = ">=3.11"
+name = "ilab-map"
+version = "2.0.0"
+description = "Local-first lab inventory, floor plans, and 3D item locations"
+requires-python = ">=3.12"
 dependencies = [
-    "email-validator>=2.2.0",
-    "flask>=3.0.3",
-    "flask-sqlalchemy>=3.1.1",
-    "psycopg2-binary>=2.9.9",
-    "flask-migrate>=4.0.7",
-    "apscheduler>=3.10.4",
-    "sqlalchemy>=2.0.35",
-    "werkzeug>=3.0.4",
-    "requests>=2.32.3",
+  "flask>=3.1,<4", "flask-sqlalchemy>=3.1,<4", "flask-migrate>=4,<5",
+  "python-dotenv>=1.1,<2", "pillow>=11.3,<13", "waitress>=3,<4",
+  "openai>=2,<3",
 ]
+[dependency-groups]
+dev = ["pytest>=8,<10", "ruff>=0.12,<1"]
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+[tool.ruff]
+target-version = "py312"
+line-length = 110
+exclude = ["recovery", ".runtime", "venv", "static/vendor"]
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F"]

@@ -1,0 +1,25 @@
+{
+  "items": 51,
+  "files": 67,
+  "verified": true,
+  "restored_files_verified": 67,
+  "live_status_counts": {
+    "archived": 36,
+    "needs_review": 15
+  },
+  "live_map_counts": {
+    "1": 14,
+    "2": 1
+  },
+  "restored_status_counts": {
+    "archived": 36,
+    "needs_review": 15
+  },
+  "restored_map_counts": {
+    "1": 14,
+    "2": 1
+  },
+  "original_assets_unchanged": 42,
+  "backup": "backups/ilab-20260914T015751Z-5fa4dfd2.zip",
+  "backup_sha256": "2d73e826c2dcb6bf45464aed0d0aa5ea76ac872cb823fe231d9926990c7e71e6"
+}
